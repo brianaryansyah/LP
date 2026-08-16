@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kelola Menu — Admin Semangkok</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <h2>🍜 Semangkok Admin</h2>
+      <a href="index.html">Dashboard</a>
+      <a href="orders.html">Kelola Pesanan</a>
+      <a href="menu.html" class="active">Kelola Menu</a>
+      <a href="login.html">Logout</a>
+    </aside>
+
+    <main class="content">
+      <h1>Kelola Menu</h1>
+
+      <button class="btn-primary add-btn">+ Tambah Menu</button>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Foto</th>
+            <th>Nama Menu</th>
+            <th>Harga</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img src="../customer/img/original.jpg" width="60" /></td>
+            <td>Mie Ayam Original</td>
+            <td>IDR 15.000</td>
+            <td>
+              <button class="btn-warning">Edit</button>
+              <button class="btn-danger">Hapus</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </body>
+</html>
