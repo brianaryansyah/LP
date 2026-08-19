@@ -1,10 +1,12 @@
 import Image from "next/image";
+import Reveal from "@/components/Reveal";
 
 export default function Features() {
   return (
     <section id="unggulan" className="relative min-h-screen flex flex-col justify-center py-16 lg:py-24 bg-[#fdf8f5]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         
+        <Reveal>
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24 mb-16 lg:mb-24">
           {/* Left Collage */}
           <div className="flex-1 w-full relative max-w-lg mx-auto lg:max-w-none group">
@@ -73,8 +75,10 @@ export default function Features() {
             </div>
           </div>
         </div>
+        </Reveal>
 
         {/* Testimonial Block */}
+        <Reveal delay={100}>
         <div className="bg-gradient-to-br from-[#f5b041]/20 to-[#f5b041]/5 rounded-[2rem] sm:rounded-[3rem] p-6 sm:p-10 md:p-16 relative mt-8 sm:mt-12 mx-auto max-w-4xl shadow-2xl border border-[#f5b041]/20 hover:scale-[1.02] transition-transform duration-500">
           <div className="absolute top-6 right-6 sm:top-10 sm:right-10 opacity-10 animate-pulse">
             <i className="fas fa-quote-right text-6xl sm:text-8xl text-[#f5b041]"></i>
@@ -92,6 +96,7 @@ export default function Features() {
             </div>
           </div>
         </div>
+        </Reveal>
 
       </div>
     </section>

@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import Reveal from "@/components/Reveal";
 
 const menuItems = [
   {
@@ -32,6 +33,7 @@ export default function Menu() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         
         {/* Header */}
+        <Reveal>
         <div className="text-center mb-10 md:mb-16">
           <div className="inline-block px-4 py-1.5 rounded-full bg-[#f5b041] text-[#2c231b] font-bold text-xs mb-4 uppercase tracking-wider shadow-md">
             Menu Pilihan
@@ -43,11 +45,13 @@ export default function Menu() {
             Dibuat dengan bahan pilihan terbaik dan resep warisan keluarga untuk menghadirkan rasa yang autentik di setiap suapan.
           </p>
         </div>
+        </Reveal>
 
         {/* Menu Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {menuItems.map((item, idx) => (
-            <div key={item.id} className="bg-[#3b3128] rounded-[2rem] p-4 flex flex-col group hover:-translate-y-3 transition-all duration-500 shadow-2xl hover:shadow-[#f5b041]/20 border border-transparent hover:border-[#f5b041]/30 relative overflow-hidden" style={{ animationDelay: `${idx * 150}ms` }}>
+            <Reveal key={item.id} delay={idx * 100}>
+            <div className="bg-[#3b3128] rounded-[2rem] p-4 flex flex-col group hover:-translate-y-3 transition-all duration-500 shadow-2xl hover:shadow-[#f5b041]/20 border border-transparent hover:border-[#f5b041]/30 relative overflow-hidden">
               
               {/* Decorative corner glow */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-[#f5b041]/10 rounded-full blur-3xl group-hover:bg-[#f5b041]/20 transition-all duration-500"></div>
@@ -79,6 +83,7 @@ export default function Menu() {
                 </div>
               </div>
             </div>
+            </Reveal>
           ))}
         </div>
       </div>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Reveal from "@/components/Reveal";
 
 export default function Location() {
   const services = [
@@ -12,13 +13,16 @@ export default function Location() {
     <section id="location" className="relative min-h-screen flex flex-col justify-center py-16 lg:py-24 bg-[#fdf8f5] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="text-center mb-10 md:mb-16">
+          <Reveal>
           <div className="inline-block px-4 py-1.5 rounded-full bg-[#f5b041]/20 text-[#2c231b] font-bold text-xs mb-4 uppercase tracking-wider border border-[#f5b041]/30">
             Layanan Kami
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#2c231b] font-poppins mb-8 md:mb-12">
             Layanan Pengiriman & Reservasi
           </h2>
+          </Reveal>
           
+          <Reveal delay={100}>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-10 md:mb-16">
             {services.map((svc, idx) => (
               <div key={idx} className="bg-white p-4 sm:p-6 rounded-2xl sm:rounded-3xl text-left border border-[#2c231b]/5 hover:border-[#f5b041]/20 transition-all duration-500 cursor-default flex flex-col items-start hover:-translate-y-1 shadow-sm hover:shadow-md group">
@@ -28,7 +32,9 @@ export default function Location() {
               </div>
             ))}
           </div>
+          </Reveal>
 
+          <Reveal delay={200}>
           <div className="relative w-full h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-xl group border-[4px] sm:border-[8px] border-white">
             <Image src="/img/mi-ayam-bakso.jpg" alt="Suasana Restoran" fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 80vw" className="object-cover transition-transform duration-[2000ms] group-hover:scale-105" />
             <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-500 flex items-center justify-center">
@@ -37,7 +43,9 @@ export default function Location() {
               </button>
             </div>
           </div>
+          </Reveal>
           
+          <Reveal delay={300}>
           <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6 px-4">
             <div className="text-[#f5b041] font-bold underline cursor-pointer hover:text-[#e09132] transition text-sm sm:text-base hover:scale-105 transform">
               Lokasi Cabang Kami
@@ -46,6 +54,7 @@ export default function Location() {
               Hubungi via WhatsApp <i className="fas fa-arrow-right ml-3 text-xs"></i>
             </div>
           </div>
+          </Reveal>
         </div>
       </div>
       

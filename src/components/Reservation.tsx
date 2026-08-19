@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Reveal from "@/components/Reveal";
 
 export default function Reservation() {
   const [formData, setFormData] = useState({
@@ -24,6 +25,7 @@ export default function Reservation() {
   return (
     <section id="reservasi" className="relative py-20 bg-[#fdf8f5] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <Reveal>
         <div className="text-center mb-14">
           <div className="inline-block px-4 py-1.5 rounded-full bg-[#f5b041]/20 text-[#2c231b] font-bold text-xs mb-4 uppercase tracking-wider border border-[#f5b041]/30">
             Reservasi Meja
@@ -35,7 +37,9 @@ export default function Reservation() {
             Booking tempat untuk pengalaman makan yang lebih nyaman bersama keluarga dan teman.
           </p>
         </div>
+        </Reveal>
 
+        <Reveal delay={100}>
         <div className="bg-white rounded-[2rem] sm:rounded-[3rem] shadow-2xl overflow-hidden border border-[#2c231b]/5 flex flex-col lg:flex-row">
           <div className="lg:w-2/5 bg-[#2c231b] p-8 sm:p-10 text-[#fdf8f5] flex flex-col justify-between relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#f5b041] opacity-10 rounded-full -translate-y-1/2 translate-x-1/3"></div>
@@ -127,6 +131,7 @@ export default function Reservation() {
             </form>
           </div>
         </div>
+        </Reveal>
       </div>
     </section>
   );
