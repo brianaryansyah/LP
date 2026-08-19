@@ -14,11 +14,59 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 1,
   userScalable: false,
+  themeColor: "#fdf8f5",
 };
 
 export const metadata: Metadata = {
-  title: "Mie Ayam Semangkok",
-  description: "Pesan Mie Ayam dan Bakso premium secara online.",
+  metadataBase: new URL("https://semangkok.id"),
+  title: {
+    default: "Semangkok - Mie Ayam & Bakso Premium",
+    template: "%s | Semangkok",
+  },
+  description:
+    "Warisan resep keluarga sejak 1990. Nikmati mie ayam kenyal, bakso premium, dan kuah kaldu gurih yang siap diantar ke rumah Anda.",
+  applicationName: "Semangkok",
+  keywords: [
+    "mie ayam",
+    "bakso",
+    "mie ayam enak",
+    "kuliner",
+    "makanan Indonesia",
+    "pesan antar",
+  ],
+  authors: [{ name: "Semangkok" }],
+  category: "food",
+  openGraph: {
+    type: "website",
+    locale: "id_ID",
+    siteName: "Semangkok",
+    title: "Semangkok - Mie Ayam & Bakso Premium",
+    description:
+      "Warisan resep keluarga sejak 1990. Nikmati mie ayam kenyal, bakso premium, dan kuah kaldu gurih yang siap diantar ke rumah Anda.",
+    url: "https://semangkok.id",
+    images: [
+      {
+        url: "/img/mi-ayam-bakso.jpg",
+        width: 1200,
+        height: 1500,
+        alt: "Semangkok Mie Ayam Premium",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Semangkok - Mie Ayam & Bakso Premium",
+    description:
+      "Warisan resep keluarga sejak 1990. Nikmati mie ayam kenyal, bakso premium, dan kuah kaldu gurih.",
+    images: ["/img/mi-ayam-bakso.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -29,7 +77,6 @@ export default function RootLayout({
   return (
     <html lang="id">
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
