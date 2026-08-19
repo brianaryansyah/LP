@@ -10,38 +10,38 @@ export default function Location() {
     <section id="location" className="relative min-h-screen flex flex-col justify-center py-16 lg:py-24 bg-[#fdf8f5] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="text-center mb-10 md:mb-16">
-          <div className="inline-block px-4 py-1.5 rounded-full bg-[#f5b041] text-[#2c231b] font-bold text-xs mb-4 uppercase tracking-wider">
+          <div className="inline-block px-4 py-1.5 rounded-full bg-[#f5b041] text-[#2c231b] font-bold text-xs mb-4 uppercase tracking-wider shadow-md">
             Layanan Kami
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#2c231b] font-poppins mb-8 md:mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#2c231b] font-poppins mb-8 md:mb-12 drop-shadow-sm">
             Layanan Pengiriman & Reservasi
           </h2>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-10 md:mb-16">
             {services.map((svc, idx) => (
-              <div key={idx} className="bg-[#f5b041]/10 p-4 sm:p-6 rounded-2xl sm:rounded-3xl text-left border border-[#f5b041]/20 hover:bg-[#f5b041]/20 transition cursor-pointer flex flex-col items-start">
-                <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">{svc.icon}</div>
+              <div key={idx} className="bg-white p-4 sm:p-6 rounded-2xl sm:rounded-3xl text-left border border-[#f5b041]/20 hover:bg-[#f5b041]/10 transition-all duration-300 cursor-pointer flex flex-col items-start hover:-translate-y-2 shadow-lg hover:shadow-xl group">
+                <div className="text-2xl sm:text-3xl mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300">{svc.icon}</div>
                 <h4 className="text-base sm:text-lg font-bold text-[#2c231b] font-poppins mb-1 sm:mb-2">{svc.title}</h4>
-                <p className="text-[#2c231b]/60 font-inter text-xs sm:text-sm">{svc.desc}</p>
+                <p className="text-[#2c231b]/70 font-inter text-xs sm:text-sm">{svc.desc}</p>
               </div>
             ))}
           </div>
 
-          <div className="relative w-full h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-2xl">
-            <img src="/img/mi ayam bakso.jpg" alt="Suasana Restoran" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-              <button className="w-16 h-16 sm:w-20 sm:h-20 bg-[#f5b041] rounded-full flex items-center justify-center text-[#2c231b] text-xl sm:text-2xl hover:scale-110 transition shadow-xl">
+          <div className="relative w-full h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-2xl group border-[6px] sm:border-[8px] border-white">
+            <img src="/img/mi ayam bakso.jpg" alt="Suasana Restoran" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
+              <button className="w-16 h-16 sm:w-20 sm:h-20 bg-[#f5b041] rounded-full flex items-center justify-center text-[#2c231b] text-xl sm:text-2xl hover:scale-110 transition-transform duration-300 shadow-[0_0_20px_rgba(245,176,65,0.4)] animate-pulse hover:animate-none">
                 <i className="fas fa-play ml-1 sm:ml-2"></i>
               </button>
             </div>
           </div>
           
           <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6 px-4">
-            <div className="text-[#f5b041] font-bold underline cursor-pointer hover:text-[#2c231b] transition text-sm sm:text-base">
+            <div className="text-[#f5b041] font-bold underline cursor-pointer hover:text-[#e09132] transition text-sm sm:text-base hover:scale-105 transform">
               Lokasi Cabang Kami
             </div>
-            <div className="text-[#2c231b]/60 font-bold cursor-pointer hover:text-[#2c231b] transition text-sm sm:text-base flex items-center">
-              Hubungi via WhatsApp <i className="fas fa-arrow-right ml-2"></i>
+            <div className="bg-[#2c231b] text-white px-6 py-3 rounded-full font-bold cursor-pointer hover:bg-black transition text-sm sm:text-base flex items-center shadow-lg hover:-translate-y-1 transform duration-300">
+              Hubungi via WhatsApp <i className="fas fa-arrow-right ml-3 text-xs"></i>
             </div>
           </div>
         </div>
