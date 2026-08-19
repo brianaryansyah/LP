@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Features() {
   return (
     <section id="unggulan" className="relative min-h-screen flex flex-col justify-center py-16 lg:py-24 bg-[#fdf8f5]">
@@ -7,15 +9,15 @@ export default function Features() {
           {/* Left Collage */}
           <div className="flex-1 w-full relative max-w-lg mx-auto lg:max-w-none group">
             <div className="grid grid-cols-2 gap-3 sm:gap-4 relative z-10">
-              <div className="col-span-2 rounded-2xl sm:rounded-3xl overflow-hidden h-48 sm:h-64 shadow-2xl transition-transform duration-700 group-hover:scale-[1.02]">
-                <img src="/img/mi-ayam-kepala.jpg" alt="Proses Memasak" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
+              <div className="col-span-2 relative rounded-2xl sm:rounded-3xl overflow-hidden h-48 sm:h-64 shadow-2xl transition-transform duration-700 group-hover:scale-[1.02]">
+                <Image src="/img/mi-ayam-kepala.jpg" alt="Proses Memasak" fill sizes="(max-width: 640px) 90vw, 40vw" className="object-cover transition-transform duration-1000 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition duration-700"></div>
               </div>
-              <div className="rounded-2xl sm:rounded-3xl overflow-hidden h-32 sm:h-48 shadow-xl transition-transform duration-700 delay-100 group-hover:-translate-y-2 group-hover:rotate-1">
-                <img src="/img/bakso-urat.png" alt="Bahan Segar" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
+              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden h-32 sm:h-48 shadow-xl transition-transform duration-700 delay-100 group-hover:-translate-y-2 group-hover:rotate-1">
+                <Image src="/img/bakso-urat.png" alt="Bahan Segar" fill sizes="(max-width: 640px) 45vw, 20vw" className="object-cover transition-transform duration-1000 group-hover:scale-110" />
               </div>
-              <div className="rounded-2xl sm:rounded-3xl overflow-hidden h-32 sm:h-48 shadow-xl transition-transform duration-700 delay-200 group-hover:-translate-y-2 group-hover:-rotate-1">
-                <img src="/img/bakso.png" alt="Mie Spesial" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
+              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden h-32 sm:h-48 shadow-xl transition-transform duration-700 delay-200 group-hover:-translate-y-2 group-hover:-rotate-1">
+                <Image src="/img/bakso.png" alt="Mie Spesial" fill sizes="(max-width: 640px) 45vw, 20vw" className="object-cover transition-transform duration-1000 group-hover:scale-110" />
               </div>
             </div>
             
@@ -82,7 +84,7 @@ export default function Features() {
           </p>
           <div className="flex items-center gap-4 relative z-10">
             <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full overflow-hidden bg-gray-200 shrink-0 border-2 border-white shadow-md">
-              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" alt="Sarah Johnson" className="w-full h-full object-cover" />
+              <Image src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" alt="Sarah Johnson" width={64} height={64} className="w-full h-full object-cover" />
             </div>
             <div>
               <h5 className="font-bold text-[#2c231b] font-poppins text-sm sm:text-base">Sarah Johnson</h5>

@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 
 const menuItems = [
   {
@@ -53,10 +54,12 @@ export default function Menu() {
 
               {/* Image */}
               <div className="w-full h-48 sm:h-60 rounded-3xl overflow-hidden mb-6 relative shadow-inner">
-                <img 
+                <Image 
                   src={item.img} 
                   alt={item.name} 
-                  className="w-full h-full object-cover group-hover:scale-110 transition duration-700 ease-in-out" 
+                  fill
+                  sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 30vw"
+                  className="object-cover group-hover:scale-110 transition duration-700 ease-in-out" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#3b3128] via-transparent to-transparent opacity-60"></div>
               </div>
