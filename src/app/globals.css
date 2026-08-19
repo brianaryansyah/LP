@@ -25,6 +25,10 @@ html, body {
   overflow-x: hidden;
 }
 
+section[id] {
+  scroll-margin-top: 4.5rem;
+}
+
 @keyframes float {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-6px); }
