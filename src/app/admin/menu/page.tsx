@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function AdminMenu() {
   return (
     <div>
@@ -34,8 +36,8 @@ export default function AdminMenu() {
             <tbody>
               <tr className="border-b border-gray-50 hover:bg-gray-50">
                 <td className="py-4 px-6">
-                  <div className="w-12 h-12 rounded-lg bg-gray-200 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1612927601601-6638404737ce?w=100&h=100&fit=crop" alt="Mie Ayam" className="w-full h-full object-cover" />
+                  <div className="w-12 h-12 rounded-lg bg-gray-200 overflow-hidden relative">
+                    <Image src="https://images.unsplash.com/photo-1612927601601-6638404737ce?w=100&h=100&fit=crop" alt="Mie Ayam" fill sizes="48px" className="object-cover" />
                   </div>
                 </td>
                 <td className="py-4 px-6 font-medium text-gray-900">Mie Ayam Original</td>
@@ -49,8 +51,8 @@ export default function AdminMenu() {
               </tr>
               <tr className="border-b border-gray-50 hover:bg-gray-50">
                 <td className="py-4 px-6">
-                  <div className="w-12 h-12 rounded-lg bg-gray-200 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=100&h=100&fit=crop" alt="Es Teh" className="w-full h-full object-cover" />
+                  <div className="w-12 h-12 rounded-lg bg-gray-200 overflow-hidden relative">
+                    <Image src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=100&h=100&fit=crop" alt="Es Teh" fill sizes="48px" className="object-cover" />
                   </div>
                 </td>
                 <td className="py-4 px-6 font-medium text-gray-900">Es Teh Manis</td>

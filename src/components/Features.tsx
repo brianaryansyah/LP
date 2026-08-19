@@ -84,7 +84,7 @@ export default function Features() {
             <i className="fas fa-quote-right text-6xl sm:text-8xl text-[#f5b041]"></i>
           </div>
           <p className="text-base sm:text-xl md:text-2xl text-[#2c231b] font-poppins font-medium leading-relaxed mb-8 sm:mb-10 relative z-10 italic">
-            "Sebagai pecinta mie ayam, saya selalu mengandalkan Semangkok untuk memuaskan selera saya. Tekstur mie yang kenyal, potongan ayam yang melimpah, dan kuah kaldu yang gurih tidak pernah mengecewakan."
+            &ldquo;Sebagai pecinta mie ayam, saya selalu mengandalkan Semangkok untuk memuaskan selera saya. Tekstur mie yang kenyal, potongan ayam yang melimpah, dan kuah kaldu yang gurih tidak pernah mengecewakan.&rdquo;
           </p>
           <div className="flex items-center gap-4 relative z-10">
             <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full overflow-hidden bg-gray-200 shrink-0 border-2 border-white shadow-md">
