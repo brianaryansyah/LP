@@ -11,7 +11,7 @@ export default function Header() {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center gap-2 cursor-pointer">
             <div className="w-10 h-10 bg-[#e09132] rounded-full flex items-center justify-center border-2 border-[#2c231b]">
-              <span className="text-xl text-white block leading-none">🍜</span>
+              <i className="fas fa-bowl-food text-white text-sm"></i>
             </div>
             <div>
               <h1 className="text-2xl font-bold text-[#2c231b] font-poppins tracking-tight">

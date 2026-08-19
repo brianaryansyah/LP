@@ -49,9 +49,9 @@ export default function Features() {
             </p>
 
             <div className="space-y-4 sm:space-y-6">
-              <div className="bg-[#f5b041]/10 p-4 sm:p-6 rounded-2xl sm:rounded-3xl flex items-center gap-4 sm:gap-6 hover:-translate-y-2 transition-transform duration-300 shadow-md border border-transparent hover:border-[#f5b041]/30 cursor-default">
+              <div className="bg-[#f5b041]/10 p-4 sm:p-6 rounded-2xl sm:rounded-3xl flex items-center gap-4 sm:gap-6 hover:-translate-y-1 transition-transform duration-500 shadow-sm border border-transparent hover:border-[#f5b041]/20 cursor-default">
                 <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#f5b041]/20 flex items-center justify-center shrink-0">
-                  <span className="text-xl sm:text-2xl text-[#f5b041]">👨‍🍳</span>
+                  <i className="fas fa-hat-chef text-xl sm:text-2xl text-[#f5b041]"></i>
                 </div>
                 <div>
                   <h4 className="text-lg sm:text-xl font-bold text-[#2c231b] font-poppins mb-1">Koki Berpengalaman</h4>
@@ -59,9 +59,9 @@ export default function Features() {
                 </div>
               </div>
 
-              <div className="bg-white border border-[#2c231b]/10 p-4 sm:p-6 rounded-2xl sm:rounded-3xl flex items-center gap-4 sm:gap-6 hover:-translate-y-2 transition-transform duration-300 shadow-md cursor-default">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#fdf8f5] flex items-center justify-center shrink-0 shadow-sm">
-                  <span className="text-xl sm:text-2xl text-[#f5b041]">🥬</span>
+              <div className="bg-white border border-[#2c231b]/5 p-4 sm:p-6 rounded-2xl sm:rounded-3xl flex items-center gap-4 sm:gap-6 hover:-translate-y-1 transition-transform duration-500 shadow-sm cursor-default">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#fdf8f5] flex items-center justify-center shrink-0 shadow-inner">
+                  <i className="fas fa-leaf text-xl sm:text-2xl text-[#f5b041]"></i>
                 </div>
                 <div>
                   <h4 className="text-lg sm:text-xl font-bold text-[#2c231b] font-poppins mb-1">Bahan Baku Segar</h4>
