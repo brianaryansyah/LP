@@ -23,7 +23,7 @@ export default function Features() {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] bg-[#f5b041]/10 rounded-full blur-3xl -z-0 opacity-50 group-hover:opacity-100 transition-opacity duration-700"></div>
 
             {/* Floating Badge */}
-            <div className="absolute -bottom-6 -left-4 sm:-bottom-8 sm:-left-8 bg-[#f5b041] p-4 sm:p-6 rounded-2xl sm:rounded-3xl shadow-2xl flex flex-col items-center justify-center border-4 border-[#fdf8f5] z-20 scale-90 sm:scale-100 origin-bottom-left animate-float">
+            <div className="absolute -bottom-6 -left-4 sm:-bottom-8 sm:-left-8 bg-[#f5b041] p-4 sm:p-6 rounded-2xl sm:rounded-3xl shadow-2xl flex flex-col items-center justify-center border-4 border-[#fdf8f5] z-20 scale-90 sm:scale-100 origin-bottom-left animate-float w-max">
               <span className="text-2xl sm:text-3xl font-bold text-[#2c231b] font-poppins">30+</span>
               <span className="text-xs sm:text-sm text-[#2c231b] font-bold mt-1 text-center leading-tight">Tahun<br/>Pengalaman</span>
             </div>

@@ -57,12 +57,12 @@ export default function Hero() {
             </svg>
             
             {/* Floating Badge on Image */}
-            <div className="absolute top-4 right-0 sm:top-10 sm:-left-6 bg-white p-3 sm:p-4 rounded-2xl shadow-xl z-30 animate-float" style={{ animationDuration: '4s' }}>
-              <div className="flex items-center gap-2 sm:gap-3">
+            <div className="absolute top-4 right-0 sm:top-10 sm:-left-6 sm:right-auto w-max bg-white p-3 sm:p-4 rounded-2xl shadow-xl z-30 animate-float" style={{ animationDuration: '4s' }}>
+              <div className="flex items-center gap-2 sm:gap-3 pr-2">
                 <div className="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center text-green-600">
                   <i className="fas fa-certificate text-xl"></i>
                 </div>
-                <div>
+                <div className="text-left">
                   <div className="text-xs sm:text-sm font-bold text-[#2c231b]">100% Halal</div>
                   <div className="text-[10px] sm:text-xs text-[#2c231b]/60">Sertifikasi Resmi</div>
                 </div>
