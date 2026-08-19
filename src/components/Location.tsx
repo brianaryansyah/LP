@@ -1,91 +1,65 @@
 export default function Location() {
   return (
-    <section id="location" className="py-20 bg-gray-50">
+    <section id="location" className="py-24 bg-transparent overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-poppins mb-4">Lokasi Kami</h2>
-          <div className="w-24 h-1 bg-orange-500 mx-auto rounded-full mb-4"></div>
-          <p className="text-lg text-gray-600 font-inter">Datang langsung atau pesan antar</p>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          {/* Info Card */}
-          <div className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100">
-            <div className="w-16 h-16 bg-orange-100 text-orange-500 rounded-2xl flex items-center justify-center text-3xl mb-6">
-              <i className="fas fa-store"></i>
-            </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 font-poppins">Mie Ayam Semangkok</h3>
+        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+          
+          {/* Left Side: Text and Socials */}
+          <div className="flex-1 text-left">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-amber-950 font-poppins leading-tight mb-8">
+              Kunjungi <br/>
+              Lokasi Kami
+            </h2>
+            <p className="text-lg text-amber-900/80 font-inter mb-4 leading-relaxed max-w-md">
+              Jl. Raya Makan Enak No. 123, Jakarta Pusat 10110. Datang dan rasakan langsung kenikmatan mie ayam autentik kami.
+            </p>
+            <p className="text-lg text-amber-900/80 font-inter mb-10 leading-relaxed max-w-md">
+              Buka Senin - Sabtu (12:00 - 20:00 WIB).<br/>
+              Pesan antar tersedia via WhatsApp.
+            </p>
             
-            <div className="space-y-6">
-              <div className="flex gap-4 items-start">
-                <i className="fas fa-map-marker-alt text-orange-500 text-xl mt-1"></i>
-                <div>
-                  <h4 className="font-semibold text-gray-900">Alamat</h4>
-                  <p className="text-gray-600">Jl. Raya Makan Enak No. 123, Jakarta Pusat 10110</p>
-                </div>
-              </div>
-              
-              <div className="flex gap-4 items-start">
-                <i className="fas fa-clock text-orange-500 text-xl mt-1"></i>
-                <div>
-                  <h4 className="font-semibold text-gray-900">Jam Buka</h4>
-                  <p className="text-gray-600">Senin - Sabtu: 12:00 - 20:00 WIB<br/><span className="text-sm text-gray-400">Minggu: Libur</span></p>
-                </div>
-              </div>
-              
-              <div className="flex gap-4 items-start">
-                <i className="fas fa-phone text-orange-500 text-xl mt-1"></i>
-                <div>
-                  <h4 className="font-semibold text-gray-900">Telepon / WhatsApp</h4>
-                  <p className="text-gray-600">0856-4073-4972</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-8 pt-8 border-t border-gray-100 flex flex-wrap gap-4">
-              <div className="bg-gray-50 px-4 py-2 rounded-lg flex items-center gap-2 text-sm text-gray-700 font-medium border border-gray-200">
-                <i className="fas fa-car text-orange-500"></i> Parkir Luas
-              </div>
-              <div className="bg-gray-50 px-4 py-2 rounded-lg flex items-center gap-2 text-sm text-gray-700 font-medium border border-gray-200">
-                <i className="fas fa-wifi text-orange-500"></i> WiFi Gratis
-              </div>
+            {/* Social Icons */}
+            <div className="flex gap-4 items-center">
+              <a href="#" className="w-10 h-10 rounded-full border border-amber-950/20 flex items-center justify-center text-amber-950 hover:bg-amber-950 hover:text-white transition">
+                <i className="fab fa-twitter"></i>
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full border border-amber-950/20 flex items-center justify-center text-amber-950 hover:bg-amber-950 hover:text-white transition">
+                <i className="fab fa-instagram"></i>
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full border border-amber-950/20 flex items-center justify-center text-amber-950 hover:bg-amber-950 hover:text-white transition">
+                <i className="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full border border-amber-950/20 flex items-center justify-center text-amber-950 hover:bg-amber-950 hover:text-white transition">
+                <i className="fab fa-tiktok"></i>
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full border border-amber-950/20 flex items-center justify-center text-amber-950 hover:bg-amber-950 hover:text-white transition">
+                <i className="fab fa-youtube"></i>
+              </a>
             </div>
           </div>
 
-          {/* Map & Delivery */}
-          <div className="space-y-8">
-            <div className="bg-white p-2 rounded-3xl shadow-lg border border-gray-100 overflow-hidden h-[300px] relative group">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.8195613506864!3d-6.194741395493371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5390917b759%3A0x6b45e67356080477!2sJl.%20Menteng%20Raya%2C%20Jakarta%20Pusat!5e0!3m2!1sen!2sid!4v1621234567890!5m2!1sen!2sid"
-                className="w-full h-full rounded-2xl"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center rounded-2xl">
-                <a href="https://goo.gl/maps/v8dnwhChcs6mZC3Za" target="_blank" rel="noreferrer" className="bg-white text-gray-900 px-6 py-3 rounded-full font-bold shadow-xl hover:scale-105 transition transform">
-                  Buka di Google Maps
-                </a>
+          {/* Right Side: Yellow Card */}
+          <div className="flex-1 w-full max-w-lg lg:max-w-none">
+            <div className="bg-[#f5b041] rounded-[3rem] p-8 md:p-12 relative shadow-2xl">
+              <h3 className="text-white font-poppins font-bold text-2xl md:text-3xl mb-8 flex items-center gap-2">
+                <span className="text-orange-200">🍜</span> Menu Spesial
+              </h3>
+              
+              <div className="relative w-full aspect-square max-w-[400px] mx-auto">
+                <div className="absolute inset-0 bg-white/20 rounded-full blur-2xl scale-90"></div>
+                <img 
+                  src="https://images.unsplash.com/photo-1612927601601-6638404737ce?w=800&h=800&fit=crop&auto=format" 
+                  alt="Special Menu" 
+                  className="relative z-10 w-full h-full object-cover rounded-full shadow-2xl border-[10px] border-white/90"
+                />
               </div>
-            </div>
-
-            <div className="bg-orange-500 rounded-3xl p-8 text-white shadow-lg relative overflow-hidden">
-              <div className="absolute -right-10 -bottom-10 opacity-10">
-                <i className="fas fa-motorcycle text-9xl"></i>
-              </div>
-              <h3 className="text-2xl font-bold mb-4 relative z-10">Layanan Pengiriman</h3>
-              <p className="mb-6 relative z-10 text-orange-100">Pesan melalui aplikasi kesayangan Anda atau gunakan layanan kurir internal kami.</p>
-              <div className="flex gap-4 relative z-10">
-                <button className="bg-white text-orange-500 px-6 py-2 rounded-full font-bold text-sm hover:bg-orange-50 transition shadow-md">
-                  GoFood
-                </button>
-                <button className="bg-white text-orange-500 px-6 py-2 rounded-full font-bold text-sm hover:bg-orange-50 transition shadow-md">
-                  GrabFood
-                </button>
-              </div>
+              
+              {/* Decorative elements */}
+              <div className="absolute top-10 right-10 text-white/50 animate-bounce">✨</div>
+              <div className="absolute bottom-20 left-10 text-white/50 animate-pulse">🌟</div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
