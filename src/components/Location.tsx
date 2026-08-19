@@ -1,66 +1,57 @@
 export default function Location() {
+  const services = [
+    { icon: "🛵", title: "Pesan Antar", desc: "Nikmati mie ayam favorit Anda tanpa keluar rumah." },
+    { icon: "🏪", title: "Makan di Tempat", desc: "Suasana nyaman untuk bersantap bersama keluarga." },
+    { icon: "🎉", title: "Acara Spesial", desc: "Kami melayani pesanan untuk berbagai acara Anda." },
+    { icon: "📅", title: "Reservasi Meja", desc: "Pesan meja Anda lebih awal untuk momen spesial." }
+  ];
+
   return (
-    <section id="location" className="py-24 bg-transparent overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+    <section id="location" className="relative py-24 bg-[#fdf8f5] overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-16">
+          <div className="inline-block px-4 py-1.5 rounded-full bg-[#f5b041] text-[#2c231b] font-bold text-xs mb-4 uppercase tracking-wider">
+            Layanan Kami
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#2c231b] font-poppins mb-12">
+            Layanan Pengiriman & Reservasi
+          </h2>
           
-          {/* Left Side: Text and Socials */}
-          <div className="flex-1 text-left">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-amber-950 font-poppins leading-tight mb-8">
-              Kunjungi <br/>
-              Lokasi Kami
-            </h2>
-            <p className="text-lg text-amber-900/80 font-inter mb-4 leading-relaxed max-w-md">
-              Jl. Raya Makan Enak No. 123, Jakarta Pusat 10110. Datang dan rasakan langsung kenikmatan mie ayam autentik kami.
-            </p>
-            <p className="text-lg text-amber-900/80 font-inter mb-10 leading-relaxed max-w-md">
-              Buka Senin - Sabtu (12:00 - 20:00 WIB).<br/>
-              Pesan antar tersedia via WhatsApp.
-            </p>
-            
-            {/* Social Icons */}
-            <div className="flex gap-4 items-center">
-              <a href="#" className="w-10 h-10 rounded-full border border-amber-950/20 flex items-center justify-center text-amber-950 hover:bg-amber-950 hover:text-white transition">
-                <i className="fab fa-twitter"></i>
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full border border-amber-950/20 flex items-center justify-center text-amber-950 hover:bg-amber-950 hover:text-white transition">
-                <i className="fab fa-instagram"></i>
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full border border-amber-950/20 flex items-center justify-center text-amber-950 hover:bg-amber-950 hover:text-white transition">
-                <i className="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full border border-amber-950/20 flex items-center justify-center text-amber-950 hover:bg-amber-950 hover:text-white transition">
-                <i className="fab fa-tiktok"></i>
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full border border-amber-950/20 flex items-center justify-center text-amber-950 hover:bg-amber-950 hover:text-white transition">
-                <i className="fab fa-youtube"></i>
-              </a>
-            </div>
-          </div>
-
-          {/* Right Side: Yellow Card */}
-          <div className="flex-1 w-full max-w-lg lg:max-w-none">
-            <div className="bg-[#f5b041] rounded-[3rem] p-8 md:p-12 relative shadow-2xl">
-              <h3 className="text-white font-poppins font-bold text-2xl md:text-3xl mb-8 flex items-center gap-2">
-                <span className="text-orange-200">🍜</span> Menu Spesial
-              </h3>
-              
-              <div className="relative w-full aspect-square max-w-[400px] mx-auto">
-                <div className="absolute inset-0 bg-white/20 rounded-full blur-2xl scale-90"></div>
-                <img 
-                  src="https://images.unsplash.com/photo-1612927601601-6638404737ce?w=800&h=800&fit=crop&auto=format" 
-                  alt="Special Menu" 
-                  className="relative z-10 w-full h-full object-cover rounded-full shadow-2xl border-[10px] border-white/90"
-                />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            {services.map((svc, idx) => (
+              <div key={idx} className="bg-[#f5b041]/10 p-6 rounded-3xl text-left border border-[#f5b041]/20 hover:bg-[#f5b041]/20 transition cursor-pointer">
+                <div className="text-3xl mb-4">{svc.icon}</div>
+                <h4 className="text-lg font-bold text-[#2c231b] font-poppins mb-2">{svc.title}</h4>
+                <p className="text-[#2c231b]/60 font-inter text-sm">{svc.desc}</p>
               </div>
-              
-              {/* Decorative elements */}
-              <div className="absolute top-10 right-10 text-white/50 animate-bounce">✨</div>
-              <div className="absolute bottom-20 left-10 text-white/50 animate-pulse">🌟</div>
-            </div>
+            ))}
           </div>
 
+          <div className="relative w-full h-[400px] md:h-[500px] rounded-[3rem] overflow-hidden shadow-2xl">
+            <img src="/img/mi ayam bakso.jpg" alt="Suasana Restoran" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+              <button className="w-20 h-20 bg-[#f5b041] rounded-full flex items-center justify-center text-[#2c231b] text-2xl hover:scale-110 transition shadow-xl">
+                <i className="fas fa-play ml-1"></i>
+              </button>
+            </div>
+          </div>
+          
+          <div className="mt-12 flex flex-col md:flex-row items-center justify-between gap-6 px-4">
+            <div className="text-[#f5b041] font-bold underline cursor-pointer hover:text-[#2c231b] transition">
+              Lokasi Cabang Kami
+            </div>
+            <div className="text-[#2c231b]/60 font-bold cursor-pointer hover:text-[#2c231b] transition">
+              Hubungi via WhatsApp <i className="fas fa-arrow-right ml-2"></i>
+            </div>
+          </div>
         </div>
+      </div>
+      
+      {/* Wavy bottom shape divider */}
+      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-20 translate-y-[2px]">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-16 md:h-24 lg:h-32 text-[#2c231b] fill-current">
+          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.45,130.34,124.63,195.4,108.27c44.87-11.28,87.65-29.67,126-51.83Z"></path>
+        </svg>
       </div>
     </section>
   );
