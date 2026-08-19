@@ -87,6 +87,9 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.variable} ${poppins.variable} antialiased overflow-x-hidden w-full`}>
+        <a href="#home" className="skip-link">
+          Langsung ke konten utama
+        </a>
         {children}
       </body>
     </html>

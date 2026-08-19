@@ -50,6 +50,9 @@ export default function Header() {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
+              aria-label={isOpen ? "Tutup menu navigasi" : "Buka menu navigasi"}
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
               className="text-[#2c231b] hover:text-[#f5b041] focus:outline-none p-2 rounded-lg bg-white/50 backdrop-blur-sm shadow-sm"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -66,7 +69,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-xl shadow-xl border-t border-gray-100">
+        <div id="mobile-menu" className="md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-xl shadow-xl border-t border-gray-100">
           <div className="px-4 pt-4 pb-6 space-y-2">
             <a href="#home" onClick={() => setIsOpen(false)} className="block px-4 py-3 rounded-xl text-base font-bold text-[#2c231b] hover:bg-[#f5b041]/10 hover:text-[#f5b041] transition">Beranda</a>
             <a href="#unggulan" onClick={() => setIsOpen(false)} className="block px-4 py-3 rounded-xl text-base font-bold text-[#2c231b] hover:bg-[#f5b041]/10 hover:text-[#f5b041] transition">Keunggulan</a>

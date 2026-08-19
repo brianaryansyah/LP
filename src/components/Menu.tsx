@@ -73,7 +73,7 @@ export default function Menu() {
                   <div className="bg-[#f5b041]/10 text-[#f5b041] font-bold px-4 py-2 rounded-xl text-sm sm:text-base border border-[#f5b041]/20">
                     {item.price}
                   </div>
-                  <button className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#fdf8f5] text-[#2c231b] flex items-center justify-center hover:bg-[#f5b041] hover:text-white transition-all duration-300 hover:rotate-12 transform shadow-md group-hover:scale-110">
+                  <button aria-label={`Tambah ${item.name} ke pesanan`} className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#fdf8f5] text-[#2c231b] flex items-center justify-center hover:bg-[#f5b041] hover:text-white transition-all duration-300 hover:rotate-12 transform shadow-md group-hover:scale-110">
                     <i className="fas fa-plus text-sm"></i>
                   </button>
                 </div>

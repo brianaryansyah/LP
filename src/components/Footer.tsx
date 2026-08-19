@@ -15,16 +15,16 @@ export default function Footer() {
               Pilihan utama pecinta mie ayam. Rasakan kelezatan resep autentik yang telah dipercaya sejak 1990.
             </p>
             <div className="flex gap-3">
-              <a href="#" className="w-10 h-10 rounded-full bg-[#f5b041] text-[#2c231b] flex items-center justify-center hover:bg-white transition duration-300">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Ikuti kami di Instagram" className="w-10 h-10 rounded-full bg-[#f5b041] text-[#2c231b] flex items-center justify-center hover:bg-white transition duration-300">
                 <i className="fab fa-instagram"></i>
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-[#f5b041] text-[#2c231b] flex items-center justify-center hover:bg-white transition duration-300">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Ikuti kami di Facebook" className="w-10 h-10 rounded-full bg-[#f5b041] text-[#2c231b] flex items-center justify-center hover:bg-white transition duration-300">
                 <i className="fab fa-facebook-f"></i>
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-[#f5b041] text-[#2c231b] flex items-center justify-center hover:bg-white transition duration-300">
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Ikuti kami di X" className="w-10 h-10 rounded-full bg-[#f5b041] text-[#2c231b] flex items-center justify-center hover:bg-white transition duration-300">
                 <i className="fab fa-twitter"></i>
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-[#f5b041] text-[#2c231b] flex items-center justify-center hover:bg-white transition duration-300">
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="Tonton kami di YouTube" className="w-10 h-10 rounded-full bg-[#f5b041] text-[#2c231b] flex items-center justify-center hover:bg-white transition duration-300">
                 <i className="fab fa-youtube"></i>
               </a>
             </div>
