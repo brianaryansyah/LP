@@ -69,7 +69,7 @@ export default function Location() {
           
           <Reveal delay={300}>
           <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6 px-4">
-            <a href="#location" className="text-[#f5b041] font-bold underline hover:text-[#e09132] transition text-sm sm:text-base hover:scale-105 transform">
+            <a href="https://maps.google.com/?q=Mie+Ayam+Semangkok" target="_blank" rel="noopener noreferrer" className="text-[#f5b041] font-bold underline hover:text-[#e09132] transition text-sm sm:text-base hover:scale-105 transform">
               Lokasi Cabang Kami
             </a>
             <a href="https://wa.me/6285640734972?text=Halo%20Semangkok%2C%20saya%20ingin%20memesan" target="_blank" rel="noopener noreferrer" className="bg-[#2c231b] text-white px-6 py-3 rounded-full font-bold hover:bg-black transition text-sm sm:text-base flex items-center shadow-lg hover:-translate-y-1 transform duration-300">
