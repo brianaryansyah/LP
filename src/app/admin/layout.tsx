@@ -1,52 +1,65 @@
-import type { Metadata } from "next";
+"use client";
+import React from "react";
+import { usePathname } from "next/navigation";
 
-export const metadata: Metadata = {
-  title: "Admin Dashboard - Semangkok",
-  description: "Admin area for Semangkok",
-};
+const navItems = [
+  { href: "/admin", label: "Dashboard", icon: "fas fa-chart-pie" },
+  { href: "/admin/orders", label: "Kelola Pesanan", icon: "fas fa-shopping-bag" },
+  { href: "/admin/menu", label: "Kelola Menu", icon: "fas fa-utensils" },
+];
 
 export default function AdminLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = usePathname();
+
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className="flex min-h-screen bg-[#fdf8f5]">
       {/* Sidebar */}
-      <aside className="w-64 bg-white shadow-md">
-        <div className="p-4">
-          <h2 className="text-2xl font-bold text-gray-800">🍜 Admin</h2>
+      <aside className="w-64 bg-[#2c231b] text-[#fdf8f5] flex flex-col fixed inset-y-0 left-0 z-40">
+        <div className="p-6 flex items-center gap-3 border-b border-[#fdf8f5]/10">
+          <div className="w-10 h-10 bg-[#f5b041] rounded-full flex items-center justify-center">
+            <i className="fas fa-bowl-food text-[#2c231b]"></i>
+          </div>
+          <div>
+            <h2 className="text-lg font-extrabold font-poppins text-[#fdf8f5]">Semangkok</h2>
+            <span className="text-[10px] text-[#f5b041] font-semibold uppercase tracking-widest">Admin Panel</span>
+          </div>
         </div>
-        <nav className="mt-4">
-          <a
-            href="/admin"
-            className="block px-4 py-2 text-gray-700 hover:bg-gray-200"
-          >
-            Dashboard
-          </a>
-          <a
-            href="/admin/orders"
-            className="block px-4 py-2 text-gray-700 hover:bg-gray-200"
-          >
-            Kelola Pesanan
-          </a>
-          <a
-            href="/admin/menu"
-            className="block px-4 py-2 text-gray-700 hover:bg-gray-200"
-          >
-            Kelola Menu
-          </a>
+        <nav className="flex-1 p-4 space-y-2">
+          {navItems.map((item) => {
+            const active = pathname === item.href;
+            return (
+              <a
+                key={item.href}
+                href={item.href}
+                className={`flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-colors ${
+                  active
+                    ? "bg-[#f5b041] text-[#2c231b] shadow-lg"
+                    : "text-[#fdf8f5]/70 hover:bg-[#fdf8f5]/10 hover:text-[#fdf8f5]"
+                }`}
+              >
+                <i className={`${item.icon} w-5 text-center`}></i>
+                {item.label}
+              </a>
+            );
+          })}
+        </nav>
+        <div className="p-4 border-t border-[#fdf8f5]/10">
           <a
             href="/admin/login"
-            className="block px-4 py-2 text-red-600 hover:bg-red-50 mt-auto"
+            className="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium text-[#fdf8f5]/70 hover:bg-red-500/20 hover:text-red-300 transition-colors"
           >
+            <i className="fas fa-sign-out-alt w-5 text-center"></i>
             Logout
           </a>
-        </nav>
+        </div>
       </aside>
 
       {/* Main Content */}
-      <main className="flex-1 p-8 overflow-y-auto">{children}</main>
+      <main className="flex-1 ml-64 p-8 overflow-y-auto">{children}</main>
     </div>
   );
 }
