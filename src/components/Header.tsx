@@ -5,46 +5,49 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm transition-all">
+    <header className="w-full z-50 pt-6 pb-4 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center gap-3 cursor-pointer">
-            <span className="text-3xl">🍜</span>
+            <div className="bg-orange-400 p-2 rounded-xl">
+              <span className="text-2xl text-white block leading-none">🍜</span>
+            </div>
             <div>
-              <h1 className="text-xl font-bold text-gray-900 font-poppins">
-                Mie Ayam Semangkok
+              <h1 className="text-xl font-bold text-amber-950 font-poppins leading-tight">
+                Semangkok
               </h1>
-              <p className="text-xs text-gray-500 font-inter hidden sm:block">
-                Rasa Autentik Sejak 1990
-              </p>
             </div>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8 font-inter">
-            <a href="#home" className="text-gray-700 hover:text-orange-500 transition">
+          <nav className="hidden md:flex items-center space-x-10 font-inter">
+            <a href="#home" className="text-amber-950 font-medium hover:text-orange-500 transition">
               Home
             </a>
-            <a href="#menu" className="text-gray-700 hover:text-orange-500 transition">
+            <a href="#menu" className="text-amber-950 font-medium hover:text-orange-500 transition">
               Menu
             </a>
-            <a href="#unggulan" className="text-gray-700 hover:text-orange-500 transition">
+            <a href="#unggulan" className="text-amber-950 font-medium hover:text-orange-500 transition">
               Keunggulan
             </a>
-            <a href="#location" className="text-gray-700 hover:text-orange-500 transition">
+            <a href="#location" className="text-amber-950 font-medium hover:text-orange-500 transition">
               Lokasi
             </a>
-            <button className="bg-orange-500 text-white px-6 py-2 rounded-full font-medium hover:bg-orange-600 transition shadow-lg hover:shadow-orange-500/30">
+          </nav>
+
+          {/* Button */}
+          <div className="hidden md:block">
+            <button className="bg-orange-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-orange-600 transition shadow-lg shadow-orange-500/30">
               Pesan Sekarang
             </button>
-          </nav>
+          </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-gray-700 hover:text-orange-500 focus:outline-none p-2"
+              className="text-amber-950 hover:text-orange-500 focus:outline-none p-2"
             >
               <i className={`fas ${isMobileMenuOpen ? "fa-times" : "fa-bars"} text-2xl`}></i>
             </button>
@@ -54,32 +57,35 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white border-t">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <div className="md:hidden bg-[#fdf6e9] border-t border-orange-200 absolute w-full left-0 mt-4 shadow-xl z-50">
+          <div className="px-4 pt-2 pb-6 space-y-2">
             <a
               href="#home"
-              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-orange-500 hover:bg-gray-50 rounded-md"
+              className="block px-3 py-2 text-base font-medium text-amber-950 hover:text-orange-500 rounded-md"
             >
               Home
             </a>
             <a
               href="#menu"
-              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-orange-500 hover:bg-gray-50 rounded-md"
+              className="block px-3 py-2 text-base font-medium text-amber-950 hover:text-orange-500 rounded-md"
             >
               Menu
             </a>
             <a
               href="#unggulan"
-              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-orange-500 hover:bg-gray-50 rounded-md"
+              className="block px-3 py-2 text-base font-medium text-amber-950 hover:text-orange-500 rounded-md"
             >
               Keunggulan
             </a>
             <a
               href="#location"
-              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-orange-500 hover:bg-gray-50 rounded-md"
+              className="block px-3 py-2 text-base font-medium text-amber-950 hover:text-orange-500 rounded-md"
             >
               Lokasi
             </a>
+            <button className="w-full mt-4 bg-orange-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-600 transition shadow-lg shadow-orange-500/30">
+              Pesan Sekarang
+            </button>
           </div>
         </div>
       )}
