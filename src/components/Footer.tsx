@@ -5,9 +5,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 border-b border-[#fdf8f5]/10 pb-12 mb-8">
           {/* Logo & Social */}
           <div>
-            <div className="flex items-center gap-3 mb-6 cursor-pointer">
-              <div className="bg-[#f5b041] p-2 rounded-xl">
-                <span className="text-2xl text-white block leading-none">🍜</span>
+            <div className="flex items-center gap-3 mb-6 cursor-pointer group">
+              <div className="bg-[#f5b041] w-10 h-10 rounded-full flex items-center justify-center border border-[#fdf8f5]/20 group-hover:bg-[#fdf8f5] transition-colors duration-300">
+                <i className="fas fa-bowl-food text-[#2c231b] text-sm"></i>
               </div>
               <h3 className="text-2xl font-bold font-poppins text-[#fdf8f5]">Semangkok</h3>
             </div>
