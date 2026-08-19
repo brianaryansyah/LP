@@ -9,6 +9,12 @@ export default function Location() {
     { icon: <i className="fas fa-calendar-alt text-[#f5b041]"></i>, title: "Reservasi Meja", desc: "Pesan meja Anda lebih awal untuk momen spesial." }
   ];
 
+  const info = [
+    { icon: "fas fa-map-marker-alt", title: "Alamat", value: "Jl. Kuliner Raya No. 12, Jakarta Selatan" },
+    { icon: "fas fa-clock", title: "Jam Buka", value: "Setiap Hari, 10.00 - 22.00 WIB" },
+    { icon: "fas fa-phone-alt", title: "Kontak", value: "0856-4073-4972" },
+  ];
+
   return (
     <section id="location" className="relative min-h-screen flex flex-col justify-center py-16 lg:py-24 bg-[#fdf8f5] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
@@ -38,10 +44,26 @@ export default function Location() {
           <div className="relative w-full h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-xl group border-[4px] sm:border-[8px] border-white">
             <Image src="/img/mi-ayam-bakso.jpg" alt="Suasana Restoran" fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 80vw" className="object-cover transition-transform duration-[2000ms] group-hover:scale-105" />
             <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-500 flex items-center justify-center">
-              <button aria-label="Tonton video suasana restoran" className="w-16 h-16 sm:w-20 sm:h-20 bg-[#fdf8f5]/90 backdrop-blur-sm rounded-full flex items-center justify-center text-[#f5b041] text-xl sm:text-2xl hover:scale-110 transition-transform duration-300 shadow-lg">
-                <i className="fas fa-play ml-1 sm:ml-2"></i>
-              </button>
+              <a href="https://maps.google.com/?q=Mie+Ayam+Semangkok" target="_blank" rel="noopener noreferrer" aria-label="Buka lokasi di Google Maps" className="w-16 h-16 sm:w-20 sm:h-20 bg-[#fdf8f5]/90 backdrop-blur-sm rounded-full flex items-center justify-center text-[#f5b041] text-xl sm:text-2xl hover:scale-110 transition-transform duration-300 shadow-lg">
+                <i className="fas fa-map-marker-alt ml-1"></i>
+              </a>
             </div>
+          </div>
+          </Reveal>
+
+          <Reveal delay={250}>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-8 sm:mt-12">
+            {info.map((item) => (
+              <div key={item.title} className="bg-white p-4 sm:p-6 rounded-2xl sm:rounded-3xl border border-[#2c231b]/5 text-left flex items-start gap-4 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-500">
+                <div className="w-12 h-12 rounded-full bg-[#f5b041]/20 text-[#f5b041] flex items-center justify-center shrink-0">
+                  <i className={`${item.icon} text-xl`}></i>
+                </div>
+                <div>
+                  <h4 className="text-base font-bold text-[#2c231b] font-poppins">{item.title}</h4>
+                  <p className="text-sm text-[#2c231b]/70 font-inter mt-1">{item.value}</p>
+                </div>
+              </div>
+            ))}
           </div>
           </Reveal>
           
