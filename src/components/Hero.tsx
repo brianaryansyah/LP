@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-24 pb-20 sm:pt-32 sm:pb-32 bg-[#fdf8f5] overflow-hidden">
@@ -50,9 +52,9 @@ export default function Hero() {
             {/* Trust Indicators */}
             <div className="mt-10 sm:mt-12 flex items-center gap-6 pt-6 border-t border-[#2c231b]/10">
               <div className="flex -space-x-3">
-                <img className="w-10 h-10 rounded-full border-2 border-[#fdf8f5] object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop" alt="User" />
-                <img className="w-10 h-10 rounded-full border-2 border-[#fdf8f5] object-cover" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop" alt="User" />
-                <img className="w-10 h-10 rounded-full border-2 border-[#fdf8f5] object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt="User" />
+                <Image className="w-10 h-10 rounded-full border-2 border-[#fdf8f5] object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop" alt="Pelanggan Semangkok" width={40} height={40} />
+                <Image className="w-10 h-10 rounded-full border-2 border-[#fdf8f5] object-cover" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop" alt="Pelanggan Semangkok" width={40} height={40} />
+                <Image className="w-10 h-10 rounded-full border-2 border-[#fdf8f5] object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt="Pelanggan Semangkok" width={40} height={40} />
               </div>
               <div className="text-sm">
                 <div className="font-bold text-[#2c231b]">Ribuan Pelanggan</div>
@@ -70,10 +72,13 @@ export default function Hero() {
 
             {/* Main Image Container */}
             <div className="w-[90%] sm:w-[85%] max-w-[500px] aspect-[4/5] rounded-[3rem] overflow-hidden relative shadow-2xl z-10 border-8 border-white bg-white group">
-              <img
+              <Image
                 src="/img/mi-ayam-bakso.jpg"
                 alt="Mie Ayam Premium"
-                className="w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-110"
+                fill
+                priority
+                sizes="(max-width: 640px) 90vw, (max-width: 1024px) 85vw, 500px"
+                className="object-cover transition-transform duration-[2000ms] group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
