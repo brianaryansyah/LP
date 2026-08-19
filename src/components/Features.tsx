@@ -8,11 +8,11 @@ export default function Features() {
           <div className="flex-1 w-full relative max-w-lg mx-auto lg:max-w-none group">
             <div className="grid grid-cols-2 gap-3 sm:gap-4 relative z-10">
               <div className="col-span-2 rounded-2xl sm:rounded-3xl overflow-hidden h-48 sm:h-64 shadow-2xl transition-transform duration-700 group-hover:scale-[1.02]">
-                <img src="/img/mi ayam kepala.jpg" alt="Proses Memasak" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
+                <img src="/img/mi-ayam-kepala.jpg" alt="Proses Memasak" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition duration-700"></div>
               </div>
               <div className="rounded-2xl sm:rounded-3xl overflow-hidden h-32 sm:h-48 shadow-xl transition-transform duration-700 delay-100 group-hover:-translate-y-2 group-hover:rotate-1">
-                <img src="/img/bakso urat.png" alt="Bahan Segar" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
+                <img src="/img/bakso-urat.png" alt="Bahan Segar" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
               </div>
               <div className="rounded-2xl sm:rounded-3xl overflow-hidden h-32 sm:h-48 shadow-xl transition-transform duration-700 delay-200 group-hover:-translate-y-2 group-hover:-rotate-1">
                 <img src="/img/bakso.png" alt="Mie Spesial" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />

@@ -7,21 +7,21 @@ const menuItems = [
     name: "Mie Ayam Original",
     price: "Rp 15.000",
     desc: "Mie ayam klasik dengan ayam kecap manis gurih",
-    img: "/img/mi ayam.jpg",
+    img: "/img/mi-ayam.jpg",
   },
   {
     id: 2,
     name: "Mie Ayam Bakso",
     price: "Rp 20.000",
     desc: "Mie ayam ditambah bakso sapi asli",
-    img: "/img/mi ayam bakso.jpg",
+    img: "/img/mi-ayam-bakso.jpg",
   },
   {
     id: 3,
     name: "Hotplate Seafood",
     price: "Rp 35.000",
     desc: "Bakmi hotplate dengan udang, cumi, dan kerang",
-    img: "/img/seafood hot plate.jpg",
+    img: "/img/seafood-hot-plate.jpg",
   },
 ];
 

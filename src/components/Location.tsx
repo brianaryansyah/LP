@@ -28,7 +28,7 @@ export default function Location() {
           </div>
 
           <div className="relative w-full h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-xl group border-[4px] sm:border-[8px] border-white">
-            <img src="/img/mi ayam bakso.jpg" alt="Suasana Restoran" className="w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-105" />
+            <img src="/img/mi-ayam-bakso.jpg" alt="Suasana Restoran" className="w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-105" />
             <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-500 flex items-center justify-center">
               <button className="w-16 h-16 sm:w-20 sm:h-20 bg-[#fdf8f5]/90 backdrop-blur-sm rounded-full flex items-center justify-center text-[#f5b041] text-xl sm:text-2xl hover:scale-110 transition-transform duration-300 shadow-lg">
                 <i className="fas fa-play ml-1 sm:ml-2"></i>

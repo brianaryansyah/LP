@@ -71,7 +71,7 @@ export default function Hero() {
             {/* Main Image Container */}
             <div className="w-[90%] sm:w-[85%] max-w-[500px] aspect-[4/5] rounded-[3rem] overflow-hidden relative shadow-2xl z-10 border-8 border-white bg-white group">
               <img
-                src="/img/mi ayam bakso.jpg"
+                src="/img/mi-ayam-bakso.jpg"
                 alt="Mie Ayam Premium"
                 className="w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-110"
               />
