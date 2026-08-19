@@ -1,25 +1,67 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+
+const navLinks = [
+  { href: "#home", label: "Beranda", id: "home" },
+  { href: "#unggulan", label: "Keunggulan", id: "unggulan" },
+  { href: "#menu", label: "Menu", id: "menu" },
+  { href: "#reservasi", label: "Reservasi", id: "reservasi" },
+  { href: "#location", label: "Lokasi", id: "location" },
+];
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
+  const headerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
+      let current = "home";
+      for (const link of navLinks) {
+        const el = document.getElementById(link.id);
+        if (el && window.scrollY >= el.offsetTop - 160) {
+          current = link.id;
+        }
+      }
+      setActiveSection(current);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (!isOpen) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setIsOpen(false);
+    };
+    const onMouseDown = (e: MouseEvent) => {
+      if (headerRef.current && !headerRef.current.contains(e.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("keydown", onKeyDown);
+    document.addEventListener("mousedown", onMouseDown);
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      document.removeEventListener("mousedown", onMouseDown);
+    };
+  }, [isOpen]);
+
+  const linkClass = (id: string) =>
+    `text-[#2c231b] font-semibold hover:text-[#f5b041] transition-colors text-sm ${
+      activeSection === id ? "text-[#f5b041]" : ""
+    }`;
+
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/80 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-5'}`}>
+    <header ref={headerRef} className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/80 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-5'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           
           {/* Logo */}
-          <div className="flex-shrink-0 flex items-center gap-3 cursor-pointer group">
+          <a href="#home" className="flex-shrink-0 flex items-center gap-3 cursor-pointer group" aria-label="Semangkok - kembali ke beranda">
             <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#f5b041] rounded-full flex items-center justify-center border-2 border-transparent group-hover:border-[#2c231b] transition-all duration-300 shadow-md group-hover:rotate-12">
               <i className="fas fa-bowl-food text-white text-sm sm:text-base"></i>
             </div>
@@ -29,14 +71,15 @@ export default function Header() {
               </h1>
               <span className="text-[10px] sm:text-xs text-[#2c231b]/60 font-medium tracking-widest uppercase hidden sm:block">Mie Ayam Premium</span>
             </div>
-          </div>
+          </a>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex space-x-8 items-center bg-white/50 backdrop-blur-sm px-8 py-3 rounded-full border border-gray-100 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07)]">
-            <a href="#home" className="text-[#2c231b] font-semibold hover:text-[#f5b041] transition-colors text-sm">Beranda</a>
-            <a href="#unggulan" className="text-[#2c231b] font-semibold hover:text-[#f5b041] transition-colors text-sm">Keunggulan</a>
-            <a href="#menu" className="text-[#2c231b] font-semibold hover:text-[#f5b041] transition-colors text-sm">Menu</a>
-            <a href="#location" className="text-[#2c231b] font-semibold hover:text-[#f5b041] transition-colors text-sm">Lokasi</a>
+            {navLinks.map((link) => (
+              <a key={link.id} href={link.href} className={linkClass(link.id)}>
+                {link.label}
+              </a>
+            ))}
           </nav>
 
           {/* CTA Button */}
@@ -71,10 +114,11 @@ export default function Header() {
       {isOpen && (
         <div id="mobile-menu" className="md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-xl shadow-xl border-t border-gray-100">
           <div className="px-4 pt-4 pb-6 space-y-2">
-            <a href="#home" onClick={() => setIsOpen(false)} className="block px-4 py-3 rounded-xl text-base font-bold text-[#2c231b] hover:bg-[#f5b041]/10 hover:text-[#f5b041] transition">Beranda</a>
-            <a href="#unggulan" onClick={() => setIsOpen(false)} className="block px-4 py-3 rounded-xl text-base font-bold text-[#2c231b] hover:bg-[#f5b041]/10 hover:text-[#f5b041] transition">Keunggulan</a>
-            <a href="#menu" onClick={() => setIsOpen(false)} className="block px-4 py-3 rounded-xl text-base font-bold text-[#2c231b] hover:bg-[#f5b041]/10 hover:text-[#f5b041] transition">Menu</a>
-            <a href="#location" onClick={() => setIsOpen(false)} className="block px-4 py-3 rounded-xl text-base font-bold text-[#2c231b] hover:bg-[#f5b041]/10 hover:text-[#f5b041] transition">Lokasi</a>
+            {navLinks.map((link) => (
+              <a key={link.id} href={link.href} onClick={() => setIsOpen(false)} className={`block px-4 py-3 rounded-xl text-base font-bold transition ${activeSection === link.id ? "text-[#f5b041] bg-[#f5b041]/10" : "text-[#2c231b] hover:bg-[#f5b041]/10 hover:text-[#f5b041]"}`}>
+                {link.label}
+              </a>
+            ))}
             <a href="#menu" onClick={() => setIsOpen(false)} className="block px-4 py-3 mt-4 rounded-xl text-center text-base font-bold bg-[#f5b041] text-[#2c231b] shadow-md">Pesan Sekarang</a>
           </div>
         </div>
