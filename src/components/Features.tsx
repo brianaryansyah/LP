@@ -16,10 +16,10 @@ export default function Features() {
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition duration-700"></div>
               </div>
               <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden w-full aspect-[4/3] shadow-xl transition-transform duration-700 delay-100 group-hover:-translate-y-2 group-hover:rotate-1">
-                <Image src="/img/bakso-urat.png" alt="Bahan Segar" fill sizes="(max-width: 640px) 45vw, 20vw" className="object-cover transition-transform duration-1000 group-hover:scale-110" />
+                <Image src="/img/mi-ayam.jpg" alt="Bahan Segar" fill sizes="(max-width: 640px) 45vw, 20vw" className="object-cover transition-transform duration-1000 group-hover:scale-110" />
               </div>
               <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden w-full aspect-[4/3] shadow-xl transition-transform duration-700 delay-200 group-hover:-translate-y-2 group-hover:-rotate-1">
-                <Image src="/img/bakso.png" alt="Mie Spesial" fill sizes="(max-width: 640px) 45vw, 20vw" className="object-cover transition-transform duration-1000 group-hover:scale-110" />
+                <Image src="/img/mi-ayam-bakso.jpg" alt="Mie Spesial" fill sizes="(max-width: 640px) 45vw, 20vw" className="object-cover transition-transform duration-1000 group-hover:scale-110" />
               </div>
             </div>
             
