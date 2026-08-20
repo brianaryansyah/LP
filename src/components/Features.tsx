@@ -3,7 +3,7 @@ import Reveal from "@/components/Reveal";
 
 export default function Features() {
   return (
-    <section id="unggulan" className="relative min-h-screen flex flex-col justify-center py-16 lg:py-24 bg-[#fdf8f5]">
+    <section id="unggulan" className="relative min-h-screen flex flex-col justify-center py-16 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         
         <Reveal>
