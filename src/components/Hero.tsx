@@ -12,7 +12,7 @@ export default function Hero() {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
           
           {/* Left Content Area */}
-          <div className="flex-1 text-left w-full max-w-2xl lg:max-w-none animate__animated animate__fadeInLeft relative z-20">
+          <div className="flex-1 text-left w-full max-w-2xl lg:max-w-none animate__animated animate__fadeInUp relative z-20">
             
             {/* Main Heading */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] font-extrabold text-[#2c231b] font-poppins leading-[1.1] mb-6 tracking-tight">
@@ -59,7 +59,7 @@ export default function Hero() {
           </div>
 
           {/* Right Image Area */}
-          <div className="flex-1 w-full flex justify-center lg:justify-end relative mt-12 lg:mt-0 animate__animated animate__fadeInRight animate-float" style={{ animationDuration: '6s' }}>
+          <div className="flex-1 w-full flex justify-center lg:justify-end relative mt-12 lg:mt-0 animate__animated animate__fadeInUp animate-float" style={{ animationDuration: '6s' }}>
             
             {/* Aesthetic Background Shape */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] sm:w-[80%] aspect-square bg-[#f5b041] rounded-[4rem] rotate-12 opacity-80 shadow-2xl z-0 transition-transform duration-700 hover:rotate-6"></div>
