@@ -47,9 +47,9 @@ export default function Hero() {
             {/* Trust Indicators */}
             <div className="mt-10 sm:mt-12 flex items-center gap-6 pt-6 border-t border-[#2c231b]/10">
               <div className="flex -space-x-3">
-                <Image className="w-10 h-10 rounded-full border-2 border-[#fdf8f5] object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop" alt="Pelanggan Semangkok" width={40} height={40} />
-                <Image className="w-10 h-10 rounded-full border-2 border-[#fdf8f5] object-cover" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop" alt="Pelanggan Semangkok" width={40} height={40} />
-                <Image className="w-10 h-10 rounded-full border-2 border-[#fdf8f5] object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt="Pelanggan Semangkok" width={40} height={40} />
+                <Image className="w-10 h-10 rounded-full border-2 border-[#fdf8f5] object-cover" src="https://images.unsplash.com/photo-1555952517-2e8e729e0b44?w=100&h=100&fit=crop" alt="Pelanggan Semangkok" width={40} height={40} />
+                <Image className="w-10 h-10 rounded-full border-2 border-[#fdf8f5] object-cover" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop" alt="Pelanggan Semangkok" width={40} height={40} />
+                <Image className="w-10 h-10 rounded-full border-2 border-[#fdf8f5] object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="Pelanggan Semangkok" width={40} height={40} />
               </div>
               <div>
                 <div className="font-bold text-[#2c231b] font-poppins text-sm sm:text-base">Ulasan Nyata Pelanggan</div>
