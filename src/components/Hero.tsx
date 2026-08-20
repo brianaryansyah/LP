@@ -26,8 +26,8 @@ export default function Hero() {
             </h1>
             
             {/* Description */}
-            <p className="text-base sm:text-lg text-[#2c231b]/70 mb-8 sm:mb-10 font-inter max-w-xl leading-relaxed">
-              Warisan resep keluarga sejak 1990. Rasakan tekstur mie yang kenyal, potongan ayam melimpah, dan kuah kaldu gurih yang akan membuat Anda selalu ingin kembali.
+            <p className="text-base sm:text-lg lg:text-xl text-[#2c231b]/80 font-inter mb-8 max-w-2xl leading-relaxed">
+              Cita rasa autentik yang memanjakan lidah ✦ Perpaduan sempurna antara mie kenyal, kaldu gurih yang kaya rempah, dan potongan ayam melimpah ✦ Pilihan utama pecinta kuliner sejati.
             </p>
             
             {/* Action Buttons */}
@@ -51,9 +51,9 @@ export default function Hero() {
                 <Image className="w-10 h-10 rounded-full border-2 border-[#fdf8f5] object-cover" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop" alt="Pelanggan Semangkok" width={40} height={40} />
                 <Image className="w-10 h-10 rounded-full border-2 border-[#fdf8f5] object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt="Pelanggan Semangkok" width={40} height={40} />
               </div>
-              <div className="text-sm">
-                <div className="font-bold text-[#2c231b]">Ribuan Pelanggan</div>
-                <div className="text-[#2c231b]/60">Puas Setiap Harinya</div>
+              <div>
+                <div className="font-bold text-[#2c231b] font-poppins text-sm sm:text-base">Ulasan Nyata Pelanggan</div>
+                <div className="text-xs sm:text-sm text-[#2c231b]/60 font-medium">Berdasarkan 17+ Review Google Maps</div>
               </div>
             </div>
           </div>
@@ -96,7 +96,7 @@ export default function Hero() {
                  <i className="fas fa-star"></i>
                  <i className="fas fa-star"></i>
                </div>
-               <span className="font-bold text-[#2c231b] text-sm">4.9/5</span>
+               <span className="font-bold text-[#2c231b] font-poppins text-sm sm:text-base">5.0/5</span>
             </div>
 
           </div>
