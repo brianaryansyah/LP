@@ -5,10 +5,11 @@ import Menu from "@/components/Menu";
 import Reservation from "@/components/Reservation";
 import Location from "@/components/Location";
 import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-transparent">
+    <main className="min-h-screen bg-transparent relative">
       <Header />
       <Hero />
       <Features />
@@ -16,6 +17,7 @@ export default function Home() {
       <Reservation />
       <Location />
       <Footer />
+      <ScrollToTop />
     </main>
   );
 }
