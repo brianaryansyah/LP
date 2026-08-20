@@ -10,7 +10,7 @@ export default function Location() {
   ];
 
   const info = [
-    { icon: "fas fa-map-marker-alt", title: "Alamat", value: "Jl. Kuliner Raya No. 12, Jakarta Selatan" },
+    { icon: "fas fa-map-marker-alt", title: "Alamat", value: "Jl. Karimata No.40, Mulyoharjo, Pemalang" },
     { icon: "fas fa-clock", title: "Jam Buka", value: "Setiap Hari, 10.00 - 22.00 WIB" },
     { icon: "fas fa-phone-alt", title: "Kontak", value: "0856-4073-4972" },
   ];
@@ -42,10 +42,21 @@ export default function Location() {
 
           <Reveal delay={200}>
           <div className="relative w-full h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-xl group border-[4px] sm:border-[8px] border-white">
-            <Image src="/img/mi-ayam-bakso.jpg" alt="Suasana Restoran" fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 80vw" className="object-cover transition-transform duration-[2000ms] group-hover:scale-105" />
-            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-500 flex items-center justify-center">
-              <a href="https://maps.google.com/?q=Mie+Ayam+Semangkok" target="_blank" rel="noopener noreferrer" aria-label="Buka lokasi di Google Maps" className="w-16 h-16 sm:w-20 sm:h-20 bg-[#fdf8f5]/90 backdrop-blur-sm rounded-full flex items-center justify-center text-[#f5b041] text-xl sm:text-2xl hover:scale-110 transition-transform duration-300 shadow-lg">
-                <i className="fas fa-map-marker-alt ml-1"></i>
+            <iframe 
+              src="https://maps.google.com/maps?q=Jl.%20Karimata%20No.40,%20Mulyoharjo,%20Kec.%20Pemalang,%20Kabupaten%20Pemalang,%20Jawa%20Tengah%2052313&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+              width="100%" 
+              height="100%" 
+              style={{ border: 0 }} 
+              allowFullScreen 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+              className="grayscale-[20%] contrast-[110%] group-hover:grayscale-0 transition-all duration-700"
+            ></iframe>
+            
+            {/* Map Overlay Button (optional, can be removed if iframe is interactive, but good for mobile) */}
+            <div className="absolute inset-0 pointer-events-none flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/10">
+              <a href="https://maps.app.goo.gl/NvCxPom7GSdYFj7Z9" target="_blank" rel="noopener noreferrer" aria-label="Buka lokasi di Google Maps" className="pointer-events-auto w-16 h-16 sm:w-20 sm:h-20 bg-[#fdf8f5]/90 backdrop-blur-sm rounded-full flex items-center justify-center text-[#f5b041] text-xl sm:text-2xl hover:scale-110 transition-transform duration-300 shadow-lg">
+                <i className="fas fa-external-link-alt ml-1"></i>
               </a>
             </div>
           </div>
@@ -69,7 +80,7 @@ export default function Location() {
           
           <Reveal delay={300}>
           <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6 px-4">
-            <a href="https://maps.google.com/?q=Mie+Ayam+Semangkok" target="_blank" rel="noopener noreferrer" className="text-[#f5b041] font-bold underline hover:text-[#e09132] transition text-sm sm:text-base hover:scale-105 transform">
+            <a href="https://maps.app.goo.gl/NvCxPom7GSdYFj7Z9" target="_blank" rel="noopener noreferrer" className="text-[#f5b041] font-bold underline hover:text-[#e09132] transition text-sm sm:text-base hover:scale-105 transform">
               Lokasi Cabang Kami
             </a>
             <a href="https://wa.me/6285640734972?text=Halo%20Semangkok%2C%20saya%20ingin%20memesan" target="_blank" rel="noopener noreferrer" className="bg-[#2c231b] text-white px-6 py-3 rounded-full font-bold hover:bg-black transition text-sm sm:text-base flex items-center shadow-lg hover:-translate-y-1 transform duration-300">
