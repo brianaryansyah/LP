@@ -66,7 +66,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <i className="fas fa-map-marker-alt text-[#f5b041] w-4 mt-0.5"></i>
-                Jl. Kuliner Raya No. 12, Jakarta Selatan
+                Jl. Karimata No.40, Mulyoharjo, Pemalang
               </li>
               <li className="flex items-center gap-3">
                 <i className="fas fa-phone-alt text-[#f5b041] w-4"></i>
