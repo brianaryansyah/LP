@@ -59,7 +59,7 @@ export default function Hero() {
           </div>
 
           {/* Right Image Area */}
-          <div className="flex-1 w-full flex justify-center lg:justify-end relative mt-12 lg:mt-0 animate-float" style={{ animationDuration: '6s' }}>
+          <div className="flex-1 w-full flex justify-center lg:justify-end relative mt-12 lg:mt-0">
             
             {/* Aesthetic Background Shape */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] sm:w-[80%] aspect-square bg-[#f5b041] rounded-[4rem] rotate-12 opacity-80 shadow-2xl z-0 transition-transform duration-700 hover:rotate-6"></div>
@@ -79,7 +79,7 @@ export default function Hero() {
             </div>
             
             {/* Absolute Badges - Bulletproof Positioning */}
-            <div className="absolute -bottom-6 sm:-bottom-10 left-4 sm:left-10 bg-white px-5 py-4 sm:px-6 sm:py-5 rounded-2xl shadow-2xl z-30 flex items-center gap-3 sm:gap-4 border border-gray-100 animate-float" style={{ animationDuration: '4s', animationDelay: '1s' }}>
+            <div className="absolute -bottom-6 sm:-bottom-10 left-4 sm:left-10 bg-white px-5 py-4 sm:px-6 sm:py-5 rounded-2xl shadow-2xl z-30 flex items-center gap-3 sm:gap-4 border border-gray-100">
               <div className="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center text-green-600 shrink-0 shadow-inner">
                 <i className="fas fa-certificate text-2xl"></i>
               </div>
@@ -89,7 +89,7 @@ export default function Hero() {
               </div>
             </div>
 
-            <div className="absolute top-10 sm:top-20 -right-4 sm:-right-8 bg-white/90 backdrop-blur-md px-4 py-3 rounded-2xl shadow-xl z-30 flex items-center gap-3 border border-white/50 animate-float" style={{ animationDuration: '5s', animationDelay: '2s' }}>
+            <div className="absolute top-10 sm:top-20 -right-4 sm:-right-8 bg-white/90 backdrop-blur-md px-4 py-3 rounded-2xl shadow-xl z-30 flex items-center gap-3 border border-white/50">
                <div className="text-[#f5b041] flex text-sm">
                  <i className="fas fa-star"></i>
                  <i className="fas fa-star"></i>
