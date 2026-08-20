@@ -59,7 +59,7 @@ export default function Hero() {
           </div>
 
           {/* Right Image Area */}
-          <div className="flex-1 w-full flex justify-center lg:justify-end relative mt-12 lg:mt-0 animate__animated animate__fadeInUp animate-float" style={{ animationDuration: '6s' }}>
+          <div className="flex-1 w-full flex justify-center lg:justify-end relative mt-12 lg:mt-0 animate-float" style={{ animationDuration: '6s' }}>
             
             {/* Aesthetic Background Shape */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] sm:w-[80%] aspect-square bg-[#f5b041] rounded-[4rem] rotate-12 opacity-80 shadow-2xl z-0 transition-transform duration-700 hover:rotate-6"></div>
