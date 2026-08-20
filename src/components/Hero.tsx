@@ -13,11 +13,6 @@ export default function Hero() {
           
           {/* Left Content Area */}
           <div className="flex-1 text-left w-full max-w-2xl lg:max-w-none animate__animated animate__fadeInLeft relative z-20">
-            {/* Elegant Top Pill */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-[#2c231b] font-bold text-xs mb-6 sm:mb-8 tracking-wide shadow-sm border border-[#2c231b]/5">
-              <span className="w-2 h-2 rounded-full bg-[#f5b041] animate-pulse"></span>
-              Pilihan Nomor 1 di Kota Anda
-            </div>
             
             {/* Main Heading */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] font-extrabold text-[#2c231b] font-poppins leading-[1.1] mb-6 tracking-tight">
