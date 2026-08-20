@@ -76,28 +76,6 @@ export default function Features() {
           </div>
         </div>
         </Reveal>
-
-        {/* Testimonial Block */}
-        <Reveal delay={100}>
-        <div className="bg-gradient-to-br from-[#f5b041]/20 to-[#f5b041]/5 rounded-[2rem] sm:rounded-[3rem] p-6 sm:p-10 md:p-16 relative mt-8 sm:mt-12 mx-auto max-w-4xl shadow-2xl border border-[#f5b041]/20 hover:scale-[1.02] transition-transform duration-500">
-          <div className="absolute top-6 right-6 sm:top-10 sm:right-10 opacity-10 animate-pulse">
-            <i className="fas fa-quote-right text-6xl sm:text-8xl text-[#f5b041]"></i>
-          </div>
-          <p className="text-base sm:text-xl md:text-2xl text-[#2c231b] font-poppins font-medium leading-relaxed mb-8 sm:mb-10 relative z-10 italic">
-            &ldquo;Sebagai pecinta mie ayam, saya selalu mengandalkan Semangkok untuk memuaskan selera saya. Tekstur mie yang kenyal, potongan ayam yang melimpah, dan kuah kaldu yang gurih tidak pernah mengecewakan.&rdquo;
-          </p>
-          <div className="flex items-center gap-4 relative z-10">
-            <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full overflow-hidden bg-gray-200 shrink-0 border-2 border-white shadow-md">
-              <Image src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" alt="Sarah Johnson" width={64} height={64} className="w-full h-full object-cover" />
-            </div>
-            <div>
-              <h5 className="font-bold text-[#2c231b] font-poppins text-sm sm:text-base">Sarah Johnson</h5>
-              <p className="text-[#2c231b]/60 text-xs sm:text-sm">Food Blogger</p>
-            </div>
-          </div>
-        </div>
-        </Reveal>
-
       </div>
     </section>
   );

@@ -1,0 +1,46 @@
+import Image from "next/image";
+import Reveal from "@/components/Reveal";
+
+export default function Testimonial() {
+  return (
+    <section id="testimoni" className="relative py-16 lg:py-24 bg-[#fdf8f5] overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center relative z-10 pb-12 sm:pb-16">
+        <Reveal>
+          <div className="inline-block px-4 py-1.5 rounded-full bg-[#f5b041]/20 text-[#2c231b] font-bold text-xs mb-4 uppercase tracking-wider shadow-sm border border-[#f5b041]/30">
+            Testimoni
+          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#2c231b] font-poppins leading-tight mb-8 sm:mb-12">
+            Apa Kata Pelanggan Kami
+          </h2>
+        </Reveal>
+
+        <Reveal delay={100}>
+          <div className="bg-gradient-to-br from-[#f5b041]/20 to-[#f5b041]/5 rounded-[2rem] sm:rounded-[3rem] p-8 sm:p-12 md:p-16 relative mx-auto max-w-4xl shadow-2xl border border-[#f5b041]/20 hover:scale-[1.02] transition-transform duration-500 text-left">
+            <div className="absolute top-6 right-6 sm:top-10 sm:right-10 opacity-10 animate-pulse">
+              <i className="fas fa-quote-right text-6xl sm:text-8xl text-[#f5b041]"></i>
+            </div>
+            <p className="text-lg sm:text-xl md:text-2xl text-[#2c231b] font-poppins font-medium leading-relaxed mb-8 sm:mb-10 relative z-10 italic">
+              &ldquo;Sebagai pecinta mie ayam, saya selalu mengandalkan Semangkok untuk memuaskan selera saya. Tekstur mie yang kenyal, potongan ayam yang melimpah, dan kuah kaldu yang gurih tidak pernah mengecewakan.&rdquo;
+            </p>
+            <div className="flex items-center gap-4 relative z-10">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full overflow-hidden bg-gray-200 shrink-0 border-2 border-white shadow-md">
+                <Image src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" alt="Sarah Johnson" width={64} height={64} className="w-full h-full object-cover" />
+              </div>
+              <div>
+                <h5 className="font-bold text-[#2c231b] font-poppins text-sm sm:text-base">Sarah Johnson</h5>
+                <p className="text-[#2c231b]/60 text-xs sm:text-sm">Food Blogger</p>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+      </div>
+
+      {/* Wavy bottom shape divider for smooth transition to Menu section */}
+      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-20 translate-y-[2px]">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-10 sm:h-16 md:h-24 lg:h-32 text-[#2c231b] fill-current">
+          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.45,130.34,124.63,195.4,108.27c44.87-11.28,87.65-29.67,126-51.83Z"></path>
+        </svg>
+      </div>
+    </section>
+  );
+}
