@@ -32,7 +32,7 @@ export default function Location() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-10 md:mb-16">
             {services.map((svc, idx) => (
               <div key={idx} className="bg-white p-4 sm:p-6 rounded-2xl sm:rounded-3xl text-left border border-[#2c231b]/5 hover:border-[#f5b041]/20 transition-all duration-500 cursor-default flex flex-col items-start hover:-translate-y-1 shadow-sm hover:shadow-md group">
-                <div className="text-2xl sm:text-3xl mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-500">{svc.icon}</div>
+                <div className="text-2xl sm:text-3xl mb-3 sm:mb-4 group-hover:scale-105 transition-transform duration-500">{svc.icon}</div>
                 <h4 className="text-base sm:text-lg font-bold text-[#2c231b] font-poppins mb-1 sm:mb-2">{svc.title}</h4>
                 <p className="text-[#2c231b]/70 font-inter text-xs sm:text-sm">{svc.desc}</p>
               </div>
