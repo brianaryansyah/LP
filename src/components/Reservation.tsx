@@ -69,7 +69,7 @@ export default function Reservation() {
               </ul>
             </div>
 
-            <div className="bg-white/5 p-4 rounded-2xl border border-[#fdf8f5]/10 relative z-10">
+            <div className="bg-white/[0.06] p-4 rounded-2xl border border-[#fdf8f5]/15 relative z-10 backdrop-blur-sm">
               <p className="text-sm font-medium text-[#fdf8f5]/70 flex items-start gap-2">
                 <i className="fas fa-info-circle mt-1 text-[#f5b041]"></i>
                 Untuk acara khusus atau grup lebih dari 10 orang, harap reservasi minimal 1 hari sebelumnya.
