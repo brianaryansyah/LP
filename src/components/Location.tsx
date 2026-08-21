@@ -83,7 +83,7 @@ export default function Location() {
             <a href="https://maps.app.goo.gl/NvCxPom7GSdYFj7Z9" target="_blank" rel="noopener noreferrer" className="text-[#f5b041] font-bold underline hover:text-[#e09132] transition text-sm sm:text-base hover:scale-105 transform">
               Lokasi Cabang Kami
             </a>
-            <a href="https://wa.me/6285640734972?text=Halo%20Semangkok%2C%20saya%20ingin%20memesan" target="_blank" rel="noopener noreferrer" className="bg-[#2c231b] text-white px-6 py-3 rounded-full font-bold hover:bg-black transition text-sm sm:text-base flex items-center shadow-lg hover:-translate-y-1 transform duration-300">
+            <a href="https://wa.me/6285640734972?text=Halo%20Semangkok%2C%20saya%20ingin%20memesan" target="_blank" rel="noopener noreferrer" className="bg-[#2c231b] text-white px-6 py-3 rounded-full font-bold hover:bg-[#f5b041] hover:text-[#2c231b] transition-all duration-300 text-sm sm:text-base flex items-center shadow-lg hover:shadow-xl hover:-translate-y-0.5">
               Hubungi via WhatsApp <i className="fas fa-arrow-right ml-3 text-xs"></i>
             </a>
           </div>
