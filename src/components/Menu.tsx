@@ -30,6 +30,8 @@ const menuItems = [
 export default function Menu() {
   return (
     <section id="menu" className="relative min-h-screen flex flex-col justify-center pt-16 pb-32 bg-[#2c231b]">
+      {/* Smooth gradient transition from previous section */}
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white via-[#2c231b]/10 to-transparent pointer-events-none"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         
         {/* Header */}
