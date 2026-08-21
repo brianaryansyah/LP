@@ -78,12 +78,8 @@ export default function Features() {
         </Reveal>
       </div>
 
-      {/* Wavy bottom shape divider for smooth transition to Testimonial */}
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-20 translate-y-[2px]">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-10 sm:h-16 md:h-24 lg:h-32 text-[#fdf8f5] fill-current">
-          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.45,130.34,124.63,195.4,108.27c44.87-11.28,87.65-29.67,126-51.83Z"></path>
-        </svg>
-      </div>
+      {/* Smooth gradient transition to next section */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent via-white/50 to-white pointer-events-none"></div>
     </section>
   );
 }
