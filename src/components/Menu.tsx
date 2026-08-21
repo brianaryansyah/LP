@@ -37,7 +37,7 @@ export default function Menu() {
         {/* Header */}
         <Reveal>
         <div className="text-center mb-10 md:mb-16">
-          <div className="inline-block px-4 py-1.5 rounded-full bg-[#f5b041] text-[#2c231b] font-bold text-xs mb-4 uppercase tracking-wider shadow-md">
+          <div className="inline-block px-4 py-1.5 rounded-full bg-[#f5b041] text-[#2c231b] font-bold text-xs mb-4 uppercase tracking-wider shadow-sm">
             Menu Pilihan
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#fdf8f5] font-poppins mb-4 sm:mb-6">
