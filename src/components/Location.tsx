@@ -53,9 +53,9 @@ export default function Location() {
               className="grayscale-[20%] contrast-[110%] group-hover:grayscale-0 transition-all duration-700"
             ></iframe>
             
-            {/* Map Overlay Button (optional, can be removed if iframe is interactive, but good for mobile) */}
-            <div className="absolute inset-0 pointer-events-none flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/10">
-              <a href="https://maps.app.goo.gl/NvCxPom7GSdYFj7Z9" target="_blank" rel="noopener noreferrer" aria-label="Buka lokasi di Google Maps" className="pointer-events-auto w-16 h-16 sm:w-20 sm:h-20 bg-[#fdf8f5]/90 backdrop-blur-sm rounded-full flex items-center justify-center text-[#f5b041] text-xl sm:text-2xl hover:scale-110 transition-transform duration-300 shadow-lg">
+            {/* Map Overlay Button */}
+            <div className="absolute inset-0 pointer-events-none flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/5">
+              <a href="https://maps.app.goo.gl/NvCxPom7GSdYFj7Z9" target="_blank" rel="noopener noreferrer" aria-label="Buka lokasi di Google Maps" className="pointer-events-auto w-16 h-16 sm:w-20 sm:h-20 bg-[#fdf8f5]/90 backdrop-blur-sm rounded-full flex items-center justify-center text-[#f5b041] text-xl sm:text-2xl hover:scale-105 transition-transform duration-300 shadow-lg">
                 <i className="fas fa-external-link-alt ml-1"></i>
               </a>
             </div>
