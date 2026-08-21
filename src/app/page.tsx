@@ -10,7 +10,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-transparent relative">
+    <main className="min-h-screen bg-[#fdf8f5] relative">
       <Header />
       <Hero />
       <Features />
