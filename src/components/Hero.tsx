@@ -78,7 +78,7 @@ export default function Hero() {
             </div>
             
             {/* Absolute Badges - Bulletproof Positioning */}
-            <div className="absolute -bottom-6 sm:-bottom-10 left-4 sm:left-10 bg-white px-5 py-4 sm:px-6 sm:py-5 rounded-2xl shadow-2xl z-30 flex items-center gap-3 sm:gap-4 border border-gray-100">
+            <div className="absolute -bottom-6 sm:-bottom-10 left-4 sm:left-10 bg-white px-5 py-4 sm:px-6 sm:py-5 rounded-2xl shadow-2xl z-30 flex items-center gap-3 sm:gap-4 border border-gray-100 animate-float">
               <div className="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center text-green-600 shrink-0 shadow-inner">
                 <i className="fas fa-certificate text-2xl"></i>
               </div>
@@ -88,7 +88,7 @@ export default function Hero() {
               </div>
             </div>
 
-            <div className="absolute top-10 sm:top-20 -right-4 sm:-right-8 bg-white/90 backdrop-blur-md px-4 py-3 rounded-2xl shadow-xl z-30 flex items-center gap-3 border border-white/50">
+            <div className="absolute top-10 sm:top-20 -right-4 sm:-right-8 bg-white/90 backdrop-blur-md px-4 py-3 rounded-2xl shadow-xl z-30 flex items-center gap-3 border border-white/50 animate-float" style={{ animationDelay: '1s' }}>
                <div className="text-[#f5b041] flex text-sm">
                  <i className="fas fa-star"></i>
                  <i className="fas fa-star"></i>
