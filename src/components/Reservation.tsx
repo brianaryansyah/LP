@@ -85,22 +85,22 @@ export default function Reservation() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-semibold text-[#2c231b] mb-2">Nama Lengkap</label>
-                  <input id="name" required type="text" name="name" value={formData.name} onChange={handleChange} className="w-full px-4 py-3 rounded-xl border border-[#2c231b]/10 bg-[#fdf8f5] focus:border-[#f5b041] focus:ring-2 focus:ring-[#f5b041]/30 transition outline-none text-[#2c231b]" placeholder="Budi Santoso" />
+                  <input id="name" required type="text" name="name" value={formData.name} onChange={handleChange} className="w-full px-4 py-3 rounded-xl border border-[#2c231b]/10 bg-white focus:border-[#f5b041] focus:ring-2 focus:ring-[#f5b041]/40 focus:ring-offset-2 focus:ring-offset-white transition-all duration-300 outline-none text-[#2c231b] hover:border-[#2c231b]/20" placeholder="Budi Santoso" />
                 </div>
                 <div>
                   <label htmlFor="phone" className="block text-sm font-semibold text-[#2c231b] mb-2">Nomor Telepon</label>
-                  <input id="phone" required type="tel" name="phone" value={formData.phone} onChange={handleChange} className="w-full px-4 py-3 rounded-xl border border-[#2c231b]/10 bg-[#fdf8f5] focus:border-[#f5b041] focus:ring-2 focus:ring-[#f5b041]/30 transition outline-none text-[#2c231b]" placeholder="081234567890" />
+                  <input id="phone" required type="tel" name="phone" value={formData.phone} onChange={handleChange} className="w-full px-4 py-3 rounded-xl border border-[#2c231b]/10 bg-white focus:border-[#f5b041] focus:ring-2 focus:ring-[#f5b041]/40 focus:ring-offset-2 focus:ring-offset-white transition-all duration-300 outline-none text-[#2c231b] hover:border-[#2c231b]/20" placeholder="081234567890" />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div>
                   <label htmlFor="date" className="block text-sm font-semibold text-[#2c231b] mb-2">Tanggal</label>
-                  <input id="date" required type="date" name="date" value={formData.date} onChange={handleChange} className="w-full px-4 py-3 rounded-xl border border-[#2c231b]/10 bg-[#fdf8f5] focus:border-[#f5b041] focus:ring-2 focus:ring-[#f5b041]/30 transition outline-none text-[#2c231b]" />
+                  <input id="date" required type="date" name="date" value={formData.date} onChange={handleChange} className="w-full px-4 py-3 rounded-xl border border-[#2c231b]/10 bg-white focus:border-[#f5b041] focus:ring-2 focus:ring-[#f5b041]/40 focus:ring-offset-2 focus:ring-offset-white transition-all duration-300 outline-none text-[#2c231b] hover:border-[#2c231b]/20" />
                 </div>
                 <div>
                   <label htmlFor="time" className="block text-sm font-semibold text-[#2c231b] mb-2">Waktu</label>
-                  <select id="time" required name="time" value={formData.time} onChange={handleChange} className="w-full px-4 py-3 rounded-xl border border-[#2c231b]/10 bg-[#fdf8f5] focus:border-[#f5b041] focus:ring-2 focus:ring-[#f5b041]/30 transition outline-none text-[#2c231b]">
+                  <select id="time" required name="time" value={formData.time} onChange={handleChange} className="w-full px-4 py-3 rounded-xl border border-[#2c231b]/10 bg-white focus:border-[#f5b041] focus:ring-2 focus:ring-[#f5b041]/40 focus:ring-offset-2 focus:ring-offset-white transition-all duration-300 outline-none text-[#2c231b] hover:border-[#2c231b]/20">
                     <option value="">Pilih Waktu</option>
                     <option value="12:00">12:00 WIB</option>
                     <option value="13:00">13:00 WIB</option>
@@ -110,7 +110,7 @@ export default function Reservation() {
                 </div>
                 <div>
                   <label htmlFor="guests" className="block text-sm font-semibold text-[#2c231b] mb-2">Jumlah Orang</label>
-                  <select id="guests" required name="guests" value={formData.guests} onChange={handleChange} className="w-full px-4 py-3 rounded-xl border border-[#2c231b]/10 bg-[#fdf8f5] focus:border-[#f5b041] focus:ring-2 focus:ring-[#f5b041]/30 transition outline-none text-[#2c231b]">
+                  <select id="guests" required name="guests" value={formData.guests} onChange={handleChange} className="w-full px-4 py-3 rounded-xl border border-[#2c231b]/10 bg-white focus:border-[#f5b041] focus:ring-2 focus:ring-[#f5b041]/40 focus:ring-offset-2 focus:ring-offset-white transition-all duration-300 outline-none text-[#2c231b] hover:border-[#2c231b]/20">
                     <option value="">Pilih Jumlah</option>
                     <option value="1-2">1-2 Orang</option>
                     <option value="3-4">3-4 Orang</option>
@@ -122,7 +122,7 @@ export default function Reservation() {
 
               <div>
                 <label htmlFor="notes" className="block text-sm font-semibold text-[#2c231b] mb-2">Catatan Khusus (Opsional)</label>
-                <textarea id="notes" name="notes" value={formData.notes} onChange={handleChange} rows={3} className="w-full px-4 py-3 rounded-xl border border-[#2c231b]/10 bg-[#fdf8f5] focus:border-[#f5b041] focus:ring-2 focus:ring-[#f5b041]/30 transition outline-none resize-none text-[#2c231b]" placeholder="Contoh: Meja dekat jendela, ada anak kecil, dll."></textarea>
+                <textarea id="notes" name="notes" value={formData.notes} onChange={handleChange} rows={3} className="w-full px-4 py-3 rounded-xl border border-[#2c231b]/10 bg-white focus:border-[#f5b041] focus:ring-2 focus:ring-[#f5b041]/40 focus:ring-offset-2 focus:ring-offset-white transition-all duration-300 outline-none resize-none text-[#2c231b] hover:border-[#2c231b]/20" placeholder="Contoh: Meja dekat jendela, ada anak kecil, dll."></textarea>
               </div>
 
               <button type="submit" className="w-full bg-[#2c231b] text-[#fdf8f5] font-bold py-4 rounded-full hover:bg-[#f5b041] hover:text-[#2c231b] transition duration-300 flex items-center justify-center gap-2 shadow-lg hover:-translate-y-1 transform">
