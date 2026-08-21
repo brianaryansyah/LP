@@ -112,10 +112,10 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div id="mobile-menu" className="md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-xl shadow-xl border-t border-gray-100">
+        <div id="mobile-menu" className="md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-xl shadow-xl border-t border-gray-100 origin-top animate-[menuDrop_0.25s_ease-out]">
           <div className="px-4 pt-4 pb-6 space-y-2">
             {navLinks.map((link) => (
-              <a key={link.id} href={link.href} onClick={() => setIsOpen(false)} className={`block px-4 py-3 rounded-xl text-base font-bold transition ${activeSection === link.id ? "text-[#f5b041] bg-[#f5b041]/10" : "text-[#2c231b] hover:bg-[#f5b041]/10 hover:text-[#f5b041]"}`}>
+              <a key={link.id} href={link.href} onClick={() => setIsOpen(false)} className={`block px-4 py-3 rounded-xl text-base font-bold transition-all duration-300 ${activeSection === link.id ? "text-[#e09132] bg-[#f5b041]/10" : "text-[#2c231b] hover:bg-[#f5b041]/10 hover:text-[#f5b041]"}`}>
                 {link.label}
               </a>
             ))}
