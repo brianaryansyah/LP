@@ -38,7 +38,7 @@ export default function Hero() {
                   <i className="fas fa-arrow-up text-sm"></i>
                 </div>
               </a>
-              <a href="#location" className="group flex items-center gap-3 bg-transparent text-[#2c231b] px-6 py-3 rounded-full font-bold text-base transition-all duration-300 hover:opacity-70">
+              <a href="#location" className="group flex items-center gap-3 bg-transparent text-[#2c231b] px-6 py-3 rounded-full font-bold text-base transition-all duration-300 hover:bg-[#f5b041]/10 hover:-translate-y-0.5">
                 Lihat Lokasi
                 <i className="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
               </a>
