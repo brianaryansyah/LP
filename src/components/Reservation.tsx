@@ -125,7 +125,7 @@ export default function Reservation() {
                 <textarea id="notes" name="notes" value={formData.notes} onChange={handleChange} rows={3} className="w-full px-4 py-3 rounded-xl border border-[#2c231b]/10 bg-white focus:border-[#f5b041] focus:ring-2 focus:ring-[#f5b041]/40 focus:ring-offset-2 focus:ring-offset-white transition-all duration-300 outline-none resize-none text-[#2c231b] hover:border-[#2c231b]/20" placeholder="Contoh: Meja dekat jendela, ada anak kecil, dll."></textarea>
               </div>
 
-              <button type="submit" className="w-full bg-[#2c231b] text-[#fdf8f5] font-bold py-4 rounded-full hover:bg-[#f5b041] hover:text-[#2c231b] transition duration-300 flex items-center justify-center gap-2 shadow-lg hover:-translate-y-1 transform">
+              <button type="submit" className="w-full bg-[#2c231b] text-[#fdf8f5] font-bold py-4 rounded-full hover:bg-[#f5b041] hover:text-[#2c231b] transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0">
                 <i className="fab fa-whatsapp text-xl text-[#25D366]"></i> Kirim Reservasi via WhatsApp
               </button>
             </form>
