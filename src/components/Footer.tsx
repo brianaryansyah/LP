@@ -92,7 +92,7 @@ export default function Footer() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Email Anda"
                 aria-label="Alamat email untuk newsletter"
-                className="w-full bg-[#3b3128] text-[#fdf8f5] px-6 py-4 rounded-full border border-[#fdf8f5]/10 focus:outline-none focus:border-[#f5b041] transition text-sm"
+                className="w-full bg-[#3b3128] text-[#fdf8f5] px-6 py-4 rounded-full border border-[#fdf8f5]/10 focus:outline-none focus:border-[#f5b041] focus:ring-2 focus:ring-[#f5b041]/30 transition-all duration-300 text-sm"
               />
               <button
                 type="submit"
