@@ -33,7 +33,7 @@ export default function Features() {
             </div>
             
             {/* Decorative dot grid */}
-            <div className="absolute top-1/2 -right-4 sm:-right-8 -translate-y-1/2 grid grid-cols-3 gap-2 opacity-20 group-hover:opacity-40 transition-opacity duration-700 z-0">
+            <div className="absolute top-1/2 -right-4 sm:-right-8 -translate-y-1/2 grid grid-cols-3 gap-2 opacity-15 group-hover:opacity-30 transition-opacity duration-700 z-0">
                {[...Array(15)].map((_, i) => (
                  <div key={i} className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#2c231b]"></div>
                ))}
