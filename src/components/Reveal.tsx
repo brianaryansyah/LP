@@ -30,8 +30,8 @@ export default function Reveal({ children, className = "", delay = 0 }: RevealPr
   return (
     <div
       ref={ref}
-      className={`${className} transition-all duration-700 ease-out will-change-transform ${
-        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+      className={`${className} transition-all duration-700 will-change-transform [transition-timing-function:cubic-bezier(0.16,1,0.3,1)] ${
+        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
       }`}
       style={{ transitionDelay: `${delay}ms` }}
     >
