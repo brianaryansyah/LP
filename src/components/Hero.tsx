@@ -34,7 +34,7 @@ export default function Hero() {
             <div className="flex flex-wrap items-center gap-4 sm:gap-6">
               <a href="#menu" className="group flex items-center gap-4 bg-[#f5b041] text-[#2c231b] pl-6 pr-2 py-2 rounded-full font-bold text-base hover:bg-[#e09132] transition-all duration-300 shadow-xl shadow-[#f5b041]/20 hover:-translate-y-1">
                 Pesan Sekarang 
-                <div className="w-10 h-10 bg-white text-[#2c231b] rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:rotate-45 shadow-sm">
+                <div className="w-10 h-10 bg-white text-[#2c231b] rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 shadow-sm">
                   <i className="fas fa-arrow-up text-sm"></i>
                 </div>
               </a>
