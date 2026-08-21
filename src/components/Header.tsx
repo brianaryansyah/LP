@@ -51,8 +51,8 @@ export default function Header() {
   }, [isOpen]);
 
   const linkClass = (id: string) =>
-    `text-[#2c231b] font-semibold hover:text-[#f5b041] transition-colors text-sm ${
-      activeSection === id ? "text-[#f5b041]" : ""
+    `text-[#2c231b] font-semibold hover:text-[#f5b041] transition-colors duration-300 text-sm px-3 py-1.5 rounded-full ${
+      activeSection === id ? "text-[#e09132] bg-[#f5b041]/15" : ""
     }`;
 
   return (
