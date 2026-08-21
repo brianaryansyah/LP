@@ -62,7 +62,7 @@ export default function Hero() {
           <div className="flex-1 w-full flex justify-center lg:justify-end relative mt-12 lg:mt-0">
             
             {/* Aesthetic Background Shape */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] sm:w-[80%] aspect-square bg-[#f5b041] rounded-[4rem] rotate-12 opacity-80 shadow-2xl z-0 transition-transform duration-700 hover:rotate-6"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] sm:w-[80%] aspect-square bg-[#f5b041] rounded-[4rem] opacity-60 shadow-2xl z-0 transition-transform duration-700 hover:scale-[1.02]"></div>
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] sm:w-[80%] aspect-square bg-[#2c231b] rounded-[4rem] -rotate-6 opacity-10 shadow-2xl z-0"></div>
 
             {/* Main Image Container */}
