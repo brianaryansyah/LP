@@ -14,7 +14,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#2c231b] text-[#fdf8f5] pt-16 pb-8 relative z-10">
+    <footer className="bg-[#2c231b] text-[#fdf8f5] pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-[#fdf8f5]/10 pb-12 mb-8">
           {/* Logo & Social */}
