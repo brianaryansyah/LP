@@ -53,7 +53,7 @@ export default function Menu() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {menuItems.map((item, idx) => (
             <Reveal key={item.id} delay={idx * 100}>
-            <div className="h-full bg-[#3b3128] rounded-[2rem] p-4 flex flex-col group hover:-translate-y-3 transition-all duration-500 shadow-2xl hover:shadow-[#f5b041]/20 border border-transparent hover:border-[#f5b041]/30 relative overflow-hidden">
+            <div className="h-full bg-[#3b3128] rounded-[2rem] p-4 flex flex-col group hover:-translate-y-2 transition-all duration-500 shadow-2xl hover:shadow-[#f5b041]/15 border border-transparent hover:border-[#f5b041]/20 relative overflow-hidden">
               
               {/* Decorative corner glow */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-[#f5b041]/10 rounded-full blur-3xl group-hover:bg-[#f5b041]/20 transition-all duration-500"></div>
@@ -65,7 +65,7 @@ export default function Menu() {
                   alt={item.name} 
                   fill
                   sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 30vw"
-                  className="object-cover group-hover:scale-110 transition duration-700 ease-in-out" 
+                  className="object-cover group-hover:scale-[1.03] transition duration-700 ease-in-out" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#3b3128] via-transparent to-transparent opacity-60"></div>
               </div>
@@ -79,7 +79,7 @@ export default function Menu() {
                   <div className="bg-[#f5b041]/10 text-[#f5b041] font-bold px-4 py-2 rounded-xl text-sm sm:text-base border border-[#f5b041]/20">
                     {item.price}
                   </div>
-                  <button aria-label={`Tambah ${item.name} ke pesanan`} className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#fdf8f5] text-[#2c231b] flex items-center justify-center hover:bg-[#f5b041] hover:text-white transition-all duration-300 hover:rotate-12 transform shadow-md group-hover:scale-110">
+                  <button aria-label={`Tambah ${item.name} ke pesanan`} className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#fdf8f5] text-[#2c231b] flex items-center justify-center hover:bg-[#f5b041] hover:text-white transition-all duration-300 shadow-md group-hover:scale-105">
                     <i className="fas fa-plus text-sm"></i>
                   </button>
                 </div>
