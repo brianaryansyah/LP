@@ -78,8 +78,8 @@ export default function Features() {
         </Reveal>
       </div>
 
-      {/* Rounded border transition to next section */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 rounded-b-lg bg-[#f5b041]/5 pointer-events-none"></div>
+      {/* Rounded gradient border transition to next section */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 rounded-b-lg bg-gradient-to-b from-transparent via-[#f5b041]/20 to-[#f5b041]/5 pointer-events-none"></div>
     </section>
   );
 }
