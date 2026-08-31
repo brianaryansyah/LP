@@ -79,7 +79,7 @@ export default function Features() {
       </div>
 
       {/* Smooth gradient transition to next section */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent via-white/50 to-white pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent via-[#f5b041]/20 to-[#f5b041]/5 pointer-events-none"></div>
     </section>
   );
 }
