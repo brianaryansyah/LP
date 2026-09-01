@@ -49,7 +49,7 @@ export default function Menu() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {menuItems.map((item, idx) => (
             <Reveal key={item.id} delay={idx * 100}>
-            <div className="h-full bg-[#3b3128] rounded-[2rem] p-4 flex flex-col group hover:-translate-y-2 transition-all duration-500 shadow-2xl hover:shadow-[#f5b041]/15 border border-transparent hover:border-[#f5b041]/20 relative overflow-hidden">
+            <div className="h-full bg-[#3b3128] rounded-[2rem] p-4 flex flex-col group hover:-translate-y-2 transition-all duration-500 shadow-2xl hover:shadow-[#f5b041]/15 border border-transparent hover:border-[#f5b041]/20 relative overflow-hidden ring-1 ring-white/5 will-change-transform">
               
               {/* Decorative corner glow */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-[#f5b041]/10 rounded-full blur-3xl group-hover:bg-[#f5b041]/20 transition-all duration-500"></div>
