@@ -1,4 +1,6 @@
+"use client";
 import Image from "next/image";
+import { useRef, useState } from "react";
 import Reveal from "@/components/Reveal";
 import WaveDivider from "@/components/WaveDivider";
 
@@ -49,6 +51,25 @@ const reviews = [
 
 export default function Testimonial() {
   const googleMapsLink = "https://share.google/QOCQKq5zvoVVkb4pm";
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [active, setActive] = useState(0);
+
+  const scrollTo = (index: number) => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const card = el.children[index] as HTMLElement;
+    if (card) {
+      el.scrollTo({ left: card.offsetLeft - 16, behavior: "smooth" });
+      setActive(index);
+    }
+  };
+
+  const onScroll = () => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const idx = Math.round(el.scrollLeft / (el.children[0] as HTMLElement).offsetWidth);
+    setActive(Math.max(0, Math.min(idx, reviews.length - 1)));
+  };
 
   return (
     <section id="testimoni" className="relative py-16 lg:py-24 bg-[#fdf8f5] overflow-hidden">
@@ -61,18 +82,26 @@ export default function Testimonial() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#2c231b] font-poppins leading-tight tracking-tight text-balance mb-4">
               Apa Kata Pelanggan Kami
             </h2>
-            <p className="text-sm text-[#2c231b]/60 font-inter mb-8">
-              17+ ulasan di Google Maps • Rata-rata 5.0/5
-            </p>
+            <p className="text-sm text-[#2c231b]/60 font-inter mb-2">17+ ulasan di Google Maps • Rata-rata 5.0/5</p>
+            <p className="text-xs text-[#2c231b]/40 font-inter mb-8">Geser untuk lihat semua ulasan</p>
           </div>
         </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
-          {reviews.map((rev, idx) => (
-            <Reveal key={rev.name} delay={idx * 80}>
-              <div className="bg-white rounded-3xl p-6 sm:p-8 relative shadow-lg border border-[#2c231b]/5 hover:shadow-xl hover:-translate-y-1 hover:border-[#f5b041]/20 transition-all duration-300 text-left h-full flex flex-col group">
+        <div className="relative max-w-6xl mx-auto">
+          <div
+            ref={scrollRef}
+            onScroll={onScroll}
+            className="flex gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 px-1 scrollbar-thin scrollbar-thumb-[#f5b041]/30 scrollbar-track-transparent"
+            style={{ scrollbarWidth: "thin" }}
+            aria-label="Daftar ulasan pelanggan, geser untuk melihat"
+          >
+            {reviews.map((rev, idx) => (
+              <div
+                key={rev.name}
+                className="min-w-[85%] sm:min-w-[45%] lg:min-w-[32%] snap-start bg-white rounded-3xl p-6 sm:p-7 relative shadow-lg border border-[#2c231b]/5 hover:shadow-xl hover:-translate-y-1 hover:border-[#f5b041]/20 transition-all duration-300 text-left flex flex-col group shrink-0"
+              >
                 <div className="absolute top-4 right-4 opacity-[0.07] group-hover:opacity-10 transition-opacity">
-                  <i className="fas fa-quote-right text-3xl text-[#f5b041]" aria-hidden="true"></i>
+                  <i className="fas fa-quote-right text-2xl text-[#f5b041]" aria-hidden="true"></i>
                 </div>
                 <div className="flex gap-1 mb-3">
                   {[...Array(5)].map((_, i) => (
@@ -92,8 +121,35 @@ export default function Testimonial() {
                   </div>
                 </div>
               </div>
-            </Reveal>
-          ))}
+            ))}
+          </div>
+
+          <div className="flex items-center justify-center gap-3 mt-6">
+            <button
+              onClick={() => scrollTo(Math.max(0, active - 1))}
+              aria-label="Ulasan sebelumnya"
+              className="w-10 h-10 rounded-full bg-white border border-[#2c231b]/10 text-[#2c231b] flex items-center justify-center hover:bg-[#f5b041] hover:border-[#f5b041] hover:text-[#2c231b] hover:scale-105 active:scale-95 transition-all duration-300 shadow-sm"
+            >
+              <i className="fas fa-chevron-left text-xs" aria-hidden="true"></i>
+            </button>
+            <div className="flex gap-1.5">
+              {reviews.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => scrollTo(i)}
+                  aria-label={`Ke ulasan ${i + 1}`}
+                  className={`h-1.5 rounded-full transition-all duration-300 ${i === active ? "w-6 bg-[#f5b041]" : "w-1.5 bg-[#2c231b]/20 hover:bg-[#2c231b]/30"}`}
+                />
+              ))}
+            </div>
+            <button
+              onClick={() => scrollTo(Math.min(reviews.length - 1, active + 1))}
+              aria-label="Ulasan berikutnya"
+              className="w-10 h-10 rounded-full bg-white border border-[#2c231b]/10 text-[#2c231b] flex items-center justify-center hover:bg-[#f5b041] hover:border-[#f5b041] hover:text-[#2c231b] hover:scale-105 active:scale-95 transition-all duration-300 shadow-sm"
+            >
+              <i className="fas fa-chevron-right text-xs" aria-hidden="true"></i>
+            </button>
+          </div>
         </div>
 
         <Reveal delay={300}>
