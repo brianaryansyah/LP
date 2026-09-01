@@ -41,7 +41,7 @@ export default function Reservation() {
         </Reveal>
 
         <Reveal delay={100}>
-        <div className="bg-white rounded-[2rem] sm:rounded-[3rem] shadow-xl hover:shadow-2xl overflow-hidden border border-[#2c231b]/5 flex flex-col lg:flex-row transition-shadow duration-500">
+        <div className="bg-white rounded-[2rem] sm:rounded-[3rem] shadow-xl hover:shadow-2xl overflow-hidden border border-[#2c231b]/5 flex flex-col lg:flex-row transition-all duration-500 ring-1 ring-black/5 will-change-transform">
           <div className="lg:w-2/5 bg-[#2c231b] p-8 sm:p-10 text-[#fdf8f5] flex flex-col justify-between relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#f5b041] opacity-10 rounded-full -translate-y-1/2 translate-x-1/3"></div>
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#f5b041] opacity-10 rounded-full translate-y-1/3 -translate-x-1/4"></div>
