@@ -82,7 +82,7 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-bold mb-6 font-poppins text-[#f5b041]">Newsletter</h4>
             <p className="text-[#fdf8f5]/60 text-sm mb-6">
-              Dapatkan info promo dan menu baru langsung ke email Anda.
+              Promo sebulan sekali, bukan spam. Cukup email saja.
             </p>
             <form onSubmit={handleSubscribe} className="relative">
               <input
