@@ -26,7 +26,7 @@ export default function Footer() {
               <h3 className="text-2xl font-bold font-poppins text-[#fdf8f5]">Semangkok</h3>
             </div>
             <p className="text-[#fdf8f5]/60 font-inter mb-8 text-sm leading-relaxed pr-4">
-              Pilihan utama pecinta mie ayam. Rasakan kelezatan resep autentik yang telah dipercaya sejak 1990.
+              Warung mie ayam di Pemalang sejak 1990. Makan di tempat atau pesan antar, tiap hari buka.
             </p>
             <div className="flex gap-3">
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Ikuti kami di Instagram" className="w-10 h-10 rounded-full bg-[#f5b041] text-[#2c231b] flex items-center justify-center hover:bg-white hover:-translate-y-1 transition-all duration-300">
