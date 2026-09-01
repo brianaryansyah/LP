@@ -53,8 +53,10 @@ export default function Hero() {
                 <Image className="w-10 h-10 rounded-full border-2 border-[#fdf8f5] object-cover hover:z-10 hover:scale-110 hover:-translate-y-0.5 transition-all duration-300" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="Pelanggan Semangkok" width={40} height={40} />
               </div>
               <div>
-                <div className="font-bold text-[#2c231b] font-poppins text-sm sm:text-base">Ulasan Nyata Pelanggan</div>
-                <div className="text-xs sm:text-sm text-[#2c231b]/60 font-medium">Berdasarkan 17+ Review Google Maps</div>
+                <div className="font-bold text-[#2c231b] font-poppins text-sm sm:text-base flex items-center gap-2">
+                  Ulasan Nyata Pelanggan <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" aria-hidden="true"></span>
+                </div>
+                <div className="text-xs sm:text-sm text-[#2c231b]/60 font-medium">17 ulasan • 5.0 di Google Maps • update hari ini</div>
               </div>
             </div>
           </div>
