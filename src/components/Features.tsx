@@ -53,8 +53,25 @@ export default function Features() {
               Dari gerobak di Pasar Pagi 1990 sampai dapur di Karimata 40 sekarang. Mie ditarik tiap jam 4 pagi, kaldu direbus 8 jam, ayam kampung dimasak pelan. Bukan soal gimmick — cuma konsistensi rasa yang bikin orang balik lagi.
             </p>
 
+            <div className="flex items-center gap-6 py-4 border-y border-[#2c231b]/5 mb-6">
+              <div className="text-center">
+                <div className="text-xl font-extrabold text-[#2c231b] font-poppins">30+</div>
+                <div className="text-[11px] text-[#2c231b]/60 font-medium uppercase tracking-wider">Tahun</div>
+              </div>
+              <div className="w-px h-8 bg-[#2c231b]/10"></div>
+              <div className="text-center">
+                <div className="text-xl font-extrabold text-[#2c231b] font-poppins">15rb+</div>
+                <div className="text-[11px] text-[#2c231b]/60 font-medium uppercase tracking-wider">Mangkok/bln</div>
+              </div>
+              <div className="w-px h-8 bg-[#2c231b]/10"></div>
+              <div className="text-center">
+                <div className="text-xl font-extrabold text-[#2c231b] font-poppins">4.9/5</div>
+                <div className="text-[11px] text-[#2c231b]/60 font-medium uppercase tracking-wider">Google</div>
+              </div>
+            </div>
+
             <div className="space-y-4 sm:space-y-6">
-               <div className="bg-[#f5b041]/10 p-4 sm:p-6 rounded-2xl sm:rounded-3xl flex items-center gap-4 sm:gap-6 hover:-translate-y-1 hover:shadow-md transition-all duration-500 shadow-sm border border-transparent hover:border-[#f5b041]/20 cursor-default">
+              <div className="bg-[#f5b041]/10 p-4 sm:p-6 rounded-2xl sm:rounded-3xl flex items-center gap-4 sm:gap-6 hover:-translate-y-1 hover:shadow-md transition-all duration-500 shadow-sm border border-transparent hover:border-[#f5b041]/20 cursor-default">
                 <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#f5b041]/20 flex items-center justify-center shrink-0" aria-hidden="true">
                   <i className="fas fa-fire text-xl sm:text-2xl text-[#f5b041]" aria-hidden="true"></i>
                 </div>
