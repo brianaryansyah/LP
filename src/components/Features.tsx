@@ -12,15 +12,15 @@ export default function Features() {
           {/* Left Collage */}
           <div className="flex-1 w-full relative max-w-lg mx-auto lg:max-w-none group">
             <div className="grid grid-cols-2 gap-3 sm:gap-4 relative z-10">
-              <div className="col-span-2 relative rounded-2xl sm:rounded-3xl overflow-hidden w-full aspect-[16/9] shadow-2xl transition-transform duration-700 group-hover:scale-[1.02]">
-                <Image src="/img/mi-ayam-kepala.jpg" alt="Proses Memasak" fill sizes="(max-width: 640px) 90vw, 40vw" className="object-cover transition-transform duration-1000 group-hover:scale-[1.03]" loading="lazy" quality={85} />
+              <div className="col-span-2 relative rounded-2xl sm:rounded-3xl overflow-hidden w-full aspect-[16/9] shadow-2xl ring-1 ring-black/5 transition-transform duration-700 group-hover:scale-[1.02]">
+                <Image src="/img/mi-ayam-kepala.jpg" alt="Proses Memasak" fill sizes="(max-width: 640px) 90vw, 40vw" className="object-cover transition-transform duration-1000 group-hover:scale-[1.03] will-change-transform" loading="lazy" quality={85} />
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition duration-700"></div>
               </div>
-              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden w-full aspect-[4/3] shadow-xl transition-transform duration-700 delay-100 group-hover:-translate-y-2">
-                <Image src="/img/mi-ayam.jpg" alt="Bahan Segar" fill sizes="(max-width: 640px) 45vw, 20vw" className="object-cover transition-transform duration-1000 group-hover:scale-[1.03]" loading="lazy" quality={85} />
+              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden w-full aspect-[4/3] shadow-xl ring-1 ring-black/5 transition-transform duration-700 delay-100 group-hover:-translate-y-2">
+                <Image src="/img/mi-ayam.jpg" alt="Bahan Segar" fill sizes="(max-width: 640px) 45vw, 20vw" className="object-cover transition-transform duration-1000 group-hover:scale-[1.03] will-change-transform" loading="lazy" quality={85} />
               </div>
-              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden w-full aspect-[4/3] shadow-xl transition-transform duration-700 delay-200 group-hover:-translate-y-2">
-                <Image src="/img/mi-ayam-bakso.jpg" alt="Mie Spesial" fill sizes="(max-width: 640px) 45vw, 20vw" className="object-cover transition-transform duration-1000 group-hover:scale-[1.03]" loading="lazy" quality={85} />
+              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden w-full aspect-[4/3] shadow-xl ring-1 ring-black/5 transition-transform duration-700 delay-200 group-hover:-translate-y-2">
+                <Image src="/img/mi-ayam-bakso.jpg" alt="Mie Spesial" fill sizes="(max-width: 640px) 45vw, 20vw" className="object-cover transition-transform duration-1000 group-hover:scale-[1.03] will-change-transform" loading="lazy" quality={85} />
               </div>
             </div>
             
