@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
+import WaveDivider from "@/components/WaveDivider";
 
 const menuItems = [
   {
@@ -29,9 +30,7 @@ const menuItems = [
 
 export default function Menu() {
   return (
-    <section id="menu" className="relative min-h-screen flex flex-col justify-center pt-16 pb-32 bg-[#2c231b]">
-      {/* Smooth gradient transition from previous section */}
-      <div className="absolute top-0 left-0 right-0 h-24 rounded-t-lg bg-gradient-to-b from-white via-[#2c231b]/10 to-transparent pointer-events-none"></div>
+    <section id="menu" className="relative min-h-screen flex flex-col justify-center pt-16 pb-32 bg-[#2c231b] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         
         {/* Header */}
@@ -87,8 +86,7 @@ export default function Menu() {
         </div>
       </div>
 
-      {/* Rounded gradient border transition to next section */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 rounded-t-lg bg-gradient-to-b from-transparent via-[#fdf8f5]/10 to-[#fdf8f5] pointer-events-none"></div>
+      <WaveDivider fill="#fdf8f5" position="bottom" />
     </section>
   );
 }
