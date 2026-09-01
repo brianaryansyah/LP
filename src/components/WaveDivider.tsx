@@ -29,7 +29,7 @@ export default function WaveDivider({
       <svg
         viewBox="0 0 1200 120"
         preserveAspectRatio="none"
-        className={`w-full ${height} block ${flip ? "scale-x-[-1]" : ""}`}
+        className={`w-full ${height} block transform-gpu will-change-transform ${flip ? "scale-x-[-1]" : ""}`}
         style={{ color: fill }}
       >
         <path
