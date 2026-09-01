@@ -24,7 +24,7 @@ export default function Reservation() {
   };
 
   return (
-    <section id="reservasi" className="relative py-20 bg-[#fdf8f5] overflow-hidden">
+    <section id="reservasi" className="relative py-16 lg:py-24 bg-[#fdf8f5] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <Reveal>
         <div className="text-center mb-14">
