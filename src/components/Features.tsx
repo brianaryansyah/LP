@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
+import WaveDivider from "@/components/WaveDivider";
 
 export default function Features() {
   return (
-    <section id="unggulan" className="relative min-h-screen flex flex-col justify-center py-16 lg:py-24 bg-white">
+    <section id="unggulan" className="relative min-h-screen flex flex-col justify-center py-16 lg:py-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         
         <Reveal>
@@ -78,8 +79,7 @@ export default function Features() {
         </Reveal>
       </div>
 
-      {/* Rounded gradient border transition to next section */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 rounded-b-lg bg-gradient-to-b from-transparent via-[#f5b041]/20 to-[#f5b041]/5 pointer-events-none"></div>
+      <WaveDivider fill="#fdf8f5" position="bottom" />
     </section>
   );
 }
