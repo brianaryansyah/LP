@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Reveal from "@/components/Reveal";
+import WaveDivider from "@/components/WaveDivider";
 
 export default function Reservation() {
   const [formData, setFormData] = useState({
@@ -133,6 +134,7 @@ export default function Reservation() {
         </div>
         </Reveal>
       </div>
+      <WaveDivider fill="#fdf8f5" position="bottom" height="h-8 sm:h-12 md:h-16" />
     </section>
   );
 }
