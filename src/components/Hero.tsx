@@ -69,14 +69,14 @@ export default function Hero() {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] sm:w-[80%] aspect-square bg-[#2c231b] rounded-[4rem] opacity-10 shadow-2xl z-0"></div>
 
             {/* Main Image Container */}
-            <div className="w-[90%] sm:w-[85%] max-w-[500px] aspect-[4/5] rounded-[3rem] overflow-hidden relative shadow-2xl z-10 border-8 border-white bg-white group">
+            <div className="w-[90%] sm:w-[85%] max-w-[500px] aspect-[4/5] rounded-[3rem] overflow-hidden relative shadow-2xl z-10 border-8 border-white bg-white group ring-1 ring-black/5">
               <Image
                 src="/img/mi-ayam-bakso.jpg"
                 alt="Mie Ayam Premium"
                 fill
                 priority
                 sizes="(max-width: 640px) 90vw, (max-width: 1024px) 85vw, 500px"
-                className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.05]"
+                className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.05] will-change-transform"
               />
             </div>
             
