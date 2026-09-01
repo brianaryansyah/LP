@@ -26,8 +26,6 @@ const menuItems = [
     desc: "Bakmi hotplate, udang cumi kerang",
     img: "/img/seafood-hot-plate.jpg",
   },
-    img: "/img/seafood-hot-plate.jpg",
-  },
 ];
 
 export default function Menu() {
