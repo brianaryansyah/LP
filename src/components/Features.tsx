@@ -50,7 +50,7 @@ export default function Features() {
               Pengalaman & Keahlian dalam Menyajikan Mie Ayam
             </h2>
             <p className="text-sm sm:text-base lg:text-lg text-[#2c231b]/70 font-inter mb-8 sm:mb-10 leading-relaxed">
-              Kami telah mendedikasikan diri selama lebih dari 30 tahun untuk meracik mie ayam dan bakso terbaik. Setiap mangkok yang kami sajikan adalah bukti dari passion dan komitmen kami terhadap kualitas.
+              30 tahun di dapur yang sama. Mie dibuat pagi, ayam dimasak pelan, bakso dari daging segar. Tiap mangkok rasanya konsisten.
             </p>
 
             <div className="space-y-4 sm:space-y-6">
@@ -60,7 +60,7 @@ export default function Features() {
                 </div>
                 <div>
                   <h4 className="text-lg sm:text-xl font-bold text-[#2c231b] font-poppins mb-1">Koki Berpengalaman</h4>
-                  <p className="text-[#2c231b]/70 text-xs sm:text-sm leading-relaxed">Resep rahasia keluarga yang dijaga turun temurun.</p>
+                  <p className="text-[#2c231b]/70 text-xs sm:text-sm leading-relaxed">Resep keluarga, takaran sama sejak dulu.</p>
                 </div>
               </div>
 
@@ -70,7 +70,7 @@ export default function Features() {
                 </div>
                 <div>
                   <h4 className="text-lg sm:text-xl font-bold text-[#2c231b] font-poppins mb-1">Bahan Baku Segar</h4>
-                  <p className="text-[#2c231b]/70 text-xs sm:text-sm leading-relaxed">Kami hanya menggunakan daging ayam segar pilihan setiap harinya.</p>
+                  <p className="text-[#2c231b]/70 text-xs sm:text-sm leading-relaxed">Ayam segar tiap pagi dari pasar Pemalang.</p>
                 </div>
               </div>
             </div>
