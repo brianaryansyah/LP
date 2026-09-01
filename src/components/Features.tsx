@@ -72,8 +72,8 @@ export default function Features() {
 
             <div className="space-y-4 sm:space-y-6">
               <div className="bg-[#f5b041]/10 p-4 sm:p-6 rounded-2xl sm:rounded-3xl flex items-center gap-4 sm:gap-6 hover:-translate-y-1 hover:shadow-md transition-all duration-500 shadow-sm border border-transparent hover:border-[#f5b041]/20 cursor-default">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#f5b041]/20 flex items-center justify-center shrink-0" aria-hidden="true">
-                  <i className="fas fa-fire text-xl sm:text-2xl text-[#f5b041]" aria-hidden="true"></i>
+                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#f5b041]/15 flex items-center justify-center shrink-0 border border-[#f5b041]/20" aria-hidden="true">
+                  <i className="fas fa-clock text-xl sm:text-2xl text-[#f5b041]" aria-hidden="true"></i>
                 </div>
                 <div>
                   <h4 className="text-lg sm:text-xl font-bold text-[#2c231b] font-poppins mb-1">Kaldu 8 Jam</h4>
@@ -82,8 +82,8 @@ export default function Features() {
               </div>
 
               <div className="bg-white border border-[#2c231b]/5 p-4 sm:p-6 rounded-2xl sm:rounded-3xl flex items-center gap-4 sm:gap-6 hover:-translate-y-1 hover:shadow-md transition-all duration-500 shadow-sm cursor-default">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#fdf8f5] flex items-center justify-center shrink-0 shadow-inner" aria-hidden="true">
-                  <i className="fas fa-hand-sparkles text-xl sm:text-2xl text-[#f5b041]" aria-hidden="true"></i>
+                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-white flex items-center justify-center shrink-0 shadow-sm border border-[#2c231b]/5" aria-hidden="true">
+                  <i className="fas fa-utensils text-xl sm:text-2xl text-[#f5b041]" aria-hidden="true"></i>
                 </div>
                 <div>
                   <h4 className="text-lg sm:text-xl font-bold text-[#2c231b] font-poppins mb-1">Mie Ditarik Tangan</h4>
