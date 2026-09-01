@@ -50,7 +50,7 @@ export default function Features() {
               Pengalaman & Keahlian dalam Menyajikan Mie Ayam
             </h2>
             <p className="text-sm sm:text-base lg:text-lg text-[#2c231b]/70 font-inter mb-8 sm:mb-10 leading-relaxed">
-              Dari gerobak di Pasar Pagi 1990 sampai dapur di Karimata 40 sekarang. Mie ditarik tiap jam 4 pagi, kaldu direbus 8 jam, ayam kampung dimasak pelan. Bukan soal gimmick — cuma konsistensi rasa yang bikin orang balik lagi.
+              Dari gerobak Pasar Pagi 1990 hingga dapur Karimata 40 hari ini. Mie ditarik pukul empat pagi, kaldu direbus delapan jam, ayam kampung dimasak perlahan. Tanpa gimmick, hanya rasa yang konsisten membuat tamu kembali.
             </p>
 
             <div className="flex items-center gap-6 py-4 border-y border-[#2c231b]/5 mb-6">
@@ -77,7 +77,7 @@ export default function Features() {
                 </div>
                 <div>
                   <h4 className="text-lg sm:text-xl font-bold text-[#2c231b] font-poppins mb-1">Kaldu 8 Jam</h4>
-                  <p className="text-[#2c231b]/70 text-xs sm:text-sm leading-relaxed">Tulang ayam kampung direbus pelan dari subuh. Gurih alami, tanpa penyedap berlebih.</p>
+                  <p className="text-[#2c231b]/70 text-xs sm:text-sm leading-relaxed">Tulang ayam kampung direbus perlahan sejak subuh. Gurih alami tanpa penyedap berlebih.</p>
                 </div>
               </div>
 
@@ -87,7 +87,7 @@ export default function Features() {
                 </div>
                 <div>
                   <h4 className="text-lg sm:text-xl font-bold text-[#2c231b] font-poppins mb-1">Mie Ditarik Tangan</h4>
-                  <p className="text-[#2c231b]/70 text-xs sm:text-sm leading-relaxed">Adonan segar tiap pagi, tekstur kenyal pas gigit.</p>
+                  <p className="text-[#2c231b]/70 text-xs sm:text-sm leading-relaxed">Adonan segar setiap pagi, tekstur kenyal saat digigit.</p>
                 </div>
               </div>
             </div>
