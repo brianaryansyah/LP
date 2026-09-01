@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Reveal from "@/components/Reveal";
+import WaveDivider from "@/components/WaveDivider";
 
 export default function Location() {
   const services = [
@@ -91,8 +91,7 @@ export default function Location() {
         </div>
       </div>
       
-      {/* Smooth gradient transition to dark footer */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent via-[#2c231b]/20 to-[#2c231b] pointer-events-none"></div>
+      <WaveDivider fill="#2c231b" position="bottom" />
     </section>
   );
 }
