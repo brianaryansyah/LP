@@ -28,7 +28,7 @@ export default function Hero() {
             
             {/* Description */}
             <p className="text-base sm:text-lg lg:text-xl text-[#2c231b]/80 font-inter mb-8 max-w-2xl leading-relaxed">
-              Cita rasa autentik yang memanjakan lidah ✦ Perpaduan sempurna antara mie kenyal, kaldu gurih yang kaya rempah, dan potongan ayam melimpah ✦ Pilihan utama pecinta kuliner sejati.
+              Mie kenyal, kuah kaldu ayam gurih, topping ayam kecap melimpah. Resep keluarga sejak 1990, dimasak harian dan rasa selalu sama.
             </p>
             
             {/* Action Buttons */}
