@@ -3,10 +3,10 @@ import WaveDivider from "@/components/WaveDivider";
 
 export default function Location() {
   const services = [
-    { icon: <i className="fas fa-motorcycle text-[#f5b041]"></i>, title: "Pesan Antar", desc: "Nikmati mie ayam favorit Anda tanpa keluar rumah." },
-    { icon: <i className="fas fa-store text-[#f5b041]"></i>, title: "Makan di Tempat", desc: "Suasana nyaman untuk bersantap bersama keluarga." },
-    { icon: <i className="fas fa-glass-cheers text-[#f5b041]"></i>, title: "Acara Spesial", desc: "Kami melayani pesanan untuk berbagai acara Anda." },
-    { icon: <i className="fas fa-calendar-alt text-[#f5b041]"></i>, title: "Reservasi Meja", desc: "Pesan meja Anda lebih awal untuk momen spesial." }
+    { icon: <i className="fas fa-motorcycle text-[#f5b041]" aria-hidden="true"></i>, title: "Pesan Antar", desc: "Nikmati mie ayam favorit Anda tanpa keluar rumah." },
+    { icon: <i className="fas fa-store text-[#f5b041]" aria-hidden="true"></i>, title: "Makan di Tempat", desc: "Suasana nyaman untuk bersantap bersama keluarga." },
+    { icon: <i className="fas fa-glass-cheers text-[#f5b041]" aria-hidden="true"></i>, title: "Acara Spesial", desc: "Kami melayani pesanan untuk berbagai acara Anda." },
+    { icon: <i className="fas fa-calendar-alt text-[#f5b041]" aria-hidden="true"></i>, title: "Reservasi Meja", desc: "Pesan meja Anda lebih awal untuk momen spesial." }
   ];
 
   const info = [
@@ -43,6 +43,7 @@ export default function Location() {
           <Reveal delay={200}>
           <div className="relative w-full h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-xl group border-[4px] sm:border-[8px] border-white">
             <iframe 
+              title="Peta lokasi Semangkok"
               src="https://maps.google.com/maps?q=Jl.%20Karimata%20No.40,%20Mulyoharjo,%20Kec.%20Pemalang,%20Kabupaten%20Pemalang,%20Jawa%20Tengah%2052313&t=&z=16&ie=UTF8&iwloc=&output=embed" 
               width="100%" 
               height="100%" 
@@ -66,8 +67,8 @@ export default function Location() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-8 sm:mt-12">
             {info.map((item) => (
               <div key={item.title} className="bg-white p-4 sm:p-6 rounded-2xl sm:rounded-3xl border border-[#2c231b]/5 text-left flex items-start gap-4 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-500">
-                <div className="w-12 h-12 rounded-full bg-[#f5b041]/20 text-[#f5b041] flex items-center justify-center shrink-0">
-                  <i className={`${item.icon} text-xl`}></i>
+                <div className="w-12 h-12 rounded-full bg-[#f5b041]/20 text-[#f5b041] flex items-center justify-center shrink-0" aria-hidden="true">
+                  <i className={`${item.icon} text-xl`} aria-hidden="true"></i>
                 </div>
                 <div>
                   <h4 className="text-base font-bold text-[#2c231b] font-poppins">{item.title}</h4>
