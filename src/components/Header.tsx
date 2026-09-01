@@ -56,7 +56,7 @@ export default function Header() {
     }`;
 
   return (
-    <header ref={headerRef} className={`fixed w-full z-50 transition-all duration-300 will-change-transform ${scrolled ? 'bg-white/85 backdrop-blur-lg shadow-sm border-b border-[#2c231b]/5 py-3' : 'bg-transparent py-5'}`}>
+    <header ref={headerRef} className={`fixed w-full z-50 transition-all duration-300 will-change-transform ${scrolled ? 'bg-white/80 backdrop-blur-xl backdrop-saturate-150 shadow-sm border-b border-[#2c231b]/5 py-3' : 'bg-transparent py-5'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           
