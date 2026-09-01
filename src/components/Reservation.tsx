@@ -35,7 +35,7 @@ export default function Reservation() {
             Pesan Tempat Anda
           </h2>
           <p className="text-sm sm:text-base lg:text-lg text-[#2c231b]/70 font-inter max-w-2xl mx-auto px-2">
-            Booking tempat untuk pengalaman makan yang lebih nyaman bersama keluarga dan teman.
+            Mau makan bareng keluarga besar? Pesan meja dulu biar kebagian tempat.
           </p>
         </div>
         </Reveal>

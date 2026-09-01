@@ -3,10 +3,10 @@ import WaveDivider from "@/components/WaveDivider";
 
 export default function Location() {
   const services = [
-    { icon: <i className="fas fa-motorcycle text-[#f5b041]" aria-hidden="true"></i>, title: "Pesan Antar", desc: "Nikmati mie ayam favorit Anda tanpa keluar rumah." },
-    { icon: <i className="fas fa-store text-[#f5b041]" aria-hidden="true"></i>, title: "Makan di Tempat", desc: "Suasana nyaman untuk bersantap bersama keluarga." },
-    { icon: <i className="fas fa-glass-cheers text-[#f5b041]" aria-hidden="true"></i>, title: "Acara Spesial", desc: "Kami melayani pesanan untuk berbagai acara Anda." },
-    { icon: <i className="fas fa-calendar-alt text-[#f5b041]" aria-hidden="true"></i>, title: "Reservasi Meja", desc: "Pesan meja Anda lebih awal untuk momen spesial." }
+    { icon: <i className="fas fa-motorcycle text-[#f5b041]" aria-hidden="true"></i>, title: "Pesan Antar", desc: "Mager keluar? Kami antar, masih hangat." },
+    { icon: <i className="fas fa-store text-[#f5b041]" aria-hidden="true"></i>, title: "Makan di Tempat", desc: "Meja luas, cocok buat keluarga." },
+    { icon: <i className="fas fa-glass-cheers text-[#f5b041]" aria-hidden="true"></i>, title: "Acara Spesial", desc: "Arisan, ulang tahun, pesan saja." },
+    { icon: <i className="fas fa-calendar-alt text-[#f5b041]" aria-hidden="true"></i>, title: "Reservasi Meja", desc: "Booking dulu biar nggak ngantri." }
   ];
 
   const info = [
