@@ -87,19 +87,26 @@ export default function Testimonial() {
           </div>
         </Reveal>
 
-        <div className="relative max-w-6xl mx-auto">
+        <div className="relative max-w-5xl mx-auto">
           <div
             ref={scrollRef}
             onScroll={onScroll}
-            className="flex gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 px-1 scrollbar-thin scrollbar-thumb-[#f5b041]/30 scrollbar-track-transparent"
-            style={{ scrollbarWidth: "thin" }}
+            className="flex gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-6 px-4 sm:px-8 scrollbar-none"
+            style={{ scrollbarWidth: "none" }}
             aria-label="Daftar ulasan pelanggan, geser untuk melihat"
           >
-            {reviews.map((rev, idx) => (
-              <div
-                key={rev.name}
-                className="min-w-[85%] sm:min-w-[45%] lg:min-w-[32%] snap-start bg-white rounded-3xl p-6 sm:p-7 relative shadow-lg border border-[#2c231b]/5 hover:shadow-xl hover:-translate-y-1 hover:border-[#f5b041]/20 transition-all duration-300 text-left flex flex-col group shrink-0"
-              >
+            {reviews.map((rev, idx) => {
+              const isActive = idx === active;
+              return (
+                <div
+                  key={rev.name}
+                  onClick={() => scrollTo(idx)}
+                  className={`min-w-[82%] sm:min-w-[44%] lg:min-w-[30%] snap-center bg-white/90 backdrop-blur-xl rounded-[1.75rem] p-5 sm:p-6 relative shadow-lg border border-[#2c231b]/5 transition-all duration-500 text-left flex flex-col group shrink-0 cursor-pointer ${
+                    isActive
+                      ? "opacity-100 blur-0 scale-100 shadow-xl border-[#f5b041]/20"
+                      : "opacity-60 blur-[1.5px] scale-[0.96] hover:opacity-80 hover:blur-[0.5px]"
+                  }`}
+                >
                 <div className="absolute top-4 right-4 opacity-[0.07] group-hover:opacity-10 transition-opacity">
                   <i className="fas fa-quote-right text-2xl text-[#f5b041]" aria-hidden="true"></i>
                 </div>
