@@ -12,7 +12,7 @@ export default function Testimonial() {
           <div className="inline-block px-4 py-1.5 rounded-full bg-[#f5b041]/20 text-[#2c231b] font-bold text-xs mb-4 uppercase tracking-wider shadow-sm border border-[#f5b041]/30">
             Testimoni
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#2c231b] font-poppins leading-tight mb-8 sm:mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#2c231b] font-poppins leading-tight tracking-tight text-balance mb-8 sm:mb-12">
             Apa Kata Pelanggan Kami
           </h2>
         </Reveal>
