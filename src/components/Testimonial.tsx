@@ -119,8 +119,11 @@ export default function Testimonial() {
                   “{rev.text}”
                 </p>
                 <div className="flex items-center gap-3 pt-4 border-t border-[#2c231b]/5">
-                  <div className="w-10 h-10 rounded-full overflow-hidden bg-gray-100 shrink-0 border border-white shadow-sm">
+                  <div className="relative w-10 h-10 rounded-full overflow-hidden bg-gray-100 shrink-0 border border-white shadow-sm">
                     <Image src={rev.avatar} alt={rev.name} width={40} height={40} className="w-full h-full object-cover" loading="lazy" />
+                    <div className="absolute -bottom-0.5 -right-0.5 w-4 h-4 bg-white rounded-full flex items-center justify-center shadow-sm border border-gray-100">
+                      <i className="fab fa-google text-[8px] text-[#4285F4]" aria-hidden="true"></i>
+                    </div>
                   </div>
                   <div className="text-left min-w-0">
                     <h5 className="font-bold text-[#2c231b] font-poppins text-sm leading-tight truncate">{rev.name}</h5>
