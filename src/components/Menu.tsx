@@ -9,21 +9,23 @@ const menuItems = [
     id: 1,
     name: "Mie Ayam Original",
     price: "Rp 15.000",
-    desc: "Mie ayam klasik dengan ayam kecap manis gurih",
+    desc: "Mie klasik, ayam kecap manis, kuah gurih",
     img: "/img/mi-ayam.jpg",
   },
   {
     id: 2,
     name: "Mie Ayam Bakso",
     price: "Rp 20.000",
-    desc: "Mie ayam ditambah bakso sapi asli",
+    desc: "Mie ayam plus bakso sapi, kenyal",
     img: "/img/mi-ayam-bakso.jpg",
   },
   {
     id: 3,
     name: "Hotplate Seafood",
     price: "Rp 35.000",
-    desc: "Bakmi hotplate dengan udang, cumi, dan kerang",
+    desc: "Bakmi hotplate, udang cumi kerang",
+    img: "/img/seafood-hot-plate.jpg",
+  },
     img: "/img/seafood-hot-plate.jpg",
   },
 ];
@@ -39,8 +41,8 @@ export default function Menu() {
           <div className="inline-block px-4 py-1.5 rounded-full bg-[#f5b041] text-[#2c231b] font-bold text-xs mb-4 uppercase tracking-wider shadow-sm">
             Menu Pilihan
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#fdf8f5] font-poppins mb-4 sm:mb-6">
-            Produk Terbaik Kami
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#fdf8f5] font-poppins mb-4 sm:mb-6 tracking-tight text-balance">
+            Paling Sering Dipesan
           </h2>
         </div>
         </Reveal>
