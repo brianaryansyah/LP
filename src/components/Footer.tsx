@@ -29,17 +29,17 @@ export default function Footer() {
               Warung mie ayam di Pemalang sejak 1990. Makan di tempat atau pesan antar, tiap hari buka.
             </p>
             <div className="flex gap-3">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Ikuti kami di Instagram" className="w-10 h-10 rounded-full bg-[#f5b041] text-[#2c231b] flex items-center justify-center hover:bg-white hover:-translate-y-1 transition-all duration-300">
-                <i className="fab fa-instagram"></i>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Ikuti kami di Instagram" className="w-10 h-10 rounded-full bg-[#f5b041] text-[#2c231b] flex items-center justify-center hover:bg-white hover:-translate-y-1 hover:shadow-md transition-all duration-300 ring-1 ring-black/5">
+                <i className="fab fa-instagram" aria-hidden="true"></i>
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Ikuti kami di Facebook" className="w-10 h-10 rounded-full bg-[#f5b041] text-[#2c231b] flex items-center justify-center hover:bg-white hover:-translate-y-1 transition-all duration-300">
-                <i className="fab fa-facebook-f"></i>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Ikuti kami di Facebook" className="w-10 h-10 rounded-full bg-[#f5b041] text-[#2c231b] flex items-center justify-center hover:bg-white hover:-translate-y-1 hover:shadow-md transition-all duration-300 ring-1 ring-black/5">
+                <i className="fab fa-facebook-f" aria-hidden="true"></i>
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Ikuti kami di X" className="w-10 h-10 rounded-full bg-[#f5b041] text-[#2c231b] flex items-center justify-center hover:bg-white hover:-translate-y-1 transition-all duration-300">
-                <i className="fab fa-twitter"></i>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Ikuti kami di X" className="w-10 h-10 rounded-full bg-[#f5b041] text-[#2c231b] flex items-center justify-center hover:bg-white hover:-translate-y-1 hover:shadow-md transition-all duration-300 ring-1 ring-black/5">
+                <i className="fab fa-twitter" aria-hidden="true"></i>
               </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="Tonton kami di YouTube" className="w-10 h-10 rounded-full bg-[#f5b041] text-[#2c231b] flex items-center justify-center hover:bg-white hover:-translate-y-1 transition-all duration-300">
-                <i className="fab fa-youtube"></i>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="Tonton kami di YouTube" className="w-10 h-10 rounded-full bg-[#f5b041] text-[#2c231b] flex items-center justify-center hover:bg-white hover:-translate-y-1 hover:shadow-md transition-all duration-300 ring-1 ring-black/5">
+                <i className="fab fa-youtube" aria-hidden="true"></i>
               </a>
             </div>
           </div>
