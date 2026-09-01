@@ -50,27 +50,27 @@ export default function Features() {
               Pengalaman & Keahlian dalam Menyajikan Mie Ayam
             </h2>
             <p className="text-sm sm:text-base lg:text-lg text-[#2c231b]/70 font-inter mb-8 sm:mb-10 leading-relaxed">
-              30 tahun di dapur yang sama. Mie dibuat pagi, ayam dimasak pelan, bakso dari daging segar. Tiap mangkok rasanya konsisten.
+              Dari gerobak di Pasar Pagi 1990 sampai dapur di Karimata 40 sekarang. Mie ditarik tiap jam 4 pagi, kaldu direbus 8 jam, ayam kampung dimasak pelan. Bukan soal gimmick — cuma konsistensi rasa yang bikin orang balik lagi.
             </p>
 
             <div className="space-y-4 sm:space-y-6">
-              <div className="bg-[#f5b041]/10 p-4 sm:p-6 rounded-2xl sm:rounded-3xl flex items-center gap-4 sm:gap-6 hover:-translate-y-1 hover:shadow-md transition-all duration-500 shadow-sm border border-transparent hover:border-[#f5b041]/20 cursor-default">
+               <div className="bg-[#f5b041]/10 p-4 sm:p-6 rounded-2xl sm:rounded-3xl flex items-center gap-4 sm:gap-6 hover:-translate-y-1 hover:shadow-md transition-all duration-500 shadow-sm border border-transparent hover:border-[#f5b041]/20 cursor-default">
                 <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#f5b041]/20 flex items-center justify-center shrink-0" aria-hidden="true">
-                  <i className="fas fa-hat-chef text-xl sm:text-2xl text-[#f5b041]" aria-hidden="true"></i>
+                  <i className="fas fa-fire text-xl sm:text-2xl text-[#f5b041]" aria-hidden="true"></i>
                 </div>
                 <div>
-                  <h4 className="text-lg sm:text-xl font-bold text-[#2c231b] font-poppins mb-1">Koki Berpengalaman</h4>
-                  <p className="text-[#2c231b]/70 text-xs sm:text-sm leading-relaxed">Resep keluarga, takaran sama sejak dulu.</p>
+                  <h4 className="text-lg sm:text-xl font-bold text-[#2c231b] font-poppins mb-1">Kaldu 8 Jam</h4>
+                  <p className="text-[#2c231b]/70 text-xs sm:text-sm leading-relaxed">Tulang ayam kampung direbus pelan dari subuh. Gurih alami, tanpa penyedap berlebih.</p>
                 </div>
               </div>
 
               <div className="bg-white border border-[#2c231b]/5 p-4 sm:p-6 rounded-2xl sm:rounded-3xl flex items-center gap-4 sm:gap-6 hover:-translate-y-1 hover:shadow-md transition-all duration-500 shadow-sm cursor-default">
                 <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#fdf8f5] flex items-center justify-center shrink-0 shadow-inner" aria-hidden="true">
-                  <i className="fas fa-leaf text-xl sm:text-2xl text-[#f5b041]" aria-hidden="true"></i>
+                  <i className="fas fa-hand-sparkles text-xl sm:text-2xl text-[#f5b041]" aria-hidden="true"></i>
                 </div>
                 <div>
-                  <h4 className="text-lg sm:text-xl font-bold text-[#2c231b] font-poppins mb-1">Bahan Baku Segar</h4>
-                  <p className="text-[#2c231b]/70 text-xs sm:text-sm leading-relaxed">Ayam segar tiap pagi dari pasar Pemalang.</p>
+                  <h4 className="text-lg sm:text-xl font-bold text-[#2c231b] font-poppins mb-1">Mie Ditarik Tangan</h4>
+                  <p className="text-[#2c231b]/70 text-xs sm:text-sm leading-relaxed">Adonan segar tiap pagi, tekstur kenyal pas gigit.</p>
                 </div>
               </div>
             </div>
