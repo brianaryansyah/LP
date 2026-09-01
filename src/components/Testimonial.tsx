@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import Reveal from "@/components/Reveal";
 import WaveDivider from "@/components/WaveDivider";
 
@@ -52,14 +52,15 @@ const reviews = [
 export default function Testimonial() {
   const googleMapsLink = "https://share.google/QOCQKq5zvoVVkb4pm";
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState(Math.floor(reviews.length / 2));
 
   const scrollTo = (index: number) => {
     const el = scrollRef.current;
     if (!el) return;
     const card = el.children[index] as HTMLElement;
     if (card) {
-      el.scrollTo({ left: card.offsetLeft - 16, behavior: "smooth" });
+      const left = card.offsetLeft - (el.clientWidth - card.offsetWidth) / 2;
+      el.scrollTo({ left, behavior: "smooth" });
       setActive(index);
     }
   };
@@ -67,9 +68,25 @@ export default function Testimonial() {
   const onScroll = () => {
     const el = scrollRef.current;
     if (!el) return;
-    const idx = Math.round(el.scrollLeft / (el.children[0] as HTMLElement).offsetWidth);
-    setActive(Math.max(0, Math.min(idx, reviews.length - 1)));
+    const center = el.scrollLeft + el.clientWidth / 2;
+    let closest = 0;
+    let minDist = Infinity;
+    Array.from(el.children).forEach((child, idx) => {
+      const c = child as HTMLElement;
+      const childCenter = c.offsetLeft + c.offsetWidth / 2;
+      const dist = Math.abs(center - childCenter);
+      if (dist < minDist) {
+        minDist = dist;
+        closest = idx;
+      }
+    });
+    setActive(closest);
   };
+
+  useEffect(() => {
+    const id = setTimeout(() => scrollTo(Math.floor(reviews.length / 2)), 100);
+    return () => clearTimeout(id);
+  }, []);
 
   return (
     <section id="testimoni" className="relative py-16 lg:py-24 bg-[#fdf8f5] overflow-hidden">
@@ -132,31 +149,14 @@ export default function Testimonial() {
             ))}
           </div>
 
-          <div className="flex items-center justify-center gap-3 mt-6">
-            <button
-              onClick={() => scrollTo(Math.max(0, active - 1))}
-              aria-label="Ulasan sebelumnya"
-              className="w-10 h-10 rounded-full bg-white border border-[#2c231b]/10 text-[#2c231b] flex items-center justify-center hover:bg-[#f5b041] hover:border-[#f5b041] hover:text-[#2c231b] hover:scale-105 active:scale-95 transition-all duration-300 shadow-sm"
-            >
-              <i className="fas fa-chevron-left text-xs" aria-hidden="true"></i>
-            </button>
-            <div className="flex gap-1.5">
-              {reviews.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => scrollTo(i)}
-                  aria-label={`Ke ulasan ${i + 1}`}
-                  className={`h-1.5 rounded-full transition-all duration-300 ${i === active ? "w-6 bg-[#f5b041]" : "w-1.5 bg-[#2c231b]/20 hover:bg-[#2c231b]/30"}`}
-                />
-              ))}
-            </div>
-            <button
-              onClick={() => scrollTo(Math.min(reviews.length - 1, active + 1))}
-              aria-label="Ulasan berikutnya"
-              className="w-10 h-10 rounded-full bg-white border border-[#2c231b]/10 text-[#2c231b] flex items-center justify-center hover:bg-[#f5b041] hover:border-[#f5b041] hover:text-[#2c231b] hover:scale-105 active:scale-95 transition-all duration-300 shadow-sm"
-            >
-              <i className="fas fa-chevron-right text-xs" aria-hidden="true"></i>
-            </button>
+          <div className="flex justify-center gap-1.5 mt-6">
+            {reviews.map((_, i) => (
+              <div
+                key={i}
+                className={`h-1 rounded-full transition-all duration-300 ${i === active ? "w-6 bg-[#f5b041]" : "w-1.5 bg-[#2c231b]/15"}`}
+                aria-hidden="true"
+              />
+            ))}
           </div>
         </div>
 
