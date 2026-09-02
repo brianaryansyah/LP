@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import Reveal from "@/components/Reveal";
 import WaveDivider from "@/components/WaveDivider";
 
@@ -44,6 +45,7 @@ const reviews = [
 export default function Testimonial() {
   const googleMapsLink = "https://share.google/QOCQKq5zvoVVkb4pm";
   const marqueeItems = [...reviews, ...reviews, ...reviews];
+  const [isPressed, setIsPressed] = useState(false);
 
   return (
     <section id="testimoni" className="relative pt-14 sm:pt-16 lg:pt-24 pb-16 sm:pb-20 lg:pb-28 bg-[#fdf8f5] overflow-hidden">
@@ -60,16 +62,24 @@ export default function Testimonial() {
             <p className="text-[13px] sm:text-sm text-[#2c231b]/55 font-inter max-w-xl mx-auto leading-relaxed mb-1 font-medium">
               Cerita jujur dari meja sebelah — tanpa filter, tanpa naskah
             </p>
-            <p className="text-[11px] text-[#2c231b]/35 font-inter mb-8 tracking-[0.08em] uppercase">Mengalir terus • Arahkan kursor untuk jeda</p>
+            <p className="text-[11px] text-[#2c231b]/35 font-inter mb-8 tracking-[0.08em] uppercase">Mengalir terus • Hover atau klik & tahan untuk jeda</p>
           </div>
         </Reveal>
 
         <div
-          className="relative w-full overflow-hidden group py-4"
-          aria-label="Ulasan pelanggan berjalan terus menerus, jeda saat hover"
+          className="relative w-full overflow-hidden group py-4 select-none"
+          aria-label="Ulasan pelanggan berjalan terus menerus, klik dan tahan untuk jeda"
           role="region"
+          onMouseDown={() => setIsPressed(true)}
+          onMouseUp={() => setIsPressed(false)}
+          onMouseLeave={() => setIsPressed(false)}
+          onTouchStart={() => setIsPressed(true)}
+          onTouchEnd={() => setIsPressed(false)}
         >
-          <div className="flex w-max animate-marquee gap-3 sm:gap-4 py-3 group-hover:[animation-play-state:paused] motion-reduce:animate-none hover:[animation-play-state:paused]">
+          <div
+            className="flex w-max animate-marquee gap-3 sm:gap-4 py-3 group-hover:[animation-play-state:paused] motion-reduce:animate-none hover:[animation-play-state:paused]"
+            style={{ animationPlayState: isPressed ? "paused" : "running" }}
+          >
             {marqueeItems.map((rev, idx) => (
               <div
                 key={`${rev.name}-${idx}`}
