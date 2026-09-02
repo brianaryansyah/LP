@@ -1,13 +1,13 @@
-# Logo Semangkok - Panduan Penggantian
+# Logo Semangkok - Panduan Penggantian (Jujur, Tidak Mengada-ada)
 
-**Status saat ini:** Placeholder SVG `logo-semangkok.svg` digunakan. Bukan logo asli dari Google Maps (JS-protected, tidak bisa di-scrape otomatis tanpa API key).
+**Status saat ini:** Placeholder SVG `logo-semangkok.svg` — **bukan** logo asli. Google Maps melindungi foto/logo dengan JS + autentikasi, tidak bisa di-scrape otomatis (sudah dicoba fetch `share.google/QOCQKq5zvoVVkb4pm` & `maps.app.goo.gl` → hanya `lh3.googleusercontent.com/ogw/default-user`). 
 
-**Cara ganti dengan logo asli 100% akurat:**
-1. Buka Google Maps → Cari `Mie Ayam dan Bakso Semangkok` → Klik foto/logo → Simpan sebagai PNG
-2. Ganti file `public/img/logo-semangkok.svg` dengan file asli (bisa SVG atau PNG, tetap nama sama)
-3. Atau tambahkan `public/img/logo-semangkok.png` (akan otomatis terdeteksi sebagai fallback)
-4. Push ke GitHub — Header & Footer akan otomatis pakai logo asli tanpa mengada-ada
+**Agar 100% sesuai kenyataan, lakukan manual (1 menit):**
+1. Buka [Google Maps Place](https://maps.app.goo.gl/NvCxPom7GSdYFj7Z9) di HP/laptop → Tab **Foto** → Foto profil/logo → Klik kanan **Simpan gambar**
+2. Simpan sebagai `logo-semangkok.png` (512x512, transparan ideal) di `public/img/`
+3. Ganti `public/img/logo-semangkok.svg` ATAU biarkan keduanya (Header/Footer prioritas PNG)
+4. `git add public/img/logo-semangkok.png && git commit -m "Add original logo" && git push` — otomatis tampil, tidak perlu ubah kode
 
-Header (`src/components/Header.tsx:64`) dan Footer (`src/components/Footer.tsx:22`) sudah pakai `next/image` dengan `priority` dan `object-contain`, jadi logo asli akan tampil tajam di semua device.
+**Catatan profesional:** Placeholder sekarang ikon mangkok generik #f5b041 agar tidak mengada-ada. Jika dibiarkan, branding tetap konsisten tapi tidak 100% identik. Segera ganti dengan file asli untuk maksimal.
 
-Jangan pakai screenshot terkompresi — usahakan file asli minimal 512x512 PNG transparan.
+Header (`src/components/Header.tsx:64`) & Footer (`src/components/Footer.tsx:22`) sudah `next/image` + `priority` + `object-contain` + `title` placeholder.
