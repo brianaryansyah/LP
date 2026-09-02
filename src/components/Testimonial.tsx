@@ -1,5 +1,4 @@
 "use client";
-import { useRef, useState, useEffect } from "react";
 import Reveal from "@/components/Reveal";
 import WaveDivider from "@/components/WaveDivider";
 
@@ -44,60 +43,10 @@ const reviews = [
 
 export default function Testimonial() {
   const googleMapsLink = "https://share.google/QOCQKq5zvoVVkb4pm";
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const [active, setActive] = useState(Math.floor(reviews.length / 2));
-  const [isPaused, setIsPaused] = useState(false);
-
-  const scrollTo = (index: number) => {
-    const el = scrollRef.current;
-    if (!el) return;
-    const card = el.children[index] as HTMLElement;
-    if (card) {
-      const left = card.offsetLeft - (el.clientWidth - card.offsetWidth) / 2;
-      el.scrollTo({ left, behavior: "smooth" });
-      setActive(index);
-    }
-  };
-
-  const onScroll = () => {
-    const el = scrollRef.current;
-    if (!el) return;
-    const center = el.scrollLeft + el.clientWidth / 2;
-    let closest = 0;
-    let minDist = Infinity;
-    Array.from(el.children).forEach((child, idx) => {
-      const c = child as HTMLElement;
-      const childCenter = c.offsetLeft + c.offsetWidth / 2;
-      const dist = Math.abs(center - childCenter);
-      if (dist < minDist) {
-        minDist = dist;
-        closest = idx;
-      }
-    });
-    setActive(closest);
-  };
-
-  useEffect(() => {
-    const id = setTimeout(() => scrollTo(Math.floor(reviews.length / 2)), 100);
-    return () => clearTimeout(id);
-  }, []);
-
-  useEffect(() => {
-    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (prefersReduced || isPaused) return;
-    const interval = setInterval(() => {
-      setActive((prev) => {
-        const next = (prev + 1) % reviews.length;
-        scrollTo(next);
-        return next;
-      });
-    }, 2800);
-    return () => clearInterval(interval);
-  }, [isPaused]);
+  const marqueeItems = [...reviews, ...reviews, ...reviews];
 
   return (
-    <section id="testimoni" className="relative py-14 sm:py-16 lg:py-24 bg-[#fdf8f5] overflow-hidden motion-safe:scroll-smooth">
-      {/* Subtle artisanal pattern */}
+    <section id="testimoni" className="relative py-14 sm:py-16 lg:py-24 bg-[#fdf8f5] overflow-hidden">
       <div className="absolute inset-0 opacity-[0.03]" aria-hidden="true" style={{ backgroundImage: `radial-gradient(circle at 1px 1px, #2c231b 1px, transparent 0)`, backgroundSize: `24px 24px` }} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 pb-10 sm:pb-16">
         <Reveal>
@@ -111,40 +60,21 @@ export default function Testimonial() {
             <p className="text-[13px] sm:text-sm text-[#2c231b]/55 font-inter max-w-xl mx-auto leading-relaxed mb-1 font-medium">
               Cerita jujur dari meja sebelah — tanpa filter, tanpa naskah
             </p>
-            <p className="text-[11px] text-[#2c231b]/35 font-inter mb-8 tracking-[0.08em] uppercase">Berjalan otomatis • Arahkan kursor untuk jeda</p>
+            <p className="text-[11px] text-[#2c231b]/35 font-inter mb-8 tracking-[0.08em] uppercase">Mengalir terus • Arahkan kursor untuk jeda</p>
           </div>
         </Reveal>
 
-        <div className="relative max-w-6xl mx-auto">
-          <div
-            ref={scrollRef}
-            onScroll={onScroll}
-            onMouseEnter={() => setIsPaused(true)}
-            onMouseLeave={() => setIsPaused(false)}
-            onTouchStart={() => setIsPaused(true)}
-            onTouchEnd={() => setIsPaused(false)}
-            onKeyDown={(e) => {
-              if (e.key === "ArrowRight") { e.preventDefault(); scrollTo((active + 1) % reviews.length); setIsPaused(true); }
-              if (e.key === "ArrowLeft") { e.preventDefault(); scrollTo((active - 1 + reviews.length) % reviews.length); setIsPaused(true); }
-            }}
-            tabIndex={0}
-            role="region"
-            aria-roledescription="carousel"
-            aria-label="Ulasan pelanggan berjalan otomatis, gunakan panah kiri kanan untuk navigasi"
-            className="flex gap-3 sm:gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-6 px-2 sm:px-6 scrollbar-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f5b041]/40 rounded-2xl"
-            style={{ scrollbarWidth: "none" }}
-          >
-            {reviews.map((rev, idx) => (
+        <div
+          className="relative w-full overflow-hidden group"
+          aria-label="Ulasan pelanggan berjalan terus menerus"
+        >
+          <div className="flex w-max animate-marquee gap-3 sm:gap-4 group-hover:[animation-play-state:paused] motion-reduce:animate-none hover:[animation-play-state:paused]">
+            {marqueeItems.map((rev, idx) => (
               <div
-                key={rev.name}
-                onClick={() => scrollTo(idx)}
-                className={`w-[280px] sm:w-[320px] lg:w-[340px] snap-center bg-white rounded-[1.5rem] p-5 sm:p-5 relative shadow-md border border-[#2c231b]/5 transition-all duration-300 will-change-transform text-left flex flex-col justify-between shrink-0 cursor-pointer group min-h-[158px] sm:min-h-[170px] max-h-[175px] sm:max-h-[185px] motion-reduce:transition-none ${
-                  idx === active
-                    ? "opacity-100 scale-[1.02] shadow-xl border-[#f5b041]/20"
-                    : "opacity-70 scale-[0.97] hover:opacity-90"
-                }`}
+                key={`${rev.name}-${idx}`}
+                className="w-[280px] sm:w-[320px] lg:w-[340px] bg-white rounded-[1.5rem] p-5 relative shadow-md border border-[#2c231b]/5 shrink-0 flex flex-col justify-between min-h-[158px] sm:min-h-[170px] max-h-[175px] sm:max-h-[185px]"
               >
-                <div className="absolute top-3.5 right-3.5 opacity-[0.06] group-hover:opacity-10 transition-opacity">
+                <div className="absolute top-3.5 right-3.5 opacity-[0.06]">
                   <i className="fas fa-quote-right text-xl text-[#f5b041]" aria-hidden="true"></i>
                 </div>
                 <div className="flex gap-1 mb-3">
@@ -152,27 +82,12 @@ export default function Testimonial() {
                     <i key={i} className={`fas fa-star text-[11px] ${i < rev.rating ? "text-[#f5b041]" : "text-gray-200"}`} aria-hidden="true"></i>
                   ))}
                 </div>
-                <p className="text-[13.5px] text-[#2c231b]/80 font-inter leading-[1.6] line-clamp-4 flex-1">
-                  “{rev.text}”
-                </p>
+                <p className="text-[13.5px] text-[#2c231b]/80 font-inter leading-[1.6] line-clamp-4 flex-1">“{rev.text}”</p>
                 <div className="flex items-center justify-between pt-3.5 mt-4 border-t border-[#2c231b]/5">
                   <h5 className="font-bold text-[#2c231b] font-poppins text-[13px] leading-tight truncate pr-2">{rev.name}</h5>
                   <span className="text-[11px] text-[#2c231b]/40 font-medium shrink-0">{rev.date}</span>
                 </div>
               </div>
-            ))}
-          </div>
-
-          <div className="flex justify-center gap-1.5 mt-6" role="tablist" aria-label="Pilihan ulasan">
-            {reviews.map((_, i) => (
-              <button
-                key={i}
-                role="tab"
-                aria-selected={i === active}
-                aria-label={`Ulasan ${i + 1} dari ${reviews.length}`}
-                onClick={() => { scrollTo(i); setIsPaused(true); }}
-                className={`h-1.5 rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f5b041]/40 ${i === active ? "w-6 bg-[#f5b041]" : "w-1.5 bg-[#2c231b]/15 hover:bg-[#2c231b]/25"}`}
-              />
             ))}
           </div>
         </div>
@@ -186,7 +101,7 @@ export default function Testimonial() {
               aria-label="Lihat semua ulasan di Google Maps"
               className="inline-flex items-center gap-2.5 text-[#2c231b] font-bold bg-white px-7 py-3.5 rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 hover:bg-[#2c231b] hover:text-white transition-all duration-300 text-[13px] sm:text-sm border border-[#2c231b]/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f5b041]/40"
             >
-              Lihat di Google Maps <i className="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-0.5" aria-hidden="true"></i>
+              Lihat di Google Maps <i className="fas fa-arrow-right text-xs" aria-hidden="true"></i>
             </a>
             <p className="text-[11px] text-[#2c231b]/30 mt-3 font-medium tracking-wide">Buka di tab baru • Sumber Google Maps</p>
           </div>
@@ -194,6 +109,20 @@ export default function Testimonial() {
       </div>
 
       <WaveDivider fill="#2c231b" position="bottom" />
+
+      <style jsx>{`
+        @keyframes marquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-33.333%); }
+        }
+        .animate-marquee {
+          animation: marquee 22s linear infinite;
+          will-change: transform;
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .animate-marquee { animation: none; transform: translateX(0); }
+        }
+      `}</style>
     </section>
   );
 }
