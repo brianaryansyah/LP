@@ -176,16 +176,17 @@ export default function Testimonial() {
         </div>
 
         <Reveal delay={300}>
-          <div className="text-center mt-10">
+          <div className="text-center mt-8 sm:mt-10">
             <a
               href={googleMapsLink}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Lihat semua ulasan di Google Maps"
-              className="inline-flex items-center gap-2 text-[#2c231b] font-bold bg-white px-6 py-3 rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 hover:bg-[#f5b041] hover:text-[#2c231b] transition-all duration-300 text-sm border border-[#2c231b]/5"
+              className="inline-flex items-center gap-2.5 text-[#2c231b] font-bold bg-white px-7 py-3.5 rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 hover:bg-[#2c231b] hover:text-white transition-all duration-300 text-[13px] sm:text-sm border border-[#2c231b]/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f5b041]/40"
             >
-              Lihat semua di Google Maps <i className="fas fa-external-link-alt text-xs" aria-hidden="true"></i>
+              Lihat di Google Maps <i className="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-0.5" aria-hidden="true"></i>
             </a>
+            <p className="text-[11px] text-[#2c231b]/30 mt-3 font-medium tracking-wide">Buka di tab baru • Sumber Google Maps</p>
           </div>
         </Reveal>
       </div>
