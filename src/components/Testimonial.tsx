@@ -62,7 +62,11 @@ export default function Testimonial() {
             <p className="text-[13px] sm:text-sm text-[#2c231b]/55 font-inter max-w-xl mx-auto leading-relaxed mb-1 font-medium">
               Cerita jujur dari meja sebelah — tanpa filter, tanpa naskah
             </p>
-            <p className="text-[11px] text-[#2c231b]/35 font-inter mb-8 tracking-[0.08em] uppercase">Mengalir terus • Hover atau klik & tahan untuk jeda</p>
+            <p className="text-[11px] text-[#2c231b]/35 font-inter mb-8 tracking-[0.08em] uppercase flex items-center justify-center gap-2">
+              <span>Mengalir terus</span>
+              <span className="w-1 h-1 bg-[#2c231b]/20 rounded-full" aria-hidden="true"></span>
+              <span className={isPressed ? "text-[#f5b041] font-bold" : ""}>{isPressed ? "Jeda — lepaskan untuk lanjut" : "Klik & tahan untuk jeda"}</span>
+            </p>
           </div>
         </Reveal>
 
