@@ -65,14 +65,14 @@ export default function Testimonial() {
         </Reveal>
 
         <div
-          className="relative w-full overflow-hidden group"
+          className="relative w-full overflow-hidden group py-3"
           aria-label="Ulasan pelanggan berjalan terus menerus"
         >
-          <div className="flex w-max animate-marquee gap-3 sm:gap-4 group-hover:[animation-play-state:paused] motion-reduce:animate-none hover:[animation-play-state:paused]">
+          <div className="flex w-max animate-marquee gap-3 sm:gap-4 py-2 group-hover:[animation-play-state:paused] motion-reduce:animate-none hover:[animation-play-state:paused]">
             {marqueeItems.map((rev, idx) => (
               <div
                 key={`${rev.name}-${idx}`}
-                className="w-[280px] sm:w-[320px] lg:w-[340px] bg-white rounded-[1.5rem] p-5 relative shadow-md border border-[#2c231b]/5 shrink-0 flex flex-col justify-between min-h-[158px] sm:min-h-[170px] max-h-[175px] sm:max-h-[185px]"
+                className="w-[280px] sm:w-[320px] lg:w-[340px] bg-white rounded-[1.5rem] p-5 relative shadow-[0_4px_20px_rgba(44,35,27,0.08)] border border-[#2c231b]/5 shrink-0 flex flex-col justify-between min-h-[170px] sm:min-h-[178px] h-auto"
               >
                 <div className="absolute top-3.5 right-3.5 opacity-[0.06]">
                   <i className="fas fa-quote-right text-xl text-[#f5b041]" aria-hidden="true"></i>
