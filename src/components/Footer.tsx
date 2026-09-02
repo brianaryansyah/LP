@@ -1,5 +1,6 @@
 ﻿"use client";
 import React, { useState } from "react";
+import Image from "next/image";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
@@ -17,13 +18,16 @@ export default function Footer() {
     <footer className="bg-[#2c231b] text-[#fdf8f5] pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-[#fdf8f5]/10 pb-12 mb-8">
-          {/* Logo & Social */}
+          {/* Logo & Social - original */}
           <div>
             <div className="flex items-center gap-3 mb-6 cursor-pointer group">
-              <div className="bg-[#f5b041] w-10 h-10 rounded-full flex items-center justify-center border border-[#fdf8f5]/20 group-hover:bg-[#fdf8f5] transition-colors duration-300">
-                <i className="fas fa-bowl-food text-[#2c231b] text-sm"></i>
+              <div className="relative w-10 h-10 rounded-full overflow-hidden bg-white border border-[#fdf8f5]/20 group-hover:border-[#f5b041] transition-colors duration-300 shrink-0">
+                <Image src="/img/logo-semangkok.svg" alt="Mie Ayam & Bakso Semangkok" width={40} height={40} className="w-full h-full object-cover" loading="lazy" />
               </div>
-              <h3 className="text-2xl font-bold font-poppins text-[#fdf8f5]">Semangkok</h3>
+              <div>
+                <h3 className="text-2xl font-bold font-poppins text-[#fdf8f5] leading-none">Semangkok</h3>
+                <span className="text-[11px] text-[#fdf8f5]/50 font-medium tracking-widest uppercase">Mie Ayam & Bakso • 1990</span>
+              </div>
             </div>
             <p className="text-[#fdf8f5]/60 font-inter mb-8 text-sm leading-relaxed pr-4">
               Warung mie ayam di Pemalang sejak 1990. Makan di tempat atau pesan antar, tiap hari buka.
