@@ -63,8 +63,8 @@ export default function Header() {
           
           {/* Logo - original from Google Maps */}
           <a href="#home" className="flex-shrink-0 flex items-center gap-3 cursor-pointer group" aria-label="Semangkok - kembali ke beranda">
-            <div className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden shadow-md border-2 border-white group-hover:border-[#f5b041] transition-all duration-300 group-hover:rotate-3 bg-white">
-              <Image src="/img/logo-semangkok.svg" alt="Mie Ayam & Bakso Semangkok - logo asli" width={48} height={48} className="w-full h-full object-cover" priority />
+            <div className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden shadow-md border-2 border-white group-hover:border-[#f5b041] transition-all duration-300 group-hover:rotate-3 bg-white p-0.5">
+              <Image src="/img/logo-semangkok.svg" alt="Mie Ayam & Bakso Semangkok - logo asli dari Google Maps" width={48} height={48} className="w-full h-full object-contain" priority sizes="48px" />
             </div>
             <div>
               <h1 className="text-xl sm:text-2xl font-extrabold text-[#2c231b] font-poppins tracking-tight">
