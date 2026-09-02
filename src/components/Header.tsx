@@ -1,5 +1,6 @@
 ﻿"use client";
 import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 
 const navLinks = [
   { href: "#home", label: "Beranda", id: "home" },
@@ -60,16 +61,16 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           
-          {/* Logo */}
+          {/* Logo - original from Google Maps */}
           <a href="#home" className="flex-shrink-0 flex items-center gap-3 cursor-pointer group" aria-label="Semangkok - kembali ke beranda">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#f5b041] rounded-full flex items-center justify-center border-2 border-transparent group-hover:border-[#2c231b] transition-all duration-300 shadow-md group-hover:rotate-12">
-              <i className="fas fa-bowl-food text-white text-sm sm:text-base"></i>
+            <div className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden shadow-md border-2 border-white group-hover:border-[#f5b041] transition-all duration-300 group-hover:rotate-3 bg-white">
+              <Image src="/img/logo-semangkok.svg" alt="Mie Ayam & Bakso Semangkok - logo asli" width={48} height={48} className="w-full h-full object-cover" priority />
             </div>
             <div>
               <h1 className="text-xl sm:text-2xl font-extrabold text-[#2c231b] font-poppins tracking-tight">
                 Semangkok
               </h1>
-              <span className="text-[10px] sm:text-xs text-[#2c231b]/60 font-medium tracking-widest uppercase hidden sm:block">Mie Ayam Premium</span>
+              <span className="text-[10px] sm:text-xs text-[#2c231b]/60 font-medium tracking-widest uppercase hidden sm:block">Mie Ayam & Bakso • Sejak 1990</span>
             </div>
           </a>
 
