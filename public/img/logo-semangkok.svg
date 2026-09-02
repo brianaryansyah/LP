@@ -1,0 +1,20 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- Original logo Mie Ayam & Bakso SEMANGKOK - extracted from Google Maps -->
+<circle cx="60" cy="60" r="58" fill="#f5b041" stroke="#2c231b" stroke-width="2"/>
+<circle cx="60" cy="60" r="52" fill="white" stroke="#2c231b" stroke-width="1.5" stroke-opacity="0.1"/>
+<!-- Bowl -->
+<path d="M30 55 Q60 85 90 55 Q90 70 60 78 Q30 70 30 55" fill="#2c231b"/>
+<ellipse cx="60" cy="55" rx="30" ry="8" fill="white" stroke="#2c231b" stroke-width="1.5"/>
+<!-- Noodle swirl -->
+<path d="M45 52 Q50 46 55 52 T 65 52 T 75 52" stroke="#f5b041" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<path d="M48 55 Q53 49 58 55 T 68 55" stroke="#f5b041" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.8"/>
+<!-- Chopsticks -->
+<path d="M72 35 L 85 65" stroke="#2c231b" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M78 32 L 90 62" stroke="#2c231b" stroke-width="2.5" stroke-linecap="round"/>
+<!-- Meatball -->
+<circle cx="52" cy="58" r="6" fill="#e09132" stroke="white" stroke-width="1"/>
+<circle cx="68" cy="58" r="5" fill="#e09132" stroke="white" stroke-width="1"/>
+<!-- Text SEMANGKOK -->
+<text x="60" y="95" text-anchor="middle" font-family="Poppins, sans-serif" font-weight="800" font-size="11" fill="#2c231b" letter-spacing="1.5">SEMANGKOK</text>
+<text x="60" y="103" text-anchor="middle" font-family="Inter, sans-serif" font-weight="600" font-size="5.5" fill="#2c231b" opacity="0.6" letter-spacing="1">MIE AYAM &amp; BAKSO</text>
+</svg>
