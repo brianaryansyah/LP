@@ -109,34 +109,26 @@ export default function Testimonial() {
               <div
                 key={rev.name}
                 onClick={() => scrollTo(idx)}
-                className={`min-w-[82%] sm:min-w-[44%] lg:min-w-[30%] snap-center bg-white/90 backdrop-blur-xl rounded-[1.75rem] p-5 sm:p-6 relative shadow-lg border border-[#2c231b]/5 transition-all duration-500 text-left flex flex-col group shrink-0 cursor-pointer ring-1 ring-black/5 ${
+                className={`w-[300px] sm:w-[340px] snap-center bg-white rounded-[1.5rem] p-5 relative shadow-md border border-[#2c231b]/5 transition-all duration-400 text-left flex flex-col justify-between shrink-0 cursor-pointer group min-h-[170px] max-h-[185px] ${
                   idx === active
-                    ? "opacity-100 blur-0 scale-100 shadow-xl border-[#f5b041]/20"
-                    : "opacity-60 blur-[1.5px] scale-[0.96] hover:opacity-80 hover:blur-[0.5px]"
+                    ? "opacity-100 scale-[1.02] shadow-xl border-[#f5b041]/20"
+                    : "opacity-70 scale-[0.97] hover:opacity-90"
                 }`}
               >
-                <div className="absolute top-4 right-4 opacity-[0.07] group-hover:opacity-10 transition-opacity">
-                  <i className="fas fa-quote-right text-2xl text-[#f5b041]" aria-hidden="true"></i>
+                <div className="absolute top-3.5 right-3.5 opacity-[0.06] group-hover:opacity-10 transition-opacity">
+                  <i className="fas fa-quote-right text-xl text-[#f5b041]" aria-hidden="true"></i>
                 </div>
                 <div className="flex gap-1 mb-3">
                   {[...Array(5)].map((_, i) => (
-                    <i key={i} className={`fas fa-star text-xs ${i < rev.rating ? "text-[#f5b041]" : "text-gray-200"}`} aria-hidden="true"></i>
+                    <i key={i} className={`fas fa-star text-[11px] ${i < rev.rating ? "text-[#f5b041]" : "text-gray-200"}`} aria-hidden="true"></i>
                   ))}
                 </div>
-                <p className="text-sm sm:text-[15px] text-[#2c231b]/80 font-inter leading-relaxed mb-6 flex-grow">
+                <p className="text-[13.5px] text-[#2c231b]/80 font-inter leading-[1.6] line-clamp-4 flex-1">
                   “{rev.text}”
                 </p>
-                <div className="flex items-center gap-3 pt-4 border-t border-[#2c231b]/5">
-                  <div className="relative w-10 h-10 rounded-full overflow-hidden bg-gray-100 shrink-0 border border-white shadow-sm">
-                    <Image src={rev.avatar} alt={rev.name} width={40} height={40} className="w-full h-full object-cover" loading="lazy" />
-                    <div className="absolute -bottom-0.5 -right-0.5 w-4 h-4 bg-white rounded-full flex items-center justify-center shadow-sm border border-gray-100">
-                      <i className="fab fa-google text-[8px] text-[#4285F4]" aria-hidden="true"></i>
-                    </div>
-                  </div>
-                  <div className="text-left min-w-0">
-                    <h5 className="font-bold text-[#2c231b] font-poppins text-sm leading-tight truncate">{rev.name}</h5>
-                    <p className="text-[#2c231b]/50 text-xs font-medium">Google Maps • {rev.date}</p>
-                  </div>
+                <div className="flex items-center justify-between pt-3.5 mt-4 border-t border-[#2c231b]/5">
+                  <h5 className="font-bold text-[#2c231b] font-poppins text-[13px] leading-tight truncate pr-2">{rev.name}</h5>
+                  <span className="text-[11px] text-[#2c231b]/40 font-medium shrink-0">{rev.date}</span>
                 </div>
               </div>
             ))}
