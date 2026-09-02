@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 import Reveal from "@/components/Reveal";
 import WaveDivider from "@/components/WaveDivider";
@@ -7,42 +6,36 @@ import WaveDivider from "@/components/WaveDivider";
 const reviews = [
   {
     name: "Lutfi Muzayyanah",
-    avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop",
     rating: 5,
-    text: "Mie ayam langganan.. rasanya enak.. harga murah meriah.. mie nya produksi sendiri katanya.. bisa buat tempat arisan dan kumpul bareng temen-temen, ownernya juga ramah bgt, bisa req sesuai kemauan kita.. lokasinya strategis, daya tampung skitar 40 orang..",
+    text: "Mie ayam langganan, rasanya enak, harga murah meriah. Mie produksi sendiri, bisa buat arisan dan kumpul bareng temen. Owner ramah, bisa request sesuai kemauan.",
     date: "2 minggu lalu",
   },
   {
     name: "Ahmad Fauzi",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
     rating: 5,
-    text: "Porsi banyak, ayamnya nggak pelit, baksonya kenyal. Langganan dari 2021, rasa konsisten. Anak-anak suka mie nya, nggak pedas.",
+    text: "Porsi banyak, ayamnya nggak pelit, baksonya kenyal. Langganan dari 2021, rasa konsisten. Anak-anak suka, nggak pedas.",
     date: "1 bulan lalu",
   },
   {
     name: "Siti Aminah",
-    avatar: "https://images.unsplash.com/photo-1554151228-14d9fef656e3?w=100&h=100&fit=crop",
     rating: 5,
-    text: "Tempat bersih, pelayanan cepat. Kuah kaldunya gurih, nggak terlalu asin. Buat makan bareng keluarga enak, meja luas.",
+    text: "Tempat bersih, pelayanan cepat. Kuah kaldu gurih, nggak terlalu asin. Buat makan bareng keluarga enak, meja luas.",
     date: "3 minggu lalu",
   },
   {
     name: "Rizki Pratama",
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop",
     rating: 4,
-    text: "Mie nya kenyal, sambal mantap. Parkir agak sempit kalau sore, tapi overall puas. Harga pas untuk porsi segini.",
+    text: "Mie kenyal, sambal mantap. Parkir agak sempit kalau sore, tapi overall puas. Harga pas untuk porsi segini.",
     date: "5 hari lalu",
   },
   {
     name: "Dewi Lestari",
-    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop",
     rating: 5,
-    text: "Sering pesan antar, packing rapi, masih hangat sampai rumah. Bakso hotplate favorit, seafood nya segar.",
+    text: "Sering pesan antar, packing rapi, masih hangat sampai rumah. Bakso hotplate favorit, seafoodnya segar.",
     date: "1 minggu lalu",
   },
   {
     name: "Bambang Wijaya",
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop",
     rating: 5,
     text: "Owner ramah, bisa request mie setengah porsi buat anak. Lokasi gampang dicari, dekat jalan besar. Bakal balik lagi.",
     date: "2 hari lalu",
