@@ -72,7 +72,7 @@ export default function Testimonial() {
             {marqueeItems.map((rev, idx) => (
               <div
                 key={`${rev.name}-${idx}`}
-                className="w-[280px] sm:w-[320px] lg:w-[340px] bg-white rounded-[1.5rem] p-5 relative shadow-[0_4px_20px_rgba(44,35,27,0.08)] border border-[#2c231b]/5 shrink-0 flex flex-col justify-between min-h-[170px] sm:min-h-[178px] h-auto"
+                className="w-[280px] sm:w-[320px] lg:w-[340px] bg-white rounded-[1.5rem] p-5 relative shadow-[0_8px_30px_rgba(44,35,27,0.10)] border border-[#2c231b]/5 shrink-0 flex flex-col justify-between min-h-[170px] sm:min-h-[178px] h-auto hover:shadow-[0_12px_32px_rgba(44,35,27,0.14)] transition-shadow duration-300"
               >
                 <div className="absolute top-3.5 right-3.5 opacity-[0.06]">
                   <i className="fas fa-quote-right text-xl text-[#f5b041]" aria-hidden="true"></i>
