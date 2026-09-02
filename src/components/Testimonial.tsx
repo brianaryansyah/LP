@@ -96,8 +96,8 @@ export default function Testimonial() {
   }, [isPaused]);
 
   return (
-    <section id="testimoni" className="relative py-16 lg:py-24 bg-[#fdf8f5] overflow-hidden motion-safe:scroll-smooth">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 pb-12 sm:pb-16">
+    <section id="testimoni" className="relative py-14 sm:py-16 lg:py-24 bg-[#fdf8f5] overflow-hidden motion-safe:scroll-smooth">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 pb-10 sm:pb-16">
         <Reveal>
           <div className="text-center">
             <div className="inline-block px-3.5 py-1.5 rounded-full bg-[#f5b041]/15 text-[#2c231b] font-bold text-[11px] mb-4 uppercase tracking-[0.14em] border border-[#f5b041]/20">
@@ -113,7 +113,7 @@ export default function Testimonial() {
           </div>
         </Reveal>
 
-        <div className="relative max-w-5xl mx-auto">
+        <div className="relative max-w-6xl mx-auto">
           <div
             ref={scrollRef}
             onScroll={onScroll}
@@ -129,14 +129,14 @@ export default function Testimonial() {
             role="region"
             aria-roledescription="carousel"
             aria-label="Ulasan pelanggan berjalan otomatis, gunakan panah kiri kanan untuk navigasi"
-            className="flex gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-6 px-4 sm:px-8 scrollbar-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f5b041]/40 rounded-2xl"
+            className="flex gap-3 sm:gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-6 px-2 sm:px-6 scrollbar-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f5b041]/40 rounded-2xl"
             style={{ scrollbarWidth: "none" }}
           >
             {reviews.map((rev, idx) => (
               <div
                 key={rev.name}
                 onClick={() => scrollTo(idx)}
-                className={`w-[300px] sm:w-[340px] snap-center bg-white rounded-[1.5rem] p-5 relative shadow-md border border-[#2c231b]/5 transition-all duration-300 will-change-transform text-left flex flex-col justify-between shrink-0 cursor-pointer group min-h-[170px] max-h-[185px] motion-reduce:transition-none ${
+                className={`w-[280px] sm:w-[320px] lg:w-[340px] snap-center bg-white rounded-[1.5rem] p-5 sm:p-5 relative shadow-md border border-[#2c231b]/5 transition-all duration-300 will-change-transform text-left flex flex-col justify-between shrink-0 cursor-pointer group min-h-[158px] sm:min-h-[170px] max-h-[175px] sm:max-h-[185px] motion-reduce:transition-none ${
                   idx === active
                     ? "opacity-100 scale-[1.02] shadow-xl border-[#f5b041]/20"
                     : "opacity-70 scale-[0.97] hover:opacity-90"
