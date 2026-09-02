@@ -13,7 +13,7 @@ export default function WaveDivider({
   bg = "transparent",
   position = "bottom",
   flip = false,
-  height = "h-12 sm:h-16 md:h-20 lg:h-24",
+  height = "h-10 sm:h-14 md:h-[72px] lg:h-24",
 }: WaveDividerProps) {
   const posClass =
     position === "bottom"
