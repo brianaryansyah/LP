@@ -134,7 +134,7 @@ export default function Reservation() {
         </div>
         </Reveal>
       </div>
-      <WaveDivider fill="#fdf8f5" position="bottom" height="h-8 sm:h-12 md:h-16" />
+      <WaveDivider fill="#fdf8f5" position="bottom" />
     </section>
   );
 }
