@@ -65,10 +65,10 @@ export default function Testimonial() {
         </Reveal>
 
         <div
-          className="relative w-full overflow-hidden group py-3"
+          className="relative w-full overflow-hidden group py-4"
           aria-label="Ulasan pelanggan berjalan terus menerus"
         >
-          <div className="flex w-max animate-marquee gap-3 sm:gap-4 py-2 group-hover:[animation-play-state:paused] motion-reduce:animate-none hover:[animation-play-state:paused]">
+          <div className="flex w-max animate-marquee gap-3 sm:gap-4 py-3 group-hover:[animation-play-state:paused] motion-reduce:animate-none hover:[animation-play-state:paused]">
             {marqueeItems.map((rev, idx) => (
               <div
                 key={`${rev.name}-${idx}`}
