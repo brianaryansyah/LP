@@ -103,11 +103,13 @@ export default function Testimonial() {
             <div className="inline-block px-4 py-1.5 rounded-full bg-[#f5b041]/20 text-[#2c231b] font-bold text-xs mb-4 uppercase tracking-wider shadow-sm border border-[#f5b041]/30">
               Testimoni
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#2c231b] font-poppins leading-tight tracking-tight text-balance mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#2c231b] font-poppins leading-tight tracking-tight text-balance mb-3">
               Apa Kata Pelanggan Kami
             </h2>
-            <p className="text-sm text-[#2c231b]/60 font-inter mb-2">17+ ulasan di Google Maps • Rata-rata 5.0/5</p>
-            <p className="text-xs text-[#2c231b]/40 font-inter mb-8">Geser untuk lihat semua ulasan</p>
+            <p className="text-sm text-[#2c231b]/60 font-inter max-w-xl mx-auto leading-relaxed mb-1">
+              Cerita jujur dari meja sebelah — tanpa filter, tanpa naskah
+            </p>
+            <p className="text-xs text-[#2c231b]/40 font-inter mb-8 tracking-wide">Berjalan otomatis • Arahkan kursor untuk jeda</p>
           </div>
         </Reveal>
 
