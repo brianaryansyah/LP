@@ -121,9 +121,16 @@ export default function Testimonial() {
             onMouseLeave={() => setIsPaused(false)}
             onTouchStart={() => setIsPaused(true)}
             onTouchEnd={() => setIsPaused(false)}
-            className="flex gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-6 px-4 sm:px-8 scrollbar-none"
+            onKeyDown={(e) => {
+              if (e.key === "ArrowRight") { e.preventDefault(); scrollTo((active + 1) % reviews.length); setIsPaused(true); }
+              if (e.key === "ArrowLeft") { e.preventDefault(); scrollTo((active - 1 + reviews.length) % reviews.length); setIsPaused(true); }
+            }}
+            tabIndex={0}
+            role="region"
+            aria-roledescription="carousel"
+            aria-label="Ulasan pelanggan berjalan otomatis, gunakan panah kiri kanan untuk navigasi"
+            className="flex gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-6 px-4 sm:px-8 scrollbar-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f5b041]/40 rounded-2xl"
             style={{ scrollbarWidth: "none" }}
-            aria-label="Ulasan pelanggan berjalan otomatis, arahkan kursor untuk jeda"
           >
             {reviews.map((rev, idx) => (
               <div
@@ -154,12 +161,15 @@ export default function Testimonial() {
             ))}
           </div>
 
-          <div className="flex justify-center gap-1.5 mt-6">
+          <div className="flex justify-center gap-1.5 mt-6" role="tablist" aria-label="Pilihan ulasan">
             {reviews.map((_, i) => (
-              <div
+              <button
                 key={i}
-                className={`h-1 rounded-full transition-all duration-300 ${i === active ? "w-6 bg-[#f5b041]" : "w-1.5 bg-[#2c231b]/15"}`}
-                aria-hidden="true"
+                role="tab"
+                aria-selected={i === active}
+                aria-label={`Ulasan ${i + 1} dari ${reviews.length}`}
+                onClick={() => { scrollTo(i); setIsPaused(true); }}
+                className={`h-1.5 rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f5b041]/40 ${i === active ? "w-6 bg-[#f5b041]" : "w-1.5 bg-[#2c231b]/15 hover:bg-[#2c231b]/25"}`}
               />
             ))}
           </div>
