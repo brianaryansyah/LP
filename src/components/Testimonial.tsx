@@ -97,6 +97,8 @@ export default function Testimonial() {
 
   return (
     <section id="testimoni" className="relative py-14 sm:py-16 lg:py-24 bg-[#fdf8f5] overflow-hidden motion-safe:scroll-smooth">
+      {/* Subtle artisanal pattern */}
+      <div className="absolute inset-0 opacity-[0.03]" aria-hidden="true" style={{ backgroundImage: `radial-gradient(circle at 1px 1px, #2c231b 1px, transparent 0)`, backgroundSize: `24px 24px` }} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 pb-10 sm:pb-16">
         <Reveal>
           <div className="text-center">
