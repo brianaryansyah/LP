@@ -46,6 +46,7 @@ export default function Testimonial() {
   const googleMapsLink = "https://share.google/QOCQKq5zvoVVkb4pm";
   const scrollRef = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(Math.floor(reviews.length / 2));
+  const [isPaused, setIsPaused] = useState(false);
 
   const scrollTo = (index: number) => {
     const el = scrollRef.current;
@@ -81,6 +82,19 @@ export default function Testimonial() {
     return () => clearTimeout(id);
   }, []);
 
+  useEffect(() => {
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReduced || isPaused) return;
+    const interval = setInterval(() => {
+      setActive((prev) => {
+        const next = (prev + 1) % reviews.length;
+        scrollTo(next);
+        return next;
+      });
+    }, 2800);
+    return () => clearInterval(interval);
+  }, [isPaused]);
+
   return (
     <section id="testimoni" className="relative py-16 lg:py-24 bg-[#fdf8f5] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 pb-12 sm:pb-16">
@@ -101,9 +115,13 @@ export default function Testimonial() {
           <div
             ref={scrollRef}
             onScroll={onScroll}
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+            onTouchStart={() => setIsPaused(true)}
+            onTouchEnd={() => setIsPaused(false)}
             className="flex gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-6 px-4 sm:px-8 scrollbar-none"
             style={{ scrollbarWidth: "none" }}
-            aria-label="Daftar ulasan pelanggan, geser untuk melihat"
+            aria-label="Ulasan pelanggan berjalan otomatis, arahkan kursor untuk jeda"
           >
             {reviews.map((rev, idx) => (
               <div
