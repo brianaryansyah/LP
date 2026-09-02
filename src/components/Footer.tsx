@@ -25,8 +25,8 @@ export default function Footer() {
                 <Image src="/img/logo-semangkok.svg" alt="Mie Ayam & Bakso Semangkok" width={40} height={40} className="w-full h-full object-cover" loading="lazy" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold font-poppins text-[#fdf8f5] leading-none">Semangkok</h3>
-                <span className="text-[11px] text-[#fdf8f5]/50 font-medium tracking-widest uppercase">Mie Ayam & Bakso • 1990</span>
+                <h3 className="text-2xl font-bold font-poppins text-[#fdf8f5] leading-none tracking-tight">Semangkok</h3>
+                <span className="text-[11px] text-[#fdf8f5]/50 font-medium tracking-[0.15em] uppercase">Mie Ayam & Bakso • Sejak 1990</span>
               </div>
             </div>
             <p className="text-[#fdf8f5]/60 font-inter mb-8 text-sm leading-relaxed pr-4">
