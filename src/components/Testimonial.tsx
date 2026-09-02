@@ -112,15 +112,17 @@ export default function Testimonial() {
 
       <style jsx>{`
         @keyframes marquee {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-33.333%); }
+          0% { transform: translate3d(0, 0, 0); }
+          100% { transform: translate3d(-33.333%, 0, 0); }
         }
         .animate-marquee {
           animation: marquee 18s linear infinite;
           will-change: transform;
+          backface-visibility: hidden;
+          perspective: 1000px;
         }
         @media (prefers-reduced-motion: reduce) {
-          .animate-marquee { animation: none; transform: translateX(0); }
+          .animate-marquee { animation: none; transform: translate3d(0, 0, 0); }
         }
       `}</style>
     </section>
