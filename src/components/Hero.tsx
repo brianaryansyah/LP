@@ -3,7 +3,7 @@ import WaveDivider from "@/components/WaveDivider";
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-24 pb-20 sm:pt-32 sm:pb-32 bg-[#fdf8f5] overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center pt-24 pb-24 sm:pt-32 sm:pb-36 bg-[#fdf8f5] overflow-hidden">
       
       {/* Subtle Background Glows */}
       <div className="absolute top-[-10%] left-[-10%] w-[50%] sm:w-[40%] aspect-square bg-[#f5b041]/10 rounded-full blur-[100px] pointer-events-none"></div>
