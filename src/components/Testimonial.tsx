@@ -77,7 +77,7 @@ export default function Testimonial() {
           onTouchEnd={() => setIsPressed(false)}
         >
           <div
-            className="flex w-max animate-marquee gap-3 sm:gap-4 py-3 group-hover:[animation-play-state:paused] motion-reduce:animate-none hover:[animation-play-state:paused]"
+            className={`flex w-max animate-marquee gap-3 sm:gap-4 py-3 group-hover:[animation-play-state:paused] motion-reduce:animate-none hover:[animation-play-state:paused] cursor-grab ${isPressed ? "cursor-grabbing" : ""}`}
             style={{ animationPlayState: isPressed ? "paused" : "running" }}
           >
             {marqueeItems.map((rev, idx) => (
