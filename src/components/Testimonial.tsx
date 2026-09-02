@@ -96,7 +96,7 @@ export default function Testimonial() {
   }, [isPaused]);
 
   return (
-    <section id="testimoni" className="relative py-16 lg:py-24 bg-[#fdf8f5] overflow-hidden">
+    <section id="testimoni" className="relative py-16 lg:py-24 bg-[#fdf8f5] overflow-hidden motion-safe:scroll-smooth">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 pb-12 sm:pb-16">
         <Reveal>
           <div className="text-center">
@@ -136,7 +136,7 @@ export default function Testimonial() {
               <div
                 key={rev.name}
                 onClick={() => scrollTo(idx)}
-                className={`w-[300px] sm:w-[340px] snap-center bg-white rounded-[1.5rem] p-5 relative shadow-md border border-[#2c231b]/5 transition-all duration-400 text-left flex flex-col justify-between shrink-0 cursor-pointer group min-h-[170px] max-h-[185px] ${
+                className={`w-[300px] sm:w-[340px] snap-center bg-white rounded-[1.5rem] p-5 relative shadow-md border border-[#2c231b]/5 transition-all duration-300 will-change-transform text-left flex flex-col justify-between shrink-0 cursor-pointer group min-h-[170px] max-h-[185px] motion-reduce:transition-none ${
                   idx === active
                     ? "opacity-100 scale-[1.02] shadow-xl border-[#f5b041]/20"
                     : "opacity-70 scale-[0.97] hover:opacity-90"
