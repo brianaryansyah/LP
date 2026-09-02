@@ -100,16 +100,16 @@ export default function Testimonial() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 pb-12 sm:pb-16">
         <Reveal>
           <div className="text-center">
-            <div className="inline-block px-4 py-1.5 rounded-full bg-[#f5b041]/20 text-[#2c231b] font-bold text-xs mb-4 uppercase tracking-wider shadow-sm border border-[#f5b041]/30">
+            <div className="inline-block px-3.5 py-1.5 rounded-full bg-[#f5b041]/15 text-[#2c231b] font-bold text-[11px] mb-4 uppercase tracking-[0.14em] border border-[#f5b041]/20">
               Testimoni
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#2c231b] font-poppins leading-tight tracking-tight text-balance mb-3">
+            <h2 className="text-[28px] sm:text-4xl md:text-[42px] font-extrabold text-[#2c231b] font-poppins leading-[1.1] tracking-[-0.02em] text-balance mb-3">
               Apa Kata Pelanggan Kami
             </h2>
-            <p className="text-sm text-[#2c231b]/60 font-inter max-w-xl mx-auto leading-relaxed mb-1">
+            <p className="text-[13px] sm:text-sm text-[#2c231b]/55 font-inter max-w-xl mx-auto leading-relaxed mb-1 font-medium">
               Cerita jujur dari meja sebelah — tanpa filter, tanpa naskah
             </p>
-            <p className="text-xs text-[#2c231b]/40 font-inter mb-8 tracking-wide">Berjalan otomatis • Arahkan kursor untuk jeda</p>
+            <p className="text-[11px] text-[#2c231b]/35 font-inter mb-8 tracking-[0.08em] uppercase">Berjalan otomatis • Arahkan kursor untuk jeda</p>
           </div>
         </Reveal>
 
