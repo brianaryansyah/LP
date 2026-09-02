@@ -21,8 +21,8 @@ export default function Footer() {
           {/* Logo & Social - original */}
           <div>
             <div className="flex items-center gap-3 mb-6 cursor-pointer group">
-              <div className="relative w-10 h-10 rounded-full overflow-hidden bg-white border border-[#fdf8f5]/20 group-hover:border-[#f5b041] transition-colors duration-300 shrink-0">
-                <Image src="/img/logo-semangkok.svg" alt="Mie Ayam & Bakso Semangkok" width={40} height={40} className="w-full h-full object-cover" loading="lazy" />
+              <div className="relative w-10 h-10 rounded-full overflow-hidden bg-white border border-[#fdf8f5]/20 group-hover:border-[#f5b041] transition-colors duration-300 shrink-0 p-0.5" title="Logo placeholder — lihat public/img/LOGO-README.md">
+                <Image src="/img/logo-semangkok.svg" alt="Mie Ayam & Bakso Semangkok" width={40} height={40} className="w-full h-full object-contain" loading="lazy" />
               </div>
               <div>
                 <h3 className="text-2xl font-bold font-poppins text-[#fdf8f5] leading-none tracking-tight">Semangkok</h3>
