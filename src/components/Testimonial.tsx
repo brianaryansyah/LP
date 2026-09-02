@@ -46,9 +46,9 @@ export default function Testimonial() {
   const marqueeItems = [...reviews, ...reviews, ...reviews];
 
   return (
-    <section id="testimoni" className="relative py-14 sm:py-16 lg:py-24 bg-[#fdf8f5] overflow-hidden">
+    <section id="testimoni" className="relative pt-14 sm:pt-16 lg:pt-24 pb-16 sm:pb-20 lg:pb-28 bg-[#fdf8f5] overflow-hidden">
       <div className="absolute inset-0 opacity-[0.03]" aria-hidden="true" style={{ backgroundImage: `radial-gradient(circle at 1px 1px, #2c231b 1px, transparent 0)`, backgroundSize: `24px 24px` }} />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 pb-10 sm:pb-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         <Reveal>
           <div className="text-center">
             <div className="inline-block px-3.5 py-1.5 rounded-full bg-[#f5b041]/15 text-[#2c231b] font-bold text-[11px] mb-4 uppercase tracking-[0.14em] border border-[#f5b041]/20">
