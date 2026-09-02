@@ -22,7 +22,7 @@ export default function WaveDivider({
 
   return (
     <div
-      className={`absolute left-0 w-full overflow-hidden leading-none z-10 ${posClass} pointer-events-none`}
+      className={`absolute left-0 w-[calc(100%+2px)] -ml-px overflow-hidden leading-none z-10 ${posClass} pointer-events-none select-none`}
       aria-hidden="true"
       style={{ background: bg }}
     >
@@ -30,9 +30,9 @@ export default function WaveDivider({
         viewBox="0 0 1200 120"
         preserveAspectRatio="none"
         className={`w-full ${height} block will-change-transform ${flip ? "scale-x-[-1]" : ""}`}
-        style={{ color: fill }}
+        style={{ color: fill, shapeRendering: "geometricPrecision" }}
       >
-        {/* Smooth single sine wave - no benjol, no double bump */}
+        {/* Smooth single sine wave - no benjol, calibrated control points */}
         <path
           d="M0,60 C 180,110 320,10 600,60 C 880,110 1020,10 1200,60 L 1200,120 L 0,120 Z"
           className="fill-current"
