@@ -45,18 +45,22 @@ export default function Hero() {
               </a>
             </div>
             
-            {/* Trust Indicators */}
-            <div className="mt-10 sm:mt-12 flex items-center gap-6 pt-6 border-t border-[#2c231b]/10">
-              <div className="flex -space-x-3">
-                <Image className="w-10 h-10 rounded-full border-2 border-[#fdf8f5] object-cover hover:z-10 hover:scale-110 hover:-translate-y-0.5 transition-all duration-300" src="https://images.unsplash.com/photo-1555952517-2e8e729e0b44?w=100&h=100&fit=crop" alt="Pelanggan Semangkok" width={40} height={40} />
-                <Image className="w-10 h-10 rounded-full border-2 border-[#fdf8f5] object-cover hover:z-10 hover:scale-110 hover:-translate-y-0.5 transition-all duration-300" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop" alt="Pelanggan Semangkok" width={40} height={40} />
-                <Image className="w-10 h-10 rounded-full border-2 border-[#fdf8f5] object-cover hover:z-10 hover:scale-110 hover:-translate-y-0.5 transition-all duration-300" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="Pelanggan Semangkok" width={40} height={40} />
+            {/* Trust Indicators — artisanal proof, not vanity metrics */}
+            <div className="mt-10 sm:mt-12 flex items-center gap-5 pt-6 border-t border-[#2c231b]/10">
+              <div className="hidden sm:flex items-center gap-3 pr-5 border-r border-[#2c231b]/10">
+                <div className="w-10 h-10 rounded-full bg-[#f5b041]/15 border border-[#f5b041]/20 flex items-center justify-center">
+                  <i className="fas fa-award text-[#f5b041] text-sm" aria-hidden="true"></i>
+                </div>
+                <div className="text-left">
+                  <div className="font-extrabold text-[#2c231b] font-poppins text-[13px] leading-none">Sejak 1990</div>
+                  <div className="text-[11px] text-[#2c231b]/50 font-medium">Pasar Pagi • Karimata</div>
+                </div>
               </div>
               <div>
-                <div className="font-bold text-[#2c231b] font-poppins text-sm sm:text-base flex items-center gap-2">
-                  Ulasan Nyata Pelanggan <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" aria-hidden="true"></span>
+                <div className="font-bold text-[#2c231b] font-poppins text-sm sm:text-[15px] flex items-center gap-2">
+                  Ditarik Pagi • Kaldu 8 Jam <span className="w-1.5 h-1.5 bg-[#f5b041] rounded-full animate-pulse" aria-hidden="true"></span>
                 </div>
-                <div className="text-xs sm:text-sm text-[#2c231b]/60 font-medium">17 ulasan • 5.0 di Google Maps • update hari ini</div>
+                <div className="text-xs sm:text-sm text-[#2c231b]/60 font-medium">Tanpa gimmick — hanya rasa yang konsisten</div>
               </div>
             </div>
           </div>
