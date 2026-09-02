@@ -71,14 +71,16 @@ export default function Testimonial() {
         </Reveal>
 
         <div
-          className="relative w-full overflow-hidden group py-4 select-none"
+          className="relative w-full overflow-hidden group py-4 select-none touch-pan-y"
           aria-label="Ulasan pelanggan berjalan terus menerus, klik dan tahan untuk jeda"
           role="region"
-          onMouseDown={() => setIsPressed(true)}
+          aria-live="off"
+          onMouseDown={(e) => { e.preventDefault(); setIsPressed(true); }}
           onMouseUp={() => setIsPressed(false)}
           onMouseLeave={() => setIsPressed(false)}
           onTouchStart={() => setIsPressed(true)}
           onTouchEnd={() => setIsPressed(false)}
+          onTouchCancel={() => setIsPressed(false)}
         >
           <div
             className={`flex w-max animate-marquee gap-3 sm:gap-4 py-3 group-hover:[animation-play-state:paused] motion-reduce:animate-none hover:[animation-play-state:paused] cursor-grab ${isPressed ? "cursor-grabbing" : ""}`}
