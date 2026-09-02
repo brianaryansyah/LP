@@ -116,7 +116,7 @@ export default function Testimonial() {
           100% { transform: translateX(-33.333%); }
         }
         .animate-marquee {
-          animation: marquee 22s linear infinite;
+          animation: marquee 18s linear infinite;
           will-change: transform;
         }
         @media (prefers-reduced-motion: reduce) {
