@@ -253,21 +253,6 @@ export default function Reservation() {
             </div>
           </div>
         </Reveal>
-
-        <Reveal delay={150}>
-          <div className="flex justify-center mt-10 lg:mt-12">
-            <a
-              href="#location"
-              aria-label="Lanjut ke bagian Layanan Kami"
-              className="group inline-flex items-center gap-3 text-sm font-bold text-[#2c231b]/60 hover:text-[#2c231b] transition-colors duration-300 px-6 py-3 rounded-full border border-[#2c231b]/10 hover:border-[#f5b041]/40 bg-white/60 hover:bg-white"
-            >
-              Lanjut ke Layanan Kami
-              <span className="w-8 h-8 rounded-full bg-[#f5b041] text-[#2c231b] flex items-center justify-center transition-transform duration-300 group-hover:translate-y-0.5">
-                <i className="fas fa-arrow-down text-xs" aria-hidden="true"></i>
-              </span>
-            </a>
-          </div>
-        </Reveal>
       </div>
     </section>
   );
