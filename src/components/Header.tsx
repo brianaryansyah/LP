@@ -5,6 +5,7 @@ import Image from "next/image";
 const navLinks = [
   { href: "#home", label: "Beranda", id: "home" },
   { href: "#unggulan", label: "Keunggulan", id: "unggulan" },
+  { href: "#testimoni", label: "Testimoni", id: "testimoni" },
   { href: "#menu", label: "Menu", id: "menu" },
   { href: "#reservasi", label: "Reservasi", id: "reservasi" },
   { href: "#location", label: "Lokasi", id: "location" },
@@ -57,13 +58,13 @@ export default function Header() {
     }`;
 
   return (
-    <header ref={headerRef} className={`fixed w-full z-50 transition-all duration-300 will-change-transform ${scrolled ? 'bg-white/80 backdrop-blur-xl backdrop-saturate-150 shadow-sm border-b border-[#2c231b]/5 py-3' : 'bg-transparent py-5'}`}>
+    <header ref={headerRef} className={`fixed w-full z-50 transition-[background-color,box-shadow,padding] duration-300 will-change-transform ${scrolled ? 'bg-white/80 backdrop-blur-xl backdrop-saturate-150 shadow-sm border-b border-[#2c231b]/5 py-3' : 'bg-transparent py-5'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           
           {/* Logo - original from Google Maps */}
           <a href="#home" className="flex-shrink-0 flex items-center gap-3 cursor-pointer group" aria-label="Semangkok - kembali ke beranda">
-            <div className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden shadow-md border-2 border-white group-hover:border-[#f5b041] transition-all duration-300 group-hover:rotate-3 bg-white p-0.5" title="Logo Semangkok di public/img/logo-semangkok.svg">
+            <div className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden shadow-md border-2 border-white group-hover:border-[#f5b041] transition-[border-color,transform] duration-300 group-hover:rotate-3 bg-white p-0.5" title="Logo Semangkok di public/img/logo-semangkok.svg">
               <Image src="/img/logo-semangkok.svg" alt="Mie Ayam & Bakso Semangkok" width={48} height={48} className="w-full h-full object-contain" priority sizes="48px" />
             </div>
             <div>
@@ -85,8 +86,8 @@ export default function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <a href="#menu" className="bg-[#2c231b] text-white px-6 py-3 rounded-full font-bold hover:bg-[#f5b041] transition-colors duration-300 shadow-lg hover:-translate-y-1 transform text-sm flex items-center gap-2">
-              <i className="fas fa-shopping-bag"></i> Pesan Sekarang
+            <a href="#menu" className="bg-[#2c231b] text-white px-6 py-3 rounded-full font-bold hover:bg-[#f5b041] transition-[transform,background-color,box-shadow] duration-300 shadow-lg hover:-translate-y-1 transform text-sm flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f5b041] focus-visible:ring-offset-2">
+              <i className="fas fa-shopping-bag" aria-hidden="true"></i> Pesan Sekarang
             </a>
           </div>
 
@@ -97,7 +98,7 @@ export default function Header() {
               aria-label={isOpen ? "Tutup menu navigasi" : "Buka menu navigasi"}
               aria-expanded={isOpen}
               aria-controls="mobile-menu"
-              className="text-[#2c231b] hover:text-[#f5b041] focus:outline-none p-2 rounded-lg bg-white/50 backdrop-blur-sm shadow-sm"
+              className="text-[#2c231b] hover:text-[#f5b041] p-2 rounded-lg bg-white/50 backdrop-blur-sm shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f5b041]"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isOpen ? (
@@ -116,7 +117,7 @@ export default function Header() {
         <div id="mobile-menu" className="md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-xl shadow-xl border-t border-gray-100 origin-top animate-[menuDrop_0.25s_ease-out]">
           <div className="px-4 pt-4 pb-6 space-y-2">
             {navLinks.map((link) => (
-              <a key={link.id} href={link.href} onClick={() => setIsOpen(false)} className={`block px-4 py-3 rounded-xl text-base font-bold transition-all duration-300 ${activeSection === link.id ? "text-[#e09132] bg-[#f5b041]/10" : "text-[#2c231b] hover:bg-[#f5b041]/10 hover:text-[#f5b041]"}`}>
+              <a key={link.id} href={link.href} onClick={() => setIsOpen(false)} className={`block px-4 py-3 rounded-xl text-base font-bold transition-[background-color,color] duration-300 ${activeSection === link.id ? "text-[#e09132] bg-[#f5b041]/10" : "text-[#2c231b] hover:bg-[#f5b041]/10 hover:text-[#f5b041]"}`}>
                 {link.label}
               </a>
             ))}
