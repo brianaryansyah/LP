@@ -50,13 +50,14 @@ export default function Footer() {
 
           {/* Links */}
           <div>
-            <h4 className="text-lg font-bold mb-6 font-poppins text-[#f5b041]">Quick Links</h4>
+            <h4 className="text-lg font-bold mb-6 font-poppins text-[#f5b041]">Tautan</h4>
             <ul className="space-y-4 text-sm font-medium">
-              <li><a href="#home" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition">Beranda</a></li>
-              <li><a href="#unggulan" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition">Keunggulan</a></li>
-              <li><a href="#menu" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition">Menu Kami</a></li>
-              <li><a href="#reservasi" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition">Reservasi</a></li>
-              <li><a href="#location" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition">Lokasi</a></li>
+              <li><a href="#home" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition-colors">Beranda</a></li>
+              <li><a href="#unggulan" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition-colors">Keunggulan</a></li>
+              <li><a href="#testimoni" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition-colors">Testimoni</a></li>
+              <li><a href="#menu" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition-colors">Menu Kami</a></li>
+              <li><a href="#reservasi" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition-colors">Reservasi</a></li>
+              <li><a href="#location" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition-colors">Lokasi</a></li>
             </ul>
           </div>
 
@@ -114,10 +115,10 @@ export default function Footer() {
         </div>
 
         <div className="text-center text-[#fdf8f5]/40 font-inter text-sm flex flex-col md:flex-row justify-between items-center gap-4">
-          <p>&copy; {new Date().getFullYear()} Mie Ayam Semangkok. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Mie Ayam Semangkok. Hak cipta dilindungi.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-[#f5b041] transition">Privacy Policy</a>
-            <a href="#" className="hover:text-[#f5b041] transition">Terms of Service</a>
+            <a href="#" className="hover:text-[#f5b041] transition-colors">Kebijakan Privasi</a>
+            <a href="#" className="hover:text-[#f5b041] transition-colors">Syarat Layanan</a>
           </div>
         </div>
       </div>
