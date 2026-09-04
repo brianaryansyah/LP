@@ -33,16 +33,16 @@ export default function Footer() {
               Warung mie ayam di Pemalang sejak 1990. Makan di tempat atau pesan antar, tiap hari buka.
             </p>
             <div className="flex gap-3">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Ikuti kami di Instagram" className="w-10 h-10 rounded-full bg-[#f5b041] text-[#2c231b] flex items-center justify-center hover:bg-white hover:-translate-y-1 hover:shadow-md transition-all duration-300 ring-1 ring-black/5">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Ikuti kami di Instagram" className="w-10 h-10 rounded-full bg-[#f5b041] text-[#2c231b] flex items-center justify-center hover:bg-white hover:-translate-y-1 hover:shadow-md transition-[transform,background-color,box-shadow] duration-300 ring-1 ring-black/5">
                 <i className="fab fa-instagram" aria-hidden="true"></i>
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Ikuti kami di Facebook" className="w-10 h-10 rounded-full bg-[#f5b041] text-[#2c231b] flex items-center justify-center hover:bg-white hover:-translate-y-1 hover:shadow-md transition-all duration-300 ring-1 ring-black/5">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Ikuti kami di Facebook" className="w-10 h-10 rounded-full bg-[#f5b041] text-[#2c231b] flex items-center justify-center hover:bg-white hover:-translate-y-1 hover:shadow-md transition-[transform,background-color,box-shadow] duration-300 ring-1 ring-black/5">
                 <i className="fab fa-facebook-f" aria-hidden="true"></i>
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Ikuti kami di X" className="w-10 h-10 rounded-full bg-[#f5b041] text-[#2c231b] flex items-center justify-center hover:bg-white hover:-translate-y-1 hover:shadow-md transition-all duration-300 ring-1 ring-black/5">
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Ikuti kami di X" className="w-10 h-10 rounded-full bg-[#f5b041] text-[#2c231b] flex items-center justify-center hover:bg-white hover:-translate-y-1 hover:shadow-md transition-[transform,background-color,box-shadow] duration-300 ring-1 ring-black/5">
                 <i className="fab fa-twitter" aria-hidden="true"></i>
               </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="Tonton kami di YouTube" className="w-10 h-10 rounded-full bg-[#f5b041] text-[#2c231b] flex items-center justify-center hover:bg-white hover:-translate-y-1 hover:shadow-md transition-all duration-300 ring-1 ring-black/5">
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="Tonton kami di YouTube" className="w-10 h-10 rounded-full bg-[#f5b041] text-[#2c231b] flex items-center justify-center hover:bg-white hover:-translate-y-1 hover:shadow-md transition-[transform,background-color,box-shadow] duration-300 ring-1 ring-black/5">
                 <i className="fab fa-youtube" aria-hidden="true"></i>
               </a>
             </div>
@@ -66,20 +66,20 @@ export default function Footer() {
             <h4 className="text-lg font-bold mb-6 font-poppins text-[#f5b041]">Jam Buka</h4>
             <ul className="space-y-4 text-sm text-[#fdf8f5]/70">
               <li className="flex items-center gap-3">
-                <i className="fas fa-clock text-[#f5b041] w-4"></i>
+                <i className="fas fa-clock text-[#f5b041] w-4" aria-hidden="true"></i>
                 Setiap Hari, 10.00 - 22.00 WIB
               </li>
               <li className="flex items-start gap-3">
-                <i className="fas fa-map-marker-alt text-[#f5b041] w-4 mt-0.5"></i>
+                <i className="fas fa-map-marker-alt text-[#f5b041] w-4 mt-0.5" aria-hidden="true"></i>
                 Jl. Karimata No.40, Mulyoharjo, Pemalang
               </li>
               <li className="flex items-center gap-3">
-                <i className="fas fa-phone-alt text-[#f5b041] w-4"></i>
+                <i className="fas fa-phone-alt text-[#f5b041] w-4" aria-hidden="true"></i>
                 0856-4073-4972
               </li>
             </ul>
-            <a href="https://wa.me/6285640734972" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-6 bg-[#f5b041] text-[#2c231b] px-5 py-2.5 rounded-full font-bold text-sm hover:bg-white transition duration-300">
-              <i className="fab fa-whatsapp"></i> Chat Kami
+            <a href="https://wa.me/6285640734972" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-6 bg-[#f5b041] text-[#2c231b] px-5 py-2.5 rounded-full font-bold text-sm hover:bg-white transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70">
+              <i className="fab fa-whatsapp" aria-hidden="true"></i> Chat Kami
             </a>
           </div>
 
@@ -93,21 +93,25 @@ export default function Footer() {
               <input
                 type="email"
                 required
+                name="email"
+                autoComplete="email"
+                spellCheck={false}
+                inputMode="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="Email Anda"
+                placeholder="Contoh: nama@email.com…"
                 aria-label="Alamat email untuk newsletter"
-                className="w-full bg-[#3b3128] text-[#fdf8f5] px-6 py-4 rounded-full border border-[#fdf8f5]/10 focus:outline-none focus:border-[#f5b041] focus:ring-2 focus:ring-[#f5b041]/30 transition-all duration-300 text-sm"
+                className="w-full bg-[#3b3128] text-[#fdf8f5] px-6 py-4 rounded-full border border-[#fdf8f5]/10 focus:outline-none focus:border-[#f5b041] focus:ring-2 focus:ring-[#f5b041]/30 transition-[border-color,box-shadow] duration-300 text-sm"
               />
               <button
                 type="submit"
-                className="absolute right-2 top-2 bottom-2 bg-[#f5b041] text-[#2c231b] px-6 rounded-full font-bold text-sm hover:bg-white transition"
+                className="absolute right-2 top-2 bottom-2 bg-[#f5b041] text-[#2c231b] px-6 rounded-full font-bold text-sm hover:bg-white transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
               >
-                Subscribe
+                Berlangganan
               </button>
             </form>
             {subscribed && (
-              <p className="text-[#f5b041] text-xs mt-3 font-medium">
+              <p role="status" aria-live="polite" className="text-[#f5b041] text-xs mt-3 font-medium">
                 Terima kasih! Anda telah berlangganan.
               </p>
             )}
