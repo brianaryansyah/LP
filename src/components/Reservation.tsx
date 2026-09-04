@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Reveal from "@/components/Reveal";
 
 const inputClass =
-  "w-full px-4 py-3 rounded-xl border border-[#2c231b]/10 bg-white focus:border-[#f5b041] focus:ring-2 focus:ring-[#f5b041]/40 focus:ring-offset-2 focus:ring-offset-white transition-[border-color,box-shadow] duration-300 outline-none text-[#2c231b] hover:border-[#2c231b]/20";
+  "w-full px-4 py-3 rounded-xl border border-[#2c231b]/10 bg-white text-[#2c231b] [color-scheme:light] focus:border-[#f5b041] focus:ring-2 focus:ring-[#f5b041]/40 focus:ring-offset-2 focus:ring-offset-white transition-[border-color,box-shadow] duration-300 outline-none hover:border-[#2c231b]/20";
 
 export default function Reservation() {
   const [formData, setFormData] = useState({
@@ -15,7 +15,10 @@ export default function Reservation() {
     notes: "",
   });
 
-  const today = new Date().toISOString().split("T")[0];
+  const now = new Date();
+  const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(
+    now.getDate()
+  ).padStart(2, "0")}`;
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -33,7 +36,7 @@ export default function Reservation() {
       `Tanggal: ${formData.date}`,
       `Waktu: ${formData.time}`,
       `Jumlah Orang: ${formData.guests}`,
-      `Catatan: ${formData.notes || "-"}`,
+      `Catatan: ${formData.notes.trim() || "Tidak ada"}`,
     ];
     const text = encodeURIComponent(lines.join("\n"));
     window.open(`https://wa.me/6285640734972?text=${text}`, "_blank", "noopener,noreferrer");
