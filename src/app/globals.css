@@ -25,6 +25,12 @@ html, body {
   overflow-x: hidden;
 }
 
+body {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgba(245, 176, 65, 0.25);
+  overscroll-behavior-y: none;
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
