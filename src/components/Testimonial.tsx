@@ -59,20 +59,15 @@ export default function Testimonial() {
             <h2 className="text-[28px] sm:text-4xl md:text-[42px] font-extrabold text-[#2c231b] font-poppins leading-[1.1] tracking-[-0.02em] text-balance mb-3">
               Apa Kata Pelanggan Kami
             </h2>
-            <p className="text-[13px] sm:text-sm text-[#2c231b]/55 font-inter max-w-xl mx-auto leading-relaxed mb-1 font-medium">
+            <p className="text-[13px] sm:text-sm text-[#2c231b]/55 font-inter max-w-xl mx-auto leading-relaxed mb-8 font-medium">
               Cerita jujur dari meja sebelah. Tanpa filter, tanpa naskah
-            </p>
-            <p className="text-[11px] text-[#2c231b]/35 font-inter mb-8 tracking-[0.08em] uppercase flex items-center justify-center gap-2">
-              <span>Mengalir terus</span>
-              <span className="w-1 h-1 bg-[#2c231b]/20 rounded-full" aria-hidden="true"></span>
-              <span className={isPressed ? "text-[#f5b041] font-bold" : ""}>{isPressed ? "Jeda, lepas untuk lanjut" : "Klik & tahan untuk jeda"}</span>
             </p>
           </div>
         </Reveal>
 
         <div
           className="relative w-full overflow-hidden group py-4 select-none touch-pan-y"
-          aria-label="Ulasan pelanggan berjalan terus menerus, klik dan tahan untuk jeda"
+          aria-label="Ulasan pelanggan berjalan terus menerus"
           role="region"
           aria-live="off"
           onMouseDown={(e) => { e.preventDefault(); setIsPressed(true); }}
