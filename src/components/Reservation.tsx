@@ -146,6 +146,10 @@ export default function Reservation() {
                       inputMode="tel"
                       type="tel"
                       name="phone"
+                      minLength={9}
+                      maxLength={16}
+                      pattern="[0-9+ ]{9,16}"
+                      title="Gunakan 9 sampai 16 digit angka"
                       value={formData.phone}
                       onChange={handleChange}
                       className={inputClass}
