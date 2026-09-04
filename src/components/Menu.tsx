@@ -29,6 +29,11 @@ const menuItems = [
 ];
 
 export default function Menu() {
+  const orderLink = (name: string, price: string) => {
+    const text = encodeURIComponent(`Halo Semangkok, saya ingin memesan ${name} (${price}).`);
+    return `https://wa.me/6285640734972?text=${text}`;
+  };
+
   return (
     <section id="menu" className="relative min-h-screen flex flex-col justify-center pt-16 pb-32 bg-[#2c231b] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
@@ -49,10 +54,10 @@ export default function Menu() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {menuItems.map((item, idx) => (
             <Reveal key={item.id} delay={idx * 100}>
-            <div className="h-full bg-[#3b3128] rounded-[2rem] p-4 flex flex-col group hover:-translate-y-2 transition-all duration-500 shadow-2xl hover:shadow-[#f5b041]/15 border border-transparent hover:border-[#f5b041]/20 relative overflow-hidden ring-1 ring-white/5 will-change-transform">
+            <div className="h-full bg-[#3b3128] rounded-[2rem] p-4 flex flex-col group hover:-translate-y-2 transition-[transform,box-shadow,border-color] duration-500 shadow-2xl hover:shadow-[#f5b041]/15 border border-transparent hover:border-[#f5b041]/20 relative overflow-hidden ring-1 ring-white/5 will-change-transform">
               
               {/* Decorative corner glow */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[#f5b041]/10 rounded-full blur-3xl group-hover:bg-[#f5b041]/20 transition-all duration-500"></div>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#f5b041]/10 rounded-full blur-3xl group-hover:bg-[#f5b041]/20 transition-[background-color] duration-500" aria-hidden="true"></div>
 
               {/* Image */}
               <div className="w-full h-48 sm:h-60 rounded-3xl overflow-hidden mb-6 relative shadow-inner">
@@ -75,9 +80,15 @@ export default function Menu() {
                   <div className="bg-[#f5b041]/10 text-[#f5b041] font-bold px-4 py-2 rounded-xl text-sm sm:text-base border border-[#f5b041]/20">
                     {item.price}
                   </div>
-                  <button aria-label={`Tambah ${item.name} ke pesanan`} className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#fdf8f5] text-[#2c231b] flex items-center justify-center hover:bg-[#f5b041] hover:text-white hover:rotate-90 active:scale-95 transition-all duration-300 shadow-md group-hover:scale-105">
+                  <a
+                    href={orderLink(item.name, item.price)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Pesan ${item.name} via WhatsApp`}
+                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#fdf8f5] text-[#2c231b] flex items-center justify-center hover:bg-[#f5b041] hover:text-white hover:rotate-90 active:scale-95 transition-[transform,background-color,color] duration-300 shadow-md group-hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f5b041] focus-visible:ring-offset-2 focus-visible:ring-offset-[#3b3128]"
+                  >
                     <i className="fas fa-plus text-sm" aria-hidden="true"></i>
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
