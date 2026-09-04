@@ -67,9 +67,9 @@ export default function Header() {
               <Image src="/img/logo-semangkok.svg" alt="Mie Ayam & Bakso Semangkok" width={48} height={48} className="w-full h-full object-contain" priority sizes="48px" />
             </div>
             <div>
-              <h1 className="text-xl sm:text-2xl font-extrabold text-[#2c231b] font-poppins tracking-tight">
+              <span className="block text-xl sm:text-2xl font-extrabold text-[#2c231b] font-poppins tracking-tight">
                 Semangkok
-              </h1>
+              </span>
               <span className="text-[10px] sm:text-xs text-[#2c231b]/60 font-medium tracking-widest uppercase hidden sm:block">Mie Ayam & Bakso • Sejak 1990</span>
             </div>
           </a>
