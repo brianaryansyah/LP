@@ -33,15 +33,15 @@ export default function Hero() {
             
             {/* Action Buttons */}
             <div className="flex flex-wrap items-center gap-4 sm:gap-6">
-              <a href="#menu" className="group flex items-center gap-4 bg-[#f5b041] text-[#2c231b] pl-6 pr-2 py-2 rounded-full font-bold text-base hover:bg-[#e09132] transition-all duration-300 shadow-xl shadow-[#f5b041]/20 hover:-translate-y-1">
+              <a href="#menu" className="group flex items-center gap-4 bg-[#f5b041] text-[#2c231b] pl-6 pr-2 py-2 rounded-full font-bold text-base hover:bg-[#e09132] transition-[transform,background-color,box-shadow] duration-300 shadow-xl shadow-[#f5b041]/20 hover:-translate-y-1">
                 Pesan Sekarang 
                 <div className="w-10 h-10 bg-white text-[#2c231b] rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 shadow-sm">
-                  <i className="fas fa-arrow-up text-sm"></i>
+                  <i className="fas fa-arrow-up text-sm" aria-hidden="true"></i>
                 </div>
               </a>
-              <a href="#location" className="group flex items-center gap-3 bg-transparent text-[#2c231b] px-6 py-3 rounded-full font-bold text-base transition-all duration-300 hover:bg-[#f5b041]/10 hover:-translate-y-0.5">
+              <a href="#location" className="group flex items-center gap-3 bg-transparent text-[#2c231b] px-6 py-3 rounded-full font-bold text-base transition-[background-color,transform] duration-300 hover:bg-[#f5b041]/10 hover:-translate-y-0.5">
                 Lihat Lokasi
-                <i className="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
+                <i className="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"></i>
               </a>
             </div>
             
@@ -76,7 +76,7 @@ export default function Hero() {
             <div className="w-[90%] sm:w-[85%] max-w-[500px] aspect-[4/5] rounded-[3rem] overflow-hidden relative shadow-2xl z-10 border-8 border-white bg-white group ring-1 ring-black/5">
               <Image
                 src="/img/mi-ayam-bakso.jpg"
-                alt="Mie Ayam Premium"
+                alt="Mangkok mie ayam bakso dengan topping melimpah"
                 fill
                 priority
                 sizes="(max-width: 640px) 90vw, (max-width: 1024px) 85vw, 500px"
@@ -87,7 +87,7 @@ export default function Hero() {
             {/* Absolute Badges - Bulletproof Positioning */}
             <div className="absolute -bottom-6 sm:-bottom-10 left-4 sm:left-10 bg-white px-5 py-4 sm:px-6 sm:py-5 rounded-2xl shadow-2xl z-30 flex items-center gap-3 sm:gap-4 border border-gray-100 animate-float">
               <div className="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center text-green-600 shrink-0 shadow-inner">
-                <i className="fas fa-certificate text-2xl"></i>
+                <i className="fas fa-certificate text-2xl" aria-hidden="true"></i>
               </div>
               <div className="flex flex-col text-left">
                 <span className="text-sm sm:text-base font-bold text-[#2c231b] leading-tight">100% Halal</span>
@@ -96,13 +96,13 @@ export default function Hero() {
             </div>
 
             <div className="absolute top-10 sm:top-20 -right-4 sm:-right-8 bg-white/90 backdrop-blur-md px-4 py-3 rounded-2xl shadow-xl z-30 flex items-center gap-3 border border-white/50 animate-float" style={{ animationDelay: '1s' }}>
-               <div className="text-[#f5b041] flex text-sm">
-                 <i className="fas fa-star"></i>
-                 <i className="fas fa-star"></i>
-                 <i className="fas fa-star"></i>
-                 <i className="fas fa-star"></i>
-                 <i className="fas fa-star"></i>
-               </div>
+               <div className="text-[#f5b041] flex text-sm" aria-hidden="true">
+                  <i className="fas fa-star"></i>
+                  <i className="fas fa-star"></i>
+                  <i className="fas fa-star"></i>
+                  <i className="fas fa-star"></i>
+                  <i className="fas fa-star"></i>
+                </div>
                <span className="font-bold text-[#2c231b] font-poppins text-sm sm:text-base">5.0/5</span>
             </div>
 
