@@ -45,7 +45,7 @@ export default function Hero() {
               </a>
             </div>
             
-            {/* Trust Indicators — artisanal proof, not vanity metrics */}
+            {/* Trust Indicators: proof of craft, not vanity metrics */}
             <div className="mt-10 sm:mt-12 flex items-center gap-5 pt-6 border-t border-[#2c231b]/10">
               <div className="hidden sm:flex items-center gap-3 pr-5 border-r border-[#2c231b]/10">
                 <div className="w-10 h-10 rounded-full bg-[#f5b041]/15 border border-[#f5b041]/20 flex items-center justify-center">
@@ -60,7 +60,7 @@ export default function Hero() {
                 <div className="font-bold text-[#2c231b] font-poppins text-sm sm:text-[15px] flex items-center gap-2">
                   Ditarik Pagi • Kaldu 8 Jam <span className="w-1.5 h-1.5 bg-[#f5b041] rounded-full animate-pulse" aria-hidden="true"></span>
                 </div>
-                <div className="text-xs sm:text-sm text-[#2c231b]/60 font-medium">Tanpa gimmick — hanya rasa yang konsisten</div>
+                <div className="text-xs sm:text-sm text-[#2c231b]/60 font-medium">Tanpa gimmick, hanya rasa yang konsisten</div>
               </div>
             </div>
           </div>
