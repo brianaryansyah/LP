@@ -13,14 +13,14 @@ export default function Features() {
           <div className="flex-1 w-full relative max-w-lg mx-auto lg:max-w-none group">
             <div className="grid grid-cols-2 gap-3 sm:gap-4 relative z-10">
               <div className="col-span-2 relative rounded-2xl sm:rounded-3xl overflow-hidden w-full aspect-[16/9] shadow-2xl ring-1 ring-black/5 transition-transform duration-700 group-hover:scale-[1.02]">
-                <Image src="/img/mi-ayam-kepala.jpg" alt="Proses Memasak" fill sizes="(max-width: 640px) 90vw, 40vw" className="object-cover transition-transform duration-1000 group-hover:scale-[1.03] will-change-transform" loading="lazy" quality={85} />
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition duration-700"></div>
+                <Image src="/img/mi-ayam-kepala.jpg" alt="Ayam kecap dimasak di wajan besar" fill sizes="(max-width: 640px) 90vw, 40vw" className="object-cover transition-transform duration-1000 group-hover:scale-[1.03] will-change-transform" loading="lazy" quality={85} />
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-[background-color] duration-700"></div>
               </div>
               <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden w-full aspect-[4/3] shadow-xl ring-1 ring-black/5 transition-transform duration-700 delay-100 group-hover:-translate-y-2">
-                <Image src="/img/mi-ayam.jpg" alt="Bahan Segar" fill sizes="(max-width: 640px) 45vw, 20vw" className="object-cover transition-transform duration-1000 group-hover:scale-[1.03] will-change-transform" loading="lazy" quality={85} />
+                <Image src="/img/mi-ayam.jpg" alt="Mangkok mie ayam dengan topping ayam kecap" fill sizes="(max-width: 640px) 45vw, 20vw" className="object-cover transition-transform duration-1000 group-hover:scale-[1.03] will-change-transform" loading="lazy" quality={85} />
               </div>
               <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden w-full aspect-[4/3] shadow-xl ring-1 ring-black/5 transition-transform duration-700 delay-200 group-hover:-translate-y-2">
-                <Image src="/img/mi-ayam-bakso.jpg" alt="Mie Spesial" fill sizes="(max-width: 640px) 45vw, 20vw" className="object-cover transition-transform duration-1000 group-hover:scale-[1.03] will-change-transform" loading="lazy" quality={85} />
+                <Image src="/img/mi-ayam-bakso.jpg" alt="Mie ayam bakso dengan kuah kaldu" fill sizes="(max-width: 640px) 45vw, 20vw" className="object-cover transition-transform duration-1000 group-hover:scale-[1.03] will-change-transform" loading="lazy" quality={85} />
               </div>
             </div>
             
@@ -71,7 +71,7 @@ export default function Features() {
             </div>
 
             <div className="space-y-4 sm:space-y-6">
-              <div className="bg-[#f5b041]/10 p-4 sm:p-6 rounded-2xl sm:rounded-3xl flex items-center gap-4 sm:gap-6 hover:-translate-y-1 hover:shadow-md transition-all duration-500 shadow-sm border border-transparent hover:border-[#f5b041]/20 cursor-default">
+              <div className="bg-[#f5b041]/10 p-4 sm:p-6 rounded-2xl sm:rounded-3xl flex items-center gap-4 sm:gap-6 hover:-translate-y-1 hover:shadow-md transition-[transform,box-shadow,border-color] duration-500 shadow-sm border border-transparent hover:border-[#f5b041]/20 cursor-default">
                 <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#f5b041]/15 flex items-center justify-center shrink-0 border border-[#f5b041]/20" aria-hidden="true">
                   <i className="fas fa-clock text-xl sm:text-2xl text-[#f5b041]" aria-hidden="true"></i>
                 </div>
@@ -81,7 +81,7 @@ export default function Features() {
                 </div>
               </div>
 
-              <div className="bg-white border border-[#2c231b]/5 p-4 sm:p-6 rounded-2xl sm:rounded-3xl flex items-center gap-4 sm:gap-6 hover:-translate-y-1 hover:shadow-md transition-all duration-500 shadow-sm cursor-default">
+              <div className="bg-white border border-[#2c231b]/5 p-4 sm:p-6 rounded-2xl sm:rounded-3xl flex items-center gap-4 sm:gap-6 hover:-translate-y-1 hover:shadow-md transition-[transform,box-shadow,border-color] duration-500 shadow-sm cursor-default">
                 <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-white flex items-center justify-center shrink-0 shadow-sm border border-[#2c231b]/5" aria-hidden="true">
                   <i className="fas fa-utensils text-xl sm:text-2xl text-[#f5b041]" aria-hidden="true"></i>
                 </div>
