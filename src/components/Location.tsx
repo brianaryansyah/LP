@@ -30,8 +30,8 @@ export default function Location() {
           
           <Reveal delay={100}>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-10 md:mb-16">
-            {services.map((svc, idx) => (
-              <div key={idx} className="bg-white p-4 sm:p-6 rounded-2xl sm:rounded-3xl text-left border border-[#2c231b]/5 hover:border-[#f5b041]/20 transition-[transform,box-shadow,border-color] duration-500 cursor-default flex flex-col items-start hover:-translate-y-1 shadow-sm hover:shadow-md group">
+            {services.map((svc) => (
+              <div key={svc.title} className="bg-white p-4 sm:p-6 rounded-2xl sm:rounded-3xl text-left border border-[#2c231b]/5 hover:border-[#f5b041]/20 transition-[transform,box-shadow,border-color] duration-500 cursor-default flex flex-col items-start hover:-translate-y-1 shadow-sm hover:shadow-md group">
                 <div className="text-2xl sm:text-3xl mb-3 sm:mb-4 group-hover:scale-105 transition-transform duration-500">{svc.icon}</div>
                 <h4 className="text-base sm:text-lg font-bold text-[#2c231b] font-poppins mb-1 sm:mb-2">{svc.title}</h4>
                 <p className="text-[#2c231b]/70 font-inter text-xs sm:text-sm">{svc.desc}</p>
@@ -51,13 +51,13 @@ export default function Location() {
               allowFullScreen 
               loading="lazy" 
               referrerPolicy="no-referrer-when-downgrade"
-              className="grayscale-[20%] contrast-[110%] group-hover:grayscale-0 transition-all duration-700"
+              className="grayscale-[20%] contrast-[110%] group-hover:grayscale-0 transition-[filter] duration-700"
             ></iframe>
             
             {/* Map Overlay Button */}
             <div className="absolute inset-0 pointer-events-none flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/5">
               <a href="https://maps.app.goo.gl/NvCxPom7GSdYFj7Z9" target="_blank" rel="noopener noreferrer" aria-label="Buka lokasi di Google Maps" className="pointer-events-auto w-16 h-16 sm:w-20 sm:h-20 bg-[#fdf8f5]/90 backdrop-blur-sm rounded-full flex items-center justify-center text-[#f5b041] text-xl sm:text-2xl hover:scale-105 transition-transform duration-300 shadow-lg">
-                <i className="fas fa-external-link-alt ml-1"></i>
+                <i className="fas fa-external-link-alt ml-1" aria-hidden="true"></i>
               </a>
             </div>
           </div>
