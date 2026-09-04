@@ -16,7 +16,7 @@ export default function Location() {
   ];
 
   return (
-    <section id="location" className="relative min-h-screen flex flex-col justify-center py-16 lg:py-24 bg-[#fdf8f5] overflow-hidden">
+    <section id="location" className="relative min-h-screen flex flex-col justify-center pt-12 lg:pt-16 pb-32 lg:pb-40 bg-[#fdf8f5] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="text-center mb-10 md:mb-16">
           <Reveal>
@@ -31,7 +31,7 @@ export default function Location() {
           <Reveal delay={100}>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-10 md:mb-16">
             {services.map((svc, idx) => (
-              <div key={idx} className="bg-white p-4 sm:p-6 rounded-2xl sm:rounded-3xl text-left border border-[#2c231b]/5 hover:border-[#f5b041]/20 transition-all duration-500 cursor-default flex flex-col items-start hover:-translate-y-1 shadow-sm hover:shadow-md group">
+              <div key={idx} className="bg-white p-4 sm:p-6 rounded-2xl sm:rounded-3xl text-left border border-[#2c231b]/5 hover:border-[#f5b041]/20 transition-[transform,box-shadow,border-color] duration-500 cursor-default flex flex-col items-start hover:-translate-y-1 shadow-sm hover:shadow-md group">
                 <div className="text-2xl sm:text-3xl mb-3 sm:mb-4 group-hover:scale-105 transition-transform duration-500">{svc.icon}</div>
                 <h4 className="text-base sm:text-lg font-bold text-[#2c231b] font-poppins mb-1 sm:mb-2">{svc.title}</h4>
                 <p className="text-[#2c231b]/70 font-inter text-xs sm:text-sm">{svc.desc}</p>
@@ -66,7 +66,7 @@ export default function Location() {
           <Reveal delay={250}>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-8 sm:mt-12">
             {info.map((item) => (
-              <div key={item.title} className="bg-white p-4 sm:p-6 rounded-2xl sm:rounded-3xl border border-[#2c231b]/5 text-left flex items-start gap-4 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-500">
+              <div key={item.title} className="bg-white p-4 sm:p-6 rounded-2xl sm:rounded-3xl border border-[#2c231b]/5 text-left flex items-start gap-4 shadow-sm hover:shadow-md hover:-translate-y-1 transition-[transform,box-shadow,border-color] duration-500">
                 <div className="w-12 h-12 rounded-full bg-[#f5b041]/20 text-[#f5b041] flex items-center justify-center shrink-0" aria-hidden="true">
                   <i className={`${item.icon} text-xl`} aria-hidden="true"></i>
                 </div>
@@ -81,11 +81,11 @@ export default function Location() {
           
           <Reveal delay={300}>
           <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6 px-4">
-            <a href="https://maps.app.goo.gl/NvCxPom7GSdYFj7Z9" target="_blank" rel="noopener noreferrer" className="text-[#f5b041] font-bold underline hover:text-[#e09132] transition text-sm sm:text-base hover:scale-105 transform">
+            <a href="https://maps.app.goo.gl/NvCxPom7GSdYFj7Z9" target="_blank" rel="noopener noreferrer" className="text-[#f5b041] font-bold underline underline-offset-4 hover:text-[#e09132] transition-colors duration-300 text-sm sm:text-base hover:scale-105 transform">
               Lokasi Cabang Kami
             </a>
-            <a href="https://wa.me/6285640734972?text=Halo%20Semangkok%2C%20saya%20ingin%20memesan" target="_blank" rel="noopener noreferrer" className="bg-[#2c231b] text-white px-6 py-3 rounded-full font-bold hover:bg-[#f5b041] hover:text-[#2c231b] transition-all duration-300 text-sm sm:text-base flex items-center shadow-lg hover:shadow-xl hover:-translate-y-0.5">
-              Hubungi via WhatsApp <i className="fas fa-arrow-right ml-3 text-xs"></i>
+            <a href="https://wa.me/6285640734972?text=Halo%20Semangkok%2C%20saya%20ingin%20memesan" target="_blank" rel="noopener noreferrer" className="bg-[#2c231b] text-white px-6 py-3 rounded-full font-bold hover:bg-[#f5b041] hover:text-[#2c231b] transition-[transform,background-color,color,box-shadow] duration-300 text-sm sm:text-base flex items-center shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+              Hubungi via WhatsApp <i className="fas fa-arrow-right ml-3 text-xs" aria-hidden="true"></i>
             </a>
           </div>
           </Reveal>
