@@ -46,8 +46,6 @@ export default function Testimonial() {
   const googleMapsLink = "https://share.google/QOCQKq5zvoVVkb4pm";
   const marqueeItems = [...reviews, ...reviews, ...reviews];
   const [isPressed, setIsPressed] = useState(false);
-  const [paused, setPaused] = useState(false);
-  const isStopped = paused || isPressed;
 
   return (
     <section id="testimoni" className="relative pt-14 sm:pt-16 lg:pt-24 pb-16 sm:pb-20 lg:pb-28 bg-[#fdf8f5] overflow-hidden">
@@ -67,19 +65,6 @@ export default function Testimonial() {
           </div>
         </Reveal>
 
-        <div className="flex justify-center mb-2">
-          <button
-            type="button"
-            onClick={() => setPaused((v) => !v)}
-            aria-pressed={paused}
-            aria-label={paused ? "Putar ulasan berjalan" : "Jeda ulasan berjalan"}
-            className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.12em] text-[#2c231b]/50 hover:text-[#2c231b] bg-white border border-[#2c231b]/10 hover:border-[#f5b041]/40 px-4 py-2 rounded-full shadow-sm transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f5b041]/60"
-          >
-            <i className={`fas ${paused ? "fa-play" : "fa-pause"} text-[10px]`} aria-hidden="true"></i>
-            {paused ? "Putar" : "Jeda"}
-          </button>
-        </div>
-
         <div
           className="relative w-full overflow-hidden group py-4 select-none touch-pan-y"
           aria-label="Ulasan pelanggan berjalan terus menerus"
@@ -93,8 +78,8 @@ export default function Testimonial() {
           onTouchCancel={() => setIsPressed(false)}
         >
           <div
-            className={`flex w-max animate-marquee gap-3 sm:gap-4 py-3 group-hover:[animation-play-state:paused] motion-reduce:animate-none hover:[animation-play-state:paused] cursor-grab ${isStopped ? "cursor-grabbing" : ""}`}
-            style={{ animationPlayState: isStopped ? "paused" : "running" }}
+            className={`flex w-max animate-marquee gap-3 sm:gap-4 py-3 group-hover:[animation-play-state:paused] motion-reduce:animate-none hover:[animation-play-state:paused] cursor-grab ${isPressed ? "cursor-grabbing" : ""}`}
+            style={{ animationPlayState: isPressed ? "paused" : "running" }}
           >
             {marqueeItems.map((rev, idx) => (
               <div
