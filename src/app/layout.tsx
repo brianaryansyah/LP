@@ -59,6 +59,9 @@ export const metadata: Metadata = {
       "Warisan resep keluarga sejak 1990. Nikmati mie ayam kenyal, bakso premium, dan kuah kaldu gurih.",
     images: ["/img/mi-ayam-bakso.jpg"],
   },
+  alternates: {
+    canonical: "/",
+  },
   robots: {
     index: true,
     follow: true,
@@ -76,6 +79,7 @@ export default function RootLayout({
   return (
     <html lang="id">
       <head>
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
