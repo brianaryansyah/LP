@@ -1,7 +1,10 @@
+"use client";
+import { useState } from "react";
 import Reveal from "@/components/Reveal";
 import WaveDivider from "@/components/WaveDivider";
 
 export default function Location() {
+  const [mapActive, setMapActive] = useState(false);
   const services = [
     { icon: <i className="fas fa-motorcycle text-[#f5b041]" aria-hidden="true"></i>, title: "Pesan Antar", desc: "Mager keluar? Kami antar, masih hangat." },
     { icon: <i className="fas fa-store text-[#f5b041]" aria-hidden="true"></i>, title: "Makan di Tempat", desc: "Meja luas, cocok buat keluarga." },
@@ -51,15 +54,28 @@ export default function Location() {
               allowFullScreen 
               loading="lazy" 
               referrerPolicy="no-referrer-when-downgrade"
-              className="grayscale-[20%] contrast-[110%] group-hover:grayscale-0 transition-[filter] duration-700"
+              className={`grayscale-[20%] contrast-[110%] group-hover:grayscale-0 transition-[filter] duration-700 ${mapActive ? "" : "pointer-events-none"}`}
             ></iframe>
             
-            {/* Map Overlay Button */}
-            <div className="absolute inset-0 pointer-events-none flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/5">
-              <a href="https://maps.app.goo.gl/NvCxPom7GSdYFj7Z9" target="_blank" rel="noopener noreferrer" aria-label="Buka lokasi di Google Maps" className="pointer-events-auto w-16 h-16 sm:w-20 sm:h-20 bg-[#fdf8f5]/90 backdrop-blur-sm rounded-full flex items-center justify-center text-[#f5b041] text-xl sm:text-2xl hover:scale-105 transition-transform duration-300 shadow-lg">
-                <i className="fas fa-external-link-alt ml-1" aria-hidden="true"></i>
-              </a>
-            </div>
+            {!mapActive ? (
+              <button
+                type="button"
+                onClick={() => setMapActive(true)}
+                aria-label="Aktifkan peta interaktif"
+                className="absolute inset-0 flex items-center justify-center bg-black/5 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#f5b041]"
+              >
+                <span className="inline-flex items-center gap-2 rounded-full bg-[#fdf8f5]/95 px-5 py-3 text-sm font-bold text-[#2c231b] shadow-lg backdrop-blur-sm">
+                  <i className="fas fa-map-marked-alt text-[#f5b041]" aria-hidden="true"></i>
+                  Ketuk untuk geser peta
+                </span>
+              </button>
+            ) : (
+              <div className="absolute inset-0 pointer-events-none flex items-center justify-center opacity-0 group-hover:opacity-100 focus-within:opacity-100 transition-opacity duration-500 bg-black/5">
+                <a href="https://maps.app.goo.gl/NvCxPom7GSdYFj7Z9" target="_blank" rel="noopener noreferrer" aria-label="Buka lokasi di Google Maps" className="pointer-events-auto w-16 h-16 sm:w-20 sm:h-20 bg-[#fdf8f5]/90 backdrop-blur-sm rounded-full flex items-center justify-center text-[#f5b041] text-xl sm:text-2xl hover:scale-105 transition-transform duration-300 shadow-lg">
+                  <i className="fas fa-external-link-alt ml-1" aria-hidden="true"></i>
+                </a>
+              </div>
+            )}
           </div>
           </Reveal>
 
