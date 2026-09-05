@@ -52,12 +52,12 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-bold mb-6 font-poppins text-[#f5b041]">Tautan</h4>
             <ul className="space-y-4 text-sm font-medium">
-              <li><a href="#home" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition-colors">Beranda</a></li>
-              <li><a href="#unggulan" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition-colors">Keunggulan</a></li>
-              <li><a href="#testimoni" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition-colors">Testimoni</a></li>
-              <li><a href="#menu" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition-colors">Menu Kami</a></li>
-              <li><a href="#reservasi" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition-colors">Reservasi</a></li>
-              <li><a href="#location" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition-colors">Lokasi</a></li>
+              <li><a href="/" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition-colors">Beranda</a></li>
+              <li><a href="/tentang/keunggulan" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition-colors">Keunggulan</a></li>
+              <li><a href="/#testimoni" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition-colors">Testimoni</a></li>
+              <li><a href="/katalog/mie-ayam" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition-colors">Menu Kami</a></li>
+              <li><a href="/#reservasi" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition-colors">Reservasi</a></li>
+              <li><a href="/bantuan/kontak" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition-colors">Lokasi</a></li>
             </ul>
           </div>
 
