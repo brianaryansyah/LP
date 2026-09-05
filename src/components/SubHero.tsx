@@ -15,7 +15,7 @@ export default function SubHero({ eyebrow, title, desc, section }: SubHeroProps)
         aria-hidden="true"
       ></div>
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        <nav aria-label="Jejak halaman" className="mb-6 flex items-center gap-2 text-xs font-medium text-[#2c231b]/50">
+        <nav aria-label="Jejak halaman" className="animate__animated animate__fadeInDown mb-6 flex items-center gap-2 text-xs font-medium text-[#2c231b]/50">
           <Link href="/" className="transition-colors duration-200 hover:text-[#e09132]">
             Beranda
           </Link>
@@ -26,13 +26,22 @@ export default function SubHero({ eyebrow, title, desc, section }: SubHeroProps)
             {eyebrow}
           </span>
         </nav>
-        <div className="inline-block rounded-full border border-[#f5b041]/30 bg-[#f5b041]/20 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-[#2c231b]">
+        <div
+          className="animate__animated animate__fadeInUp inline-block rounded-full border border-[#f5b041]/30 bg-[#f5b041]/20 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-[#2c231b]"
+          style={{ animationDelay: "80ms" }}
+        >
           {eyebrow}
         </div>
-        <h1 className="mt-4 max-w-3xl font-poppins text-3xl font-extrabold leading-tight tracking-tight text-[#2c231b] text-balance sm:text-4xl md:text-5xl">
+        <h1
+          className="animate__animated animate__fadeInUp mt-4 max-w-3xl font-poppins text-3xl font-extrabold leading-tight tracking-tight text-[#2c231b] text-balance sm:text-4xl md:text-5xl"
+          style={{ animationDelay: "160ms" }}
+        >
           {title}
         </h1>
-        <p className="mt-4 max-w-2xl font-inter text-sm leading-relaxed text-[#2c231b]/70 sm:text-base lg:text-lg">
+        <p
+          className="animate__animated animate__fadeInUp mt-4 max-w-2xl font-inter text-sm leading-relaxed text-[#2c231b]/70 sm:text-base lg:text-lg"
+          style={{ animationDelay: "240ms" }}
+        >
           {desc}
         </p>
       </div>
