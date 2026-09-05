@@ -70,7 +70,7 @@ export default function Testimonial() {
           aria-label="Ulasan pelanggan berjalan terus menerus"
           role="region"
           aria-live="off"
-          onMouseDown={(e) => { e.preventDefault(); setIsPressed(true); }}
+          onMouseDown={() => setIsPressed(true)}
           onMouseUp={() => setIsPressed(false)}
           onMouseLeave={() => setIsPressed(false)}
           onTouchStart={() => setIsPressed(true)}
