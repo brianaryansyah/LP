@@ -1,11 +1,12 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { NAVBAR_ENTRIES, NAVBAR_SECTION_IDS, ORDER_LINK, type NavbarEntry } from "@/data/navbar";
 
 function BrandMark() {
   return (
-    <a href="/" className="flex shrink-0 items-center gap-3" aria-label="Mie Ayam Semangkok, ke beranda">
+    <Link href="/" className="flex shrink-0 items-center gap-3" aria-label="Mie Ayam Semangkok, ke beranda">
       <span className="relative block h-10 w-10 overflow-hidden rounded-full border-2 border-white bg-white p-0.5 shadow-md transition-[border-color,transform] duration-300 hover:rotate-3 hover:border-[#4ADE80] sm:h-12 sm:w-12">
         <Image
           src="/img/logo-semangkok.svg"
@@ -25,7 +26,7 @@ function BrandMark() {
           Mie Ayam & Bakso • Sejak 1990
         </span>
       </span>
-    </a>
+    </Link>
   );
 }
 
@@ -105,13 +106,13 @@ function MobileAccordion({
 
   if (!entry.children) {
     return (
-      <a
+      <Link
         href={entry.href}
         onClick={onNavigate}
         className="block rounded-xl px-4 py-3 text-base font-bold text-[#1C2421] transition-colors duration-200 hover:bg-[#1C2421]/5"
       >
         {entry.label}
-      </a>
+      </Link>
     );
   }
 
@@ -248,9 +249,9 @@ export default function Navbar() {
                   onClose={() => setOpenMenu(null)}
                 />
               ) : (
-                <a key={entry.label} href={entry.href} className={plainLinkClass(entry.sectionId)}>
+                <Link key={entry.label} href={entry.href} className={plainLinkClass(entry.sectionId)}>
                   {entry.label}
-                </a>
+                </Link>
               )
             )}
           </nav>
