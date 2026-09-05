@@ -292,7 +292,7 @@ export default function Navbar() {
       {isOpen && (
         <div
           id="navbar-mobile-menu"
-          className="animate__animated animate__fadeInDown absolute left-0 top-full max-h-[75vh] w-full origin-top overflow-y-auto border-t border-[#1C2421]/5 bg-[#FCF8F2]/95 shadow-xl backdrop-blur-xl lg:hidden"
+          className="animate__animated animate__fadeInDown absolute left-0 top-full max-h-[75vh] w-full origin-top overflow-y-auto border-t border-[#1C2421]/5 bg-[#FCF8F2]/95 shadow-xl backdrop-blur-xl [overscroll-behavior:contain] lg:hidden"
         >
           <nav aria-label="Navigasi seluler" className="space-y-1 px-4 pb-6 pt-4">
             {NAVBAR_ENTRIES.map((entry) => (
