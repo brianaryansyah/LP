@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { waLink } from "@/data/navbar";
 
 interface PageCtaProps {
@@ -34,13 +35,13 @@ export default function PageCta({
             <i className="fab fa-whatsapp text-base" aria-hidden="true"></i>
             Pesan via WhatsApp
           </a>
-          <a
+          <Link
             href="/#reservasi"
             className="inline-flex items-center gap-2 rounded-full border border-[#fdf8f5]/25 px-6 py-3 text-sm font-bold text-[#fdf8f5] transition-colors duration-300 hover:border-[#f5b041] hover:text-[#f5b041] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f5b041]"
           >
             Reservasi Meja
             <i className="fas fa-arrow-right text-xs" aria-hidden="true"></i>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

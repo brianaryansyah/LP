@@ -1,6 +1,7 @@
 ﻿"use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
@@ -52,12 +53,12 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-bold mb-6 font-poppins text-[#f5b041]">Tautan</h4>
             <ul className="space-y-4 text-sm font-medium">
-              <li><a href="/" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition-colors">Beranda</a></li>
-              <li><a href="/tentang/keunggulan" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition-colors">Keunggulan</a></li>
-              <li><a href="/#testimoni" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition-colors">Testimoni</a></li>
-              <li><a href="/katalog/mie-ayam" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition-colors">Menu Kami</a></li>
-              <li><a href="/#reservasi" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition-colors">Reservasi</a></li>
-              <li><a href="/bantuan/kontak" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition-colors">Lokasi</a></li>
+              <li><Link href="/" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition-colors">Beranda</Link></li>
+              <li><Link href="/tentang/keunggulan" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition-colors">Keunggulan</Link></li>
+              <li><Link href="/#testimoni" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition-colors">Testimoni</Link></li>
+              <li><Link href="/katalog/mie-ayam" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition-colors">Menu Kami</Link></li>
+              <li><Link href="/#reservasi" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition-colors">Reservasi</Link></li>
+              <li><Link href="/bantuan/kontak" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition-colors">Lokasi</Link></li>
             </ul>
           </div>
 
