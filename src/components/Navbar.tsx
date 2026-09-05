@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { NAVBAR_ENTRIES, NAVBAR_SECTION_IDS, ORDER_LINK, type NavbarEntry } from "@/data/navbar";
 
 function BrandMark() {
@@ -169,6 +170,7 @@ export default function Navbar() {
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [expandedMobile, setExpandedMobile] = useState<string | null>(null);
   const navRef = useRef<HTMLElement>(null);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -208,15 +210,26 @@ export default function Navbar() {
     };
   }, [isOpen, openMenu]);
 
+  const activeRouteEntry =
+    pathname !== "/"
+      ? NAVBAR_ENTRIES.find(
+          (entry) =>
+            entry.href === pathname || entry.children?.some((child) => child.href === pathname)
+        ) ?? null
+      : null;
+
+  const isEntryActive = (entry: NavbarEntry) =>
+    activeRouteEntry ? activeRouteEntry.label === entry.label : activeSection === entry.sectionId;
+
   const closeAll = () => {
     setIsOpen(false);
     setOpenMenu(null);
     setExpandedMobile(null);
   };
 
-  const plainLinkClass = (sectionId: string) =>
+  const plainLinkClass = (entry: NavbarEntry) =>
     `rounded-full px-3 py-1.5 text-sm font-semibold transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4ADE80] ${
-      activeSection === sectionId
+      isEntryActive(entry)
         ? "bg-[#1C2421] text-[#4ADE80]"
         : "text-[#1C2421] hover:text-[#15803d]"
     }`;
@@ -243,13 +256,13 @@ export default function Navbar() {
                 <DesktopDropdown
                   key={entry.label}
                   entry={entry}
-                  isActive={activeSection === entry.sectionId}
+                  isActive={isEntryActive(entry)}
                   openMenu={openMenu}
                   onToggle={(label) => setOpenMenu((prev) => (prev === label ? prev : label))}
                   onClose={() => setOpenMenu(null)}
                 />
               ) : (
-                <Link key={entry.label} href={entry.href} className={plainLinkClass(entry.sectionId)}>
+                <Link key={entry.label} href={entry.href} className={plainLinkClass(entry)}>
                   {entry.label}
                 </Link>
               )
