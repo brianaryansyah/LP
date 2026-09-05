@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import Testimonial from "@/components/Testimonial";
@@ -11,7 +11,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#fdf8f5] relative">
-      <Header />
+      <Navbar />
       <Hero />
       <Features />
       <Testimonial />
