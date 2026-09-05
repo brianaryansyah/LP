@@ -12,6 +12,13 @@ export interface NavbarEntry {
   children?: NavbarChild[];
 }
 
+export const NAVBAR_THEME = {
+  cream: "#FCF8F2",
+  ink: "#1C2421",
+  fresh: "#4ADE80",
+  capsule: "#1A1A1A",
+} as const;
+
 const WA_NUMBER = "6285640734972";
 
 export function waLink(message: string): string {
@@ -21,15 +28,17 @@ export function waLink(message: string): string {
 export const ORDER_LINK = waLink("Halo Semangkok, saya ingin memesan.");
 
 export const NAVBAR_ENTRIES: NavbarEntry[] = [
-  { label: "Beranda", href: "#home", sectionId: "home" },
+  { label: "Beranda", href: "/", sectionId: "home" },
   {
     label: "Tentang Kami",
     href: "#unggulan",
     sectionId: "unggulan",
     children: [
-      { label: "Cerita Kami", href: "#unggulan", desc: "Dari gerobak 1990 sampai Karimata" },
-      { label: "Kata Pelanggan", href: "#testimoni", desc: "Cerita jujur dari meja sebelah" },
-      { label: "Lokasi Warung", href: "#location", desc: "Karimata No.40, Pemalang" },
+      { label: "Kisah Semangkok", href: "#unggulan", desc: "Dari gerobak 1990 sampai Karimata" },
+      { label: "Keunggulan Kami", href: "#unggulan", desc: "Kaldu 8 jam, mie ditarik harian" },
+      { label: "Sejarah Resep 1990", href: "#unggulan", desc: "Resep keluarga turun temurun" },
+      { label: "Sertifikasi & Kualitas", href: "#testimoni", desc: "100% halal, tamu puas 4.9" },
+      { label: "Tim Kami", href: "#location", desc: "Sapa kami di warung" },
     ],
   },
   {
@@ -37,9 +46,9 @@ export const NAVBAR_ENTRIES: NavbarEntry[] = [
     href: "#menu",
     sectionId: "menu",
     children: [
-      { label: "Menu Pilihan", href: "#menu", desc: "Paling sering dipesan" },
-      { label: "Reservasi Meja", href: "#reservasi", desc: "Pesan tempat dulu" },
-      { label: "Layanan & Lokasi", href: "#location", desc: "Antar, makan di tempat" },
+      { label: "Mie Ayam Spesial", href: "#menu", desc: "Original dan bakso favorit" },
+      { label: "Bakso & Topping", href: "#menu", desc: "Kenyal, porsi melimpah" },
+      { label: "Minuman Segar", href: "#menu", desc: "Teman makan mie ayam" },
     ],
   },
   {
@@ -48,21 +57,15 @@ export const NAVBAR_ENTRIES: NavbarEntry[] = [
     sectionId: "reservasi",
     children: [
       {
-        label: "Kemitraan Warung",
-        href: waLink("Halo Semangkok, saya tertarik kemitraan warung."),
-        desc: "Tanya skema kerjasama",
+        label: "Peluang Franchise",
+        href: waLink("Halo Semangkok, saya tertarik peluang franchise."),
+        desc: "Buka cabang bersama kami",
         external: true,
       },
       {
-        label: "Catering & Acara",
-        href: waLink("Halo Semangkok, saya ingin pesan catering atau acara."),
-        desc: "Arisan, ulang tahun, kantor",
-        external: true,
-      },
-      {
-        label: "Hubungi Kami",
-        href: waLink("Halo Semangkok, saya ingin bertanya."),
-        desc: "Respon cepat via WhatsApp",
+        label: "Kemitraan Supplier",
+        href: waLink("Halo Semangkok, saya ingin jadi supplier."),
+        desc: "Pasok bahan berkualitas",
         external: true,
       },
     ],
@@ -72,14 +75,8 @@ export const NAVBAR_ENTRIES: NavbarEntry[] = [
     href: "#unggulan",
     sectionId: "testimoni",
     children: [
-      { label: "Cerita Dapur", href: "#unggulan", desc: "Kaldu 8 jam, mie harian" },
-      { label: "Ulasan Pelanggan", href: "#testimoni", desc: "Rating 4.9 dari tamu" },
-      {
-        label: "Google Maps",
-        href: "https://share.google/QOCQKq5zvoVVkb4pm",
-        desc: "Baca semua ulasan",
-        external: true,
-      },
+      { label: "Berita & Event", href: "#testimoni", desc: "Kabar terbaru warung" },
+      { label: "Tips & Resep", href: "#unggulan", desc: "Rahasia dapur Semangkok" },
     ],
   },
   {
@@ -87,15 +84,13 @@ export const NAVBAR_ENTRIES: NavbarEntry[] = [
     href: "#location",
     sectionId: "location",
     children: [
-      { label: "Cara Pesan", href: "#menu", desc: "Pilih menu favorit" },
-      { label: "Reservasi", href: "#reservasi", desc: "Booking biar kebagian" },
+      { label: "FAQ", href: "#location", desc: "Jam, lokasi, cara pesan" },
       {
-        label: "Chat WhatsApp",
+        label: "Hubungi Kami",
         href: waLink("Halo Semangkok, saya butuh bantuan."),
-        desc: "Tanya apa saja",
+        desc: "Respon cepat via WhatsApp",
         external: true,
       },
-      { label: "Lokasi & Jam", href: "#location", desc: "Buka tiap hari 10.00-22.00" },
     ],
   },
 ];
