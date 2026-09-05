@@ -5,12 +5,8 @@ import { NAVBAR_ENTRIES, NAVBAR_SECTION_IDS, ORDER_LINK, type NavbarEntry } from
 
 function BrandMark() {
   return (
-    <a
-      href="#home"
-      className="flex shrink-0 items-center gap-3"
-      aria-label="Semangkok, kembali ke beranda"
-    >
-      <span className="relative block h-10 w-10 overflow-hidden rounded-full border-2 border-white bg-white p-0.5 shadow-md transition-[border-color,transform] duration-300 hover:rotate-3 hover:border-[#f5b041] sm:h-12 sm:w-12">
+    <a href="/" className="flex shrink-0 items-center gap-3" aria-label="Mie Ayam Semangkok, ke beranda">
+      <span className="relative block h-10 w-10 overflow-hidden rounded-full border-2 border-white bg-white p-0.5 shadow-md transition-[border-color,transform] duration-300 hover:rotate-3 hover:border-[#4ADE80] sm:h-12 sm:w-12">
         <Image
           src="/img/logo-semangkok.svg"
           alt="Logo Mie Ayam dan Bakso Semangkok"
@@ -22,10 +18,10 @@ function BrandMark() {
         />
       </span>
       <span className="block">
-        <span className="block font-poppins text-xl font-extrabold tracking-tight text-[#2c231b] sm:text-2xl">
-          Semangkok
+        <span className="block font-poppins text-xl font-extrabold tracking-tight text-[#1C2421] sm:text-2xl">
+          Mie Ayam Semangkok
         </span>
-        <span className="hidden text-[10px] font-medium uppercase tracking-widest text-[#2c231b]/60 sm:block sm:text-xs">
+        <span className="hidden text-[10px] font-medium uppercase tracking-widest text-[#1C2421]/60 sm:block sm:text-xs">
           Mie Ayam & Bakso • Sejak 1990
         </span>
       </span>
@@ -50,21 +46,15 @@ function DesktopDropdown({
   const panelId = `nav-panel-${entry.label.replace(/\s+/g, "-").toLowerCase()}`;
 
   return (
-    <div
-      className="relative"
-      onMouseEnter={() => onToggle(entry.label)}
-      onMouseLeave={onClose}
-    >
+    <div className="relative" onMouseEnter={() => onToggle(entry.label)} onMouseLeave={onClose}>
       <button
         type="button"
         aria-expanded={isOpen}
         aria-haspopup="true"
         aria-controls={panelId}
         onClick={() => (isOpen ? onClose() : onToggle(entry.label))}
-        className={`flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm font-semibold transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f5b041] ${
-          isActive || isOpen
-            ? "bg-[#f5b041]/15 text-[#e09132]"
-            : "text-[#2c231b] hover:text-[#f5b041]"
+        className={`flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm font-semibold transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4ADE80] ${
+          isActive || isOpen ? "bg-[#1C2421] text-[#4ADE80]" : "text-[#1C2421] hover:text-[#15803d]"
         }`}
       >
         {entry.label}
@@ -76,25 +66,21 @@ function DesktopDropdown({
         ></i>
       </button>
       {isOpen && entry.children && (
-        <div
-          id={panelId}
-          role="menu"
-          className="absolute left-1/2 top-full z-50 w-64 -translate-x-1/2 pt-3"
-        >
-          <div className="overflow-hidden rounded-2xl border border-[#2c231b]/5 bg-white p-2 shadow-2xl">
+        <div id={panelId} role="menu" className="absolute left-1/2 top-full z-50 w-64 -translate-x-1/2 pt-3">
+          <div className="rounded-2xl border border-white/10 bg-[#1C2421] p-2 shadow-2xl">
             {entry.children.map((child) => (
               <a
                 key={child.label}
                 role="menuitem"
                 href={child.href}
-                {...(child.external
-                  ? { target: "_blank", rel: "noopener noreferrer" }
-                  : {})}
+                {...(child.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                 onClick={onClose}
-                className="block rounded-xl px-4 py-3 transition-colors duration-200 hover:bg-[#f5b041]/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#f5b041]"
+                className="group block rounded-2xl px-4 py-3 transition-colors duration-200 hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#4ADE80]"
               >
-                <span className="block text-sm font-bold text-[#2c231b]">{child.label}</span>
-                <span className="mt-0.5 block text-xs text-[#2c231b]/55">{child.desc}</span>
+                <span className="block text-sm font-bold text-[#FCF8F2] transition-colors duration-200 group-hover:text-[#4ADE80]">
+                  {child.label}
+                </span>
+                <span className="mt-0.5 block text-xs text-[#FCF8F2]/55">{child.desc}</span>
               </a>
             ))}
           </div>
@@ -122,7 +108,7 @@ function MobileAccordion({
       <a
         href={entry.href}
         onClick={onNavigate}
-        className="block rounded-xl px-4 py-3 text-base font-bold text-[#2c231b] transition-colors duration-200 hover:bg-[#f5b041]/10"
+        className="block rounded-xl px-4 py-3 text-base font-bold text-[#1C2421] transition-colors duration-200 hover:bg-[#1C2421]/5"
       >
         {entry.label}
       </a>
@@ -136,22 +122,22 @@ function MobileAccordion({
         aria-expanded={expanded}
         aria-controls={panelId}
         onClick={onToggle}
-        className="flex w-full items-center justify-between rounded-xl px-4 py-3 text-base font-bold text-[#2c231b] transition-colors duration-200 hover:bg-[#f5b041]/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f5b041]"
+        className="flex w-full items-center justify-between rounded-xl px-4 py-3 text-base font-bold text-[#1C2421] transition-colors duration-200 hover:bg-[#1C2421]/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#15803d]"
       >
         {entry.label}
         <i
-          className={`fas fa-chevron-down text-xs text-[#2c231b]/50 transition-transform duration-300 ${
+          className={`fas fa-chevron-down text-xs text-[#1C2421]/50 transition-transform duration-300 ${
             expanded ? "rotate-180" : ""
           }`}
           aria-hidden="true"
         ></i>
       </button>
       {expanded && (
-        <div id={panelId} className="ml-2 space-y-1 border-l-2 border-[#f5b041]/30 pb-2 pl-3">
+        <div id={panelId} className="ml-2 space-y-1 rounded-2xl bg-[#1C2421] p-2">
           <a
             href={entry.href}
             onClick={onNavigate}
-            className="block rounded-lg px-3 py-2 text-sm font-bold text-[#e09132] transition-colors duration-200 hover:bg-[#f5b041]/10"
+            className="block rounded-2xl px-3 py-2 text-sm font-bold text-[#4ADE80] transition-colors duration-200 hover:bg-white/5"
           >
             Semua {entry.label}
           </a>
@@ -161,10 +147,12 @@ function MobileAccordion({
               href={child.href}
               {...(child.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               onClick={onNavigate}
-              className="block rounded-lg px-3 py-2 transition-colors duration-200 hover:bg-[#f5b041]/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f5b041]"
+              className="group block rounded-2xl px-3 py-2 transition-colors duration-200 hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4ADE80]"
             >
-              <span className="block text-sm font-bold text-[#2c231b]">{child.label}</span>
-              <span className="block text-xs text-[#2c231b]/55">{child.desc}</span>
+              <span className="block text-sm font-bold text-[#FCF8F2] transition-colors duration-200 group-hover:text-[#4ADE80]">
+                {child.label}
+              </span>
+              <span className="block text-xs text-[#FCF8F2]/55">{child.desc}</span>
             </a>
           ))}
         </div>
@@ -226,10 +214,10 @@ export default function Navbar() {
   };
 
   const plainLinkClass = (sectionId: string) =>
-    `rounded-full px-3 py-1.5 text-sm font-semibold transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f5b041] ${
+    `rounded-full px-3 py-1.5 text-sm font-semibold transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4ADE80] ${
       activeSection === sectionId
-        ? "bg-[#f5b041]/15 text-[#e09132]"
-        : "text-[#2c231b] hover:text-[#f5b041]"
+        ? "bg-[#1C2421] text-[#4ADE80]"
+        : "text-[#1C2421] hover:text-[#15803d]"
     }`;
 
   return (
@@ -237,7 +225,7 @@ export default function Navbar() {
       ref={navRef}
       className={`animate__animated animate__fadeInDown fixed z-50 w-full transition-[background-color,box-shadow,padding] duration-300 will-change-transform ${
         scrolled
-          ? "border-b border-[#2c231b]/5 bg-[#fdf8f5]/85 py-3 shadow-sm backdrop-blur-xl"
+          ? "border-b border-[#1C2421]/5 bg-[#FCF8F2]/90 py-3 shadow-sm backdrop-blur-xl"
           : "bg-transparent py-5"
       }`}
     >
@@ -247,7 +235,7 @@ export default function Navbar() {
 
           <nav
             aria-label="Navigasi utama"
-            className="hidden items-center gap-1 rounded-full border border-[#2c231b]/5 bg-white/60 px-4 py-2 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07)] backdrop-blur-sm lg:flex"
+            className="hidden items-center gap-1 rounded-full border border-[#1C2421]/5 bg-[#FCF8F2]/80 px-4 py-2 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07)] backdrop-blur-sm lg:flex"
           >
             {NAVBAR_ENTRIES.map((entry) =>
               entry.children ? (
@@ -272,7 +260,7 @@ export default function Navbar() {
               href={ORDER_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-full bg-[#2c231b] px-6 py-3 text-sm font-bold text-white shadow-lg transition-[transform,background-color,box-shadow] duration-300 hover:-translate-y-1 hover:bg-[#f5b041] hover:text-[#2c231b] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f5b041] focus-visible:ring-offset-2"
+              className="flex items-center gap-2 rounded-full bg-[#1A1A1A] px-6 py-3 text-sm font-bold text-white shadow-lg transition-[transform,background-color,color,box-shadow] duration-300 hover:-translate-y-1 hover:bg-[#4ADE80] hover:text-[#1A1A1A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4ADE80] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FCF8F2]"
             >
               <i className="fab fa-whatsapp text-base" aria-hidden="true"></i>
               Pesan Sekarang
@@ -286,7 +274,7 @@ export default function Navbar() {
               aria-label={isOpen ? "Tutup menu navigasi" : "Buka menu navigasi"}
               aria-expanded={isOpen}
               aria-controls="navbar-mobile-menu"
-              className="rounded-lg bg-white/60 p-2 text-[#2c231b] shadow-sm backdrop-blur-sm transition-colors duration-200 hover:text-[#f5b041] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f5b041]"
+              className="rounded-lg bg-[#FCF8F2]/80 p-2 text-[#1C2421] shadow-sm backdrop-blur-sm transition-colors duration-200 hover:text-[#15803d] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4ADE80]"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 {isOpen ? (
@@ -303,7 +291,7 @@ export default function Navbar() {
       {isOpen && (
         <div
           id="navbar-mobile-menu"
-          className="absolute left-0 top-full w-full origin-top border-t border-[#2c231b]/5 bg-[#fdf8f5]/95 shadow-xl backdrop-blur-xl animate__animated animate__fadeInDown lg:hidden"
+          className="animate__animated animate__fadeInDown absolute left-0 top-full max-h-[75vh] w-full origin-top overflow-y-auto border-t border-[#1C2421]/5 bg-[#FCF8F2]/95 shadow-xl backdrop-blur-xl lg:hidden"
         >
           <nav aria-label="Navigasi seluler" className="space-y-1 px-4 pb-6 pt-4">
             {NAVBAR_ENTRIES.map((entry) => (
@@ -311,9 +299,7 @@ export default function Navbar() {
                 key={entry.label}
                 entry={entry}
                 expanded={expandedMobile === entry.label}
-                onToggle={() =>
-                  setExpandedMobile((prev) => (prev === entry.label ? null : entry.label))
-                }
+                onToggle={() => setExpandedMobile((prev) => (prev === entry.label ? null : entry.label))}
                 onNavigate={closeAll}
               />
             ))}
@@ -322,7 +308,7 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={closeAll}
-              className="mt-4 flex items-center justify-center gap-2 rounded-xl bg-[#f5b041] px-4 py-3 text-center text-base font-bold text-[#2c231b] shadow-md transition-colors duration-200 hover:bg-[#e09132] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2c231b]/50"
+              className="mt-4 flex items-center justify-center gap-2 rounded-full bg-[#1A1A1A] px-4 py-3 text-center text-base font-bold text-white shadow-md transition-colors duration-200 hover:bg-[#4ADE80] hover:text-[#1A1A1A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4ADE80]"
             >
               <i className="fab fa-whatsapp" aria-hidden="true"></i>
               Pesan Sekarang
