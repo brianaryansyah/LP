@@ -45,8 +45,8 @@ export default function BaksoPage() {
       <Navbar />
       <SubHero
         eyebrow="Bakso & Topping"
-        title="Pelengkap Wajib"
-        desc="Baksonya kenyal, toppingnya melimpah. Bisa dipesan terpisah atau digabung dengan mie favorit."
+        title="Tambahan yang sering dipesan"
+        desc="Bakso kenyal, topping ayam ekstra. Bisa dipesan terpisah atau digabung dengan mie."
         section="Katalog"
       />
       <section className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8">
@@ -93,10 +93,10 @@ export default function BaksoPage() {
           <div className="mt-10 flex flex-col items-start justify-between gap-4 rounded-[2rem] border border-[#f5b041]/30 bg-[#f5b041]/10 p-6 sm:flex-row sm:items-center sm:rounded-[3rem] sm:p-8">
             <div>
               <h2 className="font-poppins text-lg font-bold text-[#2c231b] sm:text-xl">
-                Paket paling hemat
+                Contoh paket
               </h2>
               <p className="mt-1 font-inter text-sm text-[#2c231b]/70">
-                Mie Ayam Bakso Rp 20.000 plus Es Teh Rp 4.000. Kenyang total Rp 24.000.
+                Misalnya Mie Ayam Bakso Rp 20.000 plus Es Teh Rp 4.000.
               </p>
             </div>
             <a

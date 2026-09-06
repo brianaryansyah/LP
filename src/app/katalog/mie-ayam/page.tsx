@@ -43,8 +43,8 @@ export default function MieAyamPage() {
       <Navbar />
       <SubHero
         eyebrow="Mie Ayam Spesial"
-        title="Andalan Sejak 1990"
-        desc="Dua menu yang paling sering dipesan. Mie ditarik tiap pagi, ayam kampung, kuah kaldu 8 jam."
+        title="Dua menu utama"
+        desc="Menu yang paling sering dipesan. Mie disiapkan tiap pagi, ayam kampung, kuah kaldu direbus lama."
         section="Katalog"
       />
       <section className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8">

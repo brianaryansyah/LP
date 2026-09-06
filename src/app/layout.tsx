@@ -19,11 +19,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://semangkok.id"),
   title: {
-    default: "Semangkok - Mie Ayam & Bakso Premium",
+    default: "Semangkok - Mie Ayam & Bakso",
     template: "%s | Semangkok",
   },
   description:
-    "Warisan resep keluarga sejak 1990. Nikmati mie ayam kenyal, bakso premium, dan kuah kaldu gurih yang siap diantar ke rumah Anda.",
+    "Resep keluarga sejak 1990. Mie ayam kenyal, bakso, dan kuah kaldu gurih di Pemalang. Bisa makan di tempat atau pesan antar.",
   applicationName: "Semangkok",
   keywords: [
     "mie ayam",
@@ -39,24 +39,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "id_ID",
     siteName: "Semangkok",
-    title: "Semangkok - Mie Ayam & Bakso Premium",
-    description:
-      "Warisan resep keluarga sejak 1990. Nikmati mie ayam kenyal, bakso premium, dan kuah kaldu gurih yang siap diantar ke rumah Anda.",
+    title: "Semangkok - Mie Ayam & Bakso",
+      description:
+        "Resep keluarga sejak 1990. Mie ayam kenyal, bakso, dan kuah kaldu gurih di Pemalang. Bisa makan di tempat atau pesan antar.",
     url: "https://semangkok.id",
     images: [
       {
         url: "/img/mi-ayam-bakso.jpg",
         width: 1200,
         height: 1500,
-        alt: "Semangkok Mie Ayam Premium",
+        alt: "Semangkok Mie Ayam",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Semangkok - Mie Ayam & Bakso Premium",
+    title: "Semangkok - Mie Ayam & Bakso",
     description:
-      "Warisan resep keluarga sejak 1990. Nikmati mie ayam kenyal, bakso premium, dan kuah kaldu gurih.",
+      "Resep keluarga sejak 1990. Mie ayam kenyal, bakso, dan kuah kaldu gurih di Pemalang.",
     images: ["/img/mi-ayam-bakso.jpg"],
   },
   alternates: {

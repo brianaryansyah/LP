@@ -33,7 +33,7 @@ const points = [
   {
     icon: "fas fa-wallet",
     title: "Harga Merakyat",
-    desc: "Mulai Rp 15.000 per mangkok. Porsi pas, rasa restoran kaki lima premium.",
+    desc: "Mulai Rp 15.000 per mangkok. Porsi secukupnya.",
   },
   {
     icon: "fas fa-certificate",
@@ -60,8 +60,8 @@ export default function KeunggulanPage() {
       <Navbar />
       <SubHero
         eyebrow="Keunggulan Kami"
-        title="Kenapa Tamu Selalu Kembali"
-        desc="Tidak ada gimmick. Hanya tiga hal yang kami jaga tiap hari: mie segar, kaldu lama, dan ayam kampung."
+        title="Yang kami jaga tiap hari"
+        desc="Tiga hal sederhana: mie dibuat pagi, kaldu direbus lama, ayam kampung dimasak biasa."
         section="Tentang Kami"
       />
       <section className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8">
