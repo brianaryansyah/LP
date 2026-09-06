@@ -28,9 +28,9 @@ export default function Features() {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] bg-[#f5b041]/10 rounded-full blur-3xl -z-0 opacity-40 group-hover:opacity-70 transition-opacity duration-700"></div>
 
             {/* Floating Badge */}
-            <div className="absolute -bottom-6 -left-4 sm:-bottom-8 sm:-left-8 bg-[#f5b041] p-4 sm:p-6 rounded-2xl sm:rounded-3xl shadow-2xl flex flex-col items-center justify-center border-4 border-[#fdf8f5] z-20 scale-90 sm:scale-100 origin-bottom-left animate-float w-max">
-              <span className="text-2xl sm:text-3xl font-bold text-[#2c231b] font-poppins">30+</span>
-              <span className="text-xs sm:text-sm text-[#2c231b] font-bold mt-1 text-center leading-tight">Tahun<br/>Pengalaman</span>
+              <div className="absolute -bottom-6 -left-4 sm:-bottom-8 sm:-left-8 bg-[#f5b041] p-4 sm:p-6 rounded-2xl sm:rounded-3xl shadow-2xl flex flex-col items-center justify-center border-4 border-[#fdf8f5] z-20 scale-90 sm:scale-100 origin-bottom-left animate-float w-max">
+              <span className="text-2xl sm:text-3xl font-bold text-[#2c231b] font-poppins">1990</span>
+              <span className="text-xs sm:text-sm text-[#2c231b] font-bold mt-1 text-center leading-tight">Sejak<br/>Pasar Pagi</span>
             </div>
             
             {/* Decorative dot grid */}
@@ -47,26 +47,26 @@ export default function Features() {
               Mengapa Memilih Kami
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#2c231b] font-poppins leading-tight tracking-tight text-balance mb-4 sm:mb-6">
-              Pengalaman & Keahlian dalam Menyajikan Mie Ayam
+              Mie ayam yang dimasak harian
             </h2>
             <p className="text-sm sm:text-base lg:text-lg text-[#2c231b]/70 font-inter mb-8 sm:mb-10 leading-relaxed">
-              Dari gerobak Pasar Pagi 1990 hingga dapur Karimata 40 hari ini. Mie ditarik pukul empat pagi, kaldu direbus delapan jam, ayam kampung dimasak perlahan. Tanpa gimmick, hanya rasa yang konsisten membuat tamu kembali.
+              Sejak 1990 di Pasar Pagi, sekarang di Jl. Karimata 40. Mie disiapkan pagi, kaldu direbus beberapa jam, ayam dimasak seperti biasa. Tidak ada yang istimewa, hanya dibuat rutin.
             </p>
 
             <div className="flex items-center gap-6 py-4 border-y border-[#2c231b]/5 mb-6">
               <div className="text-center">
-                <div className="text-xl font-extrabold text-[#2c231b] font-poppins">30+</div>
-                <div className="text-[11px] text-[#2c231b]/60 font-medium uppercase tracking-wider">Tahun</div>
+                <div className="text-xl font-extrabold text-[#2c231b] font-poppins">Sejak 1990</div>
+                <div className="text-[11px] text-[#2c231b]/60 font-medium uppercase tracking-wider">Pasar Pagi</div>
               </div>
               <div className="w-px h-8 bg-[#2c231b]/10"></div>
               <div className="text-center">
-                <div className="text-xl font-extrabold text-[#2c231b] font-poppins">15rb+</div>
-                <div className="text-[11px] text-[#2c231b]/60 font-medium uppercase tracking-wider">Mangkok/bln</div>
+                <div className="text-xl font-extrabold text-[#2c231b] font-poppins">Harian</div>
+                <div className="text-[11px] text-[#2c231b]/60 font-medium uppercase tracking-wider">Disiapkan pagi</div>
               </div>
               <div className="w-px h-8 bg-[#2c231b]/10"></div>
               <div className="text-center">
-                <div className="text-xl font-extrabold text-[#2c231b] font-poppins">4.9/5</div>
-                <div className="text-[11px] text-[#2c231b]/60 font-medium uppercase tracking-wider">Google</div>
+                <div className="text-xl font-extrabold text-[#2c231b] font-poppins">4.8/5</div>
+                <div className="text-[11px] text-[#2c231b]/60 font-medium uppercase tracking-wider">Ulasan tamu</div>
               </div>
             </div>
 
