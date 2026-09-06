@@ -32,7 +32,7 @@ export default function KisahPage() {
       />
       <section className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8">
         <Reveal>
-          <figure className="relative mb-10 h-60 w-full overflow-hidden rounded-[2rem] shadow-xl sm:h-80 sm:rounded-[3rem]">
+          <figure className="relative mb-10 h-60 w-full overflow-hidden rounded-xl border border-[#2c231b]/10">
             <Image
               src="/img/mi-ayam-kepala.jpg"
               alt="Ayam kecap dimasak di wajan besar dapur Semangkok"
@@ -41,7 +41,7 @@ export default function KisahPage() {
               className="object-cover"
               loading="lazy"
             />
-            <figcaption className="absolute bottom-4 left-4 rounded-full bg-[#2c231b]/80 px-4 py-2 text-xs font-medium text-[#fdf8f5] backdrop-blur-sm">
+            <figcaption className="absolute bottom-4 left-4 rounded-full bg-[#2c231b]/80 px-4 py-2 text-xs font-medium text-[#fdf8f5] ">
               Wajan ayam kecap, dimasak perlahan tiap pagi
             </figcaption>
           </figure>
@@ -71,7 +71,7 @@ export default function KisahPage() {
               </p>
             </Reveal>
             <Reveal delay={200}>
-              <blockquote className="rounded-2xl border-l-4 border-[#f5b041] bg-white p-5 shadow-sm sm:rounded-3xl sm:p-6">
+              <blockquote className="rounded-2xl border-l-4 border-[#f5b041] bg-white p-5 shadow-sm sm:rounded-xl sm:p-6">
                 <p className="font-inter text-sm italic leading-relaxed text-[#2c231b]/80 sm:text-base">
                   “Porsi banyak, ayamnya nggak pelit, baksonya kenyal. Langganan dari 2021, rasa
                   konsisten.”
@@ -85,7 +85,7 @@ export default function KisahPage() {
           <div className="grid grid-cols-3 gap-4 lg:col-span-2 lg:grid-cols-1">
             {stats.map((s, i) => (
               <Reveal key={s.label} delay={i * 100}>
-                <div className="rounded-2xl border border-[#2c231b]/5 bg-white p-5 text-center shadow-sm sm:rounded-3xl sm:p-6">
+                <div className="rounded-2xl border border-[#2c231b]/5 bg-white p-5 text-center shadow-sm sm:rounded-xl sm:p-6">
                   <div className="font-poppins text-2xl font-extrabold text-[#2c231b] sm:text-3xl">
                     {s.value}
                   </div>

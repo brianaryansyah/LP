@@ -52,7 +52,7 @@ export default function TimPage() {
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-6">
           {roles.map((r, i) => (
             <Reveal key={r.title} delay={i * 100}>
-              <div className="h-full rounded-2xl border border-[#2c231b]/5 bg-white p-6 text-center shadow-sm sm:rounded-3xl">
+              <div className="h-full rounded-2xl border border-[#2c231b]/5 bg-white p-6 text-center shadow-sm sm:rounded-xl">
                 <div
                   className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#f5b041]/15 text-2xl text-[#f5b041]"
                   aria-hidden="true"
@@ -67,7 +67,7 @@ export default function TimPage() {
         </div>
         <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-10">
           <Reveal>
-            <div className="relative h-60 w-full overflow-hidden rounded-[2rem] shadow-xl sm:h-80 sm:rounded-[3rem]">
+            <div className="relative h-60 w-full overflow-hidden rounded-xl border border-[#2c231b]/10">
               <Image
                 src="/img/mi-ayam.jpg"
                 alt="Mangkok mie ayam racikan tim dapur Semangkok"
@@ -79,7 +79,7 @@ export default function TimPage() {
             </div>
           </Reveal>
           <Reveal delay={120}>
-            <div className="rounded-2xl border border-[#2c231b]/5 bg-white p-6 shadow-sm sm:rounded-3xl sm:p-8">
+            <div className="rounded-xl border border-[#2c231b]/10 bg-white p-5 sm:rounded-xl sm:p-8">
               <h2 className="font-poppins text-lg font-bold text-[#2c231b] sm:text-xl">
                 Cara request ke tim
               </h2>

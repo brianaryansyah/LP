@@ -33,7 +33,7 @@ export default function MinumanPage() {
       />
       <section className="mx-auto w-full max-w-4xl px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8">
         <Reveal>
-          <ul className="divide-y divide-[#2c231b]/8 overflow-hidden rounded-2xl border border-[#2c231b]/5 bg-white shadow-sm sm:rounded-3xl">
+          <ul className="divide-y divide-[#2c231b]/8 overflow-hidden rounded-2xl border border-[#2c231b]/5 bg-white shadow-sm sm:rounded-xl">
             {drinks.map((d) => (
               <li
                 key={d.name}

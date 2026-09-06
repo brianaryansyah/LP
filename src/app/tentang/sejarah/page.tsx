@@ -60,7 +60,7 @@ export default function SejarahPage() {
       />
       <section className="mx-auto w-full max-w-4xl px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8">
         <Reveal>
-          <figure className="relative mb-10 h-60 w-full overflow-hidden rounded-[2rem] shadow-xl sm:h-80 sm:rounded-[3rem]">
+          <figure className="relative mb-10 h-60 w-full overflow-hidden rounded-xl border border-[#2c231b]/10">
             <Image
               src="/img/mi-ayam-bakso.jpg"
               alt="Mie ayam bakso, menu yang menemani perjalanan Semangkok"
@@ -69,7 +69,7 @@ export default function SejarahPage() {
               className="object-cover"
               loading="lazy"
             />
-            <figcaption className="absolute bottom-4 left-4 rounded-full bg-[#2c231b]/80 px-4 py-2 text-xs font-medium text-[#fdf8f5] backdrop-blur-sm">
+            <figcaption className="absolute bottom-4 left-4 rounded-full bg-[#2c231b]/80 px-4 py-2 text-xs font-medium text-[#fdf8f5] ">
               Resep yang sama sejak gerobak 1990
             </figcaption>
           </figure>
@@ -82,7 +82,7 @@ export default function SejarahPage() {
                 aria-hidden="true"
               ></span>
               <Reveal delay={Math.min(i * 80, 240)}>
-                <div className="rounded-2xl border border-[#2c231b]/5 bg-white p-5 shadow-sm sm:rounded-3xl sm:p-6">
+                <div className="rounded-2xl border border-[#2c231b]/5 bg-white p-5 shadow-sm sm:rounded-xl sm:p-6">
                   <div className="font-poppins text-sm font-extrabold uppercase tracking-wider text-[#e09132]">
                     {t.year}
                   </div>
@@ -96,7 +96,7 @@ export default function SejarahPage() {
           ))}
         </ol>
         <Reveal delay={100}>
-          <div className="mt-10 rounded-2xl border border-[#f5b041]/30 bg-[#f5b041]/10 p-6 sm:rounded-3xl sm:p-8">
+          <div className="mt-10 rounded-2xl border border-[#f5b041]/30 bg-[#f5b041]/10 p-6 sm:rounded-xl sm:p-8">
             <h2 className="font-poppins text-lg font-bold text-[#2c231b] sm:text-xl">
               Yang tidak pernah berubah
             </h2>

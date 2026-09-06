@@ -55,7 +55,7 @@ export default function FranchisePage() {
             {paket.map((p) => (
               <div
                 key={p.title}
-                className="rounded-2xl border border-[#2c231b]/5 bg-white p-6 shadow-sm sm:rounded-3xl"
+                className="rounded-xl border border-[#2c231b]/10 bg-white p-5 sm:rounded-xl"
               >
                 <div
                   className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#f5b041]/15 text-xl text-[#f5b041]"
@@ -70,7 +70,7 @@ export default function FranchisePage() {
           </div>
         </Reveal>
         <Reveal delay={100}>
-          <div className="mt-10 rounded-2xl border border-[#f5b041]/30 bg-[#f5b041]/10 p-6 sm:rounded-3xl sm:p-8">
+          <div className="mt-10 rounded-2xl border border-[#f5b041]/30 bg-[#f5b041]/10 p-6 sm:rounded-xl sm:p-8">
             <h2 className="font-poppins text-lg font-bold text-[#2c231b] sm:text-xl">
               Cocok untuk kamu yang
             </h2>
@@ -90,7 +90,7 @@ export default function FranchisePage() {
           </div>
         </Reveal>
         <Reveal delay={150}>
-        <div className="mt-10 rounded-2xl bg-[#2c231b] p-6 sm:rounded-3xl sm:p-10">
+        <div className="mt-10 rounded-2xl bg-[#2c231b] p-6 sm:rounded-xl sm:p-10">
           <h2 className="font-poppins text-xl font-extrabold text-[#fdf8f5] sm:text-2xl">
             Alurnya sederhana
           </h2>

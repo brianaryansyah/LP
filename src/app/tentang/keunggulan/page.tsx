@@ -68,7 +68,7 @@ export default function KeunggulanPage() {
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
           {points.map((p, i) => (
             <Reveal key={p.title} delay={(i % 3) * 100}>
-              <div className="h-full rounded-2xl border border-[#2c231b]/5 bg-white p-6 text-left shadow-sm transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-md sm:rounded-3xl">
+              <div className="h-full rounded-2xl border border-[#2c231b]/5 bg-white p-6 text-left shadow-sm transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-md sm:rounded-xl">
                 <div
                   className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#f5b041]/15 text-xl text-[#f5b041]"
                   aria-hidden="true"
@@ -83,7 +83,7 @@ export default function KeunggulanPage() {
         </div>
         <Reveal delay={100}>
           <div className="mt-10 grid grid-cols-1 gap-6 overflow-hidden rounded-[2rem] bg-[#2c231b] p-6 sm:rounded-[3rem] sm:p-10 lg:grid-cols-2 lg:gap-10">
-            <div className="relative h-56 w-full overflow-hidden rounded-2xl sm:h-72 sm:rounded-3xl">
+            <div className="relative h-56 w-full overflow-hidden rounded-2xl sm:h-72 sm:rounded-xl">
               <Image
                 src="/img/mi-ayam.jpg"
                 alt="Mangkok mie ayam dengan topping ayam kecap"

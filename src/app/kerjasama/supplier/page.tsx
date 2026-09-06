@@ -48,7 +48,7 @@ export default function SupplierPage() {
             {kebutuhan.map((k) => (
               <div
                 key={k.title}
-                className="rounded-2xl border border-[#2c231b]/5 bg-white p-6 shadow-sm sm:rounded-3xl"
+                className="rounded-xl border border-[#2c231b]/10 bg-white p-5 sm:rounded-xl"
               >
                 <div
                   className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#f5b041]/15 text-xl text-[#f5b041]"
@@ -64,7 +64,7 @@ export default function SupplierPage() {
         </Reveal>
         <Reveal delay={100}>
           <div className="mt-8 grid grid-cols-1 gap-4 sm:gap-6 lg:grid-cols-2">
-            <div className="rounded-2xl bg-[#2c231b] p-6 sm:rounded-3xl sm:p-8">
+            <div className="rounded-2xl bg-[#2c231b] p-6 sm:rounded-xl sm:p-8">
               <h2 className="font-poppins text-lg font-bold text-[#fdf8f5] sm:text-xl">
                 Jadwal yang kami butuhkan
               </h2>
@@ -74,7 +74,7 @@ export default function SupplierPage() {
                 <li className="flex gap-3"><i className="fas fa-check mt-1 text-[#f5b041]" aria-hidden="true"></i>Konfirmasi via WhatsApp sehari sebelumnya</li>
               </ul>
             </div>
-            <div className="rounded-2xl border border-[#f5b041]/30 bg-[#f5b041]/10 p-6 sm:rounded-3xl sm:p-8">
+            <div className="rounded-2xl border border-[#f5b041]/30 bg-[#f5b041]/10 p-6 sm:rounded-xl sm:p-8">
               <h2 className="font-poppins text-lg font-bold text-[#2c231b] sm:text-xl">
                 Cara bergabung
               </h2>
@@ -86,7 +86,7 @@ export default function SupplierPage() {
             </div>
           </div>
         </Reveal>
-        <div className="mt-8 rounded-2xl border border-[#f5b041]/30 bg-[#f5b041]/10 p-6 sm:rounded-3xl sm:p-8">
+        <div className="mt-8 rounded-2xl border border-[#f5b041]/30 bg-[#f5b041]/10 p-6 sm:rounded-xl sm:p-8">
           <h2 className="font-poppins text-lg font-bold text-[#2c231b] sm:text-xl">
             Syaratnya sederhana
           </h2>

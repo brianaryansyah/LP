@@ -107,7 +107,7 @@ export default function MieAyamPage() {
                 ))}
               </ol>
             </div>
-            <div className="rounded-2xl border border-[#fdf8f5]/15 bg-white/[0.06] p-6 backdrop-blur-sm">
+            <div className="rounded-2xl border border-[#fdf8f5]/15 bg-white/[0.06] p-6 ">
               <h3 className="font-poppins text-base font-bold text-[#f5b041]">Catatan sambal</h3>
               <p className="mt-2 font-inter text-sm leading-relaxed text-[#fdf8f5]/75">
                 Semua mie disajikan tidak pedas dengan sambal terpisah. Anak-anak aman, yang suka

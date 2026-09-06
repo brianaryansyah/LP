@@ -55,7 +55,7 @@ export default function KontakPage() {
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-6">
           {channels.map((c, i) => (
             <Reveal key={c.title} delay={i * 100}>
-              <div className="flex h-full flex-col rounded-2xl border border-[#2c231b]/5 bg-white p-6 shadow-sm sm:rounded-3xl sm:p-8">
+              <div className="flex h-full flex-col rounded-xl border border-[#2c231b]/10 bg-white p-5 sm:rounded-xl sm:p-8">
                 <div
                   className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#f5b041]/15 text-xl text-[#f5b041]"
                   aria-hidden="true"
@@ -79,7 +79,7 @@ export default function KontakPage() {
           ))}
         </div>
         <Reveal delay={100}>
-          <div className="mt-8 rounded-2xl border border-[#f5b041]/30 bg-[#f5b041]/10 p-6 sm:rounded-3xl sm:p-8">
+          <div className="mt-8 rounded-2xl border border-[#f5b041]/30 bg-[#f5b041]/10 p-6 sm:rounded-xl sm:p-8">
             <h2 className="font-poppins text-lg font-bold text-[#2c231b] sm:text-xl">
               Tips biar tidak antre
             </h2>

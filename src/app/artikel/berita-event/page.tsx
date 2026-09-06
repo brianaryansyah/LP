@@ -44,7 +44,7 @@ export default function BeritaPage() {
       />
       <section className="mx-auto w-full max-w-4xl px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8">
         <Reveal>
-          <figure className="relative mb-8 h-60 w-full overflow-hidden rounded-[2rem] shadow-xl sm:h-80 sm:rounded-[3rem]">
+          <figure className="relative mb-8 h-60 w-full overflow-hidden rounded-xl border border-[#2c231b]/10">
             <Image
               src="/img/seafood-hot-plate.jpg"
               alt="Bakmi hotplate seafood favorit untuk acara dan pesan antar"
@@ -53,7 +53,7 @@ export default function BeritaPage() {
               className="object-cover"
               loading="lazy"
             />
-            <figcaption className="absolute bottom-4 left-4 rounded-full bg-[#2c231b]/80 px-4 py-2 text-xs font-medium text-[#fdf8f5] backdrop-blur-sm">
+            <figcaption className="absolute bottom-4 left-4 rounded-full bg-[#2c231b]/80 px-4 py-2 text-xs font-medium text-[#fdf8f5] ">
               Hotplate seafood, favorit pesanan acara
             </figcaption>
           </figure>
@@ -61,7 +61,7 @@ export default function BeritaPage() {
         <div className="space-y-4 sm:space-y-6">
           {kabar.map((k, i) => (
             <Reveal key={k.title} delay={Math.min(i * 100, 200)}>
-              <article className="rounded-2xl border border-[#2c231b]/5 bg-white p-6 shadow-sm sm:rounded-3xl sm:p-8">
+              <article className="rounded-xl border border-[#2c231b]/10 bg-white p-5 sm:rounded-xl sm:p-8">
                 <span className="inline-block rounded-full bg-[#f5b041]/15 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-[#e09132]">
                   {k.tag}
                 </span>
@@ -76,7 +76,7 @@ export default function BeritaPage() {
           ))}
         </div>
         <Reveal delay={100}>
-          <div className="mt-8 flex flex-col items-start justify-between gap-4 rounded-2xl bg-[#2c231b] p-6 sm:flex-row sm:items-center sm:rounded-3xl sm:p-8">
+          <div className="mt-8 flex flex-col items-start justify-between gap-4 rounded-2xl bg-[#2c231b] p-6 sm:flex-row sm:items-center sm:rounded-xl sm:p-8">
             <p className="font-inter text-sm leading-relaxed text-[#fdf8f5]/80 sm:text-base">
               Mau bikin acara di warung? Amankan tanggal dulu lewat halaman reservasi.
             </p>

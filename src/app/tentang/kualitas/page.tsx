@@ -50,7 +50,7 @@ export default function KualitasPage() {
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
           {items.map((item, i) => (
             <Reveal key={item.title} delay={(i % 2) * 100}>
-              <div className="flex h-full items-start gap-4 rounded-2xl border border-[#2c231b]/5 bg-white p-6 shadow-sm sm:rounded-3xl">
+              <div className="flex h-full items-start gap-4 rounded-xl border border-[#2c231b]/10 bg-white p-5 sm:rounded-xl">
                 <div
                   className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#f5b041]/15 text-xl text-[#f5b041]"
                   aria-hidden="true"
@@ -68,7 +68,7 @@ export default function KualitasPage() {
           ))}
         </div>
         <Reveal delay={100}>
-          <blockquote className="mt-8 rounded-2xl border-l-4 border-[#f5b041] bg-white p-5 shadow-sm sm:rounded-3xl sm:p-6">
+          <blockquote className="mt-8 rounded-2xl border-l-4 border-[#f5b041] bg-white p-5 shadow-sm sm:rounded-xl sm:p-6">
             <p className="font-inter text-sm italic leading-relaxed text-[#2c231b]/80 sm:text-base">
               “Tempat bersih, pelayanan cepat. Kuah kaldu gurih, nggak terlalu asin. Buat makan
               bareng keluarga enak, meja luas.”
@@ -79,7 +79,7 @@ export default function KualitasPage() {
           </blockquote>
         </Reveal>
         <Reveal delay={150}>
-          <div className="mt-6 flex flex-col items-start justify-between gap-4 rounded-2xl bg-[#2c231b] p-6 sm:flex-row sm:items-center sm:rounded-3xl sm:p-8">
+          <div className="mt-6 flex flex-col items-start justify-between gap-4 rounded-2xl bg-[#2c231b] p-6 sm:flex-row sm:items-center sm:rounded-xl sm:p-8">
             <p className="font-inter text-sm leading-relaxed text-[#fdf8f5]/80 sm:text-base">
               Ada yang ingin ditanyakan soal bahan atau alergi? Chat kami via WhatsApp sebelum
               memesan, nanti disiapkan yang sesuai.

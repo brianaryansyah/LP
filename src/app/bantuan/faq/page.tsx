@@ -54,7 +54,7 @@ export default function FaqPage() {
         <div className="space-y-3 sm:space-y-4">
           {faqs.map((f, i) => (
             <Reveal key={f.q} delay={Math.min(i * 60, 180)}>
-              <details className="group rounded-2xl border border-[#2c231b]/5 bg-white shadow-sm transition-[box-shadow] duration-300 open:shadow-md sm:rounded-3xl">
+              <details className="group rounded-2xl border border-[#2c231b]/5 bg-white shadow-sm transition-[box-shadow] duration-300 open:shadow-md sm:rounded-xl">
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-5 font-poppins text-base font-bold text-[#2c231b] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#f5b041] sm:p-6 [&::-webkit-details-marker]:hidden">
                   {f.q}
                   <i
@@ -70,7 +70,7 @@ export default function FaqPage() {
           ))}
         </div>
         <Reveal delay={100}>
-          <div className="mt-8 flex flex-col items-start justify-between gap-4 rounded-2xl bg-[#2c231b] p-6 sm:flex-row sm:items-center sm:rounded-3xl sm:p-8">
+          <div className="mt-8 flex flex-col items-start justify-between gap-4 rounded-2xl bg-[#2c231b] p-6 sm:flex-row sm:items-center sm:rounded-xl sm:p-8">
             <p className="font-inter text-sm leading-relaxed text-[#fdf8f5]/80 sm:text-base">
               Masih bingung? Tulis pertanyaanmu, kirim via WhatsApp, dibalas jam operasional.
             </p>

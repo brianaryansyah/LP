@@ -49,7 +49,7 @@ export default function TipsPage() {
       />
       <section className="mx-auto w-full max-w-4xl px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8">
         <Reveal>
-          <figure className="relative mb-8 h-60 w-full overflow-hidden rounded-[2rem] shadow-xl sm:h-80 sm:rounded-[3rem]">
+          <figure className="relative mb-8 h-60 w-full overflow-hidden rounded-xl border border-[#2c231b]/10">
             <Image
               src="/img/mi-ayam-kepala.jpg"
               alt="Proses memasak topping ayam di wajan besar"
@@ -58,7 +58,7 @@ export default function TipsPage() {
               className="object-cover"
               loading="lazy"
             />
-            <figcaption className="absolute bottom-4 left-4 rounded-full bg-[#2c231b]/80 px-4 py-2 text-xs font-medium text-[#fdf8f5] backdrop-blur-sm">
+            <figcaption className="absolute bottom-4 left-4 rounded-full bg-[#2c231b]/80 px-4 py-2 text-xs font-medium text-[#fdf8f5] ">
               Api kecil, waktu panjang, rasa dalam
             </figcaption>
           </figure>
@@ -66,7 +66,7 @@ export default function TipsPage() {
         <div className="space-y-4 sm:space-y-6">
           {tips.map((t, i) => (
             <Reveal key={t.no} delay={Math.min(i * 80, 240)}>
-              <article className="flex gap-5 rounded-2xl border border-[#2c231b]/5 bg-white p-6 shadow-sm sm:rounded-3xl sm:p-8">
+              <article className="flex gap-5 rounded-xl border border-[#2c231b]/10 bg-white p-5 sm:rounded-xl sm:p-8">
                 <span
                   className="font-poppins text-2xl font-extrabold text-[#f5b041] sm:text-3xl"
                   aria-hidden="true"
