@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Reveal from "@/components/Reveal";
+import WaveDivider from "@/components/WaveDivider";
 
 const inputClass =
   "w-full px-4 py-3 rounded-xl border border-[#2c231b]/10 bg-white text-[#2c231b] [color-scheme:light] focus:border-[#f5b041] focus:ring-2 focus:ring-[#f5b041]/40 focus:ring-offset-2 focus:ring-offset-white transition-[border-color,box-shadow] duration-300 outline-none hover:border-[#2c231b]/20";
@@ -257,6 +258,7 @@ export default function Reservation() {
           </div>
         </Reveal>
       </div>
+      <WaveDivider fill="#fdf8f5" position="bottom" />
     </section>
   );
 }
