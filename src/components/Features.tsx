@@ -49,23 +49,19 @@ export default function Features() {
               <span className="text-[#2c231b]/60 text-xs">ulasan</span>
             </div>
 
-            <div className="space-y-3">
-              <div className="bg-white p-4 sm:p-5 rounded-xl flex items-center gap-4 border border-[#2c231b]/10">
-                <div className="w-10 h-10 rounded-full bg-[#fdf8f5] flex items-center justify-center shrink-0 border border-[#2c231b]/10" aria-hidden="true">
-                  <i className="fas fa-clock text-base text-[#2c231b]" aria-hidden="true"></i>
-                </div>
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+              <div className="bg-[#fdf8f5] p-4 rounded-xl flex items-start gap-3 border border-[#2c231b]/10 border-l-4 border-l-[#f5b041]">
+                <i className="fas fa-clock text-sm text-[#2c231b] mt-1" aria-hidden="true"></i>
                 <div>
-                  <h4 className="text-base font-bold text-[#2c231b] font-poppins">Kaldu 8 Jam</h4>
-                  <p className="text-[#2c231b]/70 text-sm leading-relaxed">Tulang ayam kampung direbus perlahan sejak subuh.</p>
+                  <h4 className="text-sm font-bold text-[#2c231b] font-poppins">Kaldu 8 jam</h4>
+                  <p className="text-[#2c231b]/60 text-xs leading-relaxed mt-1">Tulang ayam direbus sejak subuh. Tidak pakai penyedap berlebih.</p>
                 </div>
               </div>
-              <div className="bg-white p-4 sm:p-5 rounded-xl flex items-center gap-4 border border-[#2c231b]/10">
-                <div className="w-10 h-10 rounded-full bg-[#fdf8f5] flex items-center justify-center shrink-0 border border-[#2c231b]/10" aria-hidden="true">
-                  <i className="fas fa-utensils text-base text-[#2c231b]" aria-hidden="true"></i>
-                </div>
+              <div className="bg-white p-4 rounded-xl flex items-start gap-3 border border-[#2c231b]/10">
+                <i className="fas fa-utensils text-sm text-[#2c231b] mt-1" aria-hidden="true"></i>
                 <div>
-                  <h4 className="text-base font-bold text-[#2c231b] font-poppins">Mie Ditarik Tangan</h4>
-                  <p className="text-[#2c231b]/70 text-sm leading-relaxed">Adonan segar setiap pagi, tekstur kenyal.</p>
+                  <h4 className="text-sm font-bold text-[#2c231b] font-poppins">Mie ditarik tangan</h4>
+                  <p className="text-[#2c231b]/60 text-xs leading-relaxed mt-1">Adonan dibuat pagi, tekstur kenyal saat digigit.</p>
                 </div>
               </div>
             </div>

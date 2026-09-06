@@ -50,27 +50,51 @@ export default function Menu() {
         </div>
         </Reveal>
 
-        {/* Menu Grid — flat paper */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
-          {menuItems.map((item, idx) => (
-            <Reveal key={item.id} delay={idx * 80}>
-            <div className="h-full bg-white rounded-xl p-3 flex flex-col border border-[#2c231b]/10">
-              <div className="w-full h-48 sm:h-52 rounded-xl overflow-hidden mb-4 relative border border-[#2c231b]/5">
-                <Image src={item.img} alt={item.name} fill sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 30vw" className="object-cover" />
-              </div>
-              <div className="px-1 flex-grow flex flex-col">
-                <h3 className="text-base font-bold text-[#2c231b] font-poppins">{item.name}</h3>
-                <p className="text-[#2c231b]/60 font-inter text-sm mb-4 flex-grow leading-relaxed">{item.desc}</p>
-                <div className="flex justify-between items-center mt-auto pt-3 border-t border-[#2c231b]/10">
-                  <span className="font-bold text-[#2c231b] text-sm">{item.price}</span>
-                  <a href={orderLink(item.name, item.price)} target="_blank" rel="noopener noreferrer" aria-label={`Pesan ${item.name} via WhatsApp`} className="inline-flex items-center gap-1.5 rounded-full bg-[#2c231b] px-4 py-2 text-xs font-bold text-white hover:bg-black transition-colors">
-                    Pesan <i className="fas fa-arrow-right text-[10px]" aria-hidden="true"></i>
-                  </a>
+        {/* Menu — varied: list + card, not 3 identical boxes */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+          <div className="lg:col-span-2">
+            <Reveal>
+              <div className="bg-white rounded-xl border border-[#2c231b]/10 p-4 flex gap-4">
+                <div className="relative w-36 sm:w-48 h-36 sm:h-40 rounded-lg overflow-hidden shrink-0 border border-[#2c231b]/5">
+                  <Image src={menuItems[0].img} alt={menuItems[0].name} fill sizes="200px" className="object-cover" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-[10px] font-bold uppercase tracking-wider text-[#f5b041]">Paling sering dipesan</p>
+                  <h3 className="text-lg font-bold text-[#2c231b] font-poppins mt-1">{menuItems[0].name}</h3>
+                  <p className="text-sm text-[#2c231b]/60 mt-1 leading-relaxed">{menuItems[0].desc}</p>
+                  <div className="flex items-center gap-3 mt-3">
+                    <span className="text-sm font-bold text-[#2c231b]">{menuItems[0].price}</span>
+                    <a href={orderLink(menuItems[0].name, menuItems[0].price)} target="_blank" rel="noopener noreferrer" className="ml-auto rounded-full bg-[#2c231b] px-4 py-2 text-xs font-bold text-white">Pesan</a>
+                  </div>
                 </div>
               </div>
-            </div>
             </Reveal>
-          ))}
+            <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-5">
+              {menuItems.slice(1).map((item, idx) => (
+                <Reveal key={item.name} delay={idx * 80}>
+                  <div className={idx === 0 ? "bg-[#fdf8f5] rounded-xl border border-[#2c231b]/10 p-3 flex flex-col" : "bg-white rounded-xl border border-[#2c231b]/10 p-3 flex flex-col"}>
+                    <div className="relative w-full h-40 rounded-lg overflow-hidden border border-[#2c231b]/5">
+                      <Image src={item.img} alt={item.name} fill sizes="300px" className="object-cover" />
+                    </div>
+                    <h3 className="text-sm font-bold text-[#2c231b] font-poppins mt-3">{item.name}</h3>
+                    <p className="text-xs text-[#2c231b]/60 mt-1 flex-1">{item.desc}</p>
+                    <div className="flex justify-between items-center mt-3 pt-3 border-t border-[#2c231b]/10">
+                      <span className="text-sm font-bold text-[#2c231b]">{item.price}</span>
+                      <a href={orderLink(item.name, item.price)} target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-[#2c231b] underline underline-offset-4">Pesan</a>
+                    </div>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+          <Reveal delay={120} className="lg:col-span-1">
+            <div className="bg-[#2c231b] rounded-xl p-6 text-[#fdf8f5] h-full flex flex-col">
+              <p className="text-xs font-bold uppercase tracking-wider text-[#f5b041]">Catatan dapur</p>
+              <h3 className="text-lg font-bold font-poppins mt-2">Sambal terpisah</h3>
+              <p className="text-sm text-[#fdf8f5]/70 mt-2 leading-relaxed">Semua mie disajikan tidak pedas. Sambal ditaruh terpisah, tuang sesuai selera. Anak aman, yang suka pedas bebas tambah.</p>
+              <a href="#reservasi" className="mt-auto inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-bold text-[#2c231b] self-start">Reservasi meja</a>
+            </div>
+          </Reveal>
         </div>
       </div>
 

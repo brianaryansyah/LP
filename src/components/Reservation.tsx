@@ -64,8 +64,8 @@ export default function Reservation() {
         </Reveal>
 
         <Reveal delay={100}>
-          <div className="bg-white rounded-xl overflow-hidden border border-[#2c231b]/10 flex flex-col lg:flex-row">
-            <div className="lg:w-2/5 bg-[#2c231b] p-8 sm:p-10 text-[#fdf8f5] flex flex-col justify-between">
+          <div className="grid lg:grid-cols-5 gap-6">
+            <div className="lg:col-span-2 bg-[#2c231b] p-7 sm:p-8 rounded-xl border border-[#2c231b] flex flex-col justify-between">
 
               <div className="relative z-10">
                 <h3 className="text-2xl font-bold mb-6 font-poppins text-[#fdf8f5]">
@@ -100,7 +100,7 @@ export default function Reservation() {
               </div>
             </div>
 
-            <div className="lg:w-3/5 p-8 sm:p-10">
+            <div className="lg:col-span-3 bg-white p-7 sm:p-8 rounded-xl border border-[#2c231b]/10">
               <h3 className="text-xl font-bold text-[#2c231b] mb-6 font-poppins">Form Reservasi</h3>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
