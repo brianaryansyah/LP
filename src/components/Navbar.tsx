@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { NAVBAR_ENTRIES, NAVBAR_SECTION_IDS, ORDER_LINK, type NavbarEntry } from "@/data/navbar";
+import { NAVBAR_ENTRIES, ORDER_LINK, type NavbarEntry } from "@/data/navbar";
 
 function BrandMark() {
   return (
@@ -165,63 +165,10 @@ function MobileAccordion({
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState("home");
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [expandedMobile, setExpandedMobile] = useState<string | null>(null);
   const navRef = useRef<HTMLElement>(null);
   const pathname = usePathname();
-  const isHome = pathname === "/";
-
-  // Stabilize header: subscribe to derived boolean only, rAF-throttled passive listener.
-  useEffect(() => {
-    let ticking = false;
-    const updateScrolled = () => {
-      ticking = false;
-      setScrolled((prev) => {
-        const next = window.scrollY > 24;
-        return prev === next ? prev : next;
-      });
-    };
-    const onScroll = () => {
-      if (!ticking) {
-        ticking = true;
-        requestAnimationFrame(updateScrolled);
-      }
-    };
-    updateScrolled();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  // Scrollspy hanya di beranda: cegah highlight ikut bergerak di halaman lain.
-  useEffect(() => {
-    if (!isHome) {
-      setActiveSection("");
-      return;
-    }
-    let ticking = false;
-    const updateSection = () => {
-      ticking = false;
-      let current = "home";
-      for (const id of NAVBAR_SECTION_IDS) {
-        const el = document.getElementById(id);
-        if (el && window.scrollY >= el.offsetTop - 180) {
-          current = id;
-        }
-      }
-      setActiveSection((prev) => (prev === current ? prev : current));
-    };
-    const onScroll = () => {
-      if (!ticking) {
-        ticking = true;
-        requestAnimationFrame(updateSection);
-      }
-    };
-    updateSection();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [isHome]);
 
   useEffect(() => {
     if (!isOpen && openMenu === null) return;
@@ -252,8 +199,12 @@ export default function Navbar() {
         ) ?? null
       : null;
 
-  const isEntryActive = (entry: NavbarEntry) =>
-    activeRouteEntry ? activeRouteEntry.label === entry.label : activeSection === entry.sectionId;
+  // Tidak ada scrollspy: di beranda hanya Beranda yang aktif, tidak ikut berubah saat scroll.
+  const isEntryActive = (entry: NavbarEntry) => {
+    if (activeRouteEntry) return activeRouteEntry.label === entry.label;
+    if (pathname === "/") return entry.label === "Beranda";
+    return false;
+  };
 
   const closeAll = () => {
     setIsOpen(false);
@@ -278,11 +229,7 @@ export default function Navbar() {
   return (
     <header
       ref={navRef}
-      className={`fixed inset-x-0 top-0 z-50 border-b transition-[background-color,border-color,box-shadow,backdrop-filter] duration-300 ${
-        scrolled
-          ? "border-[#1C2421]/10 bg-[#FCF8F2]/95 shadow-[0_8px_30px_-12px_rgba(28,36,33,0.25)] backdrop-blur-xl"
-          : "border-transparent bg-[#FCF8F2]/60 backdrop-blur-md"
-      }`}
+      className="fixed inset-x-0 top-0 z-50 border-b border-[#1C2421]/10 bg-[#FCF8F2]/95 shadow-[0_8px_30px_-12px_rgba(28,36,33,0.12)] backdrop-blur-xl"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between gap-4 sm:h-20">
