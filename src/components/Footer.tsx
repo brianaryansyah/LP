@@ -54,6 +54,7 @@ export default function Footer() {
             <h4 className="text-lg font-bold mb-6 font-poppins text-[#f5b041]">Tautan</h4>
             <ul className="space-y-4 text-sm font-medium">
               <li><Link href="/" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition-colors">Beranda</Link></li>
+              <li><Link href="/#fasilitas" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition-colors">Fasilitas</Link></li>
               <li><Link href="/tentang/keunggulan" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition-colors">Keunggulan</Link></li>
               <li><Link href="/#testimoni" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition-colors">Testimoni</Link></li>
               <li><Link href="/katalog/mie-ayam" className="text-[#fdf8f5]/70 hover:text-[#f5b041] transition-colors">Menu Kami</Link></li>
