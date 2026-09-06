@@ -110,12 +110,12 @@ export default function Venue() {
           </div>
         </Reveal>
 
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
-          <Reveal className="sm:col-span-2 lg:col-span-1 lg:row-span-2">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <Reveal className="lg:row-span-2">
             <VenueHero />
           </Reveal>
           {FACILITIES.map((facility, idx) => (
-            <Reveal key={facility.title} delay={Math.min(idx * 80, 320)}>
+            <Reveal key={facility.title} delay={Math.min(idx * 60, 180)} className={idx % 2 === 0 ? "" : "sm:translate-y-2"}>
               <FacilityCard facility={facility} />
             </Reveal>
           ))}
