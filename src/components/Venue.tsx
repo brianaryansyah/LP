@@ -19,35 +19,35 @@ const VENUE_PHOTO = {
 const FACILITIES: Facility[] = [
   {
     title: "Playground Anak",
-    desc: "Perosotan & mandi bola di sudut keluarga. Anak main, ayah ibu makan tenang.",
+    desc: "Sudut kecil di area makan. Anak bisa main sementara menunggu pesanan.",
     img: "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?q=80&w=800&auto=format&fit=crop",
     alt: "Area playground anak di Semangkok",
     icon: "fas fa-child",
-    badge: "Gratis",
+    badge: "Tersedia",
   },
   {
-    title: "WiFi Kencang",
-    desc: "Nugas, kerja, atau upload konten. Colokan di tiap sudut meja.",
+    title: "WiFi Gratis",
+    desc: "WiFi tersedia untuk pengunjung. Cocok buat yang mau sambil kerja santai.",
     img: "https://images.unsplash.com/photo-1521017432531-fbd92d768814?q=80&w=800&auto=format&fit=crop",
     alt: "Pengunjung bekerja dengan laptop di warung Semangkok",
     icon: "fas fa-wifi",
-    badge: "100 Mbps",
+    badge: "Gratis",
   },
   {
-    title: "TV & Nonton Bareng",
-    desc: "Layar besar untuk live bola dan acara keluarga. Suara jernih.",
+    title: "TV Bersama",
+    desc: "Ada TV di ruang makan. Biasanya nyala untuk acara umum.",
     img: "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?q=80&w=800&auto=format&fit=crop",
     alt: "Fasilitas TV layar besar untuk nonton bareng",
     icon: "fas fa-tv",
-    badge: "Layar besar",
+    badge: "Tersedia",
   },
   {
-    title: "Karaoke Keluarga",
-    desc: "Malam minggu nyanyi bareng. Request lagu Indonesia & dangdut.",
+    title: "Karaoke Santai",
+    desc: "Karaoke ada di waktu tertentu, biasanya akhir pekan. Tanya staf untuk jadwal.",
     img: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=800&auto=format&fit=crop",
     alt: "Mikrofon karaoke keluarga di Semangkok",
     icon: "fas fa-microphone-alt",
-    badge: "Jum–Min",
+    badge: "Akhir pekan",
   },
 
 ];
@@ -75,12 +75,12 @@ function VenueHero() {
       </div>
       <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
         <h3 className="font-poppins text-2xl font-extrabold leading-tight text-white sm:text-3xl">
-          Warungnya lega,
+          Ruang makan biasa,
           <br />
-          makannya betah.
+          buat kumpul keluarga.
         </h3>
         <p className="mt-2 max-w-md text-sm leading-relaxed text-white/80 sm:text-base">
-          Datang bawa keluarga besar bisa. Bawa anak kecil aman, bawa rombongan arisan muat.
+          Meja dan kursi tertata biasa. Cukup untuk makan bareng tanpa berdesakan.
         </p>
         <a
           href="https://maps.app.goo.gl/NvCxPom7GSdYFj7Z9"
@@ -136,11 +136,10 @@ export default function Venue() {
               Suasana & Fasilitas
             </span>
             <h2 className="mx-auto max-w-2xl text-balance font-poppins text-3xl font-extrabold tracking-tight text-[#2c231b] sm:text-4xl md:text-5xl">
-              Bukan sekadar makan, tapi nongkrong
+              Tempat makan yang sederhana
             </h2>
             <p className="mx-auto mt-4 max-w-2xl font-inter text-sm leading-relaxed text-[#2c231b]/70 sm:text-base lg:text-lg">
-              Ada playground buat anak, WiFi buat nugas, TV buat nobar, dan karaoke buat keluarga.
-              Semua gratis untuk pembeli.
+              Ruang makan cukup luas untuk keluarga. Beberapa fasilitas ada untuk kenyamanan, dipakai seperlunya.
             </p>
           </div>
         </Reveal>
@@ -159,8 +158,8 @@ export default function Venue() {
         <Reveal delay={150}>
           <div className="mt-8 flex flex-col items-center justify-between gap-4 rounded-[1.75rem] bg-[#2c231b] px-6 py-6 sm:flex-row sm:px-8">
             <p className="text-center font-inter text-sm text-[#fdf8f5]/80 sm:text-left sm:text-base">
-              <span className="font-bold text-[#f5b041]">Mau reservasi meja dekat playground?</span>
-              <br className="hidden sm:block" /> Chat kami, kami siapkan sebelum datang.
+              <span className="font-bold text-[#f5b041]">Butuh meja dekat playground?</span>
+              <br className="hidden sm:block" /> Hubungi kami, kami atur kalau memungkinkan.
             </p>
             <a
               href="https://wa.me/6285640734972?text=Halo%20Semangkok%2C%20saya%20ingin%20reservasi%20meja%20dekat%20playground."
