@@ -52,15 +52,6 @@ export const NAVBAR_ENTRIES: NavbarEntry[] = [
     ],
   },
   {
-    label: "Kerjasama",
-    href: "/kerjasama/franchise",
-    sectionId: "reservasi",
-    children: [
-      { label: "Peluang Franchise", href: "/kerjasama/franchise", desc: "Buka cabang bersama kami" },
-      { label: "Kemitraan Supplier", href: "/kerjasama/supplier", desc: "Pasok bahan berkualitas" },
-    ],
-  },
-  {
     label: "Artikel",
     href: "/artikel/berita-event",
     sectionId: "testimoni",
