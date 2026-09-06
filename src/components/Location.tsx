@@ -32,19 +32,19 @@ export default function Location() {
           </Reveal>
           
           <Reveal delay={100}>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-10 md:mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10 md:mb-14">
             {services.map((svc) => (
-              <div key={svc.title} className="bg-white p-4 sm:p-6 rounded-2xl sm:rounded-3xl text-left border border-[#2c231b]/5 hover:border-[#f5b041]/20 transition-[transform,box-shadow,border-color] duration-500 cursor-default flex flex-col items-start hover:-translate-y-1 shadow-sm hover:shadow-md group">
-                <div className="text-2xl sm:text-3xl mb-3 sm:mb-4 group-hover:scale-105 transition-transform duration-500">{svc.icon}</div>
-                <h4 className="text-base sm:text-lg font-bold text-[#2c231b] font-poppins mb-1 sm:mb-2">{svc.title}</h4>
-                <p className="text-[#2c231b]/70 font-inter text-xs sm:text-sm">{svc.desc}</p>
+              <div key={svc.title} className="bg-white p-4 rounded-xl text-left border border-[#2c231b]/10 flex flex-col items-start">
+                <div className="text-xl mb-3">{svc.icon}</div>
+                <h4 className="text-sm font-bold text-[#2c231b] font-poppins">{svc.title}</h4>
+                <p className="text-[#2c231b]/60 font-inter text-xs mt-1 leading-relaxed">{svc.desc}</p>
               </div>
             ))}
           </div>
           </Reveal>
 
           <Reveal delay={200}>
-          <div className="relative w-full h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-xl group border-[4px] sm:border-[8px] border-white ring-1 ring-black/5 will-change-transform">
+          <div className="relative w-full h-[280px] sm:h-[340px] lg:h-[420px] rounded-xl overflow-hidden border border-[#2c231b]/10">
             <iframe 
               title="Peta lokasi Semangkok"
               src="https://maps.google.com/maps?q=Jl.%20Karimata%20No.40,%20Mulyoharjo,%20Kec.%20Pemalang,%20Kabupaten%20Pemalang,%20Jawa%20Tengah%2052313&t=&z=16&ie=UTF8&iwloc=&output=embed" 
@@ -54,41 +54,27 @@ export default function Location() {
               allowFullScreen 
               loading="lazy" 
               referrerPolicy="no-referrer-when-downgrade"
-              className={`grayscale-[20%] contrast-[110%] group-hover:grayscale-0 transition-[filter] duration-700 ${mapActive ? "" : "pointer-events-none"}`}
+              className={`${mapActive ? "" : "pointer-events-none"}`}
             ></iframe>
             
-            {!mapActive ? (
-              <button
-                type="button"
-                onClick={() => setMapActive(true)}
-                aria-label="Aktifkan peta interaktif"
-                className="absolute inset-0 flex items-center justify-center bg-black/5 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#f5b041]"
-              >
-                <span className="inline-flex items-center gap-2 rounded-full bg-[#fdf8f5]/95 px-5 py-3 text-sm font-bold text-[#2c231b] shadow-lg backdrop-blur-sm">
-                  <i className="fas fa-map-marked-alt text-[#f5b041]" aria-hidden="true"></i>
-                  Ketuk untuk geser peta
-                </span>
+            {!mapActive && (
+              <button type="button" onClick={() => setMapActive(true)} aria-label="Aktifkan peta interaktif" className="absolute inset-0 flex items-center justify-center bg-black/5">
+                <span className="rounded-full bg-white px-4 py-2 text-sm font-bold text-[#2c231b] border border-[#2c231b]/10">Ketuk untuk geser peta</span>
               </button>
-            ) : (
-              <div className="absolute inset-0 pointer-events-none flex items-center justify-center opacity-0 group-hover:opacity-100 focus-within:opacity-100 transition-opacity duration-500 bg-black/5">
-                <a href="https://maps.app.goo.gl/NvCxPom7GSdYFj7Z9" target="_blank" rel="noopener noreferrer" aria-label="Buka lokasi di Google Maps" className="pointer-events-auto w-16 h-16 sm:w-20 sm:h-20 bg-[#fdf8f5]/90 backdrop-blur-sm rounded-full flex items-center justify-center text-[#f5b041] text-xl sm:text-2xl hover:scale-105 transition-transform duration-300 shadow-lg">
-                  <i className="fas fa-external-link-alt ml-1" aria-hidden="true"></i>
-                </a>
-              </div>
             )}
           </div>
           </Reveal>
 
           <Reveal delay={250}>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-8 sm:mt-12">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
             {info.map((item) => (
-              <div key={item.title} className="bg-white p-4 sm:p-6 rounded-2xl sm:rounded-3xl border border-[#2c231b]/5 text-left flex items-start gap-4 shadow-sm hover:shadow-md hover:-translate-y-1 transition-[transform,box-shadow,border-color] duration-500">
-                <div className="w-12 h-12 rounded-full bg-[#f5b041]/20 text-[#f5b041] flex items-center justify-center shrink-0" aria-hidden="true">
-                  <i className={`${item.icon} text-xl`} aria-hidden="true"></i>
+              <div key={item.title} className="bg-white p-4 rounded-xl border border-[#2c231b]/10 text-left flex items-start gap-3">
+                <div className="w-10 h-10 rounded-full bg-[#fdf8f5] border border-[#2c231b]/10 flex items-center justify-center shrink-0 text-[#2c231b]" aria-hidden="true">
+                  <i className={`${item.icon} text-sm`} aria-hidden="true"></i>
                 </div>
                 <div>
-                  <h4 className="text-base font-bold text-[#2c231b] font-poppins">{item.title}</h4>
-                  <p className="text-sm text-[#2c231b]/70 font-inter mt-1">{item.value}</p>
+                  <h4 className="text-sm font-bold text-[#2c231b] font-poppins">{item.title}</h4>
+                  <p className="text-xs text-[#2c231b]/60 font-inter mt-1 leading-relaxed">{item.value}</p>
                 </div>
               </div>
             ))}
@@ -96,12 +82,12 @@ export default function Location() {
           </Reveal>
           
           <Reveal delay={300}>
-          <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6 px-4">
-            <a href="https://maps.app.goo.gl/NvCxPom7GSdYFj7Z9" target="_blank" rel="noopener noreferrer" className="text-[#f5b041] font-bold underline underline-offset-4 hover:text-[#e09132] transition-colors duration-300 text-sm sm:text-base hover:scale-105 transform">
-              Lokasi Cabang Kami
+          <div className="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <a href="https://maps.app.goo.gl/NvCxPom7GSdYFj7Z9" target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-[#2c231b] underline underline-offset-4">
+              Lokasi di Google Maps
             </a>
-            <a href="https://wa.me/6285640734972?text=Halo%20Semangkok%2C%20saya%20ingin%20memesan" target="_blank" rel="noopener noreferrer" className="bg-[#2c231b] text-white px-6 py-3 rounded-full font-bold hover:bg-[#f5b041] hover:text-[#2c231b] transition-[transform,background-color,color,box-shadow] duration-300 text-sm sm:text-base flex items-center shadow-lg hover:shadow-xl hover:-translate-y-0.5">
-              Hubungi via WhatsApp <i className="fas fa-arrow-right ml-3 text-xs" aria-hidden="true"></i>
+            <a href="https://wa.me/6285640734972?text=Halo%20Semangkok%2C%20saya%20ingin%20memesan" target="_blank" rel="noopener noreferrer" className="bg-[#2c231b] text-white px-5 py-2.5 rounded-full text-sm font-bold hover:bg-black transition-colors">
+              Hubungi via WhatsApp
             </a>
           </div>
           </Reveal>
