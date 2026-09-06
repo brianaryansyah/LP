@@ -199,7 +199,7 @@ export default function Navbar() {
         ) ?? null
       : null;
 
-  // Tidak ada scrollspy: di beranda hanya Beranda yang aktif, tidak ikut berubah saat scroll.
+  // Homepage: only Beranda appears active; no scrollspy updates.
   const isEntryActive = (entry: NavbarEntry) => {
     if (activeRouteEntry) return activeRouteEntry.label === entry.label;
     if (pathname === "/") return entry.label === "Beranda";
