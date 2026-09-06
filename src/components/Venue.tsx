@@ -54,41 +54,17 @@ const FACILITIES: Facility[] = [
 
 function VenueHero() {
   return (
-    <div className="group relative overflow-hidden rounded-[2rem] shadow-2xl ring-1 ring-black/5 lg:row-span-2 lg:min-h-[560px]">
-      <Image
-        src={VENUE_PHOTO.src}
-        alt={VENUE_PHOTO.alt}
-        fill
-        sizes="(max-width: 1024px) 90vw, 40vw"
-        className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]"
-        loading="lazy"
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#2c231b]/85 via-[#2c231b]/10 to-transparent" aria-hidden="true" />
-      <div className="absolute left-0 right-0 top-4 flex items-start justify-between px-5">
-        <span className="rounded-full bg-[#fdf8f5]/95 px-4 py-2 text-xs font-bold uppercase tracking-wider text-[#2c231b] shadow-md backdrop-blur-sm">
-          <i className="fas fa-store mr-2 text-[#e09132]" aria-hidden="true"></i>
-          Jl. Karimata No.40
-        </span>
-        <span className="rounded-full bg-[#f5b041] px-4 py-2 text-xs font-bold uppercase tracking-wider text-[#2c231b] shadow-md">
-          Buka 10–22
-        </span>
+    <div className="relative overflow-hidden rounded-xl border border-[#2c231b]/10 lg:row-span-2 lg:min-h-[520px]">
+      <Image src={VENUE_PHOTO.src} alt={VENUE_PHOTO.alt} fill sizes="(max-width: 1024px) 90vw, 40vw" className="object-cover" loading="lazy" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" aria-hidden="true" />
+      <div className="absolute left-3 top-3 flex gap-2">
+        <span className="rounded-full bg-white px-3 py-1 text-xs font-bold text-[#2c231b] border border-[#2c231b]/10">Jl. Karimata No.40</span>
+        <span className="rounded-full bg-[#2c231b] px-3 py-1 text-xs font-bold text-white">10–22</span>
       </div>
-      <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
-        <h3 className="font-poppins text-2xl font-extrabold leading-tight text-white sm:text-3xl">
-          Ruang makan biasa,
-          <br />
-          buat kumpul keluarga.
-        </h3>
-        <p className="mt-2 max-w-md text-sm leading-relaxed text-white/80 sm:text-base">
-          Meja dan kursi tertata biasa. Cukup untuk makan bareng tanpa berdesakan.
-        </p>
-        <a
-          href="https://maps.app.goo.gl/NvCxPom7GSdYFj7Z9"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-4 inline-flex items-center gap-2 rounded-full bg-white/95 px-5 py-2.5 text-sm font-bold text-[#2c231b] shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#f5b041] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
-        >
-          <i className="fas fa-map-marked-alt text-[#e09132]" aria-hidden="true"></i>
+      <div className="absolute bottom-0 left-0 right-0 p-5">
+        <h3 className="font-poppins text-lg font-bold leading-tight text-white">Ruang makan biasa, buat kumpul keluarga.</h3>
+        <p className="mt-1 text-sm leading-relaxed text-white/80">Meja dan kursi tertata biasa. Cukup untuk makan bareng.</p>
+        <a href="https://maps.app.goo.gl/NvCxPom7GSdYFj7Z9" target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-bold text-[#2c231b] border border-[#2c231b]/10">
           Lihat foto lokasi
         </a>
       </div>
@@ -98,27 +74,18 @@ function VenueHero() {
 
 function FacilityCard({ facility }: { facility: Facility }) {
   return (
-    <article className="group relative flex flex-col overflow-hidden rounded-[1.75rem] bg-white shadow-lg ring-1 ring-[#2c231b]/5 transition-[transform,box-shadow] duration-500 hover:-translate-y-1.5 hover:shadow-xl">
-      <div className="relative h-44 w-full overflow-hidden sm:h-48">
-        <Image
-          src={facility.img}
-          alt={facility.alt}
-          fill
-          sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 25vw"
-          className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
-          loading="lazy"
-        />
-        <span className="absolute left-3 top-3 rounded-full bg-[#2c231b]/85 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-[#f5b041] backdrop-blur-sm">
-          {facility.badge}
-        </span>
+    <article className="flex flex-col overflow-hidden rounded-xl bg-white border border-[#2c231b]/10">
+      <div className="relative h-44 w-full">
+        <Image src={facility.img} alt={facility.alt} fill sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 25vw" className="object-cover" loading="lazy" />
+        <span className="absolute left-2 top-2 rounded-full bg-white px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#2c231b] border border-[#2c231b]/10">{facility.badge}</span>
       </div>
-      <div className="flex flex-1 items-start gap-4 p-5">
-        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#f5b041]/15 text-lg text-[#e09132]" aria-hidden="true">
+      <div className="flex flex-1 items-start gap-3 p-4">
+        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#fdf8f5] border border-[#2c231b]/10 text-sm text-[#2c231b]" aria-hidden="true">
           <i className={facility.icon}></i>
         </span>
         <div>
-          <h3 className="font-poppins text-base font-bold text-[#2c231b] sm:text-lg">{facility.title}</h3>
-          <p className="mt-1 text-xs leading-relaxed text-[#2c231b]/65 sm:text-sm">{facility.desc}</p>
+          <h3 className="font-poppins text-sm font-bold text-[#2c231b]">{facility.title}</h3>
+          <p className="mt-1 text-xs leading-relaxed text-[#2c231b]/65">{facility.desc}</p>
         </div>
       </div>
     </article>
@@ -127,8 +94,7 @@ function FacilityCard({ facility }: { facility: Facility }) {
 
 export default function Venue() {
   return (
-    <section id="fasilitas" className="relative flex scroll-mt-20 flex-col justify-center overflow-hidden bg-white py-16 lg:py-24 border-t border-[#2c231b]/5">
-      <div className="pointer-events-none absolute -left-24 top-24 aspect-square w-[320px] rounded-full bg-[#f5b041]/10 blur-[100px]" aria-hidden="true"></div>
+    <section id="fasilitas" className="relative flex scroll-mt-20 flex-col justify-center overflow-hidden bg-white py-16 lg:py-24 border-y border-[#2c231b]/5">
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal>
           <div className="mb-10 text-center md:mb-14">
@@ -156,19 +122,12 @@ export default function Venue() {
         </div>
 
         <Reveal delay={150}>
-          <div className="mt-8 flex flex-col items-center justify-between gap-4 rounded-[1.75rem] bg-[#2c231b] px-6 py-6 sm:flex-row sm:px-8">
-            <p className="text-center font-inter text-sm text-[#fdf8f5]/80 sm:text-left sm:text-base">
-              <span className="font-bold text-[#f5b041]">Butuh meja dekat playground?</span>
-              <br className="hidden sm:block" /> Hubungi kami, kami atur kalau memungkinkan.
+          <div className="mt-8 flex flex-col items-center justify-between gap-4 rounded-xl border border-[#2c231b]/10 bg-[#fdf8f5] px-5 py-4 sm:flex-row">
+            <p className="text-center font-inter text-sm text-[#2c231b]/70 sm:text-left">
+              <span className="font-bold text-[#2c231b]">Butuh meja dekat playground?</span> Hubungi kami, kami atur kalau memungkinkan.
             </p>
-            <a
-              href="https://wa.me/6285640734972?text=Halo%20Semangkok%2C%20saya%20ingin%20reservasi%20meja%20dekat%20playground."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex shrink-0 items-center gap-2 rounded-full bg-[#f5b041] px-6 py-3 text-sm font-bold text-[#2c231b] shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
-            >
-              <i className="fab fa-whatsapp text-base" aria-hidden="true"></i>
-              Booking meja
+            <a href="https://wa.me/6285640734972?text=Halo%20Semangkok%2C%20saya%20ingin%20reservasi%20meja%20dekat%20playground." target="_blank" rel="noopener noreferrer" className="inline-flex shrink-0 items-center gap-2 rounded-full bg-[#2c231b] px-5 py-2.5 text-sm font-bold text-white hover:bg-black transition-colors">
+              <i className="fab fa-whatsapp" aria-hidden="true"></i> Booking meja
             </a>
           </div>
         </Reveal>

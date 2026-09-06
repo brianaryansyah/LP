@@ -9,35 +9,22 @@ export default function Features() {
         
         <Reveal>
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24 mb-16 lg:mb-24">
-          {/* Left Collage */}
-          <div className="flex-1 w-full relative max-w-lg mx-auto lg:max-w-none group">
-            <div className="grid grid-cols-2 gap-3 sm:gap-4 relative z-10">
-              <div className="col-span-2 relative rounded-2xl sm:rounded-3xl overflow-hidden w-full aspect-[16/9] shadow-2xl ring-1 ring-black/5 transition-transform duration-700 group-hover:scale-[1.02]">
-                <Image src="/img/mi-ayam-kepala.jpg" alt="Ayam kecap dimasak di wajan besar" fill sizes="(max-width: 640px) 90vw, 40vw" className="object-cover transition-transform duration-1000 group-hover:scale-[1.03] will-change-transform" loading="lazy" quality={85} />
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-[background-color] duration-700"></div>
+          {/* Left Collage — flat, no blob */}
+          <div className="flex-1 w-full relative max-w-lg mx-auto lg:max-w-none">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4">
+              <div className="col-span-2 relative rounded-xl overflow-hidden w-full aspect-[16/9] border border-[#2c231b]/10">
+                <Image src="/img/mi-ayam-kepala.jpg" alt="Ayam kecap dimasak di wajan besar" fill sizes="(max-width: 640px) 90vw, 40vw" className="object-cover" loading="lazy" quality={85} />
               </div>
-              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden w-full aspect-[4/3] shadow-xl ring-1 ring-black/5 transition-transform duration-700 delay-100 group-hover:-translate-y-2">
-                <Image src="/img/mi-ayam.jpg" alt="Mangkok mie ayam dengan topping ayam kecap" fill sizes="(max-width: 640px) 45vw, 20vw" className="object-cover transition-transform duration-1000 group-hover:scale-[1.03] will-change-transform" loading="lazy" quality={85} />
+              <div className="relative rounded-xl overflow-hidden w-full aspect-[4/3] border border-[#2c231b]/10">
+                <Image src="/img/mi-ayam.jpg" alt="Mangkok mie ayam dengan topping ayam kecap" fill sizes="(max-width: 640px) 45vw, 20vw" className="object-cover" loading="lazy" quality={85} />
               </div>
-              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden w-full aspect-[4/3] shadow-xl ring-1 ring-black/5 transition-transform duration-700 delay-200 group-hover:-translate-y-2">
-                <Image src="/img/mi-ayam-bakso.jpg" alt="Mie ayam bakso dengan kuah kaldu" fill sizes="(max-width: 640px) 45vw, 20vw" className="object-cover transition-transform duration-1000 group-hover:scale-[1.03] will-change-transform" loading="lazy" quality={85} />
+              <div className="relative rounded-xl overflow-hidden w-full aspect-[4/3] border border-[#2c231b]/10">
+                <Image src="/img/mi-ayam-bakso.jpg" alt="Mie ayam bakso dengan kuah kaldu" fill sizes="(max-width: 640px) 45vw, 20vw" className="object-cover" loading="lazy" quality={85} />
               </div>
             </div>
-            
-            {/* Background Blob Effect */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] bg-[#f5b041]/10 rounded-full blur-3xl -z-0 opacity-40 group-hover:opacity-70 transition-opacity duration-700"></div>
-
-            {/* Floating Badge */}
-              <div className="absolute -bottom-6 -left-4 sm:-bottom-8 sm:-left-8 bg-[#f5b041] p-4 sm:p-6 rounded-2xl sm:rounded-3xl shadow-2xl flex flex-col items-center justify-center border-4 border-[#fdf8f5] z-20 scale-90 sm:scale-100 origin-bottom-left animate-float w-max">
-              <span className="text-2xl sm:text-3xl font-bold text-[#2c231b] font-poppins">1990</span>
-              <span className="text-xs sm:text-sm text-[#2c231b] font-bold mt-1 text-center leading-tight">Sejak<br/>Pasar Pagi</span>
-            </div>
-            
-            {/* Decorative dot grid */}
-            <div className="absolute top-1/2 -right-4 sm:-right-8 -translate-y-1/2 grid grid-cols-3 gap-2 opacity-15 group-hover:opacity-30 transition-opacity duration-700 z-0" aria-hidden="true">
-               {[...Array(15)].map((_, i) => (
-                 <div key={i} className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#2c231b] group-hover:scale-125 transition-transform duration-500" style={{ transitionDelay: `${i * 30}ms` }}></div>
-               ))}
+            <div className="absolute -bottom-3 -left-3 bg-white px-4 py-3 rounded-xl border border-[#2c231b]/10 shadow-sm">
+              <span className="block text-lg font-extrabold text-[#2c231b] font-poppins leading-none">1990</span>
+              <span className="text-[11px] font-medium text-[#2c231b]/60">Sejak Pasar Pagi</span>
             </div>
           </div>
 
@@ -53,41 +40,32 @@ export default function Features() {
               Sejak 1990 di Pasar Pagi, sekarang di Jl. Karimata 40. Mie disiapkan pagi, kaldu direbus beberapa jam, ayam dimasak seperti biasa. Tidak ada yang istimewa, hanya dibuat rutin.
             </p>
 
-            <div className="flex items-center gap-6 py-4 border-y border-[#2c231b]/5 mb-6">
-              <div className="text-center">
-                <div className="text-xl font-extrabold text-[#2c231b] font-poppins">Sejak 1990</div>
-                <div className="text-[11px] text-[#2c231b]/60 font-medium uppercase tracking-wider">Pasar Pagi</div>
-              </div>
-              <div className="w-px h-8 bg-[#2c231b]/10"></div>
-              <div className="text-center">
-                <div className="text-xl font-extrabold text-[#2c231b] font-poppins">Harian</div>
-                <div className="text-[11px] text-[#2c231b]/60 font-medium uppercase tracking-wider">Disiapkan pagi</div>
-              </div>
-              <div className="w-px h-8 bg-[#2c231b]/10"></div>
-              <div className="text-center">
-                <div className="text-xl font-extrabold text-[#2c231b] font-poppins">4.8/5</div>
-                <div className="text-[11px] text-[#2c231b]/60 font-medium uppercase tracking-wider">Ulasan tamu</div>
-              </div>
+            <div className="flex items-center gap-4 py-3 border-y border-[#2c231b]/10 mb-5 text-sm">
+              <span className="font-bold text-[#2c231b]">Sejak 1990</span>
+              <span className="text-[#2c231b]/30">•</span>
+              <span className="text-[#2c231b]/70">Disiapkan pagi</span>
+              <span className="text-[#2c231b]/30">•</span>
+              <span className="font-bold text-[#2c231b]">4.8/5</span>
+              <span className="text-[#2c231b]/60 text-xs">ulasan</span>
             </div>
 
-            <div className="space-y-4 sm:space-y-6">
-              <div className="bg-[#f5b041]/10 p-4 sm:p-6 rounded-2xl sm:rounded-3xl flex items-center gap-4 sm:gap-6 hover:-translate-y-1 hover:shadow-md transition-[transform,box-shadow,border-color] duration-500 shadow-sm border border-transparent hover:border-[#f5b041]/20 cursor-default">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#f5b041]/15 flex items-center justify-center shrink-0 border border-[#f5b041]/20" aria-hidden="true">
-                  <i className="fas fa-clock text-xl sm:text-2xl text-[#f5b041]" aria-hidden="true"></i>
+            <div className="space-y-3">
+              <div className="bg-white p-4 sm:p-5 rounded-xl flex items-center gap-4 border border-[#2c231b]/10">
+                <div className="w-10 h-10 rounded-full bg-[#fdf8f5] flex items-center justify-center shrink-0 border border-[#2c231b]/10" aria-hidden="true">
+                  <i className="fas fa-clock text-base text-[#2c231b]" aria-hidden="true"></i>
                 </div>
                 <div>
-                  <h4 className="text-lg sm:text-xl font-bold text-[#2c231b] font-poppins mb-1">Kaldu 8 Jam</h4>
-                  <p className="text-[#2c231b]/70 text-xs sm:text-sm leading-relaxed">Tulang ayam kampung direbus perlahan sejak subuh. Gurih alami tanpa penyedap berlebih.</p>
+                  <h4 className="text-base font-bold text-[#2c231b] font-poppins">Kaldu 8 Jam</h4>
+                  <p className="text-[#2c231b]/70 text-sm leading-relaxed">Tulang ayam kampung direbus perlahan sejak subuh.</p>
                 </div>
               </div>
-
-              <div className="bg-white border border-[#2c231b]/5 p-4 sm:p-6 rounded-2xl sm:rounded-3xl flex items-center gap-4 sm:gap-6 hover:-translate-y-1 hover:shadow-md transition-[transform,box-shadow,border-color] duration-500 shadow-sm cursor-default">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-white flex items-center justify-center shrink-0 shadow-sm border border-[#2c231b]/5" aria-hidden="true">
-                  <i className="fas fa-utensils text-xl sm:text-2xl text-[#f5b041]" aria-hidden="true"></i>
+              <div className="bg-white p-4 sm:p-5 rounded-xl flex items-center gap-4 border border-[#2c231b]/10">
+                <div className="w-10 h-10 rounded-full bg-[#fdf8f5] flex items-center justify-center shrink-0 border border-[#2c231b]/10" aria-hidden="true">
+                  <i className="fas fa-utensils text-base text-[#2c231b]" aria-hidden="true"></i>
                 </div>
                 <div>
-                  <h4 className="text-lg sm:text-xl font-bold text-[#2c231b] font-poppins mb-1">Mie Ditarik Tangan</h4>
-                  <p className="text-[#2c231b]/70 text-xs sm:text-sm leading-relaxed">Adonan segar setiap pagi, tekstur kenyal saat digigit.</p>
+                  <h4 className="text-base font-bold text-[#2c231b] font-poppins">Mie Ditarik Tangan</h4>
+                  <p className="text-[#2c231b]/70 text-sm leading-relaxed">Adonan segar setiap pagi, tekstur kenyal.</p>
                 </div>
               </div>
             </div>
