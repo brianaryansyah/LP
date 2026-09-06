@@ -35,7 +35,7 @@ export default function Menu() {
   };
 
   return (
-    <section id="menu" className="relative flex flex-col justify-center pt-16 pb-24 bg-[#fdf8f5] border-y border-[#2c231b]/5 overflow-hidden">
+    <section id="menu" className="relative flex flex-col justify-center pt-16 pb-24 bg-[#fdf8f5] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         
         {/* Header */}

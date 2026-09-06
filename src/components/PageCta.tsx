@@ -11,7 +11,7 @@ export default function PageCta({
   desc = "Pesan langsung via WhatsApp atau amankan meja dulu. Buka tiap hari 10.00 sampai 22.00 WIB.",
 }: PageCtaProps) {
   return (
-    <section className="bg-white border-y border-[#2c231b]/10 py-12 sm:py-16">
+    <section className="bg-white py-12 sm:py-16">
       <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-start gap-6 px-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
         <div>
           <h2 className="font-poppins text-xl font-extrabold tracking-tight text-[#2c231b] text-balance sm:text-2xl">{title}</h2>
