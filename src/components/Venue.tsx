@@ -49,22 +49,7 @@ const FACILITIES: Facility[] = [
     icon: "fas fa-microphone-alt",
     badge: "Jum–Min",
   },
-  {
-    title: "Ruang Keluarga Luas",
-    desc: "Meja panjang untuk arisan & ulang tahun. Kapasitas 80 kursi.",
-    img: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800&auto=format&fit=crop",
-    alt: "Meja ruang keluarga besar di warung Semangkok",
-    icon: "fas fa-users",
-    badge: "80 kursi",
-  },
-  {
-    title: "Parkir & Mushola",
-    desc: "Parkir motor & mobil lega, mushola bersih, toilet terawat.",
-    img: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=800&auto=format&fit=crop",
-    alt: "Area parkir dan sudut bersih warung Semangkok",
-    icon: "fas fa-parking",
-    badge: "Lega",
-  },
+
 ];
 
 function VenueHero() {
