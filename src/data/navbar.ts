@@ -29,7 +29,6 @@ export const ORDER_LINK = waLink("Halo Semangkok, saya ingin memesan.");
 
 export const NAVBAR_ENTRIES: NavbarEntry[] = [
   { label: "Beranda", href: "/", sectionId: "home" },
-  { label: "Fasilitas", href: "/#fasilitas", sectionId: "fasilitas" },
   {
     label: "Tentang Kami",
     href: "/tentang/kisah",
@@ -81,12 +80,4 @@ export const NAVBAR_ENTRIES: NavbarEntry[] = [
   },
 ];
 
-export const NAVBAR_SECTION_IDS = [
-  "home",
-  "unggulan",
-  "fasilitas",
-  "testimoni",
-  "menu",
-  "reservasi",
-  "location",
-];
+export const NAVBAR_SECTION_IDS = ["home", "unggulan", "testimoni", "menu", "reservasi", "location"];
