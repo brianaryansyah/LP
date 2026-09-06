@@ -64,16 +64,8 @@ export default function Reservation() {
         </Reveal>
 
         <Reveal delay={100}>
-          <div className="bg-white rounded-[2rem] sm:rounded-[3rem] shadow-xl hover:shadow-2xl overflow-hidden border border-[#2c231b]/5 flex flex-col lg:flex-row transition-[transform,box-shadow,border-color] duration-500 ring-1 ring-black/5">
-            <div className="lg:w-2/5 bg-[#2c231b] p-8 sm:p-10 text-[#fdf8f5] flex flex-col justify-between relative overflow-hidden">
-              <div
-                className="absolute top-0 right-0 w-64 h-64 bg-[#f5b041] opacity-10 rounded-full -translate-y-1/2 translate-x-1/3"
-                aria-hidden="true"
-              ></div>
-              <div
-                className="absolute bottom-0 left-0 w-48 h-48 bg-[#f5b041] opacity-10 rounded-full translate-y-1/3 -translate-x-1/4"
-                aria-hidden="true"
-              ></div>
+          <div className="bg-white rounded-xl overflow-hidden border border-[#2c231b]/10 flex flex-col lg:flex-row">
+            <div className="lg:w-2/5 bg-[#2c231b] p-8 sm:p-10 text-[#fdf8f5] flex flex-col justify-between">
 
               <div className="relative z-10">
                 <h3 className="text-2xl font-bold mb-6 font-poppins text-[#fdf8f5]">
@@ -101,20 +93,15 @@ export default function Reservation() {
                 </ul>
               </div>
 
-              <div className="bg-white/[0.06] p-4 rounded-2xl border border-[#fdf8f5]/15 relative z-10 backdrop-blur-sm">
-                <p className="text-sm font-medium text-[#fdf8f5]/70 flex items-start gap-2 leading-relaxed">
-                  <i className="fas fa-info-circle mt-1 text-[#f5b041]" aria-hidden="true"></i>
-                  Untuk acara khusus atau grup lebih dari 10 orang, harap reservasi minimal 1 hari
-                  sebelumnya.
+              <div className="border-t border-white/10 pt-4 relative z-10">
+                <p className="text-sm text-[#fdf8f5]/70 leading-relaxed">
+                  Untuk grup lebih dari 10 orang, reservasi sehari sebelumnya.
                 </p>
               </div>
             </div>
 
             <div className="lg:w-3/5 p-8 sm:p-10">
-              <h3 className="text-2xl font-bold text-[#2c231b] mb-6 font-poppins">
-                <i className="fas fa-edit text-[#f5b041] mr-2" aria-hidden="true"></i> Form
-                Reservasi
-              </h3>
+              <h3 className="text-xl font-bold text-[#2c231b] mb-6 font-poppins">Form Reservasi</h3>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
@@ -248,10 +235,10 @@ export default function Reservation() {
 
                 <button
                   type="submit"
-                  className="w-full bg-[#2c231b] text-[#fdf8f5] font-bold py-4 rounded-full hover:bg-[#f5b041] hover:text-[#2c231b] transition-[transform,background-color,color,box-shadow] duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 focus-visible:ring-2 focus-visible:ring-[#f5b041]/60 focus-visible:ring-offset-2"
+                  className="w-full bg-[#2c231b] text-white font-bold py-3.5 rounded-full hover:bg-black transition-colors flex items-center justify-center gap-2"
                 >
-                  <i className="fab fa-whatsapp text-xl text-[#25D366]" aria-hidden="true"></i>
-                  Kirim Reservasi via WhatsApp
+                  <i className="fab fa-whatsapp" aria-hidden="true"></i>
+                  Kirim via WhatsApp
                 </button>
               </form>
             </div>

@@ -48,8 +48,7 @@ export default function Testimonial() {
   const [isPressed, setIsPressed] = useState(false);
 
   return (
-    <section id="testimoni" className="relative pt-14 sm:pt-16 lg:pt-24 pb-16 sm:pb-20 lg:pb-28 bg-[#fdf8f5] overflow-hidden">
-      <div className="absolute inset-0 opacity-[0.03]" aria-hidden="true" style={{ backgroundImage: `radial-gradient(circle at 1px 1px, #2c231b 1px, transparent 0)`, backgroundSize: `24px 24px` }} />
+    <section id="testimoni" className="relative pt-14 sm:pt-16 lg:pt-20 pb-16 sm:pb-20 bg-white border-y border-[#2c231b]/5 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         <Reveal>
           <div className="text-center">
@@ -84,11 +83,8 @@ export default function Testimonial() {
             {marqueeItems.map((rev, idx) => (
               <div
                 key={`${rev.name}-${idx}`}
-                className="w-[280px] sm:w-[320px] lg:w-[340px] bg-white rounded-[1.5rem] p-5 relative shadow-[0_8px_30px_rgba(44,35,27,0.10)] border border-[#2c231b]/5 shrink-0 flex flex-col justify-between min-h-[170px] sm:min-h-[178px] h-auto hover:shadow-[0_12px_32px_rgba(44,35,27,0.14)] transition-shadow duration-300"
+                className="w-[280px] sm:w-[320px] lg:w-[340px] bg-[#fdf8f5] rounded-xl p-5 border border-[#2c231b]/10 shrink-0 flex flex-col justify-between min-h-[160px] h-auto"
               >
-                <div className="absolute top-3.5 right-3.5 opacity-[0.06]">
-                  <i className="fas fa-quote-right text-xl text-[#f5b041]" aria-hidden="true"></i>
-                </div>
                 <div className="flex gap-1 mb-3">
                   {[...Array(5)].map((_, i) => (
                     <i key={i} className={`fas fa-star text-[11px] ${i < rev.rating ? "text-[#f5b041]" : "text-gray-200"}`} aria-hidden="true"></i>
@@ -120,7 +116,7 @@ export default function Testimonial() {
         </Reveal>
       </div>
 
-      <WaveDivider fill="#2c231b" position="bottom" />
+      <WaveDivider fill="#fdf8f5" position="bottom" />
 
       <style jsx>{`
         @keyframes marquee {
