@@ -171,23 +171,57 @@ export default function Navbar() {
   const [expandedMobile, setExpandedMobile] = useState<string | null>(null);
   const navRef = useRef<HTMLElement>(null);
   const pathname = usePathname();
+  const isHome = pathname === "/";
 
+  // Stabilize header: subscribe to derived boolean only, rAF-throttled passive listener.
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+    let ticking = false;
+    const updateScrolled = () => {
+      ticking = false;
+      setScrolled((prev) => {
+        const next = window.scrollY > 24;
+        return prev === next ? prev : next;
+      });
+    };
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(updateScrolled);
+      }
+    };
+    updateScrolled();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Scrollspy hanya di beranda: cegah highlight ikut bergerak di halaman lain.
+  useEffect(() => {
+    if (!isHome) {
+      setActiveSection("");
+      return;
+    }
+    let ticking = false;
+    const updateSection = () => {
+      ticking = false;
       let current = "home";
       for (const id of NAVBAR_SECTION_IDS) {
         const el = document.getElementById(id);
-        if (el && window.scrollY >= el.offsetTop - 160) {
+        if (el && window.scrollY >= el.offsetTop - 180) {
           current = id;
         }
       }
-      setActiveSection(current);
+      setActiveSection((prev) => (prev === current ? prev : current));
     };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(updateSection);
+      }
+    };
+    updateSection();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [isHome]);
 
   useEffect(() => {
     if (!isOpen && openMenu === null) return;
@@ -234,17 +268,24 @@ export default function Navbar() {
         : "text-[#1C2421] hover:text-[#15803d]"
     }`;
 
+  // Tutup menu seluler saat pindah halaman agar tidak tersangkut.
+  useEffect(() => {
+    setIsOpen(false);
+    setOpenMenu(null);
+    setExpandedMobile(null);
+  }, [pathname]);
+
   return (
     <header
       ref={navRef}
-      className={`animate__animated animate__fadeInDown fixed z-50 w-full transition-[background-color,box-shadow,padding] duration-300 will-change-transform ${
+      className={`fixed inset-x-0 top-0 z-50 border-b transition-[background-color,border-color,box-shadow,backdrop-filter] duration-300 ${
         scrolled
-          ? "border-b border-[#1C2421]/5 bg-[#FCF8F2]/90 py-3 shadow-sm backdrop-blur-xl"
-          : "bg-transparent py-5"
+          ? "border-[#1C2421]/10 bg-[#FCF8F2]/95 shadow-[0_8px_30px_-12px_rgba(28,36,33,0.25)] backdrop-blur-xl"
+          : "border-transparent bg-[#FCF8F2]/60 backdrop-blur-md"
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between gap-4">
+        <div className="flex h-16 items-center justify-between gap-4 sm:h-20">
           <BrandMark />
 
           <nav
