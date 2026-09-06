@@ -3,17 +3,13 @@ import WaveDivider from "@/components/WaveDivider";
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-24 pb-24 sm:pt-32 sm:pb-36 bg-[#fdf8f5] overflow-hidden">
-      
-      {/* Subtle Background Glows */}
-      <div className="absolute top-[-10%] left-[-10%] w-[50%] sm:w-[40%] aspect-square bg-[#f5b041]/10 rounded-full blur-[100px] pointer-events-none"></div>
-      <div className="absolute bottom-[-10%] right-[-10%] w-[60%] sm:w-[40%] aspect-square bg-[#e09132]/10 rounded-full blur-[120px] pointer-events-none"></div>
+    <section id="home" className="relative min-h-screen flex items-center pt-24 pb-24 sm:pt-32 sm:pb-36 bg-[#fdf8f5] overflow-hidden border-b border-[#2c231b]/5">
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full mt-8 md:mt-0">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full mt-8 md:mt-0">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-12">
           
           {/* Left Content Area */}
-          <div className="flex-1 text-left w-full max-w-2xl lg:max-w-none animate__animated animate__fadeInUp relative z-20">
+          <div className="flex-1 text-left w-full max-w-2xl lg:max-w-none relative z-20">
             
             {/* Main Heading */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] font-extrabold text-[#2c231b] font-poppins leading-[1.1] mb-6 tracking-tight">
@@ -32,80 +28,40 @@ export default function Hero() {
             </p>
             
             {/* Action Buttons */}
-            <div className="flex flex-wrap items-center gap-4 sm:gap-6">
-              <a href="#menu" className="group flex items-center gap-4 bg-[#f5b041] text-[#2c231b] pl-6 pr-2 py-2 rounded-full font-bold text-base hover:bg-[#e09132] transition-[transform,background-color,box-shadow] duration-300 shadow-xl shadow-[#f5b041]/20 hover:-translate-y-1">
-                Pesan Sekarang 
-                <div className="w-10 h-10 bg-white text-[#2c231b] rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 shadow-sm">
-                  <i className="fas fa-arrow-up text-sm" aria-hidden="true"></i>
-                </div>
+            <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+              <a href="#menu" className="inline-flex items-center gap-2 bg-[#2c231b] text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-[#f5b041] hover:text-[#2c231b] transition-colors duration-200 border border-transparent">
+                Pesan Sekarang <i className="fas fa-arrow-right text-xs" aria-hidden="true"></i>
               </a>
-              <a href="#location" className="group flex items-center gap-3 bg-transparent text-[#2c231b] px-6 py-3 rounded-full font-bold text-base transition-[background-color,transform] duration-300 hover:bg-[#f5b041]/10 hover:-translate-y-0.5">
+              <a href="#location" className="inline-flex items-center gap-2 bg-white text-[#2c231b] px-6 py-3 rounded-full font-bold text-sm border border-[#2c231b]/10 hover:border-[#2c231b]/20 transition-colors duration-200">
                 Lihat Lokasi
-                <i className="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"></i>
               </a>
             </div>
             
             {/* Trust Indicators: proof of craft, not vanity metrics */}
-            <div className="mt-10 sm:mt-12 flex items-center gap-5 pt-6 border-t border-[#2c231b]/10">
-              <div className="hidden sm:flex items-center gap-3 pr-5 border-r border-[#2c231b]/10">
-                <div className="w-10 h-10 rounded-full bg-[#f5b041]/15 border border-[#f5b041]/20 flex items-center justify-center">
-                  <i className="fas fa-award text-[#f5b041] text-sm" aria-hidden="true"></i>
-                </div>
-                <div className="text-left">
-                  <div className="font-extrabold text-[#2c231b] font-poppins text-[13px] leading-none">Sejak 1990</div>
-                  <div className="text-[11px] text-[#2c231b]/50 font-medium">Pasar Pagi • Karimata</div>
-                </div>
-              </div>
-              <div>
-                <div className="font-bold text-[#2c231b] font-poppins text-sm sm:text-[15px] flex items-center gap-2">
-                  Ditarik Pagi • Kaldu 8 Jam <span className="w-1.5 h-1.5 bg-[#f5b041] rounded-full animate-pulse" aria-hidden="true"></span>
-                </div>
-                <div className="text-xs sm:text-sm text-[#2c231b]/60 font-medium">Tanpa gimmick, hanya rasa yang konsisten</div>
-              </div>
+            <div className="mt-8 flex items-center gap-3 pt-5 border-t border-[#2c231b]/10 text-xs sm:text-sm">
+              <span className="rounded-full border border-[#2c231b]/10 bg-white px-3 py-1.5 font-semibold text-[#2c231b]">Sejak 1990</span>
+              <span className="text-[#2c231b]/60">Pasar Pagi • Karimata • Ditarik pagi • Kaldu 8 jam</span>
             </div>
           </div>
 
-          {/* Right Image Area */}
+          {/* Right Image Area — flat paper, no gradient blob */}
           <div className="flex-1 w-full flex justify-center lg:justify-end relative mt-12 lg:mt-0">
-            
-            {/* Aesthetic Background Shape */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] sm:w-[80%] aspect-square bg-[#f5b041] rounded-[4rem] opacity-60 shadow-2xl z-0 transition-transform duration-700 hover:scale-[1.02]"></div>
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] sm:w-[80%] aspect-square bg-[#2c231b] rounded-[4rem] opacity-10 shadow-2xl z-0"></div>
-
-            {/* Main Image Container */}
-            <div className="w-[90%] sm:w-[85%] max-w-[500px] aspect-[4/5] rounded-[3rem] overflow-hidden relative shadow-2xl z-10 border-8 border-white bg-white group ring-1 ring-black/5">
+            <div className="w-[90%] sm:w-[85%] max-w-[480px] aspect-[4/5] rounded-2xl overflow-hidden relative border border-[#2c231b]/10 bg-white shadow-sm">
               <Image
                 src="/img/mi-ayam-bakso.jpg"
                 alt="Mangkok mie ayam bakso dengan topping melimpah"
                 fill
                 priority
-                sizes="(max-width: 640px) 90vw, (max-width: 1024px) 85vw, 500px"
-                className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.05] will-change-transform"
+                sizes="(max-width: 640px) 90vw, (max-width: 1024px) 85vw, 480px"
+                className="object-cover"
               />
+              <span className="absolute bottom-3 left-3 rounded-full bg-white px-3 py-1.5 text-xs font-bold text-[#2c231b] border border-[#2c231b]/10 shadow-sm">
+                100% Halal
+              </span>
+              <span className="absolute top-3 right-3 rounded-full bg-[#2c231b] px-3 py-1.5 text-xs font-bold text-white">
+                4.8/5 • Ulasan
+              </span>
             </div>
-            
-            {/* Absolute Badges - Bulletproof Positioning */}
-            <div className="absolute -bottom-6 sm:-bottom-10 left-4 sm:left-10 bg-white px-5 py-4 sm:px-6 sm:py-5 rounded-2xl shadow-2xl z-30 flex items-center gap-3 sm:gap-4 border border-gray-100 animate-float">
-              <div className="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center text-green-600 shrink-0 shadow-inner">
-                <i className="fas fa-certificate text-2xl" aria-hidden="true"></i>
-              </div>
-              <div className="flex flex-col text-left">
-                <span className="text-sm sm:text-base font-bold text-[#2c231b] leading-tight">100% Halal</span>
-                <span className="text-xs text-[#2c231b]/60 leading-tight">Sertifikasi Resmi</span>
-              </div>
-            </div>
-
-            <div className="absolute top-10 sm:top-20 -right-4 sm:-right-8 bg-white/90 backdrop-blur-md px-4 py-3 rounded-2xl shadow-xl z-30 flex items-center gap-3 border border-white/50 animate-float" style={{ animationDelay: '1s' }}>
-               <div className="text-[#f5b041] flex text-sm" aria-hidden="true">
-                  <i className="fas fa-star"></i>
-                  <i className="fas fa-star"></i>
-                  <i className="fas fa-star"></i>
-                  <i className="fas fa-star"></i>
-                  <i className="fas fa-star"></i>
-                </div>
-               <span className="font-bold text-[#2c231b] font-poppins text-sm sm:text-base">5.0/5</span>
-            </div>
-
           </div>
         </div>
       </div>
