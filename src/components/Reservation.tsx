@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Reveal from "@/components/Reveal";
 import WaveDivider from "@/components/WaveDivider";
 
@@ -16,10 +16,16 @@ export default function Reservation() {
     notes: "",
   });
 
-  const now = new Date();
-  const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(
-    now.getDate()
-  ).padStart(2, "0")}`;
+  const [today, setToday] = useState("");
+
+  useEffect(() => {
+    const now = new Date();
+    setToday(
+      `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(
+        now.getDate()
+      ).padStart(2, "0")}`
+    );
+  }, []);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -121,6 +127,7 @@ export default function Reservation() {
                       onChange={handleChange}
                       className={inputClass}
                       placeholder="Contoh: Budi Santoso…"
+                      suppressHydrationWarning
                     />
                   </div>
                   <div>
@@ -145,6 +152,7 @@ export default function Reservation() {
                       onChange={handleChange}
                       className={inputClass}
                       placeholder="Contoh: 081234567890…"
+                      suppressHydrationWarning
                     />
                   </div>
                 </div>
@@ -162,10 +170,11 @@ export default function Reservation() {
                       required
                       type="date"
                       name="date"
-                      min={today}
+                      min={today || undefined}
                       value={formData.date}
                       onChange={handleChange}
                       className={inputClass}
+                      suppressHydrationWarning
                     />
                   </div>
                   <div>
@@ -182,6 +191,7 @@ export default function Reservation() {
                       value={formData.time}
                       onChange={handleChange}
                       className={inputClass}
+                      suppressHydrationWarning
                     >
                       <option value="">Pilih Waktu</option>
                       <option value="12:00">12:00 WIB</option>
@@ -204,6 +214,7 @@ export default function Reservation() {
                       value={formData.guests}
                       onChange={handleChange}
                       className={inputClass}
+                      suppressHydrationWarning
                     >
                       <option value="">Pilih Jumlah</option>
                       <option value="1-2">1-2 Orang</option>
@@ -230,12 +241,14 @@ export default function Reservation() {
                     rows={3}
                     className={`${inputClass} resize-none`}
                     placeholder="Contoh: Meja dekat jendela, ada anak kecil…"
+                    suppressHydrationWarning
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
                   className="w-full bg-[#2c231b] text-white font-bold py-3.5 rounded-full hover:bg-black transition-colors flex items-center justify-center gap-2"
+                  suppressHydrationWarning
                 >
                   <i className="fab fa-whatsapp" aria-hidden="true"></i>
                   Kirim via WhatsApp
