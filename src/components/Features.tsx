@@ -54,7 +54,7 @@ export default function Features() {
             </div>
 
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
-              <div className="group relative overflow-hidden rounded-2xl p-[1px] bg-gradient-to-br from-[#f5b041]/40 via-[#f5b041]/10 to-transparent hover:from-[#f5b041]/60 hover:via-[#f5b041]/20 transition-colors duration-500">
+              <div className="group lively-card relative overflow-hidden rounded-2xl p-[1px] bg-gradient-to-br from-[#f5b041]/40 via-[#f5b041]/10 to-transparent hover:from-[#f5b041]/60 hover:via-[#f5b041]/20 transition-colors duration-500">
                 <div className="bg-gradient-to-br from-[#fffbeb] to-white rounded-2xl p-4 flex items-start gap-3.5 hover:shadow-[0_10px_24px_rgba(245,176,65,0.12)] transition-shadow duration-300">
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#f5b041] text-white shadow-sm group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300" aria-hidden="true">
                     <i className="fas fa-fire text-sm"></i>
@@ -65,7 +65,7 @@ export default function Features() {
                   </div>
                 </div>
               </div>
-              <div className="group bg-white p-4 rounded-2xl flex items-start gap-3.5 border border-[#2c231b]/10 hover:border-[#2c231b]/20 hover:shadow-[0_10px_24px_rgba(44,35,27,0.08)] hover:-translate-y-0.5 transition-[transform,box-shadow,border-color] duration-300">
+              <div className="group lively-card bg-white p-4 rounded-2xl flex items-start gap-3.5 border border-[#2c231b]/10 hover:border-[#2c231b]/20 hover:shadow-[0_10px_24px_rgba(44,35,27,0.08)] transition-[transform,box-shadow,border-color] duration-300">
                 <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#2c231b] text-white shadow-sm group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300" aria-hidden="true">
                   <i className="fas fa-utensils text-sm"></i>
                 </span>
