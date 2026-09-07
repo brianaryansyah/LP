@@ -11,8 +11,8 @@ export default function Hero() {
           {/* Left Content Area */}
           <div className="flex-1 text-left w-full max-w-2xl lg:max-w-none relative z-20">
             
-            {/* Main Heading */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] font-extrabold text-[#2c231b] font-poppins leading-[1.1] mb-6 tracking-tight">
+            {/* Main Heading — stagger 1 like Honea hero */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] font-extrabold text-[#2c231b] font-poppins leading-[1.1] mb-6 tracking-tight animate-fadeUp" style={{ animationDelay: "80ms" }}>
               Kelezatan <span className="text-[#f5b041] relative whitespace-nowrap">
                 Mie Ayam
                 <svg className="absolute w-full h-3 -bottom-1 left-0 text-[#f5b041]/30 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
@@ -22,23 +22,23 @@ export default function Hero() {
               Dalam Setiap Suapan
             </h1>
             
-            {/* Description */}
-            <p className="text-base sm:text-lg lg:text-xl text-[#2c231b]/80 font-inter mb-8 max-w-2xl leading-relaxed">
+            {/* Description — stagger 2 */}
+            <p className="text-base sm:text-lg lg:text-xl text-[#2c231b]/80 font-inter mb-8 max-w-2xl leading-relaxed animate-fadeUp" style={{ animationDelay: "220ms" }}>
               Mie kenyal, kuah kaldu ayam gurih, topping ayam kecap melimpah. Resep keluarga sejak 1990, dimasak harian dan rasa selalu sama.
             </p>
             
-            {/* Action Buttons */}
-            <div className="flex flex-wrap items-center gap-3 sm:gap-4">
-              <a href="#menu" className="inline-flex items-center gap-2 bg-[#2c231b] text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-[#f5b041] hover:text-[#2c231b] transition-colors duration-200 border border-transparent">
+            {/* Action Buttons — stagger 3 */}
+            <div className="flex flex-wrap items-center gap-3 sm:gap-4 animate-fadeUp" style={{ animationDelay: "360ms" }}>
+              <a href="#menu" className="inline-flex items-center gap-2 bg-[#2c231b] text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-[#f5b041] hover:text-[#2c231b] transition-colors duration-200 border border-transparent shadow-[0_8px_24px_rgba(44,35,27,0.18)] hover:shadow-[0_12px_32px_rgba(44,35,27,0.22)] hover:-translate-y-0.5 transition-[transform,box-shadow,background-color,color]">
                 Pesan Sekarang <i className="fas fa-arrow-right text-xs" aria-hidden="true"></i>
               </a>
-              <a href="#location" className="inline-flex items-center gap-2 bg-white text-[#2c231b] px-6 py-3 rounded-full font-bold text-sm border border-[#2c231b]/10 hover:border-[#2c231b]/20 transition-colors duration-200">
+              <a href="#location" className="inline-flex items-center gap-2 bg-white text-[#2c231b] px-6 py-3 rounded-full font-bold text-sm border border-[#2c231b]/10 hover:border-[#2c231b]/20 transition-colors duration-200 bg-white/80 backdrop-blur-sm">
                 Lihat Lokasi
               </a>
             </div>
             
-            {/* Trust Indicators: proof of craft, not vanity metrics */}
-            <div className="mt-8 flex items-center gap-3 pt-5 border-t border-[#2c231b]/10 text-xs sm:text-sm">
+            {/* Trust Indicators — stagger 4 */}
+            <div className="mt-8 flex items-center gap-3 pt-5 border-t border-[#2c231b]/10 text-xs sm:text-sm animate-fadeUp" style={{ animationDelay: "500ms" }}>
               <span className="rounded-full border border-[#2c231b]/10 bg-white px-3 py-1.5 font-semibold text-[#2c231b]">Sejak 1990</span>
               <span className="text-[#2c231b]/60">Pasar Pagi • Karimata • Ditarik pagi • Kaldu 8 jam</span>
             </div>
