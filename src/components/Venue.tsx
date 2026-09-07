@@ -54,18 +54,18 @@ const FACILITIES: Facility[] = [
 
 function VenueHero() {
   return (
-    <div className="group flex flex-col overflow-hidden rounded-2xl bg-white border border-[#2c231b]/10 lg:row-span-2 lg:min-h-[540px] shadow-[0_10px_30px_rgba(44,35,27,0.06)] hover:shadow-[0_16px_40px_rgba(44,35,27,0.1)] transition-shadow duration-500">
-      <div className="relative flex-1 min-h-[300px] lg:min-h-0 overflow-hidden">
+    <div className="group flex flex-col overflow-hidden rounded-2xl bg-white border border-[#2c231b]/10 lg:row-span-2 shadow-[0_10px_30px_rgba(44,35,27,0.06)] hover:shadow-[0_16px_40px_rgba(44,35,27,0.1)] transition-shadow duration-500">
+      <div className="relative h-[300px] sm:h-[360px] lg:h-[380px] lg:flex-1 w-full overflow-hidden shrink-0">
         <Image src={VENUE_PHOTO.src} alt={VENUE_PHOTO.alt} fill sizes="(max-width: 1024px) 90vw, 40vw" className="object-cover transition-transform duration-[900ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]" loading="lazy" />
         <div className="absolute left-3 top-3 flex gap-2">
           <span className="rounded-full bg-white/95 backdrop-blur-sm px-3 py-1 text-xs font-bold text-[#2c231b] border border-[#2c231b]/10 shadow-sm">Jl. Karimata No.40</span>
           <span className="rounded-full bg-[#2c231b] px-3 py-1 text-xs font-bold text-white shadow-sm">10–22</span>
         </div>
       </div>
-      <div className="p-5 sm:p-6">
+      <div className="p-5 sm:p-6 flex flex-col flex-1">
         <h3 className="font-poppins text-[17px] font-bold leading-tight text-[#2c231b]">Ruang makan biasa, buat kumpul keluarga</h3>
         <p className="mt-1.5 text-sm leading-relaxed text-[#2c231b]/65">Meja dan kursi tertata biasa. Cukup untuk makan bareng.</p>
-        <a href="https://maps.app.goo.gl/NvCxPom7GSdYFj7Z9" target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-2 rounded-full bg-[#2c231b] px-4 py-2 text-sm font-bold text-white hover:bg-black hover:-translate-y-0.5 transition-[transform,background-color] duration-300">
+        <a href="https://maps.app.goo.gl/NvCxPom7GSdYFj7Z9" target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-2 self-start rounded-full bg-[#2c231b] px-4 py-2 text-sm font-bold text-white hover:bg-black transition-colors duration-300">
           Lihat foto lokasi
         </a>
       </div>
@@ -75,8 +75,8 @@ function VenueHero() {
 
 function FacilityCard({ facility }: { facility: Facility }) {
   return (
-    <article className="group flex flex-col overflow-hidden rounded-2xl bg-white border border-[#2c231b]/10 shadow-[0_8px_24px_rgba(44,35,27,0.05)] hover:shadow-[0_14px_32px_rgba(44,35,27,0.09)] hover:-translate-y-1 transition-[transform,box-shadow] duration-500">
-      <div className="relative h-44 w-full overflow-hidden">
+    <article className="group flex flex-col overflow-hidden rounded-2xl bg-white border border-[#2c231b]/10 shadow-[0_8px_24px_rgba(44,35,27,0.05)] hover:shadow-[0_14px_32px_rgba(44,35,27,0.09)] transition-shadow duration-500">
+      <div className="relative aspect-[16/11] w-full overflow-hidden">
         <Image src={facility.img} alt={facility.alt} fill sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 25vw" className="object-cover transition-transform duration-[800ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.06]" loading="lazy" />
         <span className="absolute left-3 top-3 rounded-full bg-white/95 backdrop-blur-sm px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#2c231b] border border-[#2c231b]/10 shadow-sm">{facility.badge}</span>
       </div>
