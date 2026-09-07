@@ -111,7 +111,6 @@ export default function Testimonial() {
             >
               Lihat di Google Maps <i className="fas fa-arrow-right text-xs" aria-hidden="true"></i>
             </a>
-            <p className="text-[11px] text-[#2c231b]/30 mt-3 font-medium tracking-wide">Buka di tab baru • Sumber Google Maps</p>
           </div>
         </Reveal>
       </div>
