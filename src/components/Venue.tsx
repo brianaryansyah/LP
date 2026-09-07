@@ -54,17 +54,18 @@ const FACILITIES: Facility[] = [
 
 function VenueHero() {
   return (
-    <div className="relative overflow-hidden rounded-xl border border-[#2c231b]/10 lg:row-span-2 lg:min-h-[520px]">
-      <Image src={VENUE_PHOTO.src} alt={VENUE_PHOTO.alt} fill sizes="(max-width: 1024px) 90vw, 40vw" className="object-cover" loading="lazy" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" aria-hidden="true" />
-      <div className="absolute left-3 top-3 flex gap-2">
-        <span className="rounded-full bg-white px-3 py-1 text-xs font-bold text-[#2c231b] border border-[#2c231b]/10">Jl. Karimata No.40</span>
-        <span className="rounded-full bg-[#2c231b] px-3 py-1 text-xs font-bold text-white">10–22</span>
+    <div className="flex flex-col overflow-hidden rounded-xl bg-white border border-[#2c231b]/10 lg:row-span-2 lg:min-h-[520px]">
+      <div className="relative flex-1 min-h-[280px] lg:min-h-0">
+        <Image src={VENUE_PHOTO.src} alt={VENUE_PHOTO.alt} fill sizes="(max-width: 1024px) 90vw, 40vw" className="object-cover" loading="lazy" />
+        <div className="absolute left-3 top-3 flex gap-2">
+          <span className="rounded-full bg-white px-3 py-1 text-xs font-bold text-[#2c231b] border border-[#2c231b]/10">Jl. Karimata No.40</span>
+          <span className="rounded-full bg-[#2c231b] px-3 py-1 text-xs font-bold text-white">10–22</span>
+        </div>
       </div>
-      <div className="absolute bottom-0 left-0 right-0 p-5">
-        <h3 className="font-poppins text-lg font-bold leading-tight text-white">Ruang makan biasa, buat kumpul keluarga.</h3>
-        <p className="mt-1 text-sm leading-relaxed text-white/80">Meja dan kursi tertata biasa. Cukup untuk makan bareng.</p>
-        <a href="https://maps.app.goo.gl/NvCxPom7GSdYFj7Z9" target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-bold text-[#2c231b] border border-[#2c231b]/10">
+      <div className="p-5">
+        <h3 className="font-poppins text-base font-bold leading-tight text-[#2c231b]">Ruang makan biasa, buat kumpul keluarga</h3>
+        <p className="mt-1 text-sm leading-relaxed text-[#2c231b]/65">Meja dan kursi tertata biasa. Cukup untuk makan bareng.</p>
+        <a href="https://maps.app.goo.gl/NvCxPom7GSdYFj7Z9" target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex items-center gap-2 rounded-full bg-[#2c231b] px-4 py-2 text-sm font-bold text-white hover:bg-black transition-colors">
           Lihat foto lokasi
         </a>
       </div>
