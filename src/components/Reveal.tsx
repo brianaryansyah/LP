@@ -35,10 +35,10 @@ export default function Reveal({ children, className = "", delay = 0 }: RevealPr
   return (
     <div
       ref={ref}
-      className={`${className} transition-[opacity,transform] duration-700 will-change-transform [transition-timing-function:cubic-bezier(0.16,1,0.3,1)] ${
-        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+      className={`${className} transform-gpu transition-[opacity,transform] duration-[780ms] will-change-transform [transition-timing-function:cubic-bezier(0.16,1,0.3,1)] ${
+        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-[14px]"
       }`}
-      style={{ transitionDelay: `${delay}ms` }}
+      style={{ transitionDelay: `${delay}ms`, backfaceVisibility: "hidden" as const }}
     >
       {children}
     </div>
