@@ -118,6 +118,21 @@ section[id] {
 .preserve-3d { transform-style: preserve-3d; }
 .backface-hidden { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
 .rotate-y-180 { transform: rotateY(180deg); }
+/* Global lively — interactive color blending */
+@keyframes soft-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.02); }
+}
+@keyframes shimmer-slide {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+.lively-card {
+  transition: transform 500ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 500ms ease, border-color 300ms ease;
+}
+.lively-card:hover {
+  transform: translateY(-6px);
+}
 
 @keyframes menuDrop {
   0% { opacity: 0; transform: translateY(-8px) scaleY(0.98); }

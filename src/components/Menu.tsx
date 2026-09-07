@@ -36,6 +36,8 @@ export default function Menu() {
 
   return (
     <section id="menu" className="relative flex flex-col justify-center pt-16 pb-24 bg-[#fdf8f5] overflow-hidden">
+      <div className="pointer-events-none absolute -top-24 right-10 h-64 w-64 rounded-full bg-[#f5b041]/12 blur-[60px]" aria-hidden="true" />
+      <div className="pointer-events-none absolute bottom-10 left-10 h-72 w-72 rounded-full bg-white/80 blur-[50px]" aria-hidden="true" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         
         {/* Header */}
