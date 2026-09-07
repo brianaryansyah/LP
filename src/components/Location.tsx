@@ -58,7 +58,13 @@ export default function Location() {
             ></iframe>
             
             {!mapActive && (
-              <button type="button" onClick={() => setMapActive(true)} aria-label="Aktifkan peta interaktif" className="absolute inset-0 flex items-center justify-center bg-black/5">
+              <button
+                type="button"
+                onClick={() => setMapActive(true)}
+                aria-label="Aktifkan peta interaktif"
+                suppressHydrationWarning
+                className="absolute inset-0 flex items-center justify-center bg-black/5"
+              >
                 <span className="rounded-full bg-white px-4 py-2 text-sm font-bold text-[#2c231b] border border-[#2c231b]/10">Ketuk untuk geser peta</span>
               </button>
             )}

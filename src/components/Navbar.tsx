@@ -276,6 +276,7 @@ export default function Navbar() {
               aria-label={isOpen ? "Tutup menu navigasi" : "Buka menu navigasi"}
               aria-expanded={isOpen}
               aria-controls="navbar-mobile-menu"
+              suppressHydrationWarning
               className="rounded-lg bg-[#FCF8F2]/80 p-2 text-[#1C2421] shadow-sm backdrop-blur-sm transition-colors duration-200 hover:text-[#15803d] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4ADE80]"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
