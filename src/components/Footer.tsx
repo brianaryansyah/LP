@@ -102,10 +102,12 @@ export default function Footer() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Contoh: nama@email.com…"
                 aria-label="Alamat email untuk newsletter"
+                suppressHydrationWarning
                 className="w-full bg-[#3b3128] text-[#fdf8f5] px-6 py-4 rounded-full border border-[#fdf8f5]/10 focus:outline-none focus:border-[#f5b041] focus:ring-2 focus:ring-[#f5b041]/30 transition-[border-color,box-shadow] duration-300 text-sm"
               />
               <button
                 type="submit"
+                suppressHydrationWarning
                 className="absolute right-2 top-2 bottom-2 bg-[#f5b041] text-[#2c231b] px-6 rounded-full font-bold text-sm hover:bg-white transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
               >
                 Berlangganan
@@ -120,7 +122,7 @@ export default function Footer() {
         </div>
 
         <div className="text-center text-[#fdf8f5]/40 font-inter text-sm flex flex-col md:flex-row justify-between items-center gap-4">
-          <p>&copy; {new Date().getFullYear()} Mie Ayam Semangkok. Hak cipta dilindungi.</p>
+          <p suppressHydrationWarning>&copy; {new Date().getFullYear()} Mie Ayam Semangkok. Hak cipta dilindungi.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-[#f5b041] transition-colors">Kebijakan Privasi</a>
             <a href="#" className="hover:text-[#f5b041] transition-colors">Syarat Layanan</a>
