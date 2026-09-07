@@ -77,7 +77,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id">
+    <html lang="id" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
         <link
@@ -89,7 +89,10 @@ export default function RootLayout({
           href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         />
       </head>
-      <body className={`${inter.variable} ${poppins.variable} antialiased overflow-x-hidden w-full`}>
+      <body
+        className={`${inter.variable} ${poppins.variable} antialiased overflow-x-hidden w-full`}
+        suppressHydrationWarning
+      >
         <a href="#home" className="skip-link">
           Langsung ke konten utama
         </a>
