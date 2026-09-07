@@ -48,8 +48,8 @@ export default function Testimonial() {
   const [isPressed, setIsPressed] = useState(false);
 
   return (
-    <section id="testimoni" className="relative pt-14 sm:pt-16 lg:pt-20 pb-16 sm:pb-20 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+    <section id="testimoni" className="relative scroll-mt-24 bg-white overflow-hidden min-h-[60vh] sm:min-h-[70vh] lg:min-h-[75vh] flex flex-col justify-center pt-12 sm:pt-16 lg:pt-20 pb-20 sm:pb-24 lg:pb-28">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 flex-1 flex flex-col justify-center">
         <Reveal>
           <div className="text-center">
             <div className="inline-block px-3.5 py-1.5 rounded-full bg-[#f5b041]/15 text-[#2c231b] font-bold text-[11px] mb-4 uppercase tracking-[0.14em] border border-[#f5b041]/20">
