@@ -44,9 +44,13 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Image Area — flat paper, no gradient blob */}
+          {/* Right Image Area — Honea parity: float + soft glow */}
           <div className="flex-1 w-full flex justify-center lg:justify-end relative mt-12 lg:mt-0">
-            <div className="w-[90%] sm:w-[85%] max-w-[480px] aspect-[4/5] rounded-2xl overflow-hidden relative border border-[#2c231b]/10 bg-white shadow-sm">
+            <div className="pointer-events-none absolute inset-0 -z-10 flex items-center justify-center" aria-hidden="true">
+              <div className="h-[380px] w-[380px] rounded-full bg-[#f5b041]/25 blur-[70px]" />
+              <div className="absolute h-[280px] w-[280px] rounded-full bg-white/80 blur-[40px]" />
+            </div>
+            <div className="w-[90%] sm:w-[85%] max-w-[480px] aspect-[4/5] rounded-2xl overflow-hidden relative border border-[#2c231b]/10 bg-white shadow-[0_20px_50px_-16px_rgba(44,35,27,0.18)] animate-hero-float">
               <Image
                 src="/img/mi-ayam-bakso.jpg"
                 alt="Mangkok mie ayam bakso dengan topping melimpah"
