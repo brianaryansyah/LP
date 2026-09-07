@@ -69,7 +69,7 @@ section[id] {
   animation: float 8s ease-in-out infinite;
 }
 
-/* Hero — Honea parity: gradient shift + float + stagger */
+/* Hero — Honea parity: gradient shift + float + stagger — smoothed GPU */
 @keyframes gradient-shift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -78,22 +78,27 @@ section[id] {
 .hero-gradient-bg {
   background: linear-gradient(135deg, #fdf8f5 0%, #ffffff 35%, #fef7ed 65%, #fffbeb 100%);
   background-size: 200% 200%;
-  animation: gradient-shift 12s ease infinite;
+  animation: gradient-shift 16s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  will-change: background-position;
 }
 @keyframes hero-float {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-12px) rotate(1deg); }
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  50% { transform: translate3d(0, -10px, 0) rotate(0.8deg); }
 }
 .animate-hero-float {
-  animation: hero-float 5s ease-in-out infinite;
+  animation: hero-float 6s cubic-bezier(0.45, 0, 0.55, 1) infinite;
   will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(18px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translate3d(0, 20px, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
 }
 .animate-fadeUp {
-  animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
 }
 @keyframes draw {
   to { stroke-dashoffset: 0; }
@@ -101,7 +106,12 @@ section[id] {
 .hero-underline {
   stroke-dasharray: 120;
   stroke-dashoffset: 120;
-  animation: draw 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.75s forwards;
+  animation: draw 1s cubic-bezier(0.16, 1, 0.3, 1) 0.85s forwards;
+}
+@keyframes shimmer-soft {
+  0% { opacity: 0.45; }
+  50% { opacity: 0.75; }
+  100% { opacity: 0.45; }
 }
 
 @keyframes menuDrop {
