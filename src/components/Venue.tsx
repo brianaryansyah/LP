@@ -75,11 +75,12 @@ function VenueHero() {
   );
 }
 
-function FacilityFlipCard({ facility }: { facility: Facility }) {
+function FacilityFlipCard({ facility, idx }: { facility: Facility; idx: number }) {
   const [flipped, setFlipped] = useState(false);
+  const accent = idx % 2 === 0 ? "bg-[#f5b041] text-white border-[#f5b041]" : "bg-[#2c231b] text-white border-[#2c231b]";
   return (
     <div
-      className="perspective-1000 h-[280px] sm:h-[300px] w-full cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f5b041] rounded-2xl"
+      className="perspective-1000 h-[280px] sm:h-[300px] w-full cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f5b041] rounded-2xl group/flip"
       onClick={() => setFlipped((v) => !v)}
       onKeyDown={(e) => {
         if (e.key === "Enter" || e.key === " ") {
@@ -92,17 +93,17 @@ function FacilityFlipCard({ facility }: { facility: Facility }) {
       aria-pressed={flipped}
       aria-label={flipped ? `Tutup foto ${facility.title}` : `Lihat foto ${facility.title}`}
     >
-      <div className={`relative h-full w-full preserve-3d transition-transform duration-[650ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${flipped ? "rotate-y-180" : ""}`}>
-        <div className="absolute inset-0 backface-hidden rounded-2xl bg-white border border-[#2c231b]/10 shadow-[0_8px_24px_rgba(44,35,27,0.06)] p-5 sm:p-6 flex flex-col">
+      <div className={`relative h-full w-full preserve-3d transition-transform duration-[650ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${flipped ? "rotate-y-180" : ""} group-hover/flip:shadow-[0_12px_32px_rgba(44,35,27,0.12)]`}>
+        <div className="absolute inset-0 backface-hidden rounded-2xl bg-white border border-[#2c231b]/10 shadow-[0_8px_24px_rgba(44,35,27,0.06)] group-hover/flip:shadow-[0_12px_32px_rgba(44,35,27,0.1)] p-5 sm:p-6 flex flex-col transition-shadow duration-300">
           <div className="flex items-start justify-between gap-3">
-            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#fdf8f5] border border-[#2c231b]/10 text-sm text-[#2c231b]" aria-hidden="true">
+            <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border text-sm shadow-sm transition-transform duration-300 group-hover/flip:scale-110 group-hover/flip:rotate-3 ${accent}`} aria-hidden="true">
               <i className={facility.icon}></i>
             </span>
-            <span className="rounded-full bg-white px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#2c231b] border border-[#2c231b]/10 shrink-0">{facility.badge}</span>
+            <span className="rounded-full bg-[#fdf8f5] px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#2c231b] border border-[#2c231b]/10 shrink-0">{facility.badge}</span>
           </div>
           <h3 className="font-poppins text-[16px] font-bold text-[#2c231b] mt-4">{facility.title}</h3>
           <p className="mt-2 text-sm leading-relaxed text-[#2c231b]/65 flex-1">{facility.desc}</p>
-          <span className="mt-4 inline-flex items-center gap-1.5 text-xs font-bold text-[#2c231b]">Ketuk untuk lihat foto <i className="fas fa-arrow-right text-[10px]" aria-hidden="true"></i></span>
+          <span className="mt-4 inline-flex items-center gap-1.5 text-xs font-bold text-[#e09132]">Ketuk untuk lihat foto <i className="fas fa-arrow-right text-[10px] transition-transform group-hover/flip:translate-x-1" aria-hidden="true"></i></span>
         </div>
         <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-2xl overflow-hidden border border-[#2c231b]/10 shadow-[0_12px_32px_rgba(44,35,27,0.12)]">
           <Image src={facility.img} alt={facility.alt} fill sizes="(max-width: 640px) 90vw, 360px" className="object-cover" loading="lazy" />
@@ -120,7 +121,9 @@ function FacilityFlipCard({ facility }: { facility: Facility }) {
 
 export default function Venue() {
   return (
-    <section id="fasilitas" className="relative scroll-mt-24 overflow-hidden bg-white pt-12 sm:pt-16 lg:pt-20 pb-20 sm:pb-24 lg:pb-28">
+    <section id="fasilitas" className="relative scroll-mt-24 overflow-hidden bg-gradient-to-b from-white via-[#fffbf0] to-white pt-12 sm:pt-16 lg:pt-20 pb-20 sm:pb-24 lg:pb-28">
+      <div className="pointer-events-none absolute top-10 left-1/2 -translate-x-1/2 h-80 w-[600px] rounded-full bg-[#f5b041]/8 blur-[80px]" aria-hidden="true" />
+      <div className="pointer-events-none absolute bottom-20 right-0 h-64 w-64 rounded-full bg-[#2c231b]/5 blur-[60px]" aria-hidden="true" />
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal>
           <div className="mb-10 text-center md:mb-14">
@@ -142,7 +145,7 @@ export default function Venue() {
           </Reveal>
           {FACILITIES.map((facility, idx) => (
             <Reveal key={facility.title} delay={Math.min(idx * 70, 210)}>
-              <FacilityFlipCard facility={facility} />
+              <FacilityFlipCard facility={facility} idx={idx} />
             </Reveal>
           ))}
         </div>
