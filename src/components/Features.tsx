@@ -5,7 +5,9 @@ import WaveDivider from "@/components/WaveDivider";
 export default function Features() {
   return (
     <section id="unggulan" className="relative min-h-screen flex flex-col justify-center py-16 lg:py-24 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div className="pointer-events-none absolute -top-20 -right-20 h-72 w-72 rounded-full bg-[#f5b041]/10 blur-[70px]" aria-hidden="true" />
+      <div className="pointer-events-none absolute bottom-0 left-1/3 h-64 w-64 rounded-full bg-[#2c231b]/5 blur-[60px]" aria-hidden="true" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         
         <Reveal>
         <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16 mb-16 lg:mb-24">
@@ -51,16 +53,22 @@ export default function Features() {
               <span className="text-[#2c231b]/60 text-xs">ulasan</span>
             </div>
 
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
-              <div className="bg-white p-4 rounded-xl flex items-start gap-3 border border-[#2c231b]/10">
-                <i className="fas fa-clock text-sm text-[#2c231b] mt-1" aria-hidden="true"></i>
-                <div>
-                  <h4 className="text-sm font-bold text-[#2c231b] font-poppins">Kaldu 8 jam</h4>
-                  <p className="text-[#2c231b]/60 text-xs leading-relaxed mt-1">Tulang ayam direbus sejak subuh. Tidak pakai penyedap berlebih.</p>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+              <div className="group relative overflow-hidden rounded-2xl p-[1px] bg-gradient-to-br from-[#f5b041]/40 via-[#f5b041]/10 to-transparent hover:from-[#f5b041]/60 hover:via-[#f5b041]/20 transition-colors duration-500">
+                <div className="bg-gradient-to-br from-[#fffbeb] to-white rounded-2xl p-4 flex items-start gap-3.5 hover:shadow-[0_10px_24px_rgba(245,176,65,0.12)] transition-shadow duration-300">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#f5b041] text-white shadow-sm group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300" aria-hidden="true">
+                    <i className="fas fa-fire text-sm"></i>
+                  </span>
+                  <div>
+                    <h4 className="text-sm font-bold text-[#2c231b] font-poppins">Kaldu 8 jam</h4>
+                    <p className="text-[#2c231b]/60 text-xs leading-relaxed mt-1">Tulang ayam direbus sejak subuh. Tidak pakai penyedap berlebih.</p>
+                  </div>
                 </div>
               </div>
-              <div className="bg-white p-4 rounded-xl flex items-start gap-3 border border-[#2c231b]/10">
-                <i className="fas fa-utensils text-sm text-[#2c231b] mt-1" aria-hidden="true"></i>
+              <div className="group bg-white p-4 rounded-2xl flex items-start gap-3.5 border border-[#2c231b]/10 hover:border-[#2c231b]/20 hover:shadow-[0_10px_24px_rgba(44,35,27,0.08)] hover:-translate-y-0.5 transition-[transform,box-shadow,border-color] duration-300">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#2c231b] text-white shadow-sm group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300" aria-hidden="true">
+                  <i className="fas fa-utensils text-sm"></i>
+                </span>
                 <div>
                   <h4 className="text-sm font-bold text-[#2c231b] font-poppins">Mie ditarik tangan</h4>
                   <p className="text-[#2c231b]/60 text-xs leading-relaxed mt-1">Adonan dibuat pagi, tekstur kenyal saat digigit.</p>
