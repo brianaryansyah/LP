@@ -52,6 +52,7 @@ export default function Hero() {
                 alt="Mangkok mie ayam bakso dengan topping melimpah"
                 fill
                 priority
+                fetchPriority="high"
                 sizes="(max-width: 640px) 90vw, (max-width: 1024px) 85vw, 480px"
                 className="object-cover"
               />
