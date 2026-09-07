@@ -95,6 +95,14 @@ section[id] {
 .animate-fadeUp {
   animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
+@keyframes draw {
+  to { stroke-dashoffset: 0; }
+}
+.hero-underline {
+  stroke-dasharray: 120;
+  stroke-dashoffset: 120;
+  animation: draw 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.75s forwards;
+}
 
 @keyframes menuDrop {
   0% { opacity: 0; transform: translateY(-8px) scaleY(0.98); }
