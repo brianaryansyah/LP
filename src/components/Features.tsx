@@ -50,7 +50,7 @@ export default function Features() {
             </div>
 
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
-              <div className="bg-[#fdf8f5] p-4 rounded-xl flex items-start gap-3 border border-[#2c231b]/10 border-l-4 border-l-[#f5b041]">
+              <div className="bg-white p-4 rounded-xl flex items-start gap-3 border border-[#2c231b]/10">
                 <i className="fas fa-clock text-sm text-[#2c231b] mt-1" aria-hidden="true"></i>
                 <div>
                   <h4 className="text-sm font-bold text-[#2c231b] font-poppins">Kaldu 8 jam</h4>
