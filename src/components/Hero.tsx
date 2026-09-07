@@ -24,7 +24,7 @@ export default function Hero() {
             
             {/* Description — stagger 2 */}
             <p className="text-base sm:text-lg lg:text-xl text-[#2c231b]/80 font-inter mb-8 max-w-2xl leading-relaxed animate-fadeUp" style={{ animationDelay: "220ms" }}>
-              Mie kenyal, kuah kaldu ayam gurih, topping ayam kecap melimpah. Resep keluarga sejak 1990, dimasak harian dan rasa selalu sama.
+              Mie kenyal, kuah kaldu ayam gurih, topping ayam kecap melimpah. Resep keluarga yang dijaga, dimasak harian dan rasa selalu sama.
             </p>
             
             {/* Action Buttons — stagger 3 */}
@@ -39,8 +39,8 @@ export default function Hero() {
             
             {/* Trust Indicators — stagger 4 */}
             <div className="mt-8 flex items-center gap-3 pt-5 border-t border-[#2c231b]/10 text-xs sm:text-sm animate-fadeUp" style={{ animationDelay: "500ms" }}>
-              <span className="rounded-full border border-[#2c231b]/10 bg-white px-3 py-1.5 font-semibold text-[#2c231b]">Sejak 1990</span>
-              <span className="text-[#2c231b]/60">Pasar Pagi • Karimata • Ditarik pagi • Kaldu 8 jam</span>
+              <span className="rounded-full border border-[#2c231b]/10 bg-white px-3 py-1.5 font-semibold text-[#2c231b]">Dibuat Harian</span>
+              <span className="text-[#2c231b]/60">Karimata • Ditarik pagi • Kaldu 8 jam</span>
             </div>
           </div>
 

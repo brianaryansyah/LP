@@ -24,7 +24,7 @@ function BrandMark() {
           Mie Ayam Semangkok
         </span>
         <span className="hidden text-[10px] font-medium uppercase tracking-widest text-[#1C2421]/60 sm:block sm:text-xs">
-          Mie Ayam & Bakso • Sejak 1990
+          Mie Ayam & Bakso • Dapur Karimata
         </span>
       </span>
     </Link>

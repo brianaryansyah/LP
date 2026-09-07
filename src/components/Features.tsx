@@ -23,8 +23,8 @@ export default function Features() {
               </div>
             </div>
             <div className="absolute -bottom-4 -left-2 sm:-left-3 bg-white px-4 py-3 rounded-2xl border border-[#2c231b]/10 shadow-[0_12px_32px_rgba(44,35,27,0.14)] backdrop-blur-sm">
-              <span className="block text-[18px] font-extrabold text-[#2c231b] font-poppins leading-none">1990</span>
-              <span className="text-[11px] font-medium tracking-wide text-[#2c231b]/60">Sejak Pasar Pagi</span>
+              <span className="block text-[18px] font-extrabold text-[#2c231b] font-poppins leading-none">Segar</span>
+              <span className="text-[11px] font-medium tracking-wide text-[#2c231b]/60">Dibuat Tiap Pagi</span>
             </div>
           </div>
 
@@ -37,11 +37,11 @@ export default function Features() {
               Mie ayam yang dimasak harian
             </h2>
             <p className="text-sm sm:text-base lg:text-lg text-[#2c231b]/70 font-inter mb-8 sm:mb-10 leading-relaxed">
-              Sejak 1990 di Pasar Pagi, sekarang di Jl. Karimata 40. Mie disiapkan pagi, kaldu direbus beberapa jam, ayam dimasak seperti biasa. Tidak ada yang istimewa, hanya dibuat rutin.
+              Dari dapur di Jl. Karimata 40, mie disiapkan tiap pagi, kaldu direbus beberapa jam, ayam dimasak seperti biasa. Tidak ada yang istimewa, hanya dibuat rutin.
             </p>
 
             <div className="flex items-center gap-4 py-3 border-y border-[#2c231b]/10 mb-5 text-sm">
-              <span className="font-bold text-[#2c231b]">Sejak 1990</span>
+              <span className="font-bold text-[#2c231b]">Tiap Pagi</span>
               <span className="text-[#2c231b]/30">•</span>
               <span className="text-[#2c231b]/70">Disiapkan pagi</span>
               <span className="text-[#2c231b]/30">•</span>

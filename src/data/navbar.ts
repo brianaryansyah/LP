@@ -34,9 +34,9 @@ export const NAVBAR_ENTRIES: NavbarEntry[] = [
     href: "/tentang/kisah",
     sectionId: "unggulan",
     children: [
-      { label: "Kisah Semangkok", href: "/tentang/kisah", desc: "Dari gerobak 1990 sampai Karimata" },
+      { label: "Kisah Semangkok", href: "/tentang/kisah", desc: "Dari gerobak sampai Karimata" },
       { label: "Keunggulan Kami", href: "/tentang/keunggulan", desc: "Kaldu 8 jam, mie ditarik harian" },
-      { label: "Sejarah Resep 1990", href: "/tentang/sejarah", desc: "Resep keluarga turun temurun" },
+      { label: "Sejarah Resep", href: "/tentang/sejarah", desc: "Resep keluarga turun temurun" },
       { label: "Sertifikasi & Kualitas", href: "/tentang/kualitas", desc: "100% halal, tamu puas 4.9" },
       { label: "Tim Kami", href: "/tentang/tim", desc: "Sapa kami di warung" },
     ],

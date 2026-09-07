@@ -11,7 +11,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 export const metadata: Metadata = {
   title: "Kisah Semangkok",
   description:
-    "Perjalanan Mie Ayam Semangkok dari gerobak Pasar Pagi tahun 1990 sampai warung di Jl. Karimata No.40 Pemalang.",
+    "Perjalanan Mie Ayam Semangkok dari gerobak Pasar Pagi sampai warung di Jl. Karimata No.40 Pemalang.",
 };
 
 const stats = [
@@ -27,7 +27,7 @@ export default function KisahPage() {
       <SubHero
         eyebrow="Kisah Semangkok"
         title="Dari Gerobak Pasar Pagi sampai Karimata"
-        desc="Sejak 1990 kami menarik mie setiap pagi dan merebus kaldu delapan jam. Resepnya tidak berubah, yang berubah hanya tempatnya yang makin nyaman."
+        desc="Sejak awal kami menarik mie setiap pagi dan merebus kaldu delapan jam. Resepnya tidak berubah, yang berubah hanya tempatnya yang makin nyaman."
         section="Tentang Kami"
       />
       <section className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8">
@@ -50,7 +50,7 @@ export default function KisahPage() {
           <div className="space-y-5 font-inter text-sm leading-relaxed text-[#2c231b]/75 sm:text-base lg:col-span-3">
             <Reveal>
               <p>
-                Semangkok berawal dari sebuah gerobak di Pasar Pagi Pemalang pada tahun 1990. Tiap
+                Semangkok berawal dari sebuah gerobak di Pasar Pagi Pemalang. Tiap
                 subuh adonan mie disiapkan, ayam kampung dimasak kecap perlahan, dan kaldu direbus
                 sampai gurih. Tamu pertama kami adalah pedagang pasar dan anak sekolah yang mampir
                 sebelum beraktivitas.

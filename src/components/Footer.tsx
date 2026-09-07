@@ -27,11 +27,11 @@ export default function Footer() {
               </div>
               <div>
                 <h3 className="text-2xl font-bold font-poppins text-[#fdf8f5] leading-none tracking-tight">Semangkok</h3>
-                <span className="text-[11px] text-[#fdf8f5]/50 font-medium tracking-[0.15em] uppercase">Mie Ayam & Bakso • Sejak 1990</span>
+                <span className="text-[11px] text-[#fdf8f5]/50 font-medium tracking-[0.15em] uppercase">Mie Ayam & Bakso • Dapur Karimata</span>
               </div>
             </div>
             <p className="text-[#fdf8f5]/60 font-inter mb-8 text-sm leading-relaxed pr-4">
-              Warung mie ayam di Pemalang sejak 1990. Makan di tempat atau pesan antar, tiap hari buka.
+              Warung mie ayam di Pemalang. Makan di tempat atau pesan antar, tiap hari buka.
             </p>
             <div className="flex gap-3">
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Ikuti kami di Instagram" className="w-10 h-10 rounded-full bg-[#f5b041] text-[#2c231b] flex items-center justify-center hover:bg-white hover:-translate-y-1 hover:shadow-md transition-[transform,background-color,box-shadow] duration-300 ring-1 ring-black/5">

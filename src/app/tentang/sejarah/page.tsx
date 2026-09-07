@@ -9,14 +9,14 @@ import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata: Metadata = {
-  title: "Sejarah Resep 1990",
+  title: "Sejarah Resep",
   description:
-    "Linimasa resep Mie Ayam Semangkok dari gerobak Pasar Pagi 1990 sampai dapur Karimata hari ini.",
+    "Linimasa resep Mie Ayam Semangkok dari gerobak Pasar Pagi sampai dapur Karimata hari ini.",
 };
 
 const timeline = [
   {
-    year: "1990",
+    year: "Awal Mula",
     title: "Gerobak Pasar Pagi",
     desc: "Jualan pertama dengan gerobak. Mie ditarik tangan, kaldu direbus di dapur rumah.",
   },
@@ -53,8 +53,8 @@ export default function SejarahPage() {
     <main className="relative min-h-screen bg-[#fdf8f5]">
       <Navbar />
       <SubHero
-        eyebrow="Sejarah Resep 1990"
-        title="Satu Resep, Tiga Puluh Tahun"
+        eyebrow="Sejarah Resep"
+        title="Satu Resep, Puluhan Tahun"
         desc="Resep ini tidak pernah ditulis ulang. Yang berubah hanya dapurnya yang makin besar dan mejanya yang makin banyak."
         section="Tentang Kami"
       />
@@ -70,7 +70,7 @@ export default function SejarahPage() {
               loading="lazy"
             />
             <figcaption className="absolute bottom-4 left-4 rounded-full bg-[#2c231b]/80 px-4 py-2 text-xs font-medium text-[#fdf8f5] ">
-              Resep yang sama sejak gerobak 1990
+              Resep yang sama sejak gerobak awal
             </figcaption>
           </figure>
         </Reveal>

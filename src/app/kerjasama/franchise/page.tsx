@@ -11,7 +11,7 @@ import { waLink } from "@/data/navbar";
 export const metadata: Metadata = {
   title: "Peluang Franchise",
   description:
-    "Buka cabang Mie Ayam Semangkok di kotamu. Resep 1990, training sampai bisa, pasokan bahan terjaga.",
+    "Buka cabang Mie Ayam Semangkok di kotamu. Resep keluarga, training sampai bisa, pasokan bahan terjaga.",
 };
 
 const paket = [

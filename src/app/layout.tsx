@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s | Semangkok",
   },
   description:
-    "Resep keluarga sejak 1990. Mie ayam kenyal, bakso, dan kuah kaldu gurih di Pemalang. Bisa makan di tempat atau pesan antar.",
+    "Resep keluarga yang dijaga. Mie ayam kenyal, bakso, dan kuah kaldu gurih di Pemalang. Bisa makan di tempat atau pesan antar.",
   applicationName: "Semangkok",
   keywords: [
     "mie ayam",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     siteName: "Semangkok",
     title: "Semangkok - Mie Ayam & Bakso",
       description:
-        "Resep keluarga sejak 1990. Mie ayam kenyal, bakso, dan kuah kaldu gurih di Pemalang. Bisa makan di tempat atau pesan antar.",
+        "Resep keluarga yang dijaga. Mie ayam kenyal, bakso, dan kuah kaldu gurih di Pemalang. Bisa makan di tempat atau pesan antar.",
     url: "https://semangkok.id",
     images: [
       {
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Semangkok - Mie Ayam & Bakso",
     description:
-      "Resep keluarga sejak 1990. Mie ayam kenyal, bakso, dan kuah kaldu gurih di Pemalang.",
+      "Resep keluarga yang dijaga. Mie ayam kenyal, bakso, dan kuah kaldu gurih di Pemalang.",
     images: ["/img/mi-ayam-bakso.jpg"],
   },
   alternates: {
