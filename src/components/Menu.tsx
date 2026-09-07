@@ -50,7 +50,7 @@ export default function Menu() {
         </div>
         </Reveal>
 
-        {/* Menu — redesigned: 3 equal cards, smooth hover */}
+        {/* Menu redesigned: 3 equal cards smooth hover */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {menuItems.map((item, idx) => (
             <Reveal key={item.name} delay={idx * 90}>
@@ -77,7 +77,7 @@ export default function Menu() {
           <div className="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4 rounded-2xl bg-[#2c231b] p-5 sm:p-6 text-[#fdf8f5] border border-white/5 shadow-[0_12px_32px_rgba(44,35,27,0.18)]">
             <div>
               <p className="text-[11px] font-bold uppercase tracking-wider text-[#f5b041]">Catatan dapur</p>
-              <h3 className="text-base font-bold font-poppins mt-1">Sambal terpisah — tuang sendiri</h3>
+              <h3 className="text-base font-bold font-poppins mt-1">Sambal terpisah, tuang sendiri</h3>
               <p className="text-sm text-[#fdf8f5]/70 mt-1 leading-relaxed max-w-xl">Semua mie disajikan tidak pedas. Sambal di mangkuk kecil, aman buat anak, bebas tambah buat yang suka pedas.</p>
             </div>
             <a href="#reservasi" className="shrink-0 inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-bold text-[#2c231b] hover:bg-[#f5b041] transition-colors duration-300 self-stretch sm:self-auto justify-center">Reservasi meja</a>

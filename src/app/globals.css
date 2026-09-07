@@ -69,7 +69,7 @@ section[id] {
   animation: float 8s ease-in-out infinite;
 }
 
-/* Hero — Honea parity: gradient shift + float + stagger — smoothed GPU */
+/* Hero Honea parity: gradient shift + float + stagger smoothed GPU */
 @keyframes gradient-shift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }

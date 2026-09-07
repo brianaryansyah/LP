@@ -9,7 +9,7 @@ export default function Features() {
         
         <Reveal>
         <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16 mb-16 lg:mb-24">
-          {/* Left Collage — redesigned: layered editorial, smooth hover */}
+          {/* Left Collage redesigned: layered editorial smooth hover */}
           <div className="flex-1 w-full relative max-w-[560px] mx-auto lg:max-w-none">
             <div className="grid grid-cols-12 gap-3 sm:gap-4">
               <div className="col-span-12 relative rounded-2xl overflow-hidden aspect-[16/10] border border-[#2c231b]/10 shadow-[0_12px_32px_rgba(44,35,27,0.1)] group">
