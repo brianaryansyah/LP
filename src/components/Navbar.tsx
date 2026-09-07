@@ -44,6 +44,7 @@ function DesktopDropdown({
   onToggle: (label: string) => void;
   onClose: () => void;
 }) {
+  // a11y: dropdown button reflects active route via aria-current on parent nav
   const isOpen = openMenu === entry.label;
   const panelId = `nav-panel-${entry.label.replace(/\s+/g, "-").toLowerCase()}`;
 
@@ -250,7 +251,12 @@ export default function Navbar() {
                   onClose={() => setOpenMenu(null)}
                 />
               ) : (
-                <Link key={entry.label} href={entry.href} className={plainLinkClass(entry)}>
+                <Link
+                  key={entry.label}
+                  href={entry.href}
+                  aria-current={isEntryActive(entry) ? "page" : undefined}
+                  className={plainLinkClass(entry)}
+                >
                   {entry.label}
                 </Link>
               )
