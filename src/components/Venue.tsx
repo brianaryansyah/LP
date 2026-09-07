@@ -19,35 +19,35 @@ const VENUE_PHOTO = {
 const FACILITIES: Facility[] = [
   {
     title: "Playground Anak",
-    desc: "Sudut kecil di area makan. Anak bisa main sementara menunggu pesanan.",
+    desc: "Pojok dekat kasir, karpet dan ayunan kecil. Dari meja masih kelihatan anak main.",
     img: "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?q=80&w=800&auto=format&fit=crop",
     alt: "Area playground anak di Semangkok",
     icon: "fas fa-child",
-    badge: "Tersedia",
+    badge: "Di dalam",
   },
   {
     title: "WiFi Gratis",
-    desc: "WiFi tersedia untuk pengunjung. Cocok buat yang mau sambil kerja santai.",
+    desc: "Password tanya kasir. Cukup buat nunggu pesanan atau buka tugas sebentar.",
     img: "https://images.unsplash.com/photo-1521017432531-fbd92d768814?q=80&w=800&auto=format&fit=crop",
     alt: "Pengunjung bekerja dengan laptop di warung Semangkok",
     icon: "fas fa-wifi",
-    badge: "Gratis",
+    badge: "Tanya kasir",
   },
   {
     title: "TV Bersama",
-    desc: "Ada TV di ruang makan. Biasanya nyala untuk acara umum.",
+    desc: "Di dinding dekat kasir. Kalau ada bola, biasanya meja ikut nonton bareng.",
     img: "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?q=80&w=800&auto=format&fit=crop",
     alt: "Fasilitas TV layar besar untuk nonton bareng",
     icon: "fas fa-tv",
-    badge: "Tersedia",
+    badge: "Di dinding",
   },
   {
     title: "Karaoke Santai",
-    desc: "Karaoke ada di waktu tertentu, biasanya akhir pekan. Tanya staf untuk jadwal.",
+    desc: "Alat standby di gudang. Keluar kalau ada yang minta malam minggu, suara dijaga.",
     img: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=800&auto=format&fit=crop",
     alt: "Mikrofon karaoke keluarga di Semangkok",
     icon: "fas fa-microphone-alt",
-    badge: "Akhir pekan",
+    badge: "Malam minggu",
   },
 
 ];
