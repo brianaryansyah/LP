@@ -14,6 +14,7 @@ export default function Reveal({ children, className = "", delay = 0 }: RevealPr
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+    // respect reduced-motion without causing hydration mismatch (server renders hidden, client syncs via effect)
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       setVisible(true);
       return;
