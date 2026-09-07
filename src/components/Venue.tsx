@@ -1,3 +1,5 @@
+"use client";
+import { useState } from "react";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import WaveDivider from "@/components/WaveDivider";
@@ -73,23 +75,46 @@ function VenueHero() {
   );
 }
 
-function FacilityCard({ facility }: { facility: Facility }) {
+function FacilityFlipCard({ facility }: { facility: Facility }) {
+  const [flipped, setFlipped] = useState(false);
   return (
-    <article className="group flex flex-col overflow-hidden rounded-2xl bg-white border border-[#2c231b]/10 shadow-[0_8px_24px_rgba(44,35,27,0.05)] hover:shadow-[0_14px_32px_rgba(44,35,27,0.09)] transition-shadow duration-500">
-      <div className="relative aspect-[16/11] w-full overflow-hidden">
-        <Image src={facility.img} alt={facility.alt} fill sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 25vw" className="object-cover transition-transform duration-[800ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.06]" loading="lazy" />
-        <span className="absolute left-3 top-3 rounded-full bg-white/95 backdrop-blur-sm px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#2c231b] border border-[#2c231b]/10 shadow-sm">{facility.badge}</span>
-      </div>
-      <div className="flex flex-1 items-start gap-3 p-4 sm:p-5">
-        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#fdf8f5] border border-[#2c231b]/10 text-sm text-[#2c231b] group-hover:bg-[#2c231b] group-hover:text-white group-hover:border-[#2c231b] transition-colors duration-300" aria-hidden="true">
-          <i className={facility.icon}></i>
-        </span>
-        <div>
-          <h3 className="font-poppins text-[14px] font-bold text-[#2c231b]">{facility.title}</h3>
-          <p className="mt-1 text-xs leading-relaxed text-[#2c231b]/65">{facility.desc}</p>
+    <div
+      className="perspective-1000 h-[280px] sm:h-[300px] w-full cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f5b041] rounded-2xl"
+      onClick={() => setFlipped((v) => !v)}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          setFlipped((v) => !v);
+        }
+      }}
+      role="button"
+      tabIndex={0}
+      aria-pressed={flipped}
+      aria-label={flipped ? `Tutup foto ${facility.title}` : `Lihat foto ${facility.title}`}
+    >
+      <div className={`relative h-full w-full preserve-3d transition-transform duration-[650ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${flipped ? "rotate-y-180" : ""}`}>
+        <div className="absolute inset-0 backface-hidden rounded-2xl bg-white border border-[#2c231b]/10 shadow-[0_8px_24px_rgba(44,35,27,0.06)] p-5 sm:p-6 flex flex-col">
+          <div className="flex items-start justify-between gap-3">
+            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#fdf8f5] border border-[#2c231b]/10 text-sm text-[#2c231b]" aria-hidden="true">
+              <i className={facility.icon}></i>
+            </span>
+            <span className="rounded-full bg-white px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#2c231b] border border-[#2c231b]/10 shrink-0">{facility.badge}</span>
+          </div>
+          <h3 className="font-poppins text-[16px] font-bold text-[#2c231b] mt-4">{facility.title}</h3>
+          <p className="mt-2 text-sm leading-relaxed text-[#2c231b]/65 flex-1">{facility.desc}</p>
+          <span className="mt-4 inline-flex items-center gap-1.5 text-xs font-bold text-[#2c231b]">Ketuk untuk lihat foto <i className="fas fa-arrow-right text-[10px]" aria-hidden="true"></i></span>
+        </div>
+        <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-2xl overflow-hidden border border-[#2c231b]/10 shadow-[0_12px_32px_rgba(44,35,27,0.12)]">
+          <Image src={facility.img} alt={facility.alt} fill sizes="(max-width: 640px) 90vw, 360px" className="object-cover" loading="lazy" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" aria-hidden="true" />
+          <div className="absolute bottom-0 left-0 right-0 p-4">
+            <h4 className="text-sm font-bold text-white font-poppins">{facility.title}</h4>
+            <p className="text-xs text-white/80 mt-1 line-clamp-2">{facility.alt}</p>
+          </div>
+          <span className="absolute top-3 right-3 rounded-full bg-white/90 backdrop-blur px-2.5 py-1 text-[10px] font-bold text-[#2c231b] border border-white/40">Ketuk untuk kembali</span>
         </div>
       </div>
-    </article>
+    </div>
   );
 }
 
@@ -111,13 +136,13 @@ export default function Venue() {
           </div>
         </Reveal>
 
-        <div className="grid grid-cols-1 gap-4 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 items-stretch">
           <Reveal className="lg:row-span-2">
             <VenueHero />
           </Reveal>
           {FACILITIES.map((facility, idx) => (
             <Reveal key={facility.title} delay={Math.min(idx * 70, 210)}>
-              <FacilityCard facility={facility} />
+              <FacilityFlipCard facility={facility} />
             </Reveal>
           ))}
         </div>
