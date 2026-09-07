@@ -69,6 +69,33 @@ section[id] {
   animation: float 8s ease-in-out infinite;
 }
 
+/* Hero — Honea parity: gradient shift + float + stagger */
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.hero-gradient-bg {
+  background: linear-gradient(135deg, #fdf8f5 0%, #ffffff 35%, #fef7ed 65%, #fffbeb 100%);
+  background-size: 200% 200%;
+  animation: gradient-shift 12s ease infinite;
+}
+@keyframes hero-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(1deg); }
+}
+.animate-hero-float {
+  animation: hero-float 5s ease-in-out infinite;
+  will-change: transform;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeUp {
+  animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
 @keyframes menuDrop {
   0% { opacity: 0; transform: translateY(-8px) scaleY(0.98); }
   100% { opacity: 1; transform: translateY(0) scaleY(1); }
@@ -107,6 +134,9 @@ section[id] {
     scroll-behavior: auto;
   }
   .animate-float,
+  .animate-hero-float,
+  .hero-gradient-bg,
+  .animate-fadeUp,
   .animate__animated,
   *,
   *::before,
