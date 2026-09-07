@@ -95,7 +95,7 @@ function FacilityCard({ facility }: { facility: Facility }) {
 
 export default function Venue() {
   return (
-    <section id="fasilitas" className="relative flex scroll-mt-20 flex-col justify-center overflow-hidden bg-white py-16 lg:py-24">
+    <section id="fasilitas" className="relative scroll-mt-24 overflow-hidden bg-white pt-12 sm:pt-16 lg:pt-20 pb-20 sm:pb-24 lg:pb-28">
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal>
           <div className="mb-10 text-center md:mb-14">
