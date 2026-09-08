@@ -18,7 +18,7 @@ export default function KeunggulanGrid() {
       {points.map((p, i) => (
         <Reveal key={p.title} delay={(i % 3) * 90}>
           <div
-            className="perspective-1000 h-[220px] sm:h-[230px] cursor-pointer"
+            className="perspective-1000 h-[240px] sm:h-[230px] cursor-pointer touch-manipulation group"
             onMouseEnter={() => setFlipped(i)}
             onMouseLeave={() => setFlipped(null)}
             onClick={() => setFlipped(flipped === i ? null : i)}
@@ -26,8 +26,9 @@ export default function KeunggulanGrid() {
             tabIndex={0}
             onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setFlipped(flipped === i ? null : i); } }}
             aria-label={`${p.title} detail`}
+            aria-pressed={flipped === i}
           >
-            <div className={`relative h-full w-full preserve-3d transition-transform duration-[650ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${flipped === i ? "rotate-y-180" : ""}`}>
+            <div className={`relative h-full w-full preserve-3d transition-transform duration-[650ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform ${flipped === i ? "rotate-y-180" : "group-hover:rotate-y-180"}`}>
               <div className="absolute inset-0 backface-hidden rounded-2xl border border-[#2c231b]/5 bg-white p-6 shadow-sm flex flex-col sm:rounded-xl">
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#f5b041]/15 text-[#f5b041] text-lg group-hover:scale-110 transition-transform duration-300" aria-hidden="true">
                   <i className={p.icon} aria-hidden="true"></i>
