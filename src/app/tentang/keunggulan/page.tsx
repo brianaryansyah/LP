@@ -8,6 +8,7 @@ import Reveal from "@/components/Reveal";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import KeunggulanGrid from "@/components/KeunggulanGrid";
+import RitmeTimeline from "@/components/RitmeTimeline";
 
 export const metadata: Metadata = {
   title: "Keunggulan Kami",
@@ -38,30 +39,23 @@ export default function KeunggulanPage() {
         <KeunggulanGrid />
         <Reveal delay={100}>
           <div className="mt-10 grid grid-cols-1 gap-6 overflow-hidden rounded-[2rem] bg-[#2c231b] p-6 sm:rounded-[3rem] sm:p-10 lg:grid-cols-2 lg:gap-10">
-            <div className="relative h-56 w-full overflow-hidden rounded-2xl sm:h-72 sm:rounded-xl">
+            <div className="relative h-56 w-full overflow-hidden rounded-2xl sm:h-72 sm:rounded-xl group">
               <Image
                 src="/img/mi-ayam.jpg"
                 alt="Mangkok mie ayam dengan topping ayam kecap"
                 fill
                 sizes="(max-width: 1024px) 90vw, 40vw"
-                className="object-cover"
+                className="object-cover transition-transform duration-[800ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]"
                 loading="lazy"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true" />
             </div>
             <div>
               <h2 className="font-poppins text-xl font-extrabold text-[#fdf8f5] sm:text-2xl">
                 Ritme dapur sehari
               </h2>
-              <ul className="mt-5 space-y-4">
-                {ritme.map((r) => (
-                  <li key={r.time} className="flex items-center gap-4">
-                    <span className="w-14 shrink-0 rounded-lg bg-[#f5b041]/15 px-2 py-1 text-center font-poppins text-sm font-extrabold text-[#f5b041]">
-                      {r.time}
-                    </span>
-                    <span className="font-inter text-sm text-[#fdf8f5]/80">{r.desc}</span>
-                  </li>
-                ))}
-              </ul>
+              <p className="mt-2 text-xs text-white/50">Arahkan kursor untuk melihat detail, highlight otomatis sesuai jam sekarang.</p>
+              <RitmeTimeline />
             </div>
           </div>
         </Reveal>
