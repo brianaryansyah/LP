@@ -1,5 +1,3 @@
-"use client";
-import { useState } from "react";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import WaveDivider from "@/components/WaveDivider";
@@ -76,24 +74,10 @@ function VenueHero() {
 }
 
 function FacilityFlipCard({ facility, idx }: { facility: Facility; idx: number }) {
-  const [flipped, setFlipped] = useState(false);
   const accent = idx % 2 === 0 ? "bg-[#f5b041] text-white border-[#f5b041]" : "bg-[#2c231b] text-white border-[#2c231b]";
   return (
-    <div
-      className="perspective-1000 h-[280px] sm:h-[300px] w-full cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f5b041] rounded-2xl group/flip"
-      onClick={() => setFlipped((v) => !v)}
-      onKeyDown={(e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          setFlipped((v) => !v);
-        }
-      }}
-      role="button"
-      tabIndex={0}
-      aria-pressed={flipped}
-      aria-label={flipped ? `Tutup foto ${facility.title}` : `Lihat foto ${facility.title}`}
-    >
-      <div className={`relative h-full w-full preserve-3d transition-transform duration-[650ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${flipped ? "rotate-y-180" : ""} group-hover/flip:shadow-[0_12px_32px_rgba(44,35,27,0.12)]`}>
+    <div className="perspective-1000 h-[280px] sm:h-[300px] w-full rounded-2xl group/flip focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f5b041]">
+      <div className="relative h-full w-full preserve-3d transition-transform duration-[700ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover/flip:rotate-y-180 group-focus-within:rotate-y-180">
         <div className="absolute inset-0 backface-hidden rounded-2xl bg-white border border-[#2c231b]/10 shadow-[0_8px_24px_rgba(44,35,27,0.06)] group-hover/flip:shadow-[0_12px_32px_rgba(44,35,27,0.1)] p-5 sm:p-6 flex flex-col transition-shadow duration-300">
           <div className="flex items-start justify-between gap-3">
             <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border text-sm shadow-sm transition-transform duration-300 group-hover/flip:scale-110 group-hover/flip:rotate-3 ${accent}`} aria-hidden="true">
@@ -103,7 +87,6 @@ function FacilityFlipCard({ facility, idx }: { facility: Facility; idx: number }
           </div>
           <h3 className="font-poppins text-[16px] font-bold text-[#2c231b] mt-4">{facility.title}</h3>
           <p className="mt-2 text-sm leading-relaxed text-[#2c231b]/65 flex-1">{facility.desc}</p>
-          <span className="mt-4 inline-flex items-center gap-1.5 text-xs font-bold text-[#e09132]">Ketuk untuk lihat foto <i className="fas fa-arrow-right text-[10px] transition-transform group-hover/flip:translate-x-1" aria-hidden="true"></i></span>
         </div>
         <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-2xl overflow-hidden border border-[#2c231b]/10 shadow-[0_12px_32px_rgba(44,35,27,0.12)]">
           <Image src={facility.img} alt={facility.alt} fill sizes="(max-width: 640px) 90vw, 360px" className="object-cover" loading="lazy" />
@@ -112,7 +95,6 @@ function FacilityFlipCard({ facility, idx }: { facility: Facility; idx: number }
             <h4 className="text-sm font-bold text-white font-poppins">{facility.title}</h4>
             <p className="text-xs text-white/80 mt-1 line-clamp-2">{facility.alt}</p>
           </div>
-          <span className="absolute top-3 right-3 rounded-full bg-white/90 backdrop-blur px-2.5 py-1 text-[10px] font-bold text-[#2c231b] border border-white/40">Ketuk untuk kembali</span>
         </div>
       </div>
     </div>
