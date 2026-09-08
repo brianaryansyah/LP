@@ -1,8 +1,19 @@
+"use client";
+import { useState } from "react";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import WaveDivider from "@/components/WaveDivider";
 
 export default function Features() {
+  const [tilt, setTilt] = useState({ x: 0, y: 0 });
+  const onMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width - 0.5) * 8;
+    const y = ((e.clientY - rect.top) / rect.height - 0.5) * -8;
+    setTilt({ x, y });
+  };
+  const reset = () => setTilt({ x: 0, y: 0 });
   return (
     <section id="unggulan" className="relative min-h-screen flex flex-col justify-center py-16 lg:py-24 bg-white overflow-hidden">
       <div className="pointer-events-none absolute -top-20 -right-20 h-72 w-72 rounded-full bg-[#f5b041]/10 blur-[70px]" aria-hidden="true" />
@@ -11,9 +22,14 @@ export default function Features() {
         
         <Reveal>
         <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-14 mb-12 lg:mb-16">
-          {/* Left Single Photo professional */}
-          <div className="flex-1 w-full relative max-w-[520px] mx-auto lg:max-w-none">
-            <div className="relative rounded-2xl overflow-hidden aspect-[4/3] sm:aspect-[4/3] lg:aspect-[5/4] border border-[#2c231b]/10 shadow-[0_16px_40px_rgba(44,35,27,0.12)] group">
+          {/* Left Single Photo interactive tilt */}
+          <div className="flex-1 w-full relative max-w-[520px] mx-auto lg:max-w-none perspective-1000">
+            <div
+              onMouseMove={onMove}
+              onMouseLeave={reset}
+              className="relative rounded-2xl overflow-hidden aspect-[4/3] sm:aspect-[4/3] lg:aspect-[5/4] border border-[#2c231b]/10 shadow-[0_16px_40px_rgba(44,35,27,0.12)] group will-change-transform transition-transform duration-300 ease-out"
+              style={{ transform: `perspective(900px) rotateX(${tilt.y}deg) rotateY(${tilt.x}deg)` }}
+            >
               <Image src="/img/mi-ayam-kepala.jpg" alt="Ayam kecap dimasak di wajan besar dapur Semangkok" fill sizes="(max-width: 640px) 90vw, 40vw" className="object-cover transition-transform duration-[900ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03]" loading="lazy" quality={85} />
               <div className="absolute bottom-3 left-3 bg-white/95 backdrop-blur-sm px-3.5 py-2.5 rounded-xl border border-[#2c231b]/10 shadow-[0_8px_20px_rgba(44,35,27,0.14)]">
                 <span className="block text-[13px] font-extrabold text-[#2c231b] font-poppins leading-none">Dapur Karimata</span>
