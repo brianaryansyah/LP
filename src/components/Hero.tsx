@@ -53,13 +53,6 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 hidden sm:flex flex-col items-center gap-2 opacity-70" aria-hidden="true">
-        <span className="text-[10px] tracking-widest font-semibold text-white/70">GULIR</span>
-        <span className="h-8 w-5 rounded-full border border-white/30 flex justify-center pt-1.5">
-          <span className="h-1.5 w-1.5 rounded-full bg-white animate-bounce" />
-        </span>
-      </div>
-
       <WaveDivider fill="#ffffff" position="bottom" />
     </section>
   );
