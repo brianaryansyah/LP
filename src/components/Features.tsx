@@ -39,7 +39,8 @@ export default function Features() {
           </div>
 
           {/* Right Text professional description */}
-          <div className="flex-1 text-left w-full">
+          <div className="flex-1 text-left w-full relative">
+            <span className="pointer-events-none absolute -top-8 -left-2 hidden lg:block font-poppins text-[88px] font-black leading-none tracking-tighter text-[#2c231b]/[0.04] select-none" aria-hidden="true">01</span>
             <div className="inline-block px-4 py-1.5 rounded-full bg-[#f5b041]/20 text-[#2c231b] font-bold text-xs mb-4 uppercase tracking-wider shadow-sm border border-[#f5b041]/30">
               Mengapa Memilih Kami
             </div>

@@ -35,6 +35,7 @@ export default function Hero() {
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/35 to-black/65" aria-hidden="true" />
         <div className="absolute inset-0 bg-gradient-to-tr from-[#2c231b]/20 via-transparent to-[#f5b041]/10" aria-hidden="true" />
+        <div className="absolute inset-0 opacity-[0.04] mix-blend-overlay pointer-events-none" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")` }} aria-hidden="true" />
         <div
           className="pointer-events-none absolute h-64 w-64 rounded-full bg-[#f5b041]/15 blur-[50px] will-change-transform transition-transform duration-700 ease-out"
           style={{ transform: `translate3d(${pos.x * 18}px, ${pos.y * 14}px, 0)` }}
@@ -65,8 +66,9 @@ export default function Hero() {
         </p>
 
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 animate-fadeUp" style={{ animationDelay: "380ms" }}>
-          <a href="#menu" className="inline-flex items-center gap-2 bg-[#f5b041] text-[#2c231b] px-7 py-3.5 rounded-full font-extrabold text-sm hover:bg-white hover:-translate-y-1 hover:shadow-[0_16px_32px_rgba(0,0,0,0.22)] transition-[transform,background-color,box-shadow] duration-300 shadow-[0_10px_28px_rgba(0,0,0,0.22)]">
-            Pesan Sekarang <i className="fas fa-arrow-right text-xs" aria-hidden="true"></i>
+          <a href="#menu" className="group relative inline-flex items-center gap-2 bg-[#f5b041] text-[#2c231b] px-7 py-3.5 rounded-full font-extrabold text-sm overflow-hidden hover:bg-white hover:-translate-y-1 hover:shadow-[0_16px_32px_rgba(0,0,0,0.22)] transition-[transform,background-color,box-shadow] duration-300 shadow-[0_10px_28px_rgba(0,0,0,0.22)]">
+            <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]" aria-hidden="true" />
+            <span className="relative flex items-center gap-2">Pesan Sekarang <i className="fas fa-arrow-right text-xs" aria-hidden="true"></i></span>
           </a>
           <a href="#fasilitas" className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/25 text-white px-7 py-3.5 rounded-full font-bold text-sm hover:bg-white hover:text-[#2c231b] hover:-translate-y-0.5 transition-[transform,background-color,color] duration-300">
             Lihat Tempat <i className="fas fa-store text-xs" aria-hidden="true"></i>
