@@ -60,7 +60,7 @@ export default function HistoryTimeline() {
         <div
           key={item.title}
           data-idx={idx}
-          className={`relative flex flex-col lg:flex-row gap-6 lg:gap-8 mb-8 lg:mb-12 transition-[opacity,transform] duration-[700ms] ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform ${visible[idx] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"} ${idx % 2 === 1 ? "lg:flex-row-reverse" : ""}`}
+          className={`relative flex flex-col lg:flex-row gap-6 lg:gap-8 mb-8 lg:mb-12 transition-[opacity,transform] duration-[700ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform ${visible[idx] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-[16px]"} ${idx % 2 === 1 ? "lg:flex-row-reverse" : ""}`}
           style={{ transitionDelay: `${idx * 80}ms` }}
         >
           <span className={`hidden lg:block absolute left-1/2 top-6 h-3 w-3 -translate-x-1/2 rounded-full border-2 bg-white shadow-sm transition-colors duration-300 ${visible[idx] ? "bg-[#f5b041] border-[#f5b041]" : "bg-[#fdf8f5] border-[#2c231b]/20"}`} aria-hidden="true" />
