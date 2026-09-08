@@ -6,6 +6,7 @@ import PageCta from "@/components/PageCta";
 import RelatedPages from "@/components/RelatedPages";
 import Reveal from "@/components/Reveal";
 import HistoryTimeline from "@/components/HistoryTimeline";
+import ReadingProgress from "@/components/ReadingProgress";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 
@@ -24,6 +25,7 @@ const stats = [
 export default function KisahPage() {
   return (
     <main className="relative min-h-screen bg-[#fdf8f5]">
+      <ReadingProgress />
       <Navbar />
       <SubHero
         eyebrow="Kisah Semangkok"
@@ -59,6 +61,19 @@ export default function KisahPage() {
           </div>
         </Reveal>
         <div className="max-w-3xl mx-auto">
+          <div className="flex flex-wrap items-center justify-between gap-3 mb-6 rounded-xl bg-white border border-[#2c231b]/5 px-4 py-3">
+            <div className="flex items-center gap-3">
+              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#2c231b] text-white text-xs font-bold">S</span>
+              <div>
+                <p className="text-xs font-bold text-[#2c231b]">Tim Semangkok</p>
+                <p className="text-[11px] text-[#2c231b]/50">5 menit baca • Karimata, Pemalang</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-2">
+              <a href="https://wa.me/6285640734972?text=Halo%20saya%20baca%20kisah%20Semangkok%20https://semangkok.id/tentang/kisah" target="_blank" rel="noopener noreferrer" className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#f5b041] text-[#2c231b] hover:bg-[#2c231b] hover:text-white transition-colors" aria-label="Bagikan via WhatsApp"><i className="fab fa-whatsapp text-sm" aria-hidden="true"></i></a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://semangkok.id/tentang/kisah" target="_blank" rel="noopener noreferrer" className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white border border-[#2c231b]/10 text-[#2c231b] hover:bg-[#2c231b] hover:text-white transition-colors" aria-label="Bagikan ke Facebook"><i className="fab fa-facebook-f text-xs" aria-hidden="true"></i></a>
+            </div>
+          </div>
           <div className="space-y-5 font-inter text-sm leading-relaxed text-[#2c231b]/75 sm:text-base">
             <Reveal>
               <p>
