@@ -105,6 +105,40 @@ export default function KisahPage() {
             </Reveal>
           </div>
         </div>
+        <div className="mt-16 lg:mt-20">
+          <Reveal>
+            <div className="text-center mb-10">
+              <span className="inline-block rounded-full bg-[#2c231b] px-4 py-1.5 text-xs font-bold tracking-wider text-white">Linimasa</span>
+              <h2 className="mt-3 font-poppins text-2xl font-extrabold text-[#2c231b] sm:text-3xl">Perjalanan yang pelan</h2>
+              <p className="mt-2 text-sm text-[#2c231b]/60 max-w-xl mx-auto">Tidak ada lompatan besar. Hanya pindah tempat, tambah meja, dan tetap masak dengan cara yang sama.</p>
+            </div>
+          </Reveal>
+          <div className="relative">
+            <div className="absolute left-4 top-0 bottom-0 w-px bg-[#2c231b]/10 lg:left-1/2 lg:-translate-x-1/2" aria-hidden="true" />
+            {[
+              { title: "Gerobak Pasar Pagi", desc: "Berjualan dengan gerobak. Mie ditarik tangan tiap subuh, kaldu direbus di dapur rumah. Tamu pertama pedagang pasar dan anak sekolah.", img: "/img/mi-ayam-kepala.jpg", alt: "Wajan ayam kecap di dapur awal" },
+              { title: "Pindah ke Karimata", desc: "Dapat tempat di Jl. Karimata No.40. Dapur lebih lega, meja lebih banyak, parkir lebih mudah. Cara masak tetap sama persis.", img: "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=800&auto=format&fit=crop", alt: "Ruang makan Karimata" },
+              { title: "Warung keluarga", desc: "Sekarang banyak tamu yang datang bareng keluarga, arisan, atau pesan antar. Kami layani dengan resep yang sama, satu mangkok setiap kali.", img: "/img/mi-ayam-bakso.jpg", alt: "Mie ayam bakso disajikan" },
+            ].map((item, idx) => (
+              <Reveal key={item.title} delay={idx * 100}>
+                <div className={`relative flex flex-col lg:flex-row gap-6 lg:gap-8 mb-8 lg:mb-12 ${idx % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
+                  <div className="hidden lg:block absolute left-1/2 top-6 h-3 w-3 -translate-x-1/2 rounded-full bg-[#f5b041] border-2 border-white shadow-sm" aria-hidden="true" />
+                  <div className="flex-1 lg:w-1/2 pl-10 lg:pl-0">
+                    <div className={`bg-white rounded-2xl border border-[#2c231b]/10 p-5 sm:p-6 shadow-sm ${idx % 2 === 1 ? "lg:ml-8" : "lg:mr-8 lg:text-right"}`}>
+                      <h3 className="font-poppins text-base font-bold text-[#2c231b]">{item.title}</h3>
+                      <p className="mt-2 text-sm leading-relaxed text-[#2c231b]/65">{item.desc}</p>
+                    </div>
+                  </div>
+                  <div className="flex-1 lg:w-1/2 pl-10 lg:pl-0">
+                    <div className={`relative h-48 sm:h-56 rounded-2xl overflow-hidden border border-[#2c231b]/10 shadow-sm group ${idx % 2 === 1 ? "lg:mr-8" : "lg:ml-8"}`}>
+                      <Image src={item.img} alt={item.alt} fill sizes="(max-width: 1024px) 90vw, 40vw" className="object-cover transition-transform duration-[900ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]" loading="lazy" />
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
       </section>
       <RelatedPages />
       <PageCta
