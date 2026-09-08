@@ -12,29 +12,39 @@ const points = [
 ];
 
 export default function KeunggulanGrid() {
-  const [active, setActive] = useState<number | null>(null);
+  const [flipped, setFlipped] = useState<number | null>(null);
   return (
     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
       {points.map((p, i) => (
-        <Reveal key={p.title} delay={(i % 3) * 100}>
+        <Reveal key={p.title} delay={(i % 3) * 90}>
           <div
-            onClick={() => setActive(active === i ? null : i)}
+            className="perspective-1000 h-[220px] sm:h-[230px] cursor-pointer"
+            onMouseEnter={() => setFlipped(i)}
+            onMouseLeave={() => setFlipped(null)}
+            onClick={() => setFlipped(flipped === i ? null : i)}
             role="button"
             tabIndex={0}
-            onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setActive(active === i ? null : i); } }}
-            className={`group h-full text-left rounded-2xl border p-6 shadow-sm cursor-pointer transition-[transform,box-shadow,border-color,background-color] duration-300 will-change-transform sm:rounded-xl ${active === i ? "bg-[#2c231b] border-[#2c231b] shadow-[0_12px_28px_rgba(44,35,27,0.18)] -translate-y-1" : "bg-white border-[#2c231b]/5 hover:-translate-y-1 hover:shadow-md hover:border-[#f5b041]/30"}`}
+            onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setFlipped(flipped === i ? null : i); } }}
+            aria-label={`${p.title} detail`}
           >
-            <div className={`mb-4 flex h-12 w-12 items-center justify-center rounded-full text-xl transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6 ${active === i ? "bg-white/10 text-[#f5b041]" : "bg-[#f5b041]/15 text-[#f5b041]"}`} aria-hidden="true">
-              <i className={p.icon} aria-hidden="true"></i>
-            </div>
-            <h2 className={`font-poppins text-lg font-bold ${active === i ? "text-white" : "text-[#2c231b]"}`}>{p.title}</h2>
-            <p className={`mt-1 font-inter text-sm leading-relaxed ${active === i ? "text-white/70" : "text-[#2c231b]/70"}`}>{p.desc}</p>
-            <div className={`grid transition-[grid-template-rows,opacity] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${active === i ? "grid-rows-[1fr] opacity-100 mt-3" : "grid-rows-[0fr] opacity-0"}`}>
-              <div className="overflow-hidden">
-                <p className={`text-xs leading-relaxed rounded-lg px-3 py-2 ${active === i ? "bg-white/10 text-white/80" : ""}`}>{p.extra}</p>
+            <div className={`relative h-full w-full preserve-3d transition-transform duration-[650ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${flipped === i ? "rotate-y-180" : ""}`}>
+              <div className="absolute inset-0 backface-hidden rounded-2xl border border-[#2c231b]/5 bg-white p-6 shadow-sm flex flex-col sm:rounded-xl">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#f5b041]/15 text-[#f5b041] text-lg group-hover:scale-110 transition-transform duration-300" aria-hidden="true">
+                  <i className={p.icon} aria-hidden="true"></i>
+                </div>
+                <h2 className="mt-4 font-poppins text-base font-bold text-[#2c231b]">{p.title}</h2>
+                <p className="mt-1 font-inter text-xs leading-relaxed text-[#2c231b]/65 flex-1">{p.desc}</p>
+                <span className="mt-3 inline-flex items-center gap-1 text-xs font-bold text-[#e09132]">Lihat detail <i className="fas fa-arrow-right text-[10px]" aria-hidden="true"></i></span>
+              </div>
+              <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-2xl bg-[#2c231b] border border-[#2c231b] p-6 shadow-[0_12px_28px_rgba(44,35,27,0.18)] flex flex-col sm:rounded-xl">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 text-[#f5b041] text-lg" aria-hidden="true">
+                  <i className={p.icon} aria-hidden="true"></i>
+                </div>
+                <h3 className="mt-4 font-poppins text-base font-bold text-white">{p.title}</h3>
+                <p className="mt-2 text-xs leading-relaxed text-white/75 flex-1">{p.extra}</p>
+                <span className="mt-3 inline-flex items-center gap-1 text-xs font-bold text-[#f5b041]">Tutup <i className="fas fa-times text-[10px]" aria-hidden="true"></i></span>
               </div>
             </div>
-            <span className={`mt-3 inline-flex items-center gap-1 text-xs font-bold ${active === i ? "text-[#f5b041]" : "text-[#e09132]"}`}>{active === i ? "Tutup" : "Lihat detail"} <i className={`fas fa-chevron-down text-[10px] transition-transform duration-300 ${active === i ? "rotate-180" : ""}`} aria-hidden="true"></i></span>
           </div>
         </Reveal>
       ))}
