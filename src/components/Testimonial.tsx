@@ -48,8 +48,8 @@ export default function Testimonial() {
   const [isPressed, setIsPressed] = useState(false);
 
   return (
-    <section id="testimoni" className="relative scroll-mt-24 bg-white overflow-hidden min-h-[60vh] sm:min-h-[70vh] lg:min-h-[75vh] flex flex-col justify-center pt-12 sm:pt-16 lg:pt-20 pb-20 sm:pb-24 lg:pb-28">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 flex-1 flex flex-col justify-center">
+    <section id="testimoni" className="relative scroll-mt-24 bg-white overflow-hidden min-h-screen flex flex-col justify-center py-16 lg:py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         <Reveal>
           <div className="text-center">
             <div className="inline-block px-3.5 py-1.5 rounded-full bg-[#f5b041]/15 text-[#2c231b] font-bold text-[11px] mb-4 uppercase tracking-[0.14em] border border-[#f5b041]/20">
@@ -58,7 +58,7 @@ export default function Testimonial() {
             <h2 className="text-[28px] sm:text-4xl md:text-[42px] font-extrabold text-[#2c231b] font-poppins leading-[1.1] tracking-[-0.02em] text-balance mb-3">
               Apa Kata Pelanggan Kami
             </h2>
-            <p className="text-[13px] sm:text-sm text-[#2c231b]/55 font-inter max-w-xl mx-auto leading-relaxed mb-8 font-medium">
+            <p className="text-[13px] sm:text-sm text-[#2c231b]/55 font-inter max-w-xl mx-auto leading-relaxed mb-10 font-medium">
               Cerita jujur dari meja sebelah. Tanpa filter, tanpa naskah
             </p>
           </div>
@@ -101,7 +101,7 @@ export default function Testimonial() {
         </div>
 
         <Reveal delay={300}>
-          <div className="text-center mt-8 sm:mt-10">
+          <div className="text-center mt-10">
             <a
               href={googleMapsLink}
               target="_blank"
