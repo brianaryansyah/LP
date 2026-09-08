@@ -11,9 +11,16 @@ export default function SubHero({ eyebrow, title, desc, section }: SubHeroProps)
   return (
     <section className="relative overflow-hidden bg-[#fdf8f5] pb-12 pt-28 sm:pb-16 sm:pt-36">
       <div
-        className="pointer-events-none absolute -right-20 -top-20 aspect-square w-[320px] rounded-full bg-[#f5b041]/10 blur-[100px]"
+        className="pointer-events-none absolute -right-20 -top-20 aspect-square w-[320px] rounded-full bg-[#f5b041]/12 blur-[90px]"
         aria-hidden="true"
       ></div>
+      <div
+        className="pointer-events-none absolute -left-20 bottom-0 aspect-square w-[280px] rounded-full bg-[#2c231b]/5 blur-[70px]"
+        aria-hidden="true"
+      ></div>
+      <span className="pointer-events-none absolute right-6 top-1/2 hidden -translate-y-1/2 font-poppins text-[96px] font-black tracking-tighter text-[#2c231b]/[0.04] lg:block select-none" aria-hidden="true">
+        {eyebrow.split(" ")[0].toUpperCase()}
+      </span>
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <nav aria-label="Jejak halaman" className="animate__animated animate__fadeInDown mb-6 flex items-center gap-2 text-xs font-medium text-[#2c231b]/50">
           <Link href="/" className="transition-colors duration-200 hover:text-[#e09132]">
