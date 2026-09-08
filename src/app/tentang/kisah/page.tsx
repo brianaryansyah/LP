@@ -32,22 +32,33 @@ export default function KisahPage() {
       />
       <section className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8">
         <Reveal>
-          <figure className="relative mb-10 h-60 w-full overflow-hidden rounded-xl border border-[#2c231b]/10">
+          <div className="relative mb-10 h-[380px] sm:h-[440px] lg:h-[500px] w-full overflow-hidden rounded-2xl border border-[#2c231b]/10 shadow-[0_20px_50px_rgba(44,35,27,0.12)] group">
             <Image
               src="/img/mi-ayam-kepala.jpg"
               alt="Ayam kecap dimasak di wajan besar dapur Semangkok"
               fill
               sizes="(max-width: 768px) 90vw, 70vw"
-              className="object-cover"
+              className="object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03]"
               loading="lazy"
             />
-            <figcaption className="absolute bottom-4 left-4 rounded-full bg-[#2c231b]/80 px-4 py-2 text-xs font-medium text-[#fdf8f5] ">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent" aria-hidden="true" />
+            <div className="absolute top-4 left-4 rounded-full bg-white/95 backdrop-blur px-3.5 py-1.5 text-xs font-bold text-[#2c231b] border border-[#2c231b]/10 shadow-sm">
               Wajan ayam kecap, dimasak perlahan tiap pagi
-            </figcaption>
-          </figure>
+            </div>
+            <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
+              <div className="grid grid-cols-3 gap-3 max-w-xl">
+                {stats.map((s) => (
+                  <div key={s.label} className="rounded-xl bg-white/95 backdrop-blur border border-white/20 px-3 py-3 text-center shadow-sm">
+                    <div className="font-poppins text-lg sm:text-xl font-extrabold text-[#2c231b] leading-none">{s.value}</div>
+                    <div className="mt-1 text-[10px] font-bold uppercase tracking-wider text-[#2c231b]/60">{s.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </Reveal>
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-5 lg:gap-10">
-          <div className="space-y-5 font-inter text-sm leading-relaxed text-[#2c231b]/75 sm:text-base lg:col-span-3">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-5 lg:gap-10">
+          <div className="space-y-5 font-inter text-sm leading-relaxed text-[#2c231b]/75 sm:text-base lg:col-span-3 lg:pt-2">
             <Reveal>
               <p>
                 Semangkok berawal dari sebuah gerobak di Pasar Pagi Pemalang. Tiap
@@ -82,19 +93,16 @@ export default function KisahPage() {
               </blockquote>
             </Reveal>
           </div>
-          <div className="grid grid-cols-3 gap-4 lg:col-span-2 lg:grid-cols-1">
-            {stats.map((s, i) => (
-              <Reveal key={s.label} delay={i * 100}>
-                <div className="rounded-2xl border border-[#2c231b]/5 bg-white p-5 text-center shadow-sm sm:rounded-xl sm:p-6">
-                  <div className="font-poppins text-2xl font-extrabold text-[#2c231b] sm:text-3xl">
-                    {s.value}
-                  </div>
-                  <div className="mt-1 text-[11px] font-medium uppercase tracking-wider text-[#2c231b]/55">
-                    {s.label}
-                  </div>
+          <div className="lg:col-span-2 lg:sticky lg:top-28 self-start">
+            <Reveal delay={150}>
+              <div className="relative h-[340px] lg:h-[420px] rounded-2xl overflow-hidden border border-[#2c231b]/10 shadow-[0_16px_40px_rgba(44,35,27,0.1)] group">
+                <Image src="/img/mi-ayam.jpg" alt="Mangkok mie ayam Semangkok" fill sizes="(max-width: 1024px) 40vw, 90vw" className="object-cover transition-transform duration-[1000ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03]" loading="lazy" />
+                <div className="absolute bottom-3 left-3 right-3 rounded-xl bg-white/95 backdrop-blur px-3.5 py-3 border border-[#2c231b]/10 shadow-sm">
+                  <p className="text-xs font-bold text-[#2c231b] font-poppins">Mangkok yang sama, sejak gerobak</p>
+                  <p className="text-[11px] text-[#2c231b]/60 leading-relaxed mt-1">Porsi dan rasa dijaga, bukan dibesarkan. Satu takaran untuk semua.</p>
                 </div>
-              </Reveal>
-            ))}
+              </div>
+            </Reveal>
           </div>
         </div>
       </section>
