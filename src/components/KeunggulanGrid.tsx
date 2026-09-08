@@ -19,8 +19,12 @@ export default function KeunggulanGrid() {
         <Reveal key={p.title} delay={(i % 3) * 90}>
           <div
             className="perspective-1000 h-[220px] sm:h-[230px] cursor-pointer"
-            onMouseEnter={() => setFlipped(i)}
-            onMouseLeave={() => setFlipped(null)}
+            onMouseEnter={() => {
+              if (window.matchMedia("(hover: hover)").matches) setFlipped(i);
+            }}
+            onMouseLeave={() => {
+              if (window.matchMedia("(hover: hover)").matches) setFlipped(null);
+            }}
             onClick={() => setFlipped(flipped === i ? null : i)}
             role="button"
             tabIndex={0}
