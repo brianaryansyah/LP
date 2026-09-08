@@ -25,27 +25,27 @@ export default function RitmeTimeline() {
     return false;
   };
   return (
-    <ul className="mt-5 space-y-3 relative">
-      <li className="absolute left-[26px] top-2 bottom-2 w-px bg-white/10 hidden sm:block" aria-hidden="true" />
-      {ritme.map((r, i) => {
-        const active = isActive(r.hour) || hover === i;
-        return (
-          <li
-            key={r.time}
-            onMouseEnter={() => setHover(i)}
-            onMouseLeave={() => setHover(null)}
-            className={`group relative flex items-center gap-4 rounded-xl px-2 py-2 transition-[background-color,transform] duration-300 cursor-default ${active ? "bg-white/10 translate-x-1" : "hover:bg-white/5"}`}
-            style={{ transitionDelay: `${i * 40}ms` }}
-          >
-            <span className={`absolute left-[18px] hidden h-2 w-2 rounded-full sm:block transition-[transform,background-color] duration-300 ${active ? "bg-[#f5b041] scale-150 shadow-[0_0_10px_rgba(245,176,65,0.6)]" : "bg-white/30 group-hover:bg-[#f5b041]/60"}`} aria-hidden="true" />
-            <span className={`w-14 shrink-0 rounded-lg px-2 py-1 text-center font-poppins text-sm font-extrabold transition-[transform,background-color,color] duration-300 ${active ? "bg-[#f5b041] text-[#2c231b] scale-105" : "bg-[#f5b041]/15 text-[#f5b041] group-hover:bg-[#f5b041]/25 group-hover:scale-105"}`}>
-              {r.time}
-            </span>
-            <span className={`font-inter text-sm transition-colors duration-300 ${active ? "text-white font-semibold" : "text-[#fdf8f5]/80 group-hover:text-white"}`}>{r.desc}</span>
-            {active && <span className="ml-auto hidden sm:inline-flex items-center gap-1 rounded-full bg-[#f5b041] px-2 py-1 text-[10px] font-bold text-[#2c231b] animate-pulse">Aktif</span>}
-          </li>
-        );
-      })}
-    </ul>
+    <div className="mt-5 relative">
+      <div className="hidden lg:block absolute top-[34px] left-6 right-6 h-px bg-white/10" aria-hidden="true" />
+      <div className="hidden sm:block lg:hidden absolute left-[26px] top-2 bottom-2 w-px bg-white/10" aria-hidden="true" />
+      <div className="grid grid-cols-1 gap-3 sm:gap-4 lg:grid-cols-4 lg:gap-4">
+        {ritme.map((r, i) => {
+          const active = isActive(r.hour) || hover === i;
+          return (
+            <div
+              key={r.time}
+              onMouseEnter={() => setHover(i)}
+              onMouseLeave={() => setHover(null)}
+              className={`group relative flex lg:flex-col items-center lg:items-center gap-4 rounded-2xl border px-4 py-4 lg:px-4 lg:py-6 lg:text-center transition-[border-color,background-color,transform] duration-300 cursor-default ${active ? "bg-white/[0.06] border-white/15 lg:-translate-y-1 lg:shadow-[0_8px_24px_rgba(0,0,0,0.12)]" : "bg-transparent border-white/5 hover:bg-white/[0.04] hover:border-white/10"}`}
+            >
+              <span className={`hidden lg:block absolute -top-1.5 left-1/2 h-3 w-3 -translate-x-1/2 rounded-full border-2 bg-[#2c231b] transition-[background-color,border-color,transform] duration-300 ${active ? "bg-[#f5b041] border-[#f5b041] scale-110" : "border-white/20 group-hover:border-[#f5b041]/40"}`} aria-hidden="true" />
+              <span className={`hidden sm:block lg:hidden absolute left-[18px] h-2 w-2 rounded-full transition-colors duration-300 ${active ? "bg-[#f5b041]" : "bg-white/20 group-hover:bg-white/40"}`} aria-hidden="true" />
+              <span className={`shrink-0 font-poppins text-sm font-extrabold tracking-tight transition-colors duration-300 ${active ? "text-[#f5b041]" : "text-white/90 group-hover:text-white"}`}>{r.time}</span>
+              <span className={`flex-1 lg:flex-none font-inter text-sm leading-snug transition-colors duration-300 ${active ? "text-white font-medium" : "text-white/70 group-hover:text-white/90"}`}>{r.desc}</span>
+            </div>
+          );
+        })}
+      </div>
+    </div>
   );
 }
