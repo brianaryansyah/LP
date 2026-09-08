@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import KeunggulanGrid from "@/components/KeunggulanGrid";
 import RitmeTimeline from "@/components/RitmeTimeline";
+import CountUp from "@/components/CountUp";
 
 export const metadata: Metadata = {
   title: "Keunggulan Kami",
@@ -18,12 +19,7 @@ export const metadata: Metadata = {
 
 
 
-const ritme = [
-  { time: "04.00", desc: "Adonan mie disiapkan dan ditarik" },
-  { time: "05.00", desc: "Kaldu mulai direbus 8 jam" },
-  { time: "10.00", desc: "Warung buka, mie pertama disajikan" },
-  { time: "22.00", desc: "Tutup, dapur dibersihkan total" },
-];
+
 
 export default function KeunggulanPage() {
   return (
@@ -37,6 +33,22 @@ export default function KeunggulanPage() {
       />
       <section className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8">
         <KeunggulanGrid />
+        <Reveal delay={80}>
+          <div className="mt-8 grid grid-cols-3 gap-4 rounded-2xl bg-white border border-[#2c231b]/5 p-6 sm:p-7 shadow-sm text-center">
+            <div>
+              <div className="font-poppins text-2xl sm:text-3xl font-extrabold text-[#2c231b]"><CountUp value={8} suffix=" Jam" /></div>
+              <div className="mt-1 text-[11px] font-bold uppercase tracking-wider text-[#2c231b]/50">Kaldu direbus</div>
+            </div>
+            <div className="border-l border-[#2c231b]/10">
+              <div className="font-poppins text-2xl sm:text-3xl font-extrabold text-[#2c231b]"><CountUp value={15} suffix="rb+" /></div>
+              <div className="mt-1 text-[11px] font-bold uppercase tracking-wider text-[#2c231b]/50">Mangkok / bulan</div>
+            </div>
+            <div className="border-l border-[#2c231b]/10">
+              <div className="font-poppins text-2xl sm:text-3xl font-extrabold text-[#2c231b]"><CountUp value={4} suffix=".9/5" /></div>
+              <div className="mt-1 text-[11px] font-bold uppercase tracking-wider text-[#2c231b]/50">Rating Maps</div>
+            </div>
+          </div>
+        </Reveal>
         <Reveal delay={100}>
           <div className="mt-10 grid grid-cols-1 gap-6 overflow-hidden rounded-[2rem] bg-[#2c231b] p-6 sm:rounded-[3rem] sm:p-10 lg:grid-cols-2 lg:gap-10">
             <div className="relative h-56 w-full overflow-hidden rounded-2xl sm:h-72 sm:rounded-xl group">
