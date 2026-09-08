@@ -58,7 +58,7 @@ export default function KisahPage() {
             </div>
           </div>
         </Reveal>
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
+        <div className="max-w-3xl mx-auto">
           <div className="space-y-5 font-inter text-sm leading-relaxed text-[#2c231b]/75 sm:text-base">
             <Reveal>
               <p>
@@ -103,11 +103,6 @@ export default function KisahPage() {
               </figure>
             </Reveal>
           </div>
-          <Reveal delay={200}>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-2xl border-4 border-white">
-              <Image src="/img/mi-ayam.jpg" alt="Mangkok mie ayam Semangkok disajikan hangat" fill sizes="(max-width: 1024px) 90vw, 45vw" className="object-cover" />
-            </div>
-          </Reveal>
         </div>
       </section>
       <section className="border-y border-[#f5b041]/15 bg-[#f5b041]/8 py-12 sm:py-16 relative overflow-hidden">
