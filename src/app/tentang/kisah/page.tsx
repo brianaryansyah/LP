@@ -57,8 +57,8 @@ export default function KisahPage() {
             </div>
           </div>
         </Reveal>
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-5 lg:gap-10">
-          <div className="space-y-5 font-inter text-sm leading-relaxed text-[#2c231b]/75 sm:text-base lg:col-span-3 lg:pt-2">
+        <div className="max-w-3xl mx-auto">
+          <div className="space-y-5 font-inter text-sm leading-relaxed text-[#2c231b]/75 sm:text-base">
             <Reveal>
               <p>
                 Semangkok berawal dari sebuah gerobak di Pasar Pagi Pemalang. Tiap
@@ -67,21 +67,21 @@ export default function KisahPage() {
                 sebelum beraktivitas.
               </p>
             </Reveal>
-            <Reveal delay={100}>
+            <Reveal delay={80}>
               <p>
                 Dari mulut ke mulut, antrean makin panjang. Kami pindah ke tempat yang lebih layak
                 sampai akhirnya menetap di Jl. Karimata No.40, Mulyoharjo. Dapurnya lebih besar,
                 mejanya lebih banyak, tapi cara masaknya sama persis seperti di gerobak dulu.
               </p>
             </Reveal>
-            <Reveal delay={150}>
+            <Reveal delay={160}>
               <p>
                 Hari ini Semangkok menyajikan belasan ribu mangkok setiap bulan. Ada yang makan di
                 tempat bareng keluarga, ada yang pesan antar sampai rumah, ada juga yang reservasi
                 untuk arisan dan ulang tahun. Semuanya kami layani dengan resep yang sama.
               </p>
             </Reveal>
-            <Reveal delay={200}>
+            <Reveal delay={240}>
               <figure className="relative overflow-hidden rounded-2xl bg-[#2c231b] p-6 sm:p-7 border border-[#2c231b] shadow-[0_12px_32px_rgba(44,35,27,0.18)]">
                 <i className="fas fa-quote-left absolute -top-1 left-4 text-5xl text-white/[0.07]" aria-hidden="true"></i>
                 <blockquote className="relative">
@@ -100,17 +100,6 @@ export default function KisahPage() {
                   </span>
                 </figcaption>
               </figure>
-            </Reveal>
-          </div>
-          <div className="lg:col-span-2 lg:sticky lg:top-28 self-start">
-            <Reveal delay={150}>
-              <div className="relative h-[340px] lg:h-[420px] rounded-2xl overflow-hidden border border-[#2c231b]/10 shadow-[0_16px_40px_rgba(44,35,27,0.1)] group">
-                <Image src="/img/mi-ayam.jpg" alt="Mangkok mie ayam Semangkok" fill sizes="(max-width: 1024px) 40vw, 90vw" className="object-cover transition-transform duration-[1000ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03]" loading="lazy" />
-                <div className="absolute bottom-3 left-3 right-3 rounded-xl bg-white/95 backdrop-blur px-3.5 py-3 border border-[#2c231b]/10 shadow-sm">
-                  <p className="text-xs font-bold text-[#2c231b] font-poppins">Mangkok yang sama, sejak gerobak</p>
-                  <p className="text-[11px] text-[#2c231b]/60 leading-relaxed mt-1">Porsi dan rasa dijaga, bukan dibesarkan. Satu takaran untuk semua.</p>
-                </div>
-              </div>
             </Reveal>
           </div>
         </div>
