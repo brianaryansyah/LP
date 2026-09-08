@@ -1,3 +1,5 @@
+"use client";
+import { useState } from "react";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import WaveDivider from "@/components/WaveDivider";
@@ -75,9 +77,20 @@ function VenueHero() {
 
 function FacilityFlipCard({ facility, idx }: { facility: Facility; idx: number }) {
   const accent = idx % 2 === 0 ? "bg-[#f5b041] text-white border-[#f5b041]" : "bg-[#2c231b] text-white border-[#2c231b]";
+  const [flipped, setFlipped] = useState(false);
   return (
-    <div className="perspective-1000 h-[280px] sm:h-[300px] w-full rounded-2xl group/flip focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f5b041]">
-      <div className="relative h-full w-full preserve-3d transition-transform duration-[700ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover/flip:rotate-y-180 group-focus-within:rotate-y-180">
+    <div
+      className="perspective-1000 h-[280px] sm:h-[300px] w-full rounded-2xl group/flip cursor-pointer touch-manipulation focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f5b041]"
+      onClick={() => setFlipped((v) => !v)}
+      onMouseEnter={() => setFlipped(true)}
+      onMouseLeave={() => setFlipped(false)}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setFlipped((v) => !v); } }}
+      aria-pressed={flipped}
+      aria-label={flipped ? `Tutup ${facility.title}` : `Lihat ${facility.title}`}
+    >
+      <div className={`relative h-full w-full preserve-3d transition-transform duration-[700ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform ${flipped ? "rotate-y-180" : "group-hover:rotate-y-180 group-focus-within:rotate-y-180"}`}>
         <div className="absolute inset-0 backface-hidden rounded-2xl bg-white border border-[#2c231b]/10 shadow-[0_8px_24px_rgba(44,35,27,0.06)] group-hover/flip:shadow-[0_12px_32px_rgba(44,35,27,0.1)] p-5 sm:p-6 flex flex-col transition-shadow duration-300">
           <div className="flex items-start justify-between gap-3">
             <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border text-sm shadow-sm transition-transform duration-300 group-hover/flip:scale-110 group-hover/flip:rotate-3 ${accent}`} aria-hidden="true">
