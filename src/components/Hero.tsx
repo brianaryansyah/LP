@@ -3,7 +3,7 @@ import WaveDivider from "@/components/WaveDivider";
 
 export default function Hero() {
   return (
-    <section id="home" className="relative h-screen min-h-[640px] max-h-[900px] flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative h-[100vh] min-h-[680px] max-h-[960px] flex items-center justify-center overflow-hidden pb-8">
       <div className="absolute inset-0">
         <Image
           src="/img/mi-ayam-bakso.jpg"
