@@ -74,7 +74,7 @@ export default function KisahPage() {
               <a href="https://www.facebook.com/sharer/sharer.php?u=https://semangkok.id/tentang/kisah" target="_blank" rel="noopener noreferrer" className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white border border-[#2c231b]/10 text-[#2c231b] hover:bg-[#2c231b] hover:text-white transition-colors" aria-label="Bagikan ke Facebook"><i className="fab fa-facebook-f text-xs" aria-hidden="true"></i></a>
             </div>
           </div>
-          <div className="space-y-5 font-inter text-sm leading-relaxed text-[#2c231b]/75 sm:text-base">
+          <div className="space-y-6 font-inter text-[15px] leading-[1.8] tracking-[-0.01em] text-[#2c231b]/80 sm:text-[16px]">
             <Reveal>
               <p>
                 Semangkok berawal dari sebuah gerobak di Pasar Pagi Pemalang. Tiap
