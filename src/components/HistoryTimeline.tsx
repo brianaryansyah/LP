@@ -19,6 +19,7 @@ export default function HistoryTimeline() {
   const wrapRef = useRef<HTMLDivElement>(null);
   const [progress, setProgress] = useState(0);
   const [visible, setVisible] = useState<boolean[]>([false, false, false]);
+  const [active, setActive] = useState<Item | null>(null);
 
   useEffect(() => {
     const onScroll = () => {
@@ -71,12 +72,37 @@ export default function HistoryTimeline() {
             </div>
           </div>
           <div className="flex-1 lg:w-1/2 pl-10 lg:pl-0">
-            <div className={`relative h-48 sm:h-56 rounded-2xl overflow-hidden border border-[#2c231b]/10 shadow-sm group ${idx % 2 === 1 ? "lg:mr-8" : "lg:ml-8"}`}>
-              <Image src={item.img} alt={item.alt} fill sizes="(max-width: 1024px) 90vw, 40vw" className="object-cover transition-transform duration-[900ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]" loading="lazy" />
-            </div>
+            <button
+              type="button"
+              onClick={() => setActive(item)}
+              className={`relative h-48 sm:h-56 w-full rounded-2xl overflow-hidden border border-[#2c231b]/10 shadow-sm group text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f5b041] transition-[opacity,transform] duration-[700ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform ${visible[idx] ? "opacity-100 scale-100" : "opacity-0 scale-[0.96]"} ${idx % 2 === 1 ? "lg:mr-8" : "lg:ml-8"}`}
+              style={{ transitionDelay: `${idx * 80 + 140}ms` }}
+              aria-label={`Lihat foto ${item.title} lebih besar`}
+            >
+              <Image src={item.img} alt={item.alt} fill sizes="(max-width: 1024px) 90vw, 40vw" className="object-cover transition-transform duration-[700ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.06] group-active:scale-[1.02]" loading="lazy" />
+              <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true" />
+              <span className="pointer-events-none absolute bottom-2 right-2 rounded-full bg-white/90 backdrop-blur px-2 py-1 text-[10px] font-bold text-[#2c231b] border border-white/40 shadow-sm opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-[opacity,transform] duration-300">Perbesar</span>
+            </button>
           </div>
         </div>
       ))}
+      {active && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-fadeUp" onClick={() => setActive(null)} role="dialog" aria-modal="true" aria-label={`Foto ${active.title}`}>
+          <div className="relative w-full max-w-2xl overflow-hidden rounded-2xl bg-white shadow-2xl" onClick={(e) => e.stopPropagation()}>
+            <div className="relative h-64 sm:h-80">
+              <Image src={active.img} alt={active.alt} fill className="object-cover" sizes="90vw" />
+            </div>
+            <div className="p-5">
+              <h4 className="font-poppins text-base font-bold text-[#2c231b]">{active.title}</h4>
+              <p className="mt-1 text-sm text-[#2c231b]/65">{active.desc}</p>
+              <button type="button" onClick={() => setActive(null)} className="mt-4 rounded-full bg-[#2c231b] px-4 py-2 text-xs font-bold text-white hover:bg-black">Tutup</button>
+            </div>
+            <button type="button" onClick={() => setActive(null)} className="absolute top-3 right-3 rounded-full bg-white/90 backdrop-blur p-2 text-[#2c231b] shadow-sm hover:bg-white" aria-label="Tutup">
+              <i className="fas fa-times text-sm" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
