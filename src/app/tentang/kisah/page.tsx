@@ -82,15 +82,24 @@ export default function KisahPage() {
               </p>
             </Reveal>
             <Reveal delay={200}>
-              <blockquote className="rounded-2xl border-l-4 border-[#f5b041] bg-white p-5 shadow-sm sm:rounded-xl sm:p-6">
-                <p className="font-inter text-sm italic leading-relaxed text-[#2c231b]/80 sm:text-base">
-                  “Porsi banyak, ayamnya nggak pelit, baksonya kenyal. Langganan dari 2021, rasa
-                  konsisten.”
-                </p>
-                <cite className="mt-2 block text-xs font-bold not-italic text-[#2c231b]/60">
-                  Ahmad Fauzi, Google Maps
-                </cite>
-              </blockquote>
+              <figure className="relative overflow-hidden rounded-2xl bg-[#2c231b] p-6 sm:p-7 border border-[#2c231b] shadow-[0_12px_32px_rgba(44,35,27,0.18)]">
+                <i className="fas fa-quote-left absolute -top-1 left-4 text-5xl text-white/[0.07]" aria-hidden="true"></i>
+                <blockquote className="relative">
+                  <p className="font-inter text-[15px] sm:text-base leading-relaxed italic text-[#fdf8f5]/90">
+                    “Porsi banyak, ayamnya nggak pelit, baksonya kenyal. Langganan dari 2021, rasa konsisten. Anak suka, porsi pas buat keluarga.”
+                  </p>
+                </blockquote>
+                <figcaption className="mt-4 flex items-center gap-3">
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#f5b041] text-[#2c231b] font-poppins text-xs font-extrabold">AF</span>
+                  <div>
+                    <cite className="block text-xs font-bold not-italic text-white">Ahmad Fauzi</cite>
+                    <span className="text-[11px] text-white/60">Google Maps • 5 dari 5</span>
+                  </div>
+                  <span className="ml-auto hidden sm:flex gap-0.5 text-[#f5b041] text-[11px]" aria-hidden="true">
+                    <i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i>
+                  </span>
+                </figcaption>
+              </figure>
             </Reveal>
           </div>
           <div className="lg:col-span-2 lg:sticky lg:top-28 self-start">
