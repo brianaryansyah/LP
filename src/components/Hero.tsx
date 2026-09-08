@@ -1,25 +1,51 @@
+"use client";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import WaveDivider from "@/components/WaveDivider";
 
 export default function Hero() {
+  const [pos, setPos] = useState({ x: 0, y: 0 });
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const onMove = (e: MouseEvent) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 2;
+      const y = (e.clientY / window.innerHeight - 0.5) * 2;
+      setPos({ x, y });
+    };
+    window.addEventListener("mousemove", onMove, { passive: true });
+    return () => window.removeEventListener("mousemove", onMove);
+  }, []);
   return (
     <section id="home" className="relative h-[100vh] min-h-[680px] max-h-[960px] flex items-center justify-center overflow-hidden pb-8">
-      <div className="absolute inset-0">
-        <Image
-          src="/img/mi-ayam-bakso.jpg"
-          alt="Mangkok mie ayam bakso dengan topping melimpah"
-          fill
-          priority
-          fetchPriority="high"
-          sizes="100vw"
-          quality={80}
-          className="object-cover scale-[1.02] transition-transform duration-[1600ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
-        />
+      <div className="absolute inset-0 overflow-hidden">
+        <div
+          className="absolute inset-0 will-change-transform transition-transform duration-700 ease-out"
+          style={{ transform: `translate3d(${pos.x * -12}px, ${pos.y * -8}px, 0) scale(1.06)` }}
+        >
+          <Image
+            src="/img/mi-ayam-bakso.jpg"
+            alt="Mangkok mie ayam bakso dengan topping melimpah"
+            fill
+            priority
+            fetchPriority="high"
+            sizes="100vw"
+            quality={80}
+            className="object-cover"
+          />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/35 to-black/65" aria-hidden="true" />
         <div className="absolute inset-0 bg-gradient-to-tr from-[#2c231b]/20 via-transparent to-[#f5b041]/10" aria-hidden="true" />
+        <div
+          className="pointer-events-none absolute h-64 w-64 rounded-full bg-[#f5b041]/15 blur-[50px] will-change-transform transition-transform duration-700 ease-out"
+          style={{ transform: `translate3d(${pos.x * 18}px, ${pos.y * 14}px, 0)` }}
+          aria-hidden="true"
+        />
       </div>
 
-      <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-16">
+      <div
+        className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-16 will-change-transform transition-transform duration-700 ease-out"
+        style={{ transform: `translate3d(${pos.x * 8}px, ${pos.y * 6}px, 0)` }}
+      >
         <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 px-4 py-1.5 text-xs font-semibold tracking-wider text-white animate-fadeUp" style={{ animationDelay: "60ms" }}>
           <span className="h-2 w-2 rounded-full bg-[#f5b041] animate-pulse" aria-hidden="true" />
           Dapur Karimata • Buka 10.00-22.00
