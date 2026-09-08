@@ -12,6 +12,7 @@ export default function Hero() {
           priority
           fetchPriority="high"
           sizes="100vw"
+          quality={80}
           className="object-cover scale-[1.02] transition-transform duration-[1600ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/35 to-black/65" aria-hidden="true" />
