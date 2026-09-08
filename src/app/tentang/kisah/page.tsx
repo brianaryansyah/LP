@@ -109,6 +109,21 @@ export default function KisahPage() {
             </div>
           </Reveal>
         </div>
+      </section>
+      <section className="border-y border-[#f5b041]/15 bg-[#f5b041]/8 py-12 sm:py-16 relative overflow-hidden">
+        <div className="pointer-events-none absolute -right-10 top-0 h-40 w-40 rounded-full bg-[#f5b041]/15 blur-[40px]" aria-hidden="true" />
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
+          <Reveal>
+            <div className="max-w-2xl">
+              <span className="inline-flex items-center gap-2 rounded-full border border-[#2c231b]/10 bg-white px-3 py-1 text-xs font-bold tracking-wider text-[#2c231b]">Warisan Rasa</span>
+              <h2 className="mt-3 font-poppins text-2xl sm:text-3xl font-extrabold tracking-tight text-[#2c231b]">Telusuri Resep & Sejarah Semangkok</h2>
+              <p className="mt-3 text-sm leading-relaxed text-[#2c231b]/65">Ketahui bagaimana resep keluarga dijaga dari gerobak Pasar Pagi sampai dapur Karimata yang sekarang.</p>
+              <a href="/tentang/sejarah" className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#2c231b] px-6 py-3 text-sm font-bold text-white hover:bg-black transition-colors">Pelajari Sejarah <i className="fas fa-arrow-right text-xs" aria-hidden="true"></i></a>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+      <section className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8">
         <div className="mt-16 lg:mt-20">
           <Reveal>
             <div className="text-center mb-10">
