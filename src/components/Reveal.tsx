@@ -14,22 +14,32 @@ export default function Reveal({ children, className = "", delay = 0 }: RevealPr
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    // respect reduced-motion without causing hydration mismatch (server renders hidden, client syncs via effect)
+
+    // Respect reduced motion without causing a hydration mismatch.
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      setVisible(true);
-      return;
+      const reducedMotionTimer = setTimeout(() => setVisible(true), 0);
+      return () => clearTimeout(reducedMotionTimer);
     }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setVisible(true);
           observer.disconnect();
+          clearTimeout(fallbackTimer);
         }
       },
-      { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+      { threshold: 0.01, rootMargin: "0px 0px 120px 0px" }
     );
     observer.observe(el);
-    return () => observer.disconnect();
+
+    // Some mobile browsers defer intersection updates for content below the fold.
+    const fallbackTimer = setTimeout(() => setVisible(true), 1500);
+
+    return () => {
+      observer.disconnect();
+      clearTimeout(fallbackTimer);
+    };
   }, []);
 
   return (

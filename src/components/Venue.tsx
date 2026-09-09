@@ -82,8 +82,12 @@ function FacilityFlipCard({ facility, idx }: { facility: Facility; idx: number }
     <div
       className="perspective-1000 h-[280px] sm:h-[300px] w-full rounded-2xl group/flip cursor-pointer touch-manipulation focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f5b041]"
       onClick={() => setFlipped((v) => !v)}
-      onMouseEnter={() => setFlipped(true)}
-      onMouseLeave={() => setFlipped(false)}
+      onMouseEnter={() => {
+        if (window.matchMedia("(hover: hover)").matches) setFlipped(true);
+      }}
+      onMouseLeave={() => {
+        if (window.matchMedia("(hover: hover)").matches) setFlipped(false);
+      }}
       role="button"
       tabIndex={0}
       onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setFlipped((v) => !v); } }}

@@ -56,8 +56,6 @@ h1, h2, h3 {
 
 section[id] {
   scroll-margin-top: 5.5rem;
-  content-visibility: auto;
-  contain-intrinsic-size: 1px 800px;
 }
 
 @keyframes float {
